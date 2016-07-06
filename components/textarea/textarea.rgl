@@ -1,0 +1,26 @@
+<template>
+	<textarea class="r-textarea"></textarea>
+</template>
+
+<script>
+	export default {
+		name: 'Textarea'
+	}
+</script>
+
+<style lang="less" scoped>
+	@import '../../variable.less';
+
+	.r-textarea {
+		border: solid 1px #DDD;
+		padding: 10px;
+		outline: none;
+		vertical-align: middle;
+		font-size: @form-font-size;
+		color: @form-color;
+
+		&:focus {
+			border: solid 1px @primary-color;
+		}
+	}
+</style>

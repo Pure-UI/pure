@@ -1,0 +1,33 @@
+<template>
+	<input class="r-input" type="text" value="{ value }" placeholder="{ placeholder }" on-input="{ this.onChange() }">
+</template>
+
+<script>
+	export default {
+		name: 'Input',
+		onChange() {
+			this.$emit( 'emit' );
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+	@import '../../variable.less';
+
+	.r-input {
+		height: 40px;
+		background-color: #FFF;
+		color: @form-color;
+		outline: none;
+		padding: 0 10px;
+		font-size: @form-font-size;
+		display: inline-block;
+		vertical-align: middle;
+		box-sizing: border-box;
+		border: solid 1px #DDD;
+
+		&:focus {
+			border: solid 1px @primary-color;
+		}
+	}
+</style>

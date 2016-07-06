@@ -1,0 +1,13 @@
+<template>
+	<input type="checkbox" value="">
+</template>
+
+<script>
+	export default {
+		name: 'Checkbox'
+	}
+</script>
+
+<style lang="less" scoped>
+
+</style>

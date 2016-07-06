@@ -1,0 +1,57 @@
+<template>
+	<tr class="r-tr">
+		{#list fields as field}
+			<td>{#include this.renderColumns( field ) }</td>
+		{/list}
+	</tr>
+</template>
+
+<script>
+	export default {
+		name: 'Table-Row',
+		config( data ) {
+		},
+		renderColumns( field ) {
+			let rendered = '';
+			if( typeof field.render === 'function' ) {
+				rendered = field.render( this.data.dataSource[ field.key ], this.data.dataSource );
+			}
+
+			if( !rendered ) {
+				rendered = this.data.dataSource[ field.key ];
+			}
+
+			if( typeof rendered !== 'string' ) {
+				rendered = JSON.stringify( rendered );
+			}
+
+			return rendered;
+		},
+		onEmit( i ) {
+			console.log( 'table row emit', i );
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+	.r-tr {
+		& td {
+			padding: .78571429em;
+			border-top: 1px solid rgba(34,36,38,.1);
+			text-align: inherit;
+			border-left: 1px solid rgba(34,36,38,.1);
+		}
+
+		&:first-child td {
+			border-top: none
+		}
+
+		& td:first-child {
+			border-left: none;
+		}
+
+		&:nth-child(2n), &:nth-child(2n) {
+			background-color: rgba(0,0,50,.02);
+		}
+	}
+</style>

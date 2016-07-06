@@ -1,0 +1,13 @@
+<template>
+	<input type="radio" value="">
+</template>
+
+<script>
+	export default {
+		name: 'Radio'
+	}
+</script>
+
+<style lang="less" scoped>
+
+</style>
