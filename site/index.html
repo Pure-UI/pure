@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pure Docs</title>
+		<link rel="stylesheet" href="../dist/pure.css">
+		<script type="text/javascript" src="https://npmcdn.com/regularjs/dist/regular.js"></script>
+		<script type="text/javascript" src="../dist/pure.js"></script>
+		<script type="text/javascript">
+			var mountNode;
+			var require = function( v ) {
+				if( v === 'regularjs' ) {
+					return Regular;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="docs">
+			<!-- button basic -->
+			<div class="doc">
+				<div class="demo-box">
+					<div id="demo-button-basic"></div>
+				</div>
+				<div class="markdown-box">
+					按钮有两种类型
+				</div>
+				<div class="code-box"></div>
+			</div>
+			<script type="text/javascript">
+				mountNode = document.getElementById( 'demo-button-basic' );
+			</script>
+			<script type="text/javascript">
+				(function() {
+					var Regular = require( 'regularjs' );
+					var Demo = Regular.extend({
+						template: `
+							<Button primary>按钮</Button>
+							<Button>按钮</Button>
+						`
+					});
+					new Demo().$inject( mountNode );
+				})();
+			</script>
+
+			<div class="doc">
+				<div class="demo-box">
+					<div id="demo-button-click"></div>
+				</div>
+				<div class="markdown-box">
+
+				</div>
+				<div class="code-box"></div>
+			</div>
+
+			<!-- button click -->
+			<script type="text/javascript">
+				mountNode = document.getElementById( 'demo-button-click' );
+			</script>
+			<script type="text/javascript">
+				(function() {
+					var Demo = Regular.extend({
+						template: `
+							<Button on-click="{ this.onClick() }">按钮</Button>
+						`,
+						onClick() {
+							alert( 'clicked' );
+						}
+					});
+
+					new Demo().$inject( mountNode );
+				})();
+			</script>
+		</div>
+	</body>
+</html>

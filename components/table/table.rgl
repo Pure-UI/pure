@@ -10,7 +10,7 @@
 		<tbody>
 			{#inc this.$body}
 			{#list dataSource as ds}
-			<Table-Row data-source="{ ds }" fields="{ fields }"></Table-Row>
+			<TableRow data-source="{ ds }" fields="{ fields }"></TableRow>
 			{/list}
 		</tbody>
 	</table>
@@ -49,7 +49,6 @@
 			font-weight: 700;
 			text-transform: none;
 			border-bottom: 1px solid rgba(34,36,38,.1);
-			border-left: none;
 			border-left: 1px solid rgba(34,36,38,.1);
 		}
 

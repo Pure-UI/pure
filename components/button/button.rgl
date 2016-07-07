@@ -23,7 +23,7 @@
 				setTimeout(function () { cb(lastTime = nowtime + timeout) }, timeout)
 			}
 		}
-	return raf;
+		return raf;
 	})(window || {});
 
 	export default {
@@ -40,6 +40,7 @@
 		},
 		onClick( e ) {
 			this.$emit( 'emit' );
+			this.$emit( 'click' );
 
 			const target = this.$refs.b;
 			const pageX = e.pageX;
@@ -73,7 +74,7 @@
 	@import '../../variable.less';
 
 	@button-color: @primary-color;
-
+	@button-font-size: 16px;
 
 	@keyframes r-button-ripple {
 		from {
@@ -117,7 +118,7 @@
 		-webkit-appearance: none;
 		border: none;
 		padding: 0 30px;
-		font-size: 17px;
+		font-size: @button-font-size;
 		border-radius: 4px;
 		height: 40px;
 		outline: none;

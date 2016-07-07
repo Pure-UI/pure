@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name: 'Table-Row',
+		name: 'TableRow',
 		config( data ) {
 		},
 		renderColumns( field ) {

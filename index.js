@@ -8,5 +8,8 @@ import './components/table/table-row.rgl';
 import './components/spinner/spinner.rgl';
 import './components/modal/modal.rgl';
 import './components/checkbox/checkbox.rgl';
+import './components/checkbox/checkbox-group.rgl';
 import './components/radio/radio.rgl';
+import './components/radio/radio-group.rgl';
 import './components/select/select.rgl';
+import './components/switch/switch.rgl';

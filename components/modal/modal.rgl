@@ -8,8 +8,8 @@
 				{#inc this.$body}
 			</div>
 			<div class="r-modal-actions">
-				<Button>{ cancelText || '取消' }</Button>
-				<Button primary>{ okText || '确认' }</Button>
+				<Button on-click="{ this.onCancel() }">{ cancelText || '取消' }</Button>
+				<Button primary on-click="{ this.onOk() }">{ okText || '确认' }</Button>
 			</div>
 		</div>
 	</div>
@@ -19,11 +19,19 @@
 	import Button from '../button/button.rgl';
 
 	export default {
-		name: 'Modal'
+		name: 'Modal',
+		onCancel() {
+			this.$emit( 'cancel' );
+		},
+		onOk() {
+			this.$emit( 'ok' );
+		}
 	};
 </script>
 
-<style>
+<style lang="less" scoped>
+	@import '../../variable.less';
+
 	.r-modal-mask {
 		position: fixed;
 		top: 0;
@@ -38,7 +46,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%,-50%,0);
-		min-width: 700px;
+		min-width: 780px;
 		background-color: #FFF;
 		border-radius: 5px;
 		box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.14);
@@ -48,11 +56,28 @@
 	.r-modal-hd {
 		text-align: center;
 		padding: 20px 0;
+		font-size: 19px;
 	}
 
 	.r-modal-bd {
 		padding: 0 40px;
 		font-size: 15px;
+		max-height: 600px;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			width: 4px;
+			border-radius: 10px;
+			background-color: fade(@primary-color, 15%);
+		}
 	}
 
 	.r-modal-actions {

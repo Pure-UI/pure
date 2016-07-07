@@ -1,2 +1,3 @@
 # pure
-clean and lovely components
+
+elegant and lovely components

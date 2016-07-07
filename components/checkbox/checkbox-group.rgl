@@ -1,10 +1,26 @@
 <template>
-	<input type="checkbox" value="">
+	{#inc this.$body}
 </template>
 
 <script>
 	export default {
-		name: 'Checkbox-Group'
+		name: 'CheckboxGroup',
+		config() {
+			this.checkboxChildren = [];
+		},
+		onCheckboxChange( target ) {
+			target.data.checked = !target.data.checked;
+			target.$update();
+
+			const checkedValues = this.checkboxChildren
+				.filter(v => v.data.checked === true)
+				.map(v => v.data.value);
+
+			this.$emit( 'change', checkedValues );
+		},
+		ping( target ) {
+			this.checkboxChildren.push( target );
+		}
 	}
 </script>
 

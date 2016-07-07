@@ -1,13 +1,76 @@
 <template>
-	<input type="checkbox" value="">
+	<span class="r-checkbox { checked ? 'r-checkbox-checked' : '' }" on-click="{ this.onClick() }">
+		<span class="r-checkbox-inner"></span>
+		<span class="r-checkbox-text">{#inc this.$body}</span>
+	</span>
 </template>
 
 <script>
 	export default {
-		name: 'Checkbox'
+		name: 'Checkbox',
+		config() {
+			if( this.$outer && this.$outer.ping ) {
+				this.$outer.ping( this );
+			}
+		},
+		onClick() {
+			// 受控，控制权转移
+			if( this.$outer && this.$outer.onCheckboxChange ) {
+				this.$outer.onCheckboxChange( this );
+			} else {
+				this.data.checked = !this.data.checked;
+				this.$update();
+				this.$emit( 'change', this.data.checked );
+			}
+		}
 	}
 </script>
 
 <style lang="less" scoped>
+	@import '../../variable.less';
 
+	@checkbox-size: 20px;
+	@checkbox-border-color: #DDD;
+	@checkbox-checkmark-width: 10px;
+	@checkbox-checkmark-height: 5px;
+
+	.r-checkbox {
+		position: relative;
+		width: @checkbox-size;
+		height: @checkbox-size;
+		margin-right: 5px;
+		cursor: pointer;
+		user-select: none;
+
+		&.r-checkbox-checked {
+			.r-checkbox-inner::after {
+				transform: scale(1) rotate(-45deg);
+			}
+		}
+
+		.r-checkbox-inner {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			border: solid 1px @checkbox-border-color;
+			vertical-align: middle;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 4px;
+				left: 5px;
+				width: @checkbox-checkmark-width;
+				height: @checkbox-checkmark-height;
+				border-left: solid 2px @primary-color;
+				border-bottom: solid 2px @primary-color;
+				transform: scale(0) rotate(-45deg);
+				transition: all .2s cubic-bezier(.78,.14,.15,.86);
+			}
+		}
+
+		.r-checkbox-text {
+			vertical-align: middle;
+		}
+	}
 </style>
