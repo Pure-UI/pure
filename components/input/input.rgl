@@ -1,12 +1,13 @@
 <template>
-	<input class="r-input" type="text" value="{ value }" placeholder="{ placeholder }" on-input="{ this.onChange() }">
+	<input class="r-input" type="text" value="{ value }" placeholder="{ placeholder }" on-input="{ this.onChange() }" ref="v">
 </template>
 
 <script>
 	export default {
 		name: 'Input',
 		onChange() {
-			this.$emit( 'emit' );
+			this.$emit( 'emit', this.$refs.v.value );
+			this.$emit( 'change', this.$refs.v.value );
 		}
 	}
 </script>

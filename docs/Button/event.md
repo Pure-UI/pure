@@ -8,3 +8,5 @@ title: 事件
 <Button on-click="{ v = Math.random() }">点击</Button>
 <Input value="{ v }"></Input>
 ```
+
+事件

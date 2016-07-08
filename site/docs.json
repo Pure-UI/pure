@@ -1,0 +1,135 @@
+{
+    "Button": [
+        {
+            "path": "Button/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n\r\n```css\r\n.c {\r\n\tcolor: #333;\r\n}\r\n```\r\n\r\n按钮有两种基本形态，primary和normal\r\n",
+            "html": "<p>按钮有两种基本形态，primary和normal</p>\n",
+            "code": {
+                "html": "<Button primary>Primary</Button>\n<Button>Normal</Button>",
+                "css": ".c {\n    color: #333;\n}"
+            }
+        },
+        {
+            "path": "Button/event.md",
+            "attrs": {
+                "order": 2,
+                "title": "事件"
+            },
+            "source": "\r\n\r\n```html\r\n<Button on-click=\"{ v = Math.random() }\">点击</Button>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n\r\n事件\r\n",
+            "html": "<p>事件</p>\n",
+            "code": {
+                "html": "<Button on-click=\"{ v = Math.random() }\">点击</Button>\n<Input value=\"{ v }\"></Input>"
+            }
+        }
+    ],
+    "Checkbox": [
+        {
+            "path": "Checkbox/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\n基本使用\r\n\r\n```html\r\n<Checkbox checked=\"{ false }\"></Checkbox>\r\n<Checkbox checked=\"{ true }\"></Checkbox>\r\n```\r\n",
+            "html": "<p>基本使用</p>\n",
+            "code": {
+                "html": "<Checkbox checked=\"{ false }\"></Checkbox>\n<Checkbox checked=\"{ true }\"></Checkbox>"
+            }
+        },
+        {
+            "path": "Checkbox/group.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\n组\r\n\r\n```html\r\n<CheckboxGroup checked=\"2\">\r\n\t<Checkbox value=\"1\">Option1</Checkbox>\r\n\t<Checkbox value=\"2\">Option2</Checkbox>\r\n\t<Checkbox value=\"3\">Option3</Checkbox>\r\n</CheckboxGroup>\r\n```\r\n",
+            "html": "<p>组</p>\n",
+            "code": {
+                "html": "<CheckboxGroup checked=\"2\">\n    <Checkbox value=\"1\">Option1</Checkbox>\n    <Checkbox value=\"2\">Option2</Checkbox>\n    <Checkbox value=\"3\">Option3</Checkbox>\n</CheckboxGroup>"
+            }
+        },
+        {
+            "path": "Checkbox/event.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\n事件\r\n\r\n```html\r\n<CheckboxGroup checked=\"2\" on-change=\"{ v = $event }\">\r\n\t<Checkbox value=\"1\">Option1</Checkbox>\r\n\t<Checkbox value=\"2\">Option2</Checkbox>\r\n\t<Checkbox value=\"3\">Option3</Checkbox>\r\n</CheckboxGroup>\r\n<br />\r\n<br />\r\nChecked：{ ( v && v.length > 0 ) ? v : '未选中' }\r\n```\r\n",
+            "html": "<p>事件</p>\n",
+            "code": {
+                "html": "<CheckboxGroup checked=\"2\" on-change=\"{ v = $event }\">\n    <Checkbox value=\"1\">Option1</Checkbox>\n    <Checkbox value=\"2\">Option2</Checkbox>\n    <Checkbox value=\"3\">Option3</Checkbox>\n</CheckboxGroup>\n<br />\n<br />\nChecked：{ ( v && v.length > 0 ) ? v : '未选中' }"
+            }
+        }
+    ],
+    "Input": [
+        {
+            "path": "Input/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"v\"></Input>\r\n```\r\n\r\n基本使用\r\n",
+            "html": "<p>基本使用</p>\n",
+            "code": {
+                "html": "<Input placeholder=\"placeholder\" value=\"v\"></Input>"
+            }
+        },
+        {
+            "path": "Input/event.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\n事件\r\n\r\n```html\r\n<Input on-change=\"{ v = $event }\"></Input>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
+            "html": "<p>事件</p>\n",
+            "code": {
+                "html": "<Input on-change=\"{ v = $event }\"></Input>\n<Input value=\"{ v }\"></Input>"
+            }
+        }
+    ],
+    "Radio": [
+        {
+            "path": "Radio/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\n基本使用\r\n\r\n```html\r\n<Radio checked=\"{ false }\"></Radio>\r\n<Radio checked=\"{ true }\"></Radio>\r\n```\r\n",
+            "html": "<p>基本使用</p>\n",
+            "code": {
+                "html": "<Radio checked=\"{ false }\"></Radio>\n<Radio checked=\"{ true }\"></Radio>"
+            }
+        },
+        {
+            "path": "Radio/group.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\n组\r\n\r\n```html\r\n<RadioGroup checked=\"2\">\r\n\t<Radio value=\"1\">选项1</Radio>\r\n\t<Radio value=\"2\">选项2</Radio>\r\n\t<Radio value=\"3\">选项3</Radio>\r\n</RadioGroup>\r\n```\r\n",
+            "html": "<p>组</p>\n",
+            "code": {
+                "html": "<RadioGroup checked=\"2\">\n    <Radio value=\"1\">选项1</Radio>\n    <Radio value=\"2\">选项2</Radio>\n    <Radio value=\"3\">选项3</Radio>\n</RadioGroup>"
+            }
+        },
+        {
+            "path": "Radio/event.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\n事件\r\n\r\n```html\r\n<RadioGroup on-change=\"{ v = $event }\">\r\n\t<Radio value=\"1\">选项1</Radio>\r\n\t<Radio value=\"2\">选项2</Radio>\r\n\t<Radio value=\"3\">选项3</Radio>\r\n</RadioGroup>\r\n<br />\r\n<br />\r\n选中项：{ v || '未选中' }\r\n```\r\n",
+            "html": "<p>事件</p>\n",
+            "code": {
+                "html": "<RadioGroup on-change=\"{ v = $event }\">\n    <Radio value=\"1\">选项1</Radio>\n    <Radio value=\"2\">选项2</Radio>\n    <Radio value=\"3\">选项3</Radio>\n</RadioGroup>\n<br />\n<br />\n选中项：{ v || '未选中' }"
+            }
+        }
+    ],
+    "Textarea": [
+        {
+            "path": "Textarea/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\n基本使用\r\n\r\n```html\r\n<Textarea></Textarea>\r\n```\r\n",
+            "html": "<p>基本使用</p>\n",
+            "code": {
+                "html": "<Textarea></Textarea>"
+            }
+        }
+    ]
+}

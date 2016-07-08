@@ -326,7 +326,8 @@
 	exports.default = {
 		name: 'Input',
 		onChange: function onChange() {
-			this.$emit('emit');
+			this.$emit('emit', this.$refs.v.value);
+			this.$emit('change', this.$refs.v.value);
 		}
 	};
 
@@ -334,7 +335,7 @@
 /* 16 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"input","attrs":[{"type":"attribute","name":"class","value":"r-input"},{"type":"attribute","name":"type","value":"text"},{"type":"attribute","name":"value","value":{"type":"expression","body":"c._sg_('value', d, e)","constant":false,"setbody":"c._ss_('value',p_,d, '=', 1)"}},{"type":"attribute","name":"placeholder","value":{"type":"expression","body":"c._sg_('placeholder', d, e)","constant":false,"setbody":"c._ss_('placeholder',p_,d, '=', 1)"}},{"type":"attribute","name":"on-input","value":{"type":"expression","body":"c['onChange']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-7f084694","value":""}]}]
+	module.exports = [{"type":"element","tag":"input","attrs":[{"type":"attribute","name":"class","value":"r-input"},{"type":"attribute","name":"type","value":"text"},{"type":"attribute","name":"value","value":{"type":"expression","body":"c._sg_('value', d, e)","constant":false,"setbody":"c._ss_('value',p_,d, '=', 1)"}},{"type":"attribute","name":"placeholder","value":{"type":"expression","body":"c._sg_('placeholder', d, e)","constant":false,"setbody":"c._ss_('placeholder',p_,d, '=', 1)"}},{"type":"attribute","name":"on-input","value":{"type":"expression","body":"c['onChange']()","constant":false,"setbody":false}},{"type":"attribute","name":"ref","value":"v"},{"type":"attribute","name":"_r-7f084694","value":""}]}]
 
 /***/ },
 /* 17 */

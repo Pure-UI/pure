@@ -25,6 +25,11 @@ module.exports = {
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract( 'style', 'css' ),
 				exclude: /node_modules/
+			},
+			{
+				test: /\.json$/,
+				loader: 'json',
+				exclude: /node_modules/
 			}
 		]
 	},
@@ -35,7 +40,7 @@ module.exports = {
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', '.css', '.rgl' ]
+		extensions: [ '', '.js', 'json', '.css', '.rgl' ]
 	},
 	externals: {
 		'regularjs': 'Regular'
