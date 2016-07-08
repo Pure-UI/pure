@@ -1,0 +1,10 @@
+html {
+	font-size: 14px;
+}
+
+.modal-example-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
