@@ -297,7 +297,7 @@
 .r-checkbox[_r-b5d5c50c] .r-checkbox-inner[_r-b5d5c50c]::after {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 4px;
   width: 10px;
   height: 5px;
@@ -510,8 +510,10 @@ code[_r-6dd20558] {
   font-family: sans-serif, Quicksand;
 }
 .nav[_r-7130e100] {
-  width: 20%;
   color: #333;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
 }
 .title[_r-7130e100] {
   font-size: 11px;

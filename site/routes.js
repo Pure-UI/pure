@@ -1,8 +1,6 @@
 import docs from './docs.json';
 import dispatcher from './dispatcher';
 
-console.log( docs );
-
 export default {
 	'/Button': () => {
 		dispatcher.emit( 'update', docs.Button );
@@ -18,5 +16,11 @@ export default {
 	},
 	'/Checkbox': () => {
 		dispatcher.emit( 'update', docs.Checkbox );
+	},
+	'/Switch': () => {
+		dispatcher.emit( 'update', docs.Switch );
+	},
+	'/Modal': () => {
+		dispatcher.emit( 'update', docs.Modal );
 	},
 };

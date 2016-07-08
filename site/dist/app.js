@@ -860,6 +860,10 @@
 			},
 			ping: function ping(target) {
 				this.checkboxChildren.push(target);
+				if (target.data.value === this.data.checked) {
+					target.data.checked = true;
+					target.$update();
+				}
 			}
 		};
 	
@@ -1005,6 +1009,10 @@
 			},
 			ping: function ping(target) {
 				this.radioChildren.push(target);
+				if (target.data.value === this.data.checked) {
+					target.data.checked = true;
+					target.$update();
+				}
 			}
 		};
 	
@@ -2137,7 +2145,7 @@
 /* 20 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"nav","attrs":[{"type":"attribute","name":"class","value":"nav"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"title"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"basic"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"ul","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Button"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Button"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t\n\t"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"title"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"form"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"ul","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Input"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Input"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Textarea"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Textarea"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Radio"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Radio"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Checkbox"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Checkbox"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t\n\t\t\n\t\t\n\t"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"title"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"container"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"ul","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Modal"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Modal"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n\t\n"}]}]
+	module.exports = [{"type":"element","tag":"nav","attrs":[{"type":"attribute","name":"class","value":"nav"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"title"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"basic"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"ul","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Button"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Button"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t\n\t"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"title"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"form"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"ul","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Input"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Input"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Textarea"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Textarea"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Radio"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Radio"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Checkbox"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Checkbox"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Switch"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Switch"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t\n\t\t\n\t\t\n\t"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"title"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"container"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"ul","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"li","attrs":[{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"a","attrs":[{"type":"attribute","name":"href","value":"#/Modal"},{"type":"attribute","name":"_r-7130e100","value":""}],"children":[{"type":"text","text":"Modal"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n\t\n"}]}]
 
 /***/ },
 /* 21 */
@@ -2165,8 +2173,6 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	console.log(_docs2.default);
-	
 	exports.default = {
 		'/Button': function Button() {
 			_dispatcher2.default.emit('update', _docs2.default.Button);
@@ -2182,6 +2188,12 @@
 		},
 		'/Checkbox': function Checkbox() {
 			_dispatcher2.default.emit('update', _docs2.default.Checkbox);
+		},
+		'/Switch': function Switch() {
+			_dispatcher2.default.emit('update', _docs2.default.Switch);
+		},
+		'/Modal': function Modal() {
+			_dispatcher2.default.emit('update', _docs2.default.Modal);
 		}
 	};
 
@@ -2197,8 +2209,8 @@
 				"attrs": {
 					"order": 1
 				},
-				"source": "\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n\r\n```css\r\n.c {\r\n\tcolor: #333;\r\n}\r\n```\r\n\r\n按钮有两种基本形态，primary和normal\r\n",
-				"html": "<p>按钮有两种基本形态，primary和normal</p>\n",
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n\r\n```css\r\n.c {\r\n\tcolor: #333;\r\n}\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
 				"code": {
 					"html": "<Button primary>Primary</Button>\n<Button>Normal</Button>",
 					"css": ".c {\n    color: #333;\n}"
@@ -2207,13 +2219,12 @@
 			{
 				"path": "Button/event.md",
 				"attrs": {
-					"order": 2,
-					"title": "事件"
+					"order": 2
 				},
-				"source": "\r\n\r\n```html\r\n<Button on-click=\"{ v = Math.random() }\">点击</Button>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n\r\n事件\r\n",
-				"html": "<p>事件</p>\n",
+				"source": "\r\nEvent\r\n\r\n```html\r\n<Button on-click=\"{ v = Math.random() }\">Random</Button>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
+				"html": "<p>Event</p>\n",
 				"code": {
-					"html": "<Button on-click=\"{ v = Math.random() }\">点击</Button>\n<Input value=\"{ v }\"></Input>"
+					"html": "<Button on-click=\"{ v = Math.random() }\">Random</Button>\n<Input value=\"{ v }\"></Input>"
 				}
 			}
 		],
@@ -2223,10 +2234,10 @@
 				"attrs": {
 					"order": 1
 				},
-				"source": "\r\n基本使用\r\n\r\n```html\r\n<Checkbox checked=\"{ false }\"></Checkbox>\r\n<Checkbox checked=\"{ true }\"></Checkbox>\r\n```\r\n",
-				"html": "<p>基本使用</p>\n",
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Checkbox checked=\"{ false }\">Option</Checkbox>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
 				"code": {
-					"html": "<Checkbox checked=\"{ false }\"></Checkbox>\n<Checkbox checked=\"{ true }\"></Checkbox>"
+					"html": "<Checkbox checked=\"{ false }\">Option</Checkbox>"
 				}
 			},
 			{
@@ -2234,10 +2245,10 @@
 				"attrs": {
 					"order": 2
 				},
-				"source": "\r\n组\r\n\r\n```html\r\n<CheckboxGroup checked=\"2\">\r\n\t<Checkbox value=\"1\">Option1</Checkbox>\r\n\t<Checkbox value=\"2\">Option2</Checkbox>\r\n\t<Checkbox value=\"3\">Option3</Checkbox>\r\n</CheckboxGroup>\r\n```\r\n",
-				"html": "<p>组</p>\n",
+				"source": "\r\nGroup\r\n\r\n```html\r\n<CheckboxGroup checked=\"{ 2 }\">\r\n\t<Checkbox value=\"{ 1 }\">Option 1</Checkbox>\r\n\t<Checkbox value=\"{ 2 }\">Option 2</Checkbox>\r\n\t<Checkbox value=\"{ 3 }\">Option 3</Checkbox>\r\n</CheckboxGroup>\r\n```\r\n",
+				"html": "<p>Group</p>\n",
 				"code": {
-					"html": "<CheckboxGroup checked=\"2\">\n    <Checkbox value=\"1\">Option1</Checkbox>\n    <Checkbox value=\"2\">Option2</Checkbox>\n    <Checkbox value=\"3\">Option3</Checkbox>\n</CheckboxGroup>"
+					"html": "<CheckboxGroup checked=\"{ 2 }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>"
 				}
 			},
 			{
@@ -2245,10 +2256,10 @@
 				"attrs": {
 					"order": 3
 				},
-				"source": "\r\n事件\r\n\r\n```html\r\n<CheckboxGroup checked=\"2\" on-change=\"{ v = $event }\">\r\n\t<Checkbox value=\"1\">Option1</Checkbox>\r\n\t<Checkbox value=\"2\">Option2</Checkbox>\r\n\t<Checkbox value=\"3\">Option3</Checkbox>\r\n</CheckboxGroup>\r\n<br />\r\n<br />\r\nChecked：{ ( v && v.length > 0 ) ? v : '未选中' }\r\n```\r\n",
-				"html": "<p>事件</p>\n",
+				"source": "\r\nEvent\r\n\r\n```html\r\n<CheckboxGroup on-change=\"{ v = $event }\">\r\n\t<Checkbox value=\"{ 1 }\">Option 1</Checkbox>\r\n\t<Checkbox value=\"{ 2 }\">Option 2</Checkbox>\r\n\t<Checkbox value=\"{ 3 }\">Option 3</Checkbox>\r\n</CheckboxGroup>\r\n<br />\r\n<br />\r\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }\r\n```\r\n",
+				"html": "<p>Event</p>\n",
 				"code": {
-					"html": "<CheckboxGroup checked=\"2\" on-change=\"{ v = $event }\">\n    <Checkbox value=\"1\">Option1</Checkbox>\n    <Checkbox value=\"2\">Option2</Checkbox>\n    <Checkbox value=\"3\">Option3</Checkbox>\n</CheckboxGroup>\n<br />\n<br />\nChecked：{ ( v && v.length > 0 ) ? v : '未选中' }"
+					"html": "<CheckboxGroup on-change=\"{ v = $event }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>\n<br />\n<br />\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }"
 				}
 			}
 		],
@@ -2258,8 +2269,8 @@
 				"attrs": {
 					"order": 1
 				},
-				"source": "\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"v\"></Input>\r\n```\r\n\r\n基本使用\r\n",
-				"html": "<p>基本使用</p>\n",
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"v\"></Input>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
 				"code": {
 					"html": "<Input placeholder=\"placeholder\" value=\"v\"></Input>"
 				}
@@ -2269,10 +2280,23 @@
 				"attrs": {
 					"order": 2
 				},
-				"source": "\r\n事件\r\n\r\n```html\r\n<Input on-change=\"{ v = $event }\"></Input>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
-				"html": "<p>事件</p>\n",
+				"source": "\r\nEvent\r\n\r\n```html\r\n<Input on-change=\"{ v = $event }\"></Input>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
+				"html": "<p>Event</p>\n",
 				"code": {
 					"html": "<Input on-change=\"{ v = $event }\"></Input>\n<Input value=\"{ v }\"></Input>"
+				}
+			}
+		],
+		"Modal": [
+			{
+				"path": "Modal/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary on-click=\"{ show = true }\">Open Modal</Button>\r\n{#if show}\r\n<Modal\r\n\ttitle=\"Modal Title\"\r\n\tok-text=\"Confirm\"\r\n\tcancel-text=\"Cancel\"\r\n\ton-cancel=\"{ show = false }\"\r\n\ton-ok=\"{ show = false }\"\r\n>\r\n\t<div class=\"modal-example-center\">\r\n\t\t<img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\" alt=\"something\">\r\n\t</div>\r\n</Modal>\r\n{/if}\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Button primary on-click=\"{ show = true }\">Open Modal</Button>\n{#if show}\n<Modal\n    title=\"Modal Title\"\n    ok-text=\"Confirm\"\n    cancel-text=\"Cancel\"\n    on-cancel=\"{ show = false }\"\n    on-ok=\"{ show = false }\"\n>\n    <div class=\"modal-example-center\">\n        <img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\" alt=\"something\">\n    </div>\n</Modal>\n{/if}"
 				}
 			}
 		],
@@ -2282,10 +2306,10 @@
 				"attrs": {
 					"order": 1
 				},
-				"source": "\r\n基本使用\r\n\r\n```html\r\n<Radio checked=\"{ false }\"></Radio>\r\n<Radio checked=\"{ true }\"></Radio>\r\n```\r\n",
-				"html": "<p>基本使用</p>\n",
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Radio checked=\"{ false }\">Option</Radio>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
 				"code": {
-					"html": "<Radio checked=\"{ false }\"></Radio>\n<Radio checked=\"{ true }\"></Radio>"
+					"html": "<Radio checked=\"{ false }\">Option</Radio>"
 				}
 			},
 			{
@@ -2293,10 +2317,10 @@
 				"attrs": {
 					"order": 2
 				},
-				"source": "\r\n组\r\n\r\n```html\r\n<RadioGroup checked=\"2\">\r\n\t<Radio value=\"1\">选项1</Radio>\r\n\t<Radio value=\"2\">选项2</Radio>\r\n\t<Radio value=\"3\">选项3</Radio>\r\n</RadioGroup>\r\n```\r\n",
-				"html": "<p>组</p>\n",
+				"source": "\r\nGroup\r\n\r\n```html\r\n<RadioGroup checked=\"{ 2 }\">\r\n\t<Radio value=\"{ 1 }\">Option 1</Radio>\r\n\t<Radio value=\"{ 2 }\">Option 2</Radio>\r\n\t<Radio value=\"{ 3 }\">Option 3</Radio>\r\n</RadioGroup>\r\n```\r\n",
+				"html": "<p>Group</p>\n",
 				"code": {
-					"html": "<RadioGroup checked=\"2\">\n    <Radio value=\"1\">选项1</Radio>\n    <Radio value=\"2\">选项2</Radio>\n    <Radio value=\"3\">选项3</Radio>\n</RadioGroup>"
+					"html": "<RadioGroup checked=\"{ 2 }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>"
 				}
 			},
 			{
@@ -2304,10 +2328,34 @@
 				"attrs": {
 					"order": 3
 				},
-				"source": "\r\n事件\r\n\r\n```html\r\n<RadioGroup on-change=\"{ v = $event }\">\r\n\t<Radio value=\"1\">选项1</Radio>\r\n\t<Radio value=\"2\">选项2</Radio>\r\n\t<Radio value=\"3\">选项3</Radio>\r\n</RadioGroup>\r\n<br />\r\n<br />\r\n选中项：{ v || '未选中' }\r\n```\r\n",
-				"html": "<p>事件</p>\n",
+				"source": "\r\nEvent\r\n\r\n```html\r\n<RadioGroup on-change=\"{ v = $event }\">\r\n\t<Radio value=\"{ 1 }\">Option 1</Radio>\r\n\t<Radio value=\"{ 2 }\">Option 2</Radio>\r\n\t<Radio value=\"{ 3 }\">Option 3</Radio>\r\n</RadioGroup>\r\n<br />\r\n<br />\r\nChecked：{ v || 'none' }\r\n```\r\n",
+				"html": "<p>Event</p>\n",
 				"code": {
-					"html": "<RadioGroup on-change=\"{ v = $event }\">\n    <Radio value=\"1\">选项1</Radio>\n    <Radio value=\"2\">选项2</Radio>\n    <Radio value=\"3\">选项3</Radio>\n</RadioGroup>\n<br />\n<br />\n选中项：{ v || '未选中' }"
+					"html": "<RadioGroup on-change=\"{ v = $event }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>\n<br />\n<br />\nChecked：{ v || 'none' }"
+				}
+			}
+		],
+		"Switch": [
+			{
+				"path": "Switch/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Switch checked=\"{ false }\"></Switch>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Switch checked=\"{ false }\"></Switch>"
+				}
+			},
+			{
+				"path": "Switch/event.md",
+				"attrs": {
+					"order": 2
+				},
+				"source": "\r\nEvent\r\n\r\n```html\r\n<Switch on-change=\"{ v = $event }\"></Switch>\r\n<br />\r\n<br />\r\nChecked: { v !== undefined ? v : 'none' }\r\n```\r\n",
+				"html": "<p>Event</p>\n",
+				"code": {
+					"html": "<Switch on-change=\"{ v = $event }\"></Switch>\n<br />\n<br />\nChecked: { v !== undefined ? v : 'none' }"
 				}
 			}
 		],
@@ -2317,8 +2365,8 @@
 				"attrs": {
 					"order": 1
 				},
-				"source": "\r\n基本使用\r\n\r\n```html\r\n<Textarea></Textarea>\r\n```\r\n",
-				"html": "<p>基本使用</p>\n",
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Textarea></Textarea>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
 				"code": {
 					"html": "<Textarea></Textarea>"
 				}

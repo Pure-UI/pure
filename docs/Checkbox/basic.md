@@ -2,9 +2,8 @@
 order: 1
 ---
 
-基本使用
+Basic Usage
 
 ```html
-<Checkbox checked="{ false }"></Checkbox>
-<Checkbox checked="{ true }"></Checkbox>
+<Checkbox checked="{ false }">Option</Checkbox>
 ```

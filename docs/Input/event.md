@@ -2,7 +2,7 @@
 order: 2
 ---
 
-事件
+Event
 
 ```html
 <Input on-change="{ v = $event }"></Input>

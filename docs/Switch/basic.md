@@ -5,5 +5,5 @@ order: 1
 Basic Usage
 
 ```html
-<Textarea></Textarea>
+<Switch checked="{ false }"></Switch>
 ```

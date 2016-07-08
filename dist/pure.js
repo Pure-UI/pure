@@ -741,6 +741,10 @@
 		},
 		ping: function ping(target) {
 			this.checkboxChildren.push(target);
+			if (target.data.value === this.data.checked) {
+				target.data.checked = true;
+				target.$update();
+			}
 		}
 	};
 
@@ -880,6 +884,10 @@
 		},
 		ping: function ping(target) {
 			this.radioChildren.push(target);
+			if (target.data.value === this.data.checked) {
+				target.data.checked = true;
+				target.$update();
+			}
 		}
 	};
 

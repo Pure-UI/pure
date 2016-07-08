@@ -20,6 +20,10 @@
 		},
 		ping( target ) {
 			this.checkboxChildren.push( target );
+			if( target.data.value === this.data.checked ) {
+				target.data.checked = true;
+				target.$update();
+			}
 		}
 	}
 </script>

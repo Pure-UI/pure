@@ -297,7 +297,7 @@
 .r-checkbox[_r-b5d5c50c] .r-checkbox-inner[_r-b5d5c50c]::after {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 4px;
   width: 10px;
   height: 5px;

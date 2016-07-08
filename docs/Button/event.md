@@ -1,12 +1,10 @@
 ---
 order: 2
-title: 事件
 ---
 
+Event
 
 ```html
-<Button on-click="{ v = Math.random() }">点击</Button>
+<Button on-click="{ v = Math.random() }">Random</Button>
 <Input value="{ v }"></Input>
 ```
-
-事件

@@ -16,11 +16,15 @@
 					v.data.checked = false;
 				});
 			this.$update();
-			
+
 			this.$emit( 'change', target.data.value );
 		},
 		ping( target ) {
 			this.radioChildren.push( target );
+			if( target.data.value === this.data.checked ) {
+				target.data.checked = true;
+				target.$update();
+			}
 		}
 	}
 </script>

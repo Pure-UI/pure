@@ -14,7 +14,6 @@
 			}
 		},
 		onClick() {
-			// 受控，控制权转移
 			if( this.$outer && this.$outer.onCheckboxChange ) {
 				this.$outer.onCheckboxChange( this );
 			} else {
@@ -58,7 +57,7 @@
 			&::after {
 				content: '';
 				position: absolute;
-				top: 4px;
+				top: 5px;
 				left: 4px;
 				width: @checkbox-checkmark-width;
 				height: @checkbox-checkmark-height;

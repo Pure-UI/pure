@@ -23,6 +23,9 @@
 			<li>
 				<a href="#/Checkbox">Checkbox</a>
 			</li>
+			<li>
+				<a href="#/Switch">Switch</a>
+			</li>
 			<!-- <li>
 				<a href="#/NumberInput">NumberInput</a>
 			</li> -->
@@ -62,8 +65,8 @@
 
 <style lang="less" scoped>
 	.nav {
-		width: 20%;
 		color: #333;
+		flex: 0 0 20%;
 	}
 
 	.title {

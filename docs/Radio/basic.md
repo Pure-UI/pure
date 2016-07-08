@@ -2,9 +2,8 @@
 order: 1
 ---
 
-基本使用
+Basic Usage
 
 ```html
-<Radio checked="{ false }"></Radio>
-<Radio checked="{ true }"></Radio>
+<Radio checked="{ false }">Option</Radio>
 ```

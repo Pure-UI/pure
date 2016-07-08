@@ -2,6 +2,8 @@
 order: 1
 ---
 
+Basic Usage
+
 ```html
 <Button primary>Primary</Button>
 <Button>Normal</Button>
@@ -12,5 +14,3 @@ order: 1
 	color: #333;
 }
 ```
-
-按钮有两种基本形态，primary和normal
