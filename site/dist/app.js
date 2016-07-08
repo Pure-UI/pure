@@ -65,9 +65,8 @@
 	new _app2.default().$inject(document.getElementById('app'));
 	
 	var router = (0, _director.Router)(_routes2.default);
-	router.configure({
-		// html5history: true
-	});
+	router.setRoute('Button');
+	
 	router.init();
 
 /***/ },

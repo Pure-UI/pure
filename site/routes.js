@@ -22,5 +22,5 @@ export default {
 	},
 	'/Modal': () => {
 		dispatcher.emit( 'update', docs.Modal );
-	},
+	}
 };
