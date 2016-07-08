@@ -1,4 +1,5 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 var cwd = process.cwd();
 
 module.exports = {
@@ -8,7 +9,8 @@ module.exports = {
 	output: {
 		path: './site/dist',
 		publicPath: 'dist/',
-		filename: 'app.js'
+		filename: 'app-[hash:8].js',
+		jsonpFunction: 'Q'
 	},
 	module: {
 		loaders: [
@@ -46,6 +48,10 @@ module.exports = {
 		'regularjs': 'Regular'
 	},
 	plugins: [
-		new ExtractTextPlugin( 'app.css' )
+		new ExtractTextPlugin( 'app-[hash:8].css' ),
+		new HtmlWebpackPlugin({
+			template: 'site/_index.html',
+			filename: '../index.html',
+		})
 	]
 };

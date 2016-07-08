@@ -56,7 +56,7 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _routes = __webpack_require__(22);
+	var _routes = __webpack_require__(24);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
@@ -1902,7 +1902,7 @@
 	__webpack_require__(8)
 	__webpack_require__(9)
 	__regular_script__ = __webpack_require__(10)
-	__regular_template__ = __webpack_require__(21)
+	__regular_template__ = __webpack_require__(23)
 	var Regular = __webpack_require__( 16 );
 	
 	var __rs__ = __regular_script__ || {};
@@ -1949,7 +1949,7 @@
 	
 	__webpack_require__(17);
 	
-	var _dispatcher = __webpack_require__(26);
+	var _dispatcher = __webpack_require__(21);
 	
 	var _dispatcher2 = _interopRequireDefault(_dispatcher);
 	
@@ -2148,234 +2148,6 @@
 
 /***/ },
 /* 21 */
-/***/ function(module, exports) {
-
-	module.exports = [{"type":"element","tag":"header","attrs":[{"type":"attribute","name":"_r-729c9190","value":""}],"children":[{"type":"text","text":"\n\tPure\n"}]},{"type":"text","text":"\n"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"wrapper"},{"type":"attribute","name":"_r-729c9190","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"Nav","attrs":[{"type":"attribute","name":"_r-729c9190","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"docs"},{"type":"attribute","name":"ref"},{"type":"attribute","name":"_r-729c9190","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('doc', d, e)","constant":false,"setbody":"c._ss_('doc',p_,d, '=', 1)"},"alternate":[],"variable":"d","body":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"Demo","attrs":[{"type":"attribute","name":"source","value":{"type":"expression","body":"c._sg_('html', c._sg_('code', c._sg_('d', d, e)))","constant":false,"setbody":"c._ss_('html',p_,c._sg_('code', c._sg_('d', d, e)), '=', 0)"}},{"type":"attribute","name":"markdown","value":{"type":"expression","body":"c._sg_('html', c._sg_('d', d, e))","constant":false,"setbody":"c._ss_('html',p_,c._sg_('d', d, e), '=', 0)"}},{"type":"attribute","name":"_r-729c9190","value":""}],"children":[]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\n\t\t\n\n\t\t\n\t\t"},{"type":"element","tag":"API","attrs":[{"type":"attribute","name":"_r-729c9190","value":""}],"children":[]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _docs = __webpack_require__(24);
-	
-	var _docs2 = _interopRequireDefault(_docs);
-	
-	var _dispatcher = __webpack_require__(26);
-	
-	var _dispatcher2 = _interopRequireDefault(_dispatcher);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-		'/Button': function Button() {
-			_dispatcher2.default.emit('update', _docs2.default.Button);
-		},
-		'/Input': function Input() {
-			_dispatcher2.default.emit('update', _docs2.default.Input);
-		},
-		'/Textarea': function Textarea() {
-			_dispatcher2.default.emit('update', _docs2.default.Textarea);
-		},
-		'/Radio': function Radio() {
-			_dispatcher2.default.emit('update', _docs2.default.Radio);
-		},
-		'/Checkbox': function Checkbox() {
-			_dispatcher2.default.emit('update', _docs2.default.Checkbox);
-		},
-		'/Switch': function Switch() {
-			_dispatcher2.default.emit('update', _docs2.default.Switch);
-		},
-		'/Modal': function Modal() {
-			_dispatcher2.default.emit('update', _docs2.default.Modal);
-		}
-	};
-
-/***/ },
-/* 23 */,
-/* 24 */
-/***/ function(module, exports) {
-
-	module.exports = {
-		"Button": [
-			{
-				"path": "Button/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n\r\n```css\r\n.c {\r\n\tcolor: #333;\r\n}\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Button primary>Primary</Button>\n<Button>Normal</Button>",
-					"css": ".c {\n    color: #333;\n}"
-				}
-			},
-			{
-				"path": "Button/event.md",
-				"attrs": {
-					"order": 2
-				},
-				"source": "\r\nEvent\r\n\r\n```html\r\n<Button on-click=\"{ v = Math.random() }\">Random</Button>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
-				"html": "<p>Event</p>\n",
-				"code": {
-					"html": "<Button on-click=\"{ v = Math.random() }\">Random</Button>\n<Input value=\"{ v }\"></Input>"
-				}
-			}
-		],
-		"Checkbox": [
-			{
-				"path": "Checkbox/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Checkbox checked=\"{ false }\">Option</Checkbox>\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Checkbox checked=\"{ false }\">Option</Checkbox>"
-				}
-			},
-			{
-				"path": "Checkbox/group.md",
-				"attrs": {
-					"order": 2
-				},
-				"source": "\r\nGroup\r\n\r\n```html\r\n<CheckboxGroup checked=\"{ 2 }\">\r\n\t<Checkbox value=\"{ 1 }\">Option 1</Checkbox>\r\n\t<Checkbox value=\"{ 2 }\">Option 2</Checkbox>\r\n\t<Checkbox value=\"{ 3 }\">Option 3</Checkbox>\r\n</CheckboxGroup>\r\n```\r\n",
-				"html": "<p>Group</p>\n",
-				"code": {
-					"html": "<CheckboxGroup checked=\"{ 2 }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>"
-				}
-			},
-			{
-				"path": "Checkbox/event.md",
-				"attrs": {
-					"order": 3
-				},
-				"source": "\r\nEvent\r\n\r\n```html\r\n<CheckboxGroup on-change=\"{ v = $event }\">\r\n\t<Checkbox value=\"{ 1 }\">Option 1</Checkbox>\r\n\t<Checkbox value=\"{ 2 }\">Option 2</Checkbox>\r\n\t<Checkbox value=\"{ 3 }\">Option 3</Checkbox>\r\n</CheckboxGroup>\r\n<br />\r\n<br />\r\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }\r\n```\r\n",
-				"html": "<p>Event</p>\n",
-				"code": {
-					"html": "<CheckboxGroup on-change=\"{ v = $event }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>\n<br />\n<br />\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }"
-				}
-			}
-		],
-		"Input": [
-			{
-				"path": "Input/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"v\"></Input>\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Input placeholder=\"placeholder\" value=\"v\"></Input>"
-				}
-			},
-			{
-				"path": "Input/event.md",
-				"attrs": {
-					"order": 2
-				},
-				"source": "\r\nEvent\r\n\r\n```html\r\n<Input on-change=\"{ v = $event }\"></Input>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
-				"html": "<p>Event</p>\n",
-				"code": {
-					"html": "<Input on-change=\"{ v = $event }\"></Input>\n<Input value=\"{ v }\"></Input>"
-				}
-			}
-		],
-		"Modal": [
-			{
-				"path": "Modal/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary on-click=\"{ show = true }\">Open Modal</Button>\r\n{#if show}\r\n<Modal\r\n\ttitle=\"Modal Title\"\r\n\tok-text=\"Confirm\"\r\n\tcancel-text=\"Cancel\"\r\n\ton-cancel=\"{ show = false }\"\r\n\ton-ok=\"{ show = false }\"\r\n>\r\n\t<div class=\"modal-example-center\">\r\n\t\t<img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\" alt=\"something\">\r\n\t</div>\r\n</Modal>\r\n{/if}\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Button primary on-click=\"{ show = true }\">Open Modal</Button>\n{#if show}\n<Modal\n    title=\"Modal Title\"\n    ok-text=\"Confirm\"\n    cancel-text=\"Cancel\"\n    on-cancel=\"{ show = false }\"\n    on-ok=\"{ show = false }\"\n>\n    <div class=\"modal-example-center\">\n        <img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\" alt=\"something\">\n    </div>\n</Modal>\n{/if}"
-				}
-			}
-		],
-		"Radio": [
-			{
-				"path": "Radio/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Radio checked=\"{ false }\">Option</Radio>\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Radio checked=\"{ false }\">Option</Radio>"
-				}
-			},
-			{
-				"path": "Radio/group.md",
-				"attrs": {
-					"order": 2
-				},
-				"source": "\r\nGroup\r\n\r\n```html\r\n<RadioGroup checked=\"{ 2 }\">\r\n\t<Radio value=\"{ 1 }\">Option 1</Radio>\r\n\t<Radio value=\"{ 2 }\">Option 2</Radio>\r\n\t<Radio value=\"{ 3 }\">Option 3</Radio>\r\n</RadioGroup>\r\n```\r\n",
-				"html": "<p>Group</p>\n",
-				"code": {
-					"html": "<RadioGroup checked=\"{ 2 }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>"
-				}
-			},
-			{
-				"path": "Radio/event.md",
-				"attrs": {
-					"order": 3
-				},
-				"source": "\r\nEvent\r\n\r\n```html\r\n<RadioGroup on-change=\"{ v = $event }\">\r\n\t<Radio value=\"{ 1 }\">Option 1</Radio>\r\n\t<Radio value=\"{ 2 }\">Option 2</Radio>\r\n\t<Radio value=\"{ 3 }\">Option 3</Radio>\r\n</RadioGroup>\r\n<br />\r\n<br />\r\nChecked：{ v || 'none' }\r\n```\r\n",
-				"html": "<p>Event</p>\n",
-				"code": {
-					"html": "<RadioGroup on-change=\"{ v = $event }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>\n<br />\n<br />\nChecked：{ v || 'none' }"
-				}
-			}
-		],
-		"Switch": [
-			{
-				"path": "Switch/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Switch checked=\"{ false }\"></Switch>\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Switch checked=\"{ false }\"></Switch>"
-				}
-			},
-			{
-				"path": "Switch/event.md",
-				"attrs": {
-					"order": 2
-				},
-				"source": "\r\nEvent\r\n\r\n```html\r\n<Switch on-change=\"{ v = $event }\"></Switch>\r\n<br />\r\n<br />\r\nChecked: { v !== undefined ? v : 'none' }\r\n```\r\n",
-				"html": "<p>Event</p>\n",
-				"code": {
-					"html": "<Switch on-change=\"{ v = $event }\"></Switch>\n<br />\n<br />\nChecked: { v !== undefined ? v : 'none' }"
-				}
-			}
-		],
-		"Textarea": [
-			{
-				"path": "Textarea/basic.md",
-				"attrs": {
-					"order": 1
-				},
-				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Textarea></Textarea>\r\n```\r\n",
-				"html": "<p>Basic Usage</p>\n",
-				"code": {
-					"html": "<Textarea></Textarea>"
-				}
-			}
-		]
-	};
-
-/***/ },
-/* 25 */,
-/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2384,14 +2156,14 @@
 	  value: true
 	});
 	
-	var _eventemitter = __webpack_require__(27);
+	var _eventemitter = __webpack_require__(22);
 	
 	var dispatcher = new _eventemitter.EventEmitter2();
 	
 	exports.default = dispatcher;
 
 /***/ },
-/* 27 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3117,6 +2889,232 @@
 	}();
 
 
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"header","attrs":[{"type":"attribute","name":"_r-729c9190","value":""}],"children":[{"type":"text","text":"\n\tPure\n"}]},{"type":"text","text":"\n"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"wrapper"},{"type":"attribute","name":"_r-729c9190","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"Nav","attrs":[{"type":"attribute","name":"_r-729c9190","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"docs"},{"type":"attribute","name":"ref"},{"type":"attribute","name":"_r-729c9190","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('doc', d, e)","constant":false,"setbody":"c._ss_('doc',p_,d, '=', 1)"},"alternate":[],"variable":"d","body":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"Demo","attrs":[{"type":"attribute","name":"source","value":{"type":"expression","body":"c._sg_('html', c._sg_('code', c._sg_('d', d, e)))","constant":false,"setbody":"c._ss_('html',p_,c._sg_('code', c._sg_('d', d, e)), '=', 0)"}},{"type":"attribute","name":"markdown","value":{"type":"expression","body":"c._sg_('html', c._sg_('d', d, e))","constant":false,"setbody":"c._ss_('html',p_,c._sg_('d', d, e), '=', 0)"}},{"type":"attribute","name":"_r-729c9190","value":""}],"children":[]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\n\t\t\n\n\t\t\n\t\t"},{"type":"element","tag":"API","attrs":[{"type":"attribute","name":"_r-729c9190","value":""}],"children":[]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _docs = __webpack_require__(25);
+	
+	var _docs2 = _interopRequireDefault(_docs);
+	
+	var _dispatcher = __webpack_require__(21);
+	
+	var _dispatcher2 = _interopRequireDefault(_dispatcher);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+		'/Button': function Button() {
+			_dispatcher2.default.emit('update', _docs2.default.Button);
+		},
+		'/Input': function Input() {
+			_dispatcher2.default.emit('update', _docs2.default.Input);
+		},
+		'/Textarea': function Textarea() {
+			_dispatcher2.default.emit('update', _docs2.default.Textarea);
+		},
+		'/Radio': function Radio() {
+			_dispatcher2.default.emit('update', _docs2.default.Radio);
+		},
+		'/Checkbox': function Checkbox() {
+			_dispatcher2.default.emit('update', _docs2.default.Checkbox);
+		},
+		'/Switch': function Switch() {
+			_dispatcher2.default.emit('update', _docs2.default.Switch);
+		},
+		'/Modal': function Modal() {
+			_dispatcher2.default.emit('update', _docs2.default.Modal);
+		}
+	};
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"Button": [
+			{
+				"path": "Button/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n\r\n```css\r\n.c {\r\n\tcolor: #333;\r\n}\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Button primary>Primary</Button>\n<Button>Normal</Button>",
+					"css": ".c {\n    color: #333;\n}"
+				}
+			},
+			{
+				"path": "Button/event.md",
+				"attrs": {
+					"order": 2
+				},
+				"source": "\r\nEvent\r\n\r\n```html\r\n<Button on-click=\"{ v = Math.random() }\">Random</Button>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
+				"html": "<p>Event</p>\n",
+				"code": {
+					"html": "<Button on-click=\"{ v = Math.random() }\">Random</Button>\n<Input value=\"{ v }\"></Input>"
+				}
+			}
+		],
+		"Checkbox": [
+			{
+				"path": "Checkbox/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Checkbox checked=\"{ false }\">Option</Checkbox>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Checkbox checked=\"{ false }\">Option</Checkbox>"
+				}
+			},
+			{
+				"path": "Checkbox/group.md",
+				"attrs": {
+					"order": 2
+				},
+				"source": "\r\nGroup\r\n\r\n```html\r\n<CheckboxGroup checked=\"{ 2 }\">\r\n\t<Checkbox value=\"{ 1 }\">Option 1</Checkbox>\r\n\t<Checkbox value=\"{ 2 }\">Option 2</Checkbox>\r\n\t<Checkbox value=\"{ 3 }\">Option 3</Checkbox>\r\n</CheckboxGroup>\r\n```\r\n",
+				"html": "<p>Group</p>\n",
+				"code": {
+					"html": "<CheckboxGroup checked=\"{ 2 }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>"
+				}
+			},
+			{
+				"path": "Checkbox/event.md",
+				"attrs": {
+					"order": 3
+				},
+				"source": "\r\nEvent\r\n\r\n```html\r\n<CheckboxGroup on-change=\"{ v = $event }\">\r\n\t<Checkbox value=\"{ 1 }\">Option 1</Checkbox>\r\n\t<Checkbox value=\"{ 2 }\">Option 2</Checkbox>\r\n\t<Checkbox value=\"{ 3 }\">Option 3</Checkbox>\r\n</CheckboxGroup>\r\n<br />\r\n<br />\r\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }\r\n```\r\n",
+				"html": "<p>Event</p>\n",
+				"code": {
+					"html": "<CheckboxGroup on-change=\"{ v = $event }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>\n<br />\n<br />\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }"
+				}
+			}
+		],
+		"Input": [
+			{
+				"path": "Input/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"v\"></Input>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Input placeholder=\"placeholder\" value=\"v\"></Input>"
+				}
+			},
+			{
+				"path": "Input/event.md",
+				"attrs": {
+					"order": 2
+				},
+				"source": "\r\nEvent\r\n\r\n```html\r\n<Input on-change=\"{ v = $event }\"></Input>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
+				"html": "<p>Event</p>\n",
+				"code": {
+					"html": "<Input on-change=\"{ v = $event }\"></Input>\n<Input value=\"{ v }\"></Input>"
+				}
+			}
+		],
+		"Modal": [
+			{
+				"path": "Modal/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary on-click=\"{ show = true }\">Open Modal</Button>\r\n{#if show}\r\n<Modal\r\n\ttitle=\"Modal Title\"\r\n\tok-text=\"Confirm\"\r\n\tcancel-text=\"Cancel\"\r\n\ton-cancel=\"{ show = false }\"\r\n\ton-ok=\"{ show = false }\"\r\n>\r\n\t<div class=\"modal-example-center\">\r\n\t\t<img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\" alt=\"something\">\r\n\t</div>\r\n</Modal>\r\n{/if}\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Button primary on-click=\"{ show = true }\">Open Modal</Button>\n{#if show}\n<Modal\n    title=\"Modal Title\"\n    ok-text=\"Confirm\"\n    cancel-text=\"Cancel\"\n    on-cancel=\"{ show = false }\"\n    on-ok=\"{ show = false }\"\n>\n    <div class=\"modal-example-center\">\n        <img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\" alt=\"something\">\n    </div>\n</Modal>\n{/if}"
+				}
+			}
+		],
+		"Radio": [
+			{
+				"path": "Radio/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Radio checked=\"{ false }\">Option</Radio>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Radio checked=\"{ false }\">Option</Radio>"
+				}
+			},
+			{
+				"path": "Radio/group.md",
+				"attrs": {
+					"order": 2
+				},
+				"source": "\r\nGroup\r\n\r\n```html\r\n<RadioGroup checked=\"{ 2 }\">\r\n\t<Radio value=\"{ 1 }\">Option 1</Radio>\r\n\t<Radio value=\"{ 2 }\">Option 2</Radio>\r\n\t<Radio value=\"{ 3 }\">Option 3</Radio>\r\n</RadioGroup>\r\n```\r\n",
+				"html": "<p>Group</p>\n",
+				"code": {
+					"html": "<RadioGroup checked=\"{ 2 }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>"
+				}
+			},
+			{
+				"path": "Radio/event.md",
+				"attrs": {
+					"order": 3
+				},
+				"source": "\r\nEvent\r\n\r\n```html\r\n<RadioGroup on-change=\"{ v = $event }\">\r\n\t<Radio value=\"{ 1 }\">Option 1</Radio>\r\n\t<Radio value=\"{ 2 }\">Option 2</Radio>\r\n\t<Radio value=\"{ 3 }\">Option 3</Radio>\r\n</RadioGroup>\r\n<br />\r\n<br />\r\nChecked：{ v || 'none' }\r\n```\r\n",
+				"html": "<p>Event</p>\n",
+				"code": {
+					"html": "<RadioGroup on-change=\"{ v = $event }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>\n<br />\n<br />\nChecked：{ v || 'none' }"
+				}
+			}
+		],
+		"Switch": [
+			{
+				"path": "Switch/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Switch checked=\"{ false }\"></Switch>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Switch checked=\"{ false }\"></Switch>"
+				}
+			},
+			{
+				"path": "Switch/event.md",
+				"attrs": {
+					"order": 2
+				},
+				"source": "\r\nEvent\r\n\r\n```html\r\n<Switch on-change=\"{ v = $event }\"></Switch>\r\n<br />\r\n<br />\r\nChecked: { v !== undefined ? v : 'none' }\r\n```\r\n",
+				"html": "<p>Event</p>\n",
+				"code": {
+					"html": "<Switch on-change=\"{ v = $event }\"></Switch>\n<br />\n<br />\nChecked: { v !== undefined ? v : 'none' }"
+				}
+			}
+		],
+		"Textarea": [
+			{
+				"path": "Textarea/basic.md",
+				"attrs": {
+					"order": 1
+				},
+				"source": "\r\nBasic Usage\r\n\r\n```html\r\n<Textarea></Textarea>\r\n```\r\n",
+				"html": "<p>Basic Usage</p>\n",
+				"code": {
+					"html": "<Textarea></Textarea>"
+				}
+			}
+		]
+	};
+
 /***/ }
 /******/ ]);
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=app-39d28e96.js.map

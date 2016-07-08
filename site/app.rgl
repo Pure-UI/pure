@@ -34,9 +34,20 @@
 </script>
 
 <style>
+	html {
+		font-size: 14px;
+	}
+
 	body {
 		margin: 0;
 		font-family: cursive;
+	}
+
+	.modal-example-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
 	}
 </style>
 
