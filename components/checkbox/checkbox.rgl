@@ -29,7 +29,7 @@
 <style lang="less" scoped>
 	@import '../../variable.less';
 
-	@checkbox-size: 20px;
+	@checkbox-size: 18px;
 	@checkbox-border-color: #DDD;
 	@checkbox-checkmark-width: 10px;
 	@checkbox-checkmark-height: 5px;
@@ -49,8 +49,8 @@
 		}
 
 		.r-checkbox-inner {
-			width: 20px;
-			height: 20px;
+			width: @checkbox-size;
+			height: @checkbox-size;
 			display: inline-block;
 			border: solid 1px @checkbox-border-color;
 			vertical-align: middle;
@@ -59,7 +59,7 @@
 				content: '';
 				position: absolute;
 				top: 4px;
-				left: 5px;
+				left: 4px;
 				width: @checkbox-checkmark-width;
 				height: @checkbox-checkmark-height;
 				border-left: solid 2px @primary-color;

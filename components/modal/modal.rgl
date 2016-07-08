@@ -46,7 +46,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%,-50%,0);
-		min-width: 780px;
+		width: 700px;
+		max-width: 88%;
 		background-color: #FFF;
 		border-radius: 5px;
 		box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.14);
@@ -62,7 +63,8 @@
 	.r-modal-bd {
 		padding: 0 40px;
 		font-size: 15px;
-		max-height: 600px;
+		height: 600px;
+		max-height: 70vh;
 		overflow-y: auto;
 
 		&::-webkit-scrollbar {

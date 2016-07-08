@@ -31,12 +31,11 @@ module.exports = {
 	regularjs: {
 		loaders: {
 			css: ExtractTextPlugin.extract( 'css' ),
-			mcss: ExtractTextPlugin.extract( 'css!mcss' ),
 			less: ExtractTextPlugin.extract( 'css!less' ),
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', '.mcss', '.rgl' ]
+		extensions: [ '', '.js', '.less', '.rgl' ]
 	},
 	externals: {
 		'regularjs': 'Regular'

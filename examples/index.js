@@ -30,7 +30,8 @@ var App = Regular.extend({
 		<br />
 		<br />
 
-		<Button on-emit="{ this.onEmit() }">刷新</Button>
+		<Button on-click="{ v = Math.random() }">Follow</Button>
+		<Input value="{ v }"></Input>
 		<Button primary on-click="{ this.onOpenModal() }">打开模态框</Button>
 
 		<br />

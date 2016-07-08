@@ -1,0 +1,59 @@
+<template>
+	<header>
+
+	</header>
+	<div class="wrapper">
+		<Nav></Nav>
+		<div class="docs">
+			<Demo source="{ sourceBasic }"></Demo>
+			{#list 1..3 as item}
+			<Demo source="{ source }" markdown="{ markdown }"></Demo>
+			{/list}
+		</div>
+	</div>
+</template>
+
+<script>
+	import './components/demo';
+	import './components/nav';
+
+	export default {
+		config() {
+			this.data.sourceBasic = `
+				<Button primary>Primary</Button>
+				<Button>Normal</Button>
+			`;
+			this.data.source = `
+				<Button on-click="{ v = Math.random() }">点击</Button> { v }
+			`;
+			this.markdown = `
+				按钮有两种形态
+			`;
+		}
+	}
+</script>
+
+<style>
+	body {
+		margin: 0;
+	}
+</style>
+
+<style lang="less" scoped>
+	header {
+		width: 100%;
+		height: 50px;
+		background-color: #DDD;
+	}
+
+	.wrapper {
+		display: flex;
+		width: 90%;
+		margin: 0 auto;
+		padding: 60px 0;
+	}
+
+	.docs {
+		flex: 1;
+	}
+</style>

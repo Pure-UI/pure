@@ -15,12 +15,11 @@
 	@import '../../variable.less';
 
 	.r-input {
-		height: 40px;
 		background-color: #FFF;
 		color: @form-color;
 		outline: none;
-		padding: 0 10px;
-		font-size: @form-font-size;
+		padding: .7em 10px;
+		font-size: 1rem;
 		display: inline-block;
 		vertical-align: middle;
 		box-sizing: border-box;

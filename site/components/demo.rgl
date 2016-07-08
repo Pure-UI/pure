@@ -1,0 +1,31 @@
+<template>
+	<div class="doc">
+		<div class="demo-box">
+			{#inc source}
+		</div>
+		<div class="markdown-box">
+			{ markdown }
+		</div>
+		<div class="code-box">
+			<pre><code ref="c">{ deindentSource }</code></pre>
+		</div>
+	</div>
+</template>
+
+<script>
+	import deindent from 'de-indent';
+
+	export default {
+		name: 'Demo',
+		config() {
+			this.data.deindentSource = deindent( this.data.source.trim() );
+		},
+		init() {
+			hljs.highlightBlock( this.$refs.c );
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+
+</style>

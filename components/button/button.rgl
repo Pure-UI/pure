@@ -54,10 +54,10 @@
 			const offsetX = pageX - left;
 			const offsetY = pageY - top;
 
-			this.data.waveTop = offsetY - width * 1.5 / 2;
-			this.data.waveLeft = offsetX - width * 1.5 / 2;
-			this.data.waveWidth = width * 1.5;
-			this.data.waveHeight = width * 1.5;
+			this.data.waveTop = offsetY - width / 2;
+			this.data.waveLeft = offsetX - width / 2;
+			this.data.waveWidth = width;
+			this.data.waveHeight = width;
 
 			this.data.pressed = false;
 			this.$update();
@@ -74,7 +74,6 @@
 	@import '../../variable.less';
 
 	@button-color: @primary-color;
-	@button-font-size: 16px;
 
 	@keyframes r-button-ripple {
 		from {
@@ -117,10 +116,9 @@
 		position: relative;
 		-webkit-appearance: none;
 		border: none;
-		padding: 0 30px;
-		font-size: @button-font-size;
-		border-radius: 4px;
-		height: 40px;
+		padding: .7em 1.5em;
+		font-size: 1rem;
+		border-radius: .28rem;
 		outline: none;
 		cursor: pointer;
 		box-sizing: border-box;
@@ -129,13 +127,14 @@
 		overflow: hidden;
 
 		&:active {
-			box-shadow: inset 0 1px 5px rgba(0,0,0,.19);
+			box-shadow: inset 0 1px 5px rgba(0,0,0,.15);
 		}
 	}
 
 	.r-button-basic {
 		background-color: #FFF;
 		border: solid 1px #DDD;
+		color: #333;
 
 		&:hover, &:focus {
 			background-color: shade(#FFF, 3%);

@@ -16,7 +16,7 @@
 		padding: 10px;
 		outline: none;
 		vertical-align: middle;
-		font-size: @form-font-size;
+		font-size: 1rem;
 		color: @form-color;
 
 		&:focus {

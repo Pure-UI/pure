@@ -1,0 +1,44 @@
+<template>
+	<nav class="nav">
+		<div class="title">Components</div>
+		<ul>
+			<li>Button</li>
+			<li>Button</li>
+			<li>Button</li>
+			<li>Button</li>
+			<li>Button</li>
+		</ul>
+	</nav>
+</template>
+
+<script>
+	export default {
+		name: 'Nav',
+		config() {
+
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+	.nav {
+		width: 20%;
+		color: #333;
+	}
+
+	.title {
+		font-size: 11px;
+		padding: 10px;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		padding: 10px;
+		cursor: pointer;
+	}
+</style>

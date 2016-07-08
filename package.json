@@ -29,6 +29,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "de-indent": "^1.0.2",
     "regularjs": "^0.4.4"
   }
 }

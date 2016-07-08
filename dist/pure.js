@@ -171,10 +171,10 @@
 			var offsetX = pageX - left;
 			var offsetY = pageY - top;
 	
-			this.data.waveTop = offsetY - width * 1.5 / 2;
-			this.data.waveLeft = offsetX - width * 1.5 / 2;
-			this.data.waveWidth = width * 1.5;
-			this.data.waveHeight = width * 1.5;
+			this.data.waveTop = offsetY - width / 2;
+			this.data.waveLeft = offsetX - width / 2;
+			this.data.waveWidth = width;
+			this.data.waveHeight = width;
 	
 			this.data.pressed = false;
 			this.$update();
@@ -190,7 +190,7 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"button","attrs":[{"type":"attribute","name":"ref","value":"b"},{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-button ',c._sg_('primary', d, e)?'r-button-primary':'r-button-basic'].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-mouseup","value":{"type":"expression","body":"c['onClick'](c._sg_('$event', d, e))","constant":false,"setbody":false}},{"type":"attribute","name":"_r-85e263ca","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-button-wave  ',c._sg_('pressed', d, e)?'pressed':'r-button-wave-hidden'].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"style","value":{"type":"expression","body":"['width: ',c._sg_('waveWidth', d, e),'px;height: ',c._sg_('waveHeight', d, e),'px;top: ',c._sg_('waveTop', d, e),'px;left: ',c._sg_('waveLeft', d, e),'px;'].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"ref","value":"w"},{"type":"attribute","name":"_r-85e263ca","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-button-text"},{"type":"attribute","name":"_r-85e263ca","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"element","tag":"button","attrs":[{"type":"attribute","name":"ref","value":"b"},{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-button ',c._sg_('primary', d, e)?'r-button-primary':'r-button-basic'].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-mouseup","value":{"type":"expression","body":"c['onClick'](c._sg_('$event', d, e))","constant":false,"setbody":false}},{"type":"attribute","name":"_r-5065414c","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-button-wave  ',c._sg_('pressed', d, e)?'pressed':'r-button-wave-hidden'].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"style","value":{"type":"expression","body":"['width: ',c._sg_('waveWidth', d, e),'px;height: ',c._sg_('waveHeight', d, e),'px;top: ',c._sg_('waveTop', d, e),'px;left: ',c._sg_('waveLeft', d, e),'px;'].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"ref","value":"w"},{"type":"attribute","name":"_r-5065414c","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-button-text"},{"type":"attribute","name":"_r-5065414c","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
 
 /***/ },
 /* 7 */
@@ -278,7 +278,7 @@
 /* 12 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"table","attrs":[{"type":"attribute","name":"class","value":"r-table"},{"type":"attribute","name":"_r-699c0e82","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"thead","attrs":[{"type":"attribute","name":"class","value":"r-table-head"},{"type":"attribute","name":"_r-699c0e82","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"tr","attrs":[{"type":"attribute","name":"_r-699c0e82","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('fields', d, e)","constant":false,"setbody":"c._ss_('fields',p_,d, '=', 1)"},"alternate":[],"variable":"field","body":[{"type":"text","text":"\n\t\t\t\t"},{"type":"element","tag":"th","attrs":[{"type":"attribute","name":"_r-699c0e82","value":""}],"children":[{"type":"expression","body":"c._sg_('label', c._sg_('field', d, e))","constant":false,"setbody":"c._ss_('label',p_,c._sg_('field', d, e), '=', 0)"}]},{"type":"text","text":"\n\t\t\t"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"tbody","attrs":[{"type":"attribute","name":"_r-699c0e82","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('dataSource', d, e)","constant":false,"setbody":"c._ss_('dataSource',p_,d, '=', 1)"},"alternate":[],"variable":"ds","body":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"TableRow","attrs":[{"type":"attribute","name":"data-source","value":{"type":"expression","body":"c._sg_('ds', d, e)","constant":false,"setbody":"c._ss_('ds',p_,d, '=', 1)"}},{"type":"attribute","name":"fields","value":{"type":"expression","body":"c._sg_('fields', d, e)","constant":false,"setbody":"c._ss_('fields',p_,d, '=', 1)"}},{"type":"attribute","name":"_r-699c0e82","value":""}],"children":[]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"element","tag":"table","attrs":[{"type":"attribute","name":"class","value":"r-table"},{"type":"attribute","name":"_r-3e91cdbe","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"thead","attrs":[{"type":"attribute","name":"class","value":"r-table-head"},{"type":"attribute","name":"_r-3e91cdbe","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"tr","attrs":[{"type":"attribute","name":"_r-3e91cdbe","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('fields', d, e)","constant":false,"setbody":"c._ss_('fields',p_,d, '=', 1)"},"alternate":[],"variable":"field","body":[{"type":"text","text":"\n\t\t\t\t"},{"type":"element","tag":"th","attrs":[{"type":"attribute","name":"_r-3e91cdbe","value":""}],"children":[{"type":"expression","body":"c._sg_('label', c._sg_('field', d, e))","constant":false,"setbody":"c._ss_('label',p_,c._sg_('field', d, e), '=', 0)"}]},{"type":"text","text":"\n\t\t\t"}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"tbody","attrs":[{"type":"attribute","name":"_r-3e91cdbe","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('dataSource', d, e)","constant":false,"setbody":"c._ss_('dataSource',p_,d, '=', 1)"},"alternate":[],"variable":"ds","body":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"TableRow","attrs":[{"type":"attribute","name":"data-source","value":{"type":"expression","body":"c._sg_('ds', d, e)","constant":false,"setbody":"c._ss_('ds',p_,d, '=', 1)"}},{"type":"attribute","name":"fields","value":{"type":"expression","body":"c._sg_('fields', d, e)","constant":false,"setbody":"c._ss_('fields',p_,d, '=', 1)"}},{"type":"attribute","name":"_r-3e91cdbe","value":""}],"children":[]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
 
 /***/ },
 /* 13 */
@@ -334,7 +334,7 @@
 /* 16 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"input","attrs":[{"type":"attribute","name":"class","value":"r-input"},{"type":"attribute","name":"type","value":"text"},{"type":"attribute","name":"value","value":{"type":"expression","body":"c._sg_('value', d, e)","constant":false,"setbody":"c._ss_('value',p_,d, '=', 1)"}},{"type":"attribute","name":"placeholder","value":{"type":"expression","body":"c._sg_('placeholder', d, e)","constant":false,"setbody":"c._ss_('placeholder',p_,d, '=', 1)"}},{"type":"attribute","name":"on-input","value":{"type":"expression","body":"c['onChange']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-4d1c07b7","value":""}]}]
+	module.exports = [{"type":"element","tag":"input","attrs":[{"type":"attribute","name":"class","value":"r-input"},{"type":"attribute","name":"type","value":"text"},{"type":"attribute","name":"value","value":{"type":"expression","body":"c._sg_('value', d, e)","constant":false,"setbody":"c._ss_('value',p_,d, '=', 1)"}},{"type":"attribute","name":"placeholder","value":{"type":"expression","body":"c._sg_('placeholder', d, e)","constant":false,"setbody":"c._ss_('placeholder',p_,d, '=', 1)"}},{"type":"attribute","name":"on-input","value":{"type":"expression","body":"c['onChange']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-7f084694","value":""}]}]
 
 /***/ },
 /* 17 */
@@ -387,7 +387,7 @@
 /* 20 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"textarea","attrs":[{"type":"attribute","name":"class","value":"r-textarea"},{"type":"attribute","name":"_r-c8f96cca","value":""}],"children":[]}]
+	module.exports = [{"type":"element","tag":"textarea","attrs":[{"type":"attribute","name":"class","value":"r-textarea"},{"type":"attribute","name":"_r-2609235a","value":""}],"children":[]}]
 
 /***/ },
 /* 21 */
@@ -490,7 +490,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"tr","attrs":[{"type":"attribute","name":"class","value":"r-tr"},{"type":"attribute","name":"_r-2270bdcc","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('fields', d, e)","constant":false,"setbody":"c._ss_('fields',p_,d, '=', 1)"},"alternate":[],"variable":"field","body":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"td","attrs":[{"type":"attribute","name":"_r-2270bdcc","value":""}],"children":[{"type":"template","content":{"type":"expression","body":"c['renderColumns'](c._sg_('field', d, e))","constant":false,"setbody":false}}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"element","tag":"tr","attrs":[{"type":"attribute","name":"class","value":"r-tr"},{"type":"attribute","name":"_r-f060096a","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"list","sequence":{"type":"expression","body":"c._sg_('fields', d, e)","constant":false,"setbody":"c._ss_('fields',p_,d, '=', 1)"},"alternate":[],"variable":"field","body":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"td","attrs":[{"type":"attribute","name":"_r-f060096a","value":""}],"children":[{"type":"template","content":{"type":"expression","body":"c['renderColumns'](c._sg_('field', d, e))","constant":false,"setbody":false}}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
 
 /***/ },
 /* 28 */
@@ -550,9 +550,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __regular_script__, __regular_template__;
-	__webpack_require__(61)
+	__webpack_require__(33)
 	__regular_script__ = __webpack_require__(34)
-	__regular_template__ = __webpack_require__(62)
+	__regular_template__ = __webpack_require__(35)
 	var Regular = __webpack_require__( 7 );
 	
 	var __rs__ = __regular_script__ || {};
@@ -574,7 +574,12 @@
 	module.exports = __Component__;
 
 /***/ },
-/* 33 */,
+/* 33 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -601,7 +606,12 @@
 	};
 
 /***/ },
-/* 35 */,
+/* 35 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-mask"},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal"},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-hd"},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"expression","body":"c._sg_('title', d, e)","constant":false,"setbody":"c._ss_('title',p_,d, '=', 1)"},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-bd"},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-actions"},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"Button","attrs":[{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onCancel']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"expression","body":"c._sg_('cancelText', d, e)||'取消'","constant":false,"setbody":false}]},{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"Button","attrs":[{"type":"attribute","name":"primary"},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onOk']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-939a0d88","value":""}],"children":[{"type":"expression","body":"c._sg_('okText', d, e)||'确认'","constant":false,"setbody":false}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+
+/***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -666,7 +676,7 @@
 /* 39 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-checkbox ',c._sg_('checked', d, e)?'r-checkbox-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-1a8f43bb","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-checkbox-inner"},{"type":"attribute","name":"_r-1a8f43bb","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-checkbox-text"},{"type":"attribute","name":"_r-1a8f43bb","value":""}],"children":[{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}}]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-checkbox ',c._sg_('checked', d, e)?'r-checkbox-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-b5d5c50c","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-checkbox-inner"},{"type":"attribute","name":"_r-b5d5c50c","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-checkbox-text"},{"type":"attribute","name":"_r-b5d5c50c","value":""}],"children":[{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}}]},{"type":"text","text":"\n"}]}]
 
 /***/ },
 /* 40 */
@@ -806,7 +816,7 @@
 /* 47 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-radio ',c._sg_('checked', d, e)?'r-radio-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-29e5934e","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-radio-inner"},{"type":"attribute","name":"_r-29e5934e","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-radio-text"},{"type":"attribute","name":"_r-29e5934e","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-radio ',c._sg_('checked', d, e)?'r-radio-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-5e6d0b58","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-radio-inner"},{"type":"attribute","name":"_r-5e6d0b58","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-radio-text"},{"type":"attribute","name":"_r-5e6d0b58","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
 
 /***/ },
 /* 48 */
@@ -929,7 +939,7 @@
 /* 55 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"select","attrs":[{"type":"attribute","name":"_r-7c5136db","value":""}],"children":[]}]
+	module.exports = [{"type":"element","tag":"select","attrs":[{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[]}]
 
 /***/ },
 /* 56 */
@@ -998,20 +1008,7 @@
 /* 59 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch ',c._sg_('checked', d, e)?'r-switch-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-mousedown","value":{"type":"expression","body":"c['onMousedown']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-mouseup","value":{"type":"expression","body":"c['onMouseup']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-78ac47db","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch-circle-mask ',c._sg_('showMask', d, e)?'r-switch-show-mask':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"_r-78ac47db","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-switch-block"},{"type":"attribute","name":"_r-78ac47db","value":""}],"children":[]},{"type":"text","text":"\n"}]}]
-
-/***/ },
-/* 60 */,
-/* 61 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 62 */
-/***/ function(module, exports) {
-
-	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-mask"},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal"},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"text","text":"\n\t\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-hd"},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"expression","body":"c._sg_('title', d, e)","constant":false,"setbody":"c._ss_('title',p_,d, '=', 1)"},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-bd"},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t\t"},{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-modal-actions"},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"Button","attrs":[{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onCancel']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"expression","body":"c._sg_('cancelText', d, e)||'取消'","constant":false,"setbody":false}]},{"type":"text","text":"\n\t\t\t"},{"type":"element","tag":"Button","attrs":[{"type":"attribute","name":"primary"},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onOk']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-42d3243d","value":""}],"children":[{"type":"expression","body":"c._sg_('okText', d, e)||'确认'","constant":false,"setbody":false}]},{"type":"text","text":"\n\t\t"}]},{"type":"text","text":"\n\t"}]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch ',c._sg_('checked', d, e)?'r-switch-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-mousedown","value":{"type":"expression","body":"c['onMousedown']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-mouseup","value":{"type":"expression","body":"c['onMouseup']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch-circle-mask ',c._sg_('showMask', d, e)?'r-switch-show-mask':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-switch-block"},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[]},{"type":"text","text":"\n"}]}]
 
 /***/ }
 /******/ ]);

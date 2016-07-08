@@ -32,7 +32,7 @@
 <style lang="less" scoped>
 	@import '../../variable.less';
 
-	@radio-size: 20px;
+	@radio-size: 18px;
 	@radio-dot-size: 8px;
 
 	.r-radio.r-radio-checked {
