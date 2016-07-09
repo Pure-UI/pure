@@ -1,11 +1,11 @@
 var HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+var webpack = require( 'webpack' );
 var cwd = process.cwd();
 
 module.exports = {
 	entry: './site/index.js',
 	cwd: cwd,
-	devtool: 'source-map',
 	output: {
 		path: './site/dist',
 		publicPath: 'dist/',
@@ -52,6 +52,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'site/_index.html',
 			filename: '../index.html',
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
 		})
 	]
 };
