@@ -73,6 +73,16 @@
 	__webpack_require__(52);
 	
 	__webpack_require__(56);
+	
+	__webpack_require__(60);
+	
+	__webpack_require__(64);
+	
+	__webpack_require__(68);
+	
+	__webpack_require__(72);
+	
+	__webpack_require__(76);
 
 /***/ },
 /* 1 */,
@@ -941,14 +951,30 @@
 		value: true
 	});
 	exports.default = {
-		name: 'Select'
+		name: 'Switch',
+		config: function config() {},
+		onMousedown: function onMousedown() {
+			this.data.showMask = true;
+			this.$update();
+		},
+		onMouseup: function onMouseup() {
+			this.data.showMask = false;
+			this.$update();
+		},
+		onClick: function onClick() {
+			this.data.checked = !this.data.checked;
+			this.$update();
+	
+			this.$emit('change', this.data.checked);
+			this.$emit('emit', this.data.checked);
+		}
 	};
 
 /***/ },
 /* 55 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"select","attrs":[{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[]}]
+	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch ',c._sg_('checked', d, e)?'r-switch-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-mousedown","value":{"type":"expression","body":"c['onMousedown']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-mouseup","value":{"type":"expression","body":"c['onMouseup']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch-circle-mask ',c._sg_('showMask', d, e)?'r-switch-show-mask':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-switch-block"},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[]},{"type":"text","text":"\n"}]}]
 
 /***/ },
 /* 56 */
@@ -994,30 +1020,316 @@
 		value: true
 	});
 	exports.default = {
-		name: 'Switch',
+		name: 'Select',
 		config: function config() {},
-		onMousedown: function onMousedown() {
-			this.data.showMask = true;
-			this.$update();
-		},
-		onMouseup: function onMouseup() {
-			this.data.showMask = false;
-			this.$update();
-		},
-		onClick: function onClick() {
-			this.data.checked = !this.data.checked;
-			this.$update();
-	
-			this.$emit('change', this.data.checked);
-			this.$emit('emit', this.data.checked);
-		}
+		init: function init() {}
 	};
 
 /***/ },
 /* 59 */
 /***/ function(module, exports) {
 
-	module.exports = [{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch ',c._sg_('checked', d, e)?'r-switch-checked':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"on-mousedown","value":{"type":"expression","body":"c['onMousedown']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-mouseup","value":{"type":"expression","body":"c['onMouseup']()","constant":false,"setbody":false}},{"type":"attribute","name":"on-click","value":{"type":"expression","body":"c['onClick']()","constant":false,"setbody":false}},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-switch-circle-mask ',c._sg_('showMask', d, e)?'r-switch-show-mask':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[]},{"type":"text","text":"\n\t"},{"type":"element","tag":"span","attrs":[{"type":"attribute","name":"class","value":"r-switch-block"},{"type":"attribute","name":"_r-d92a4dcc","value":""}],"children":[]},{"type":"text","text":"\n"}]}]
+	module.exports = [{"type":"text","text":"\n"},{"type":"element","tag":"select","attrs":[{"type":"attribute","name":"class","value":"r-select"},{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"element","tag":"option","attrs":[{"type":"attribute","name":"value","value":""},{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[{"type":"text","text":"Option 1"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"option","attrs":[{"type":"attribute","name":"value","value":""},{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[{"type":"text","text":"Option 2"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"option","attrs":[{"type":"attribute","name":"value","value":""},{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[{"type":"text","text":"Option 3"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"option","attrs":[{"type":"attribute","name":"value","value":""},{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[{"type":"text","text":"Option 4"}]},{"type":"text","text":"\n\t"},{"type":"element","tag":"option","attrs":[{"type":"attribute","name":"value","value":""},{"type":"attribute","name":"_r-d1e06fcc","value":""}],"children":[{"type":"text","text":"Option 5"}]},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __regular_script__, __regular_template__;
+	__webpack_require__(61)
+	__regular_script__ = __webpack_require__(62)
+	__regular_template__ = __webpack_require__(63)
+	var Regular = __webpack_require__( 7 );
+	
+	var __rs__ = __regular_script__ || {};
+	if (__rs__.__esModule) __rs__ = __rs__.default;
+	
+	var __Component__;
+	if( typeof __rs__ === "object" ) {
+		__rs__.template = __regular_template__;
+		__Component__ = Regular.extend(__rs__);
+		if( typeof __rs__.component === "object" ) {
+			for( var i in __rs__.component ) {
+				__Component__.component(i, __rs__.component[ i ]);
+			}
+		}
+	} else if( typeof __rs__ === "function" && ( __rs__.prototype instanceof Regular ) ) {
+		__rs__.prototype.template = __regular_template__;
+		__Component__ = __rs__;
+	}
+	module.exports = __Component__;
+
+/***/ },
+/* 61 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 62 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		name: 'Option',
+		config: function config() {
+			console.log(this.$outer);
+		},
+		init: function init() {}
+	};
+
+/***/ },
+/* 63 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-option"},{"type":"attribute","name":"_r-4ba2b713","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __regular_script__, __regular_template__;
+	__webpack_require__(65)
+	__regular_script__ = __webpack_require__(66)
+	__regular_template__ = __webpack_require__(67)
+	var Regular = __webpack_require__( 7 );
+	
+	var __rs__ = __regular_script__ || {};
+	if (__rs__.__esModule) __rs__ = __rs__.default;
+	
+	var __Component__;
+	if( typeof __rs__ === "object" ) {
+		__rs__.template = __regular_template__;
+		__Component__ = Regular.extend(__rs__);
+		if( typeof __rs__.component === "object" ) {
+			for( var i in __rs__.component ) {
+				__Component__.component(i, __rs__.component[ i ]);
+			}
+		}
+	} else if( typeof __rs__ === "function" && ( __rs__.prototype instanceof Regular ) ) {
+		__rs__.prototype.template = __regular_template__;
+		__Component__ = __rs__;
+	}
+	module.exports = __Component__;
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 66 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		name: 'Form'
+	};
+
+/***/ },
+/* 67 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":{"type":"expression","body":"['r-form ',c._sg_('v', d, e)?'r-form-vertical':''].join('')","constant":false,"setbody":false}},{"type":"attribute","name":"_r-0bd4e0cc","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __regular_script__, __regular_template__;
+	__webpack_require__(87)
+	__webpack_require__(86)
+	__regular_script__ = __webpack_require__(70)
+	__regular_template__ = __webpack_require__(71)
+	var Regular = __webpack_require__( 7 );
+	
+	var __rs__ = __regular_script__ || {};
+	if (__rs__.__esModule) __rs__ = __rs__.default;
+	
+	var __Component__;
+	if( typeof __rs__ === "object" ) {
+		__rs__.template = __regular_template__;
+		__Component__ = Regular.extend(__rs__);
+		if( typeof __rs__.component === "object" ) {
+			for( var i in __rs__.component ) {
+				__Component__.component(i, __rs__.component[ i ]);
+			}
+		}
+	} else if( typeof __rs__ === "function" && ( __rs__.prototype instanceof Regular ) ) {
+		__rs__.prototype.template = __regular_template__;
+		__Component__ = __rs__;
+	}
+	module.exports = __Component__;
+
+/***/ },
+/* 69 */,
+/* 70 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		name: 'FormItem'
+	};
+
+/***/ },
+/* 71 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-item"},{"type":"attribute","name":"_r-f50650d0","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 72 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __regular_script__, __regular_template__;
+	__webpack_require__(88)
+	__webpack_require__(89)
+	__regular_script__ = __webpack_require__(74)
+	__regular_template__ = __webpack_require__(75)
+	var Regular = __webpack_require__( 7 );
+	
+	var __rs__ = __regular_script__ || {};
+	if (__rs__.__esModule) __rs__ = __rs__.default;
+	
+	var __Component__;
+	if( typeof __rs__ === "object" ) {
+		__rs__.template = __regular_template__;
+		__Component__ = Regular.extend(__rs__);
+		if( typeof __rs__.component === "object" ) {
+			for( var i in __rs__.component ) {
+				__Component__.component(i, __rs__.component[ i ]);
+			}
+		}
+	} else if( typeof __rs__ === "function" && ( __rs__.prototype instanceof Regular ) ) {
+		__rs__.prototype.template = __regular_template__;
+		__Component__ = __rs__;
+	}
+	module.exports = __Component__;
+
+/***/ },
+/* 73 */,
+/* 74 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		name: 'FormLabel',
+		init: function init() {
+			this.$outer && this.$outer.ping && this.$outer.ping(this);
+		}
+	};
+
+/***/ },
+/* 75 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-label"},{"type":"attribute","name":"_r-efb2e37e","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __regular_script__, __regular_template__;
+	__webpack_require__(82)
+	__webpack_require__(81)
+	__regular_script__ = __webpack_require__(78)
+	__regular_template__ = __webpack_require__(79)
+	var Regular = __webpack_require__( 7 );
+	
+	var __rs__ = __regular_script__ || {};
+	if (__rs__.__esModule) __rs__ = __rs__.default;
+	
+	var __Component__;
+	if( typeof __rs__ === "object" ) {
+		__rs__.template = __regular_template__;
+		__Component__ = Regular.extend(__rs__);
+		if( typeof __rs__.component === "object" ) {
+			for( var i in __rs__.component ) {
+				__Component__.component(i, __rs__.component[ i ]);
+			}
+		}
+	} else if( typeof __rs__ === "function" && ( __rs__.prototype instanceof Regular ) ) {
+		__rs__.prototype.template = __regular_template__;
+		__Component__ = __rs__;
+	}
+	module.exports = __Component__;
+
+/***/ },
+/* 77 */,
+/* 78 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		name: 'FormControl'
+	};
+
+/***/ },
+/* 79 */
+/***/ function(module, exports) {
+
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-control"},{"type":"attribute","name":"_r-240261ac","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
+
+/***/ },
+/* 80 */,
+/* 81 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 82 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 87 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 88 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 89 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

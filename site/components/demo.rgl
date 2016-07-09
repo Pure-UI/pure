@@ -1,14 +1,18 @@
 <template>
 	<div class="doc">
+		{#if markdown}
 		<div class="markdown-box">
 			{#inc markdown }
 		</div>
+		{/if}
 
+		{#if source}
 		<div class="demo-box">
 			{#inc source}
 		</div>
+		{/if}
 
-		<div class="code-box">
+		<div class="{ deindentSource ? 'code-box' : '' }">
 			<pre><code ref="c">{ deindentSource }</code></pre>
 		</div>
 	</div>
@@ -26,19 +30,20 @@
 			this.data.deindentSource = deindent( this.data.source ).trim();
 		},
 		init() {
-			hljs.highlightBlock( this.$refs.c );
+			if( this.data.deindentSource ) {
+				hljs.highlightBlock( this.$refs.c );
+			}
 		}
 	}
 </script>
 
 <style lang="less" scoped>
-	.hljs {
-		border-radius: 4px;
-		line-height: 1.6;
-		padding: 15px;
-	}
-
 	.code-box {
+		.hljs {
+			border-radius: 4px;
+			line-height: 1.6;
+			padding: 15px;
+		}
 	}
 
 	.markdown-box {
@@ -46,9 +51,5 @@
 		border-bottom: solid 1px #f0f0f0;
 		font-family: '微软雅黑';
 		color: #666;
-	}
-
-	code {
-		font-family: sans-serif, Quicksand;
 	}
 </style>

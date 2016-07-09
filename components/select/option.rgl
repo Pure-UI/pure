@@ -1,0 +1,48 @@
+<template>
+	<div class="r-option">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'Option',
+		config() {
+			console.log( this.$outer )
+		},
+		init() {
+
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+	@option-width: 170px;
+	@delta: 6px;
+
+	.r-option {
+		position: absolute;
+		width: @option-width;
+		border: solid 1px #DDD;
+		padding: .5em 10px;
+		font-size: 1rem;
+		background-color: #FFF;
+		margin: 0 auto;
+
+		&:nth-child(1) {
+			width: @option-width - @delta;
+		}
+		&:nth-child(2) {
+			width: @option-width - @delta * 2;
+		}
+		&:nth-child(3) {
+			width: @option-width - @delta * 3;
+		}
+		&:nth-child(4) {
+			width: @option-width - @delta * 4;
+		}
+		&:nth-child(5) {
+			width: @option-width - @delta * 5;
+		}
+	}
+</style>

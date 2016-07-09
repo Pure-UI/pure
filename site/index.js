@@ -7,6 +7,4 @@ import routes from './routes';
 new App().$inject( document.getElementById( 'app' ) );
 
 const router = Router( routes );
-router.setRoute( 'Button' );
-
 router.init();

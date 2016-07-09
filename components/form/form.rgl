@@ -1,0 +1,17 @@
+<template>
+	<div class="r-form { v ? 'r-form-vertical' : '' }">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'Form'
+	}
+</script>
+
+<style lang="less" scoped>
+	.r-form {
+
+	}
+</style>

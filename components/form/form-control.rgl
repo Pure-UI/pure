@@ -1,0 +1,25 @@
+<template>
+	<div class="r-form-control">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'FormControl'
+	}
+</script>
+
+<style lang="less">
+	.r-form-control {
+		input, textarea, select {
+			width: 100%!important;
+		}
+	}
+</style>
+
+<style lang="less" scoped>
+	.r-form-control {
+		width: 100%;
+	}
+</style>

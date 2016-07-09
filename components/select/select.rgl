@@ -1,13 +1,41 @@
 <template>
-	<select></select>
+	<!-- <div class="r-select-trigger">选中1项，共10项</div>
+	<div class="r-select-items">
+		{#inc this.$body}
+	</div> -->
+	<select class="r-select">
+		<option value="">Option 1</option>
+		<option value="">Option 2</option>
+		<option value="">Option 3</option>
+		<option value="">Option 4</option>
+		<option value="">Option 5</option>
+	</select>
 </template>
 
 <script>
 	export default {
-		name: 'Select'
+		name: 'Select',
+		config() {
+
+		},
+		init() {
+
+		}
 	}
 </script>
 
 <style lang="less" scoped>
+	.r-select {
+		width: 170px;
+		border: solid 1px #DDD;
+		padding: .7em 10px;
+		font-size: 1rem;
+		background-color: #FFF;
+		outline: none;
+	}
 
+	.r-select-items {
+		position: absolute;
+		width: 170px;
+	}
 </style>

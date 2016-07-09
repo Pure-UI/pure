@@ -4,6 +4,57 @@ var App = Regular.extend({
 		<br />
 		<br />
 
+		<Form v>
+			<FormItem>
+				<FormLabel>姓名</FormLabel>
+				<FormControl>
+					<Input placeholder=""></Input>
+				</FormControl>
+			</FormItem>
+			<FormItem>
+				<FormLabel>年龄</FormLabel>
+				<FormControl>
+					<Input></Input>
+				</FormControl>
+			</FormItem>
+			<FormItem>
+				<FormLabel>萝莉保护协会成员</FormLabel>
+				<FormControl>
+					<Select></Select>
+				</FormControl>
+			</FormItem>
+
+			<FormItem>
+				<FormLabel></FormLabel>
+				<FormControl>
+					<Checkbox>同意xxx协议</Checkbox>
+				</FormControl>
+			</FormItem>
+
+			<FormItem>
+				<FormLabel></FormLabel>
+				<FormControl>
+					<Button primary>注册</Button>
+				</FormControl>
+			</FormItem>
+		</Form>
+
+		<br />
+		<br />
+		<br />
+
+		<Select>
+			<Option>选项1</Option>
+			<Option>选项2</Option>
+			<Option>选项3</Option>
+			<Option>选项4</Option>
+			<Option>选项5</Option>
+		</Select>
+
+		<br />
+		<br />
+		<br />
+
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Switch checked="{ false }" on-change="{ this.onSwitchChanged( $event ) }"></Switch>
 
 		<br />

@@ -59,6 +59,39 @@
             }
         }
     ],
+    "Form": [
+        {
+            "path": "Form/intro.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\n### pure provides you two common layout\r\n",
+            "html": "<h3 id=\"pure-provides-you-two-common-layout\">pure provides you two common layout</h3>\n",
+            "code": {}
+        },
+        {
+            "path": "Form/horizontal.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\nHorizontal\r\n\r\n```html\r\n<Form>\r\n\t<FormItem>\r\n\t\t<FormLabel>Nickname</FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Input placeholder=\"Your Nickname\"></Input>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n\t\r\n\t<FormItem>\r\n\t\t<FormLabel>Email</FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Input placeholder=\"Your Email\"></Input>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n\r\n\t<FormItem>\r\n\t\t<FormLabel></FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Checkbox>Agree something</Checkbox>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n\r\n\t<FormItem>\r\n\t\t<FormLabel></FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Button primary>Register</Button>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n</Form>\r\n```\r\n",
+            "html": "<p>Horizontal</p>\n",
+            "code": {
+                "html": "<Form>\n    <FormItem>\n        <FormLabel>Nickname</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Nickname\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel>Email</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Email\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Checkbox>Agree something</Checkbox>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Button primary>Register</Button>\n        </FormControl>\n    </FormItem>\n</Form>"
+            }
+        },
+        {
+            "path": "Form/vertical.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\nVertical\r\n\r\n```html\r\n<Form v>\r\n\t<FormItem>\r\n\t\t<FormLabel>Nickname</FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Input placeholder=\"Your Nickname\"></Input>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n\r\n\t<FormItem>\r\n\t\t<FormLabel>Email</FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Input placeholder=\"Your Email\"></Input>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n\r\n\t<FormItem>\r\n\t\t<FormLabel></FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Checkbox>Agree something</Checkbox>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n\r\n\t<FormItem>\r\n\t\t<FormLabel></FormLabel>\r\n\t\t<FormControl>\r\n\t\t\t<Button primary>Register</Button>\r\n\t\t</FormControl>\r\n\t</FormItem>\r\n</Form>\r\n```\r\n",
+            "html": "<p>Vertical</p>\n",
+            "code": {
+                "html": "<Form v>\n    <FormItem>\n        <FormLabel>Nickname</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Nickname\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel>Email</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Email\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Checkbox>Agree something</Checkbox>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Button primary>Register</Button>\n        </FormControl>\n    </FormItem>\n</Form>"
+            }
+        }
+    ],
     "Input": [
         {
             "path": "Input/basic.md",

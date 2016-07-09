@@ -3,7 +3,7 @@
 		Pure
 	</header>
 	<div class="wrapper">
-		<Nav></Nav>
+		<Nav active="{ active }"></Nav>
 		<div class="docs" ref>
 			{#list doc as d}
 			<Demo source="{ d.code.html }" markdown="{ d.html }"></Demo>
@@ -22,11 +22,16 @@
 	import './components/demo';
 	import './components/nav';
 	import dispatcher from './dispatcher';
+	import docs from './docs.json';
 
 	export default {
 		config() {
-			dispatcher.on('update', doc => {
+			this.data.active = 'Button';
+			this.data.doc = docs.Button;
+
+			dispatcher.on('update', ( doc, name ) => {
 				this.data.doc = doc;
+				this.data.active = name;
 				this.$update();
 			});
 		}

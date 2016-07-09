@@ -35,7 +35,6 @@
 
 	.r-checkbox {
 		position: relative;
-		width: @checkbox-size;
 		height: @checkbox-size;
 		margin-right: 5px;
 		cursor: pointer;
