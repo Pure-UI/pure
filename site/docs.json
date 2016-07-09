@@ -164,6 +164,19 @@
             }
         }
     ],
+    "Spinner": [
+        {
+            "path": "Spinner/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nSpinner\r\n\r\n```html\r\n<Spinner></Spinner>\r\n```\r\n",
+            "html": "<p>Spinner</p>\n",
+            "code": {
+                "html": "<Spinner></Spinner>"
+            }
+        }
+    ],
     "Switch": [
         {
             "path": "Switch/basic.md",

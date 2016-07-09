@@ -11,4 +11,5 @@ export default {
 	'/Switch': () => dispatcher.emit( 'update', docs.Switch, 'Switch' ),
 	'/Modal': () => dispatcher.emit( 'update', docs.Modal, 'Modal' ),
 	'/Form': () => dispatcher.emit( 'update', docs.Form, 'Form' ),
+	'/Spinner': () => dispatcher.emit( 'update', docs.Spinner, 'Spinner' ),
 };

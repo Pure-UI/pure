@@ -5,6 +5,9 @@
 			<li>
 				<a class="{ active === 'Button' ? 'active' : '' }" href="#/Button">Button</a>
 			</li>
+			<li>
+				<a class="{ active === 'Spinner' ? 'active' : '' }" href="#/Spinner">Spinner</a>
+			</li>
 			<!-- <li>
 				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
 			</li>
