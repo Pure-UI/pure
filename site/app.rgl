@@ -4,16 +4,13 @@
 	</header>
 	<div class="wrapper">
 		<Nav active="{ active }"></Nav>
-		<div class="docs" ref>
+		<div class="docs">
 			{#list doc as d}
 			<Demo source="{ d.code.html }" markdown="{ d.html }"></Demo>
 			{/list}
 
-			<!-- <Demo source="{ sourceBasic }" markdown="按钮有两种基本形态"></Demo>
-			<Demo source="{ source }" markdown="事件"></Demo> -->
-
 			<!-- TODO: api table -->
-			<API></API>
+			<!-- <API></API> -->
 		</div>
 	</div>
 </template>

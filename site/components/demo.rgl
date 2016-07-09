@@ -34,7 +34,7 @@
 				hljs.highlightBlock( this.$refs.c );
 			}
 		}
-	}
+	};
 </script>
 
 <style lang="less" scoped>
