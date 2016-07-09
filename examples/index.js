@@ -18,7 +18,7 @@ var App = Regular.extend({
 				</FormControl>
 			</FormItem>
 			<FormItem>
-				<FormLabel>萝莉保护协会成员</FormLabel>
+				<FormLabel>萝莉保护协会</FormLabel>
 				<FormControl>
 					<Select></Select>
 				</FormControl>

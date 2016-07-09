@@ -45,6 +45,7 @@
 			const target = this.$refs.b;
 			const pageX = e.pageX;
 			const pageY = e.pageY;
+			const scrollY = window.scrollY;
 
 			const rect = target.getBoundingClientRect();
 			const top = rect.top;
@@ -52,7 +53,7 @@
 			const width = rect.width;
 
 			const offsetX = pageX - left;
-			const offsetY = pageY - top;
+			const offsetY = pageY - top - scrollY;
 
 			this.data.waveTop = offsetY - width / 2;
 			this.data.waveLeft = offsetX - width / 2;

@@ -65,8 +65,8 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\n### pure provides you two common layout\r\n",
-            "html": "<h3 id=\"pure-provides-you-two-common-layout\">pure provides you two common layout</h3>\n",
+            "source": "\r\n### Pure provides you two common form layout\r\n",
+            "html": "<h3 id=\"pure-provides-you-two-common-form-layout\">Pure provides you two common form layout</h3>\n",
             "code": {}
         },
         {

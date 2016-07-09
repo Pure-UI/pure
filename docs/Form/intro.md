@@ -2,4 +2,4 @@
 order: 1
 ---
 
-### pure provides you two common layout
+### Pure provides you two common form layout

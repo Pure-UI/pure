@@ -80,9 +80,9 @@
 	
 	__webpack_require__(68);
 	
-	__webpack_require__(72);
+	__webpack_require__(73);
 	
-	__webpack_require__(76);
+	__webpack_require__(78);
 
 /***/ },
 /* 1 */,
@@ -172,6 +172,7 @@
 			var target = this.$refs.b;
 			var pageX = e.pageX;
 			var pageY = e.pageY;
+			var scrollY = window.scrollY;
 	
 			var rect = target.getBoundingClientRect();
 			var top = rect.top;
@@ -179,7 +180,7 @@
 			var width = rect.width;
 	
 			var offsetX = pageX - left;
-			var offsetY = pageY - top;
+			var offsetY = pageY - top - scrollY;
 	
 			this.data.waveTop = offsetY - width / 2;
 			this.data.waveLeft = offsetX - width / 2;
@@ -1146,10 +1147,10 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __regular_script__, __regular_template__;
-	__webpack_require__(87)
-	__webpack_require__(86)
-	__regular_script__ = __webpack_require__(70)
-	__regular_template__ = __webpack_require__(71)
+	__webpack_require__(69)
+	__webpack_require__(70)
+	__regular_script__ = __webpack_require__(71)
+	__regular_template__ = __webpack_require__(72)
 	var Regular = __webpack_require__( 7 );
 	
 	var __rs__ = __regular_script__ || {};
@@ -1171,8 +1172,19 @@
 	module.exports = __Component__;
 
 /***/ },
-/* 69 */,
+/* 69 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 70 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 71 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1185,20 +1197,20 @@
 	};
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports) {
 
 	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-item"},{"type":"attribute","name":"_r-f50650d0","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __regular_script__, __regular_template__;
-	__webpack_require__(88)
-	__webpack_require__(89)
-	__regular_script__ = __webpack_require__(74)
-	__regular_template__ = __webpack_require__(75)
+	__webpack_require__(74)
+	__webpack_require__(75)
+	__regular_script__ = __webpack_require__(76)
+	__regular_template__ = __webpack_require__(77)
 	var Regular = __webpack_require__( 7 );
 	
 	var __rs__ = __regular_script__ || {};
@@ -1220,8 +1232,19 @@
 	module.exports = __Component__;
 
 /***/ },
-/* 73 */,
 /* 74 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 75 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 76 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1237,20 +1260,20 @@
 	};
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-label"},{"type":"attribute","name":"_r-efb2e37e","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __regular_script__, __regular_template__;
-	__webpack_require__(82)
-	__webpack_require__(81)
-	__regular_script__ = __webpack_require__(78)
-	__regular_template__ = __webpack_require__(79)
+	__webpack_require__(79)
+	__webpack_require__(80)
+	__regular_script__ = __webpack_require__(81)
+	__regular_template__ = __webpack_require__(82)
 	var Regular = __webpack_require__( 7 );
 	
 	var __rs__ = __regular_script__ || {};
@@ -1272,8 +1295,19 @@
 	module.exports = __Component__;
 
 /***/ },
-/* 77 */,
-/* 78 */
+/* 79 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 80 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 81 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1286,50 +1320,10 @@
 	};
 
 /***/ },
-/* 79 */
-/***/ function(module, exports) {
-
-	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-control"},{"type":"attribute","name":"_r-240261ac","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
-
-/***/ },
-/* 80 */,
-/* 81 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
 /* 82 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 87 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 88 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 89 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
+	module.exports = [{"type":"element","tag":"div","attrs":[{"type":"attribute","name":"class","value":"r-form-control"},{"type":"attribute","name":"_r-240261ac","value":""}],"children":[{"type":"text","text":"\n\t"},{"type":"template","content":{"type":"expression","body":"c._sg_('$body', c)","constant":false,"setbody":"c._ss_('$body',p_,c, '=', 0)"}},{"type":"text","text":"\n"}]}]
 
 /***/ }
 /******/ ]);
