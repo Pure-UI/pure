@@ -1,7 +1,7 @@
 // button
 import './components/button/button';
 // pager
-import './components/pager/pager';
+import './components/pagination/pagination';
 // table
 import './components/table/table';
 // input

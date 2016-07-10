@@ -1,5 +1,9 @@
 var App = Regular.extend({
 	template: `
+		<Pagination min="{ 1 }" max="{ 10 }" current="{ current || 5 }" on-change="{ current = $event }"></Pagination>
+		<br />
+		Current: { current || 5 }
+
 		<br />
 		<br />
 		<br />
@@ -111,6 +115,11 @@ var App = Regular.extend({
 		</Modal>
 		{/if}
 	`,
+	onPaginationChange( v ) {
+		console.log( 'onPaginationChange', v );
+		this.data.current = v;
+		this.$update();
+	},
 	onSwitchChanged( v ) {
 		console.log( 'switch changed', v );
 	},
@@ -134,6 +143,7 @@ var App = Regular.extend({
 		this.$update();
 	},
 	config( data ) {
+		data.current = 5;
 		data.dataSource = [];
 		data.fields = [
 			{

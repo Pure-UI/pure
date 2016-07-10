@@ -1,5 +1,5 @@
 <template>
-	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' }" on-mouseup="{ this.onClick( $event ) }">
+	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' }" on-mousedown="{ this.onMouseDown( $event ) }" on-mouseup="{ this.onMouseUp( $event ) }">
 		<div
 			class="r-button-wave  { pressed ? 'pressed' : 'r-button-wave-hidden' }"
 			style="width: { waveWidth }px;height: { waveHeight }px;top: { waveTop }px;left: { waveLeft }px;"
@@ -28,6 +28,9 @@
 
 	export default {
 		name: 'Button',
+		config() {
+			this.data.ripple = this.data.ripple !== false;
+		},
 		init( data ) {
 			const handleAnimationEnd = () => {
 				if( this.data.pressed !== false ) {
@@ -38,9 +41,18 @@
 
 			Regular.dom.on( this.$refs.w, 'webkitAnimationEnd', handleAnimationEnd );
 		},
-		onClick( e ) {
+		onMouseDown() {
+		},
+		onMouseUp( e ) {
+			if( this.data.disabled ) {
+				return;
+			}
 			this.$emit( 'emit' );
 			this.$emit( 'click' );
+
+			if( !this.data.ripple ) {
+				return;
+			}
 
 			const target = this.$refs.b;
 			const pageX = e.pageX;
@@ -127,9 +139,17 @@
 		vertical-align: middle;
 		overflow: hidden;
 
-		&:active {
+		&.r-button-sm {
+			padding: .5em .9em;
+		}
+
+		&:not(.r-button-disabled):active {
 			box-shadow: inset 0 1px 5px rgba(0,0,0,.15);
 		}
+	}
+
+	.r-button-disabled {
+		cursor: not-allowed;
 	}
 
 	.r-button-basic {
@@ -137,7 +157,7 @@
 		border: solid 1px #DDD;
 		color: #333;
 
-		&:hover, &:focus {
+		&:not(.r-button-disabled):hover, &:not(.r-button-disabled):focus {
 			background-color: shade(#FFF, 3%);
 		}
 	}
@@ -146,12 +166,8 @@
 		background-color: @button-color;
 		color: #fff;
 
-		&:hover, &:focus {
+		&:not(.r-button-disabled):hover, &:not(.r-button-disabled):focus {
 			background-color: shade(@button-color, 5%);
 		}
-	}
-
-	.r-button-wave {
-
 	}
 </style>

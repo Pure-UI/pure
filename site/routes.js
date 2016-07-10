@@ -4,6 +4,7 @@ import dispatcher from './dispatcher';
 export default {
 	'/': () => dispatcher.emit( 'update', docs.Button, 'Button' ),
 	'/Button': () => dispatcher.emit( 'update', docs.Button, 'Button' ),
+	'/Pagination': () => dispatcher.emit( 'update', docs.Pagination, 'Pagination' ),
 	'/Input': () => dispatcher.emit( 'update', docs.Input, 'Input' ),
 	'/Textarea': () => dispatcher.emit( 'update', docs.Textarea, 'Textarea' ),
 	'/Radio': () => dispatcher.emit( 'update', docs.Radio, 'Radio' ),

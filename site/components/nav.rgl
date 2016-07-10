@@ -15,6 +15,12 @@
 				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">Icon</a>
 			</li> -->
 		</ul>
+		<div class="title">navigation</div>
+		<ul>
+			<li>
+				<a class="{ active === 'Pagination' ? 'active' : '' }" href="#/Pagination">Pagination</a>
+			</li>
+		</ul>
 		<div class="title">form</div>
 		<ul>
 			<li>
