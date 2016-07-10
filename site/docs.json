@@ -135,10 +135,10 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 1 }\"\r\n\tmax=\"{ 10 }\"\r\n\tcurrent=\"{ current || 5 }\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\n<div class=\"pagination-example-center\">Current: { current || 5 }</div>\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 1 }\"\r\n\tmax=\"{ 10 }\"\r\n\tcurrent=\"{ current || 5 }\"\r\n\tprev-text=\"<\"\r\n\tnext-text=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\n<div class=\"pagination-example-center\">Current: { current || 5 }</div>\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "<Pagination\n    min=\"{ 1 }\"\n    max=\"{ 10 }\"\n    current=\"{ current || 5 }\"\n    on-change=\"{ current = $event }\"\n></Pagination>\n<div class=\"pagination-example-center\">Current: { current || 5 }</div>"
+                "html": "<Pagination\n    min=\"{ 1 }\"\n    max=\"{ 10 }\"\n    current=\"{ current || 5 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\n<div class=\"pagination-example-center\">Current: { current || 5 }</div>"
             }
         }
     ],

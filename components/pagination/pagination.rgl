@@ -1,6 +1,6 @@
 <template>
 	<div class="r-pagination">
-		<Button sm disabled="{ current === 1 }" on-click="{ this.onPrev() }">prev</Button>
+		<Button sm disabled="{ current === 1 }" on-click="{ this.onPrev() }">{ prevText || 'prev' }</Button>
 		{#if hasBeforeDot}
 			<Button sm ripple="{ false }" on-click="{ this.onClick(1) }">1</Button>
 			<Button sm disabled>...</Button>
@@ -24,7 +24,7 @@
 				<Button sm ripple="{ false }" on-click="{ this.onClick(item) }">{ item }</Button>
 			{/list}
 		{/if}
-		<Button sm disabled="{ current === max }" on-click="{ this.onNext() }">next</Button>
+		<Button sm disabled="{ current === max }" on-click="{ this.onNext() }">{ nextText || 'next' }</Button>
 	</div>
 </template>
 
@@ -100,6 +100,5 @@
 <style lang="less" scoped>
 	.r-pagination {
 		margin: .4em 0;
-		text-align: center;
 	}
 </style>
