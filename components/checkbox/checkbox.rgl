@@ -56,7 +56,7 @@
 			&::after {
 				content: '';
 				position: absolute;
-				top: 5px;
+				top: 4px;
 				left: 4px;
 				width: @checkbox-checkmark-width;
 				height: @checkbox-checkmark-height;

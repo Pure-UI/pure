@@ -1,10 +1,10 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require( 'webpack' )
+var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 var cwd = process.cwd();
 
 module.exports = {
 	entry: './index.js',
 	cwd: cwd,
-	devtool: 'source-map',
 	output: {
 		path: './dist',
 		publicPath: 'dist/',
@@ -41,6 +41,11 @@ module.exports = {
 		'regularjs': 'Regular'
 	},
 	plugins: [
-		new ExtractTextPlugin( 'pure.css' )
+		new ExtractTextPlugin( 'pure.css' ),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		}),
 	]
 };

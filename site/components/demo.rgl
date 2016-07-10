@@ -13,7 +13,7 @@
 		{/if}
 
 		<div class="{ deindentSource ? 'code-box' : '' }">
-			<pre><code ref="c">{ deindentSource }</code></pre>
+			<pre><code ref="c" class="lang-html">{ deindentSource }</code></pre>
 		</div>
 	</div>
 </template>
@@ -49,7 +49,6 @@
 	.markdown-box {
 		margin-bottom: 20px;
 		border-bottom: solid 1px #f0f0f0;
-		font-family: '微软雅黑';
 		color: #666;
 	}
 </style>

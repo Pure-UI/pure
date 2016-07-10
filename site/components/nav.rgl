@@ -103,6 +103,5 @@
 
 	.active {
 		background-color: #eaeef3;
-		text-decoration: underline;
 	}
 </style>

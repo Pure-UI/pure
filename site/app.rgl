@@ -1,6 +1,6 @@
 <template>
 	<header>
-		Pure
+		<a class="logo" href="#/">Pure</a>
 	</header>
 	<div class="wrapper">
 		<Nav active="{ active }"></Nav>
@@ -42,7 +42,7 @@
 
 	body {
 		margin: 0;
-		font-family: cursive;
+		font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;
 	}
 
 	.modal-example-center {
@@ -57,13 +57,18 @@
 	header {
 		width: 100%;
 		background: -webkit-gradient(linear,left top,right bottom,from(#689eff), to(#3e7bea));
-		font-size: 20px;
-		color: #FFF;
 		padding: 0 21%;
 		height: 50px;
-		line-height: 50px;
-		font-weight: 700;
 		box-sizing: border-box;
+
+		.logo {
+			color: #FFF;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 50px;
+			text-decoration: none;
+			font-family: cursive;
+		}
 	}
 
 	.wrapper {

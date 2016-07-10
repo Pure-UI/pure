@@ -15,7 +15,7 @@ Basic Usage
 	on-ok="{ show = false }"
 >
 	<div class="modal-example-center">
-		<img src="http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif" alt="something">
+		<img src="http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif">
 	</div>
 </Modal>
 {/if}
