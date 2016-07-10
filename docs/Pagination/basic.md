@@ -13,5 +13,5 @@ Basic Usage
 	next-text=">"
 	on-change="{ current = $event }"
 ></Pagination>
-<div class="pagination-example-center">Current: { current || 5 }</div>
+Current: { current || 5 }
 ```

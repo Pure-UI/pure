@@ -51,10 +51,6 @@
 		justify-content: center;
 		height: 100%;
 	}
-
-	.pagination-example-center {
-		text-align: center;
-	}
 </style>
 
 <style lang="less" scoped>
