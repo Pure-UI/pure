@@ -1,17 +1,24 @@
 <template>
-	<div class="r-form { v ? 'r-form-vertical' : '' }">
+	<div class="r-form { v ? 'r-form-vertical' : '' } { full ? 'r-form-full' : '' }">
 		{#inc this.$body}
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'Form'
+		name: 'Form',
+		config() {
+			this.data.full;
+		}
 	}
 </script>
 
-<style lang="less" scoped>
-	.r-form {
-
+<style lang="less">
+	.r-form.r-form-full {
+		.r-form-control {
+			input, textarea, select {
+				width: 100%!important;
+			}
+		}
 	}
 </style>

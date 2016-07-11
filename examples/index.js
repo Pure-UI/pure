@@ -28,7 +28,7 @@ var App = Regular.extend({
 		<br />
 		<br />
 
-		<Form v>
+		<Form v full>
 			<FormItem>
 				<FormLabel>姓名</FormLabel>
 				<FormControl>

@@ -13,13 +13,14 @@
 <style lang="less">
 	.r-form-control {
 		input, textarea, select {
-			width: 100%!important;
+			margin-right: 10px;
 		}
 	}
 </style>
 
 <style lang="less" scoped>
 	.r-form-control {
-		width: 100%;
+		display: flex;
+		align-items: center;
 	}
 </style>
