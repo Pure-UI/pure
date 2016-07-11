@@ -105,9 +105,31 @@
             }
         },
         {
-            "path": "Input/event.md",
+            "path": "Input/error.md",
             "attrs": {
                 "order": 2
+            },
+            "source": "\r\nError Status\r\n\r\n```html\r\n<Input error=\"{ true }\"></Input>\r\n```\r\n",
+            "html": "<p>Error Status</p>\n",
+            "code": {
+                "html": "<Input error=\"{ true }\"></Input>"
+            }
+        },
+        {
+            "path": "Input/error-with-message.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\nError Status With Error Message\r\n\r\n```html\r\n<Input error=\"{ true }\" error-message=\"{ 'This field is REQUIRED' }\"></Input>\r\n```\r\n",
+            "html": "<p>Error Status With Error Message</p>\n",
+            "code": {
+                "html": "<Input error=\"{ true }\" error-message=\"{ 'This field is REQUIRED' }\"></Input>"
+            }
+        },
+        {
+            "path": "Input/event.md",
+            "attrs": {
+                "order": 4
             },
             "source": "\r\nEvent\r\n\r\n```html\r\n<Input on-change=\"{ v = $event }\"></Input>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
             "html": "<p>Event</p>\n",
@@ -135,10 +157,10 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 1 }\"\r\n\tmax=\"{ 10 }\"\r\n\tcurrent=\"{ current || 5 }\"\r\n\tprev-text=\"<\"\r\n\tnext-text=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\n<div class=\"pagination-example-center\">Current: { current || 5 }</div>\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 1 }\"\r\n\tmax=\"{ 10 }\"\r\n\tcurrent=\"{ current || 5 }\"\r\n\tprev-text=\"<\"\r\n\tnext-text=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\nCurrent: { current || 5 }\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "<Pagination\n    min=\"{ 1 }\"\n    max=\"{ 10 }\"\n    current=\"{ current || 5 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\n<div class=\"pagination-example-center\">Current: { current || 5 }</div>"
+                "html": "<Pagination\n    min=\"{ 1 }\"\n    max=\"{ 10 }\"\n    current=\"{ current || 5 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\nCurrent: { current || 5 }"
             }
         }
     ],

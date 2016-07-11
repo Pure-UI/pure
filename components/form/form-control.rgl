@@ -10,14 +10,6 @@
 	}
 </script>
 
-<style lang="less">
-	.r-form-control {
-		input, textarea, select {
-			margin-right: 10px;
-		}
-	}
-</style>
-
 <style lang="less" scoped>
 	.r-form-control {
 		display: flex;

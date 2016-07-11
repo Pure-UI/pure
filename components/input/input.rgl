@@ -1,5 +1,20 @@
 <template>
-	<input class="r-input" type="text" value="{ value }" placeholder="{ placeholder }" on-input="{ this.onChange() }" ref="v">
+	<div class="r-input-wrapper">
+		<input
+			class="r-input { error ? 'r-input-error' : '' }"
+			type="{ type || 'text' }"
+			value="{ value }"
+			placeholder="{ placeholder }"
+			on-input="{ this.onChange() }"
+			on-focus="{ this.onFocus() }"
+			ref="v"
+		>
+		{#if error && errorMessage}
+		<div class="r-input-error-message">
+			{ errorMessage }
+		</div>
+		{/if}
+	</div>
 </template>
 
 <script>
@@ -8,12 +23,29 @@
 		onChange() {
 			this.$emit( 'emit', this.$refs.v.value );
 			this.$emit( 'change', this.$refs.v.value );
+		},
+		onFocus() {
+			this.data.error = false;
 		}
 	}
 </script>
 
 <style lang="less" scoped>
 	@import '../../variable.less';
+
+	.r-input-wrapper {
+		display: inline-block;
+	}
+
+	.r-input-error-message {
+		width: 100%;
+		color: #fd8282;
+		font-size: 11px;
+		background-color: #ffebeb;
+		border: solid 1px #ffebeb;
+		padding: 4px 10px;
+		box-sizing: border-box;
+	}
 
 	.r-input {
 		background-color: #FFF;
@@ -29,5 +61,9 @@
 		&:focus {
 			border: solid 1px @primary-color;
 		}
+	}
+
+	.r-input-error {
+		border: solid 1px #fd8282;
 	}
 </style>
