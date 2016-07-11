@@ -1,5 +1,25 @@
 var App = Regular.extend({
 	template: `
+		<Table fields="{ fields }">
+			{#list dataSource as ds}
+			<TR>
+				<TD>{ ds.name.first + ds.name.last }</TD>
+				<TD>{ ds.gender }</TD>
+				<TD>{ ds.email }</TD>
+				<TD>
+					<Button sm primary>查看</Button>
+				</TD>
+				<TD>
+					<Button sm primary>编辑</Button>
+				</TD>
+			</TR>
+			{/list}
+		</Table>
+
+		<br />
+		<br />
+		<br />
+
 		<Pagination min="{ 1 }" max="{ 10 }" current="{ current || 5 }" on-change="{ current = $event }"></Pagination>
 		<br />
 		Current: { current || 5 }

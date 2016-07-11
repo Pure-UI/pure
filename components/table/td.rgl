@@ -1,0 +1,30 @@
+<template>
+	<td class="r-td">
+		{#inc this.$body}
+	</td>
+</template>
+
+<script>
+	export default {
+		name: 'TD'
+	}
+</script>
+
+<style lang="less">
+	.r-tr {
+		& .r-td {
+			padding: .78571429em;
+			border-top: 1px solid rgba(34,36,38,.1);
+			text-align: inherit;
+			border-left: 1px solid rgba(34,36,38,.1);
+		}
+
+		&:first-child .r-td {
+			border-top: none
+		}
+
+		& .r-td:first-child {
+			border-left: none;
+		}
+	}
+</style>

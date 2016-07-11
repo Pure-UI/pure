@@ -11,6 +11,8 @@ import './components/textarea/textarea';
 // table
 import './components/table/table';
 import './components/table/table-row';
+import './components/table/tr';
+import './components/table/td';
 // spinner
 import './components/spinner/spinner';
 // modal

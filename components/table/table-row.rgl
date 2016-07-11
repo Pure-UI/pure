@@ -1,5 +1,5 @@
 <template>
-	<tr class="r-tr">
+	<tr class="r-tablerow">
 		{#list fields as field}
 			<td>{#include this.renderColumns( field ) }</td>
 		{/list}
@@ -7,6 +7,9 @@
 </template>
 
 <script>
+	// TableRow会对fields中的render进行处理
+	// 如果render后的内容没有事件交互，可以直接给Table传入dataSource并在fields中定义render
+	// 如果需要更强的控制权，可以使用Table+Tr+Td组合，传入fields(生成表格标题)的方式
 	export default {
 		name: 'TableRow',
 		config( data ) {
@@ -26,15 +29,12 @@
 			}
 
 			return rendered;
-		},
-		onEmit( i ) {
-			console.log( 'table row emit', i );
 		}
 	}
 </script>
 
 <style lang="less" scoped>
-	.r-tr {
+	.r-tablerow {
 		& td {
 			padding: .78571429em;
 			border-top: 1px solid rgba(34,36,38,.1);

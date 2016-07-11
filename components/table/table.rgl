@@ -9,9 +9,11 @@
 		</thead>
 		<tbody>
 			{#inc this.$body}
-			{#list dataSource as ds}
-			<TableRow data-source="{ ds }" fields="{ fields }"></TableRow>
-			{/list}
+			{#if dataSource}
+				{#list dataSource as ds}
+				<TableRow data-source="{ ds }" fields="{ fields }"></TableRow>
+				{/list}
+			{/if}
 		</tbody>
 	</table>
 </template>
