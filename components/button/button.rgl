@@ -150,6 +150,10 @@
 
 	.r-button-disabled {
 		cursor: not-allowed;
+
+		&.r-button-basic {
+			color: #999;
+		}
 	}
 
 	.r-button-basic {

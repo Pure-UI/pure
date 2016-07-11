@@ -70,14 +70,17 @@
 
 		&::-webkit-scrollbar {
 			width: 4px;
+			height: 4px;
 		}
 
 		&::-webkit-scrollbar-track {
 			width: 4px;
+			height: 4px;
 		}
 
 		&::-webkit-scrollbar-thumb {
 			width: 4px;
+			height: 4px;
 			border-radius: 10px;
 			background-color: fade(@primary-color, 15%);
 		}
