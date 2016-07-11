@@ -87,11 +87,12 @@
 
 <style lang="less" scoped>
 	.r-note {
+		display: inline-block;
 		padding: 8px 14px;
 		border-radius: 4px;
 		background-color: #FFF;
 		border: solid 1px #DDD;
-		color: #333;
+		color: #666;
 		box-shadow: 2px 2px 8px -2px rgba(50, 50, 50, 0.14);
 		font-size: 1rem;
 	}

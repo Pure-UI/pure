@@ -2,7 +2,7 @@
 order: 1
 ---
 
-Spinner
+Basic Usage
 
 ```html
 <Spinner></Spinner>

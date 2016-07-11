@@ -6,6 +6,9 @@
 				<a class="{ active === 'Button' ? 'active' : '' }" href="#/Button">Button</a>
 			</li>
 			<li>
+				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">Icon</a>
+			</li>
+			<li>
 				<a class="{ active === 'Spinner' ? 'active' : '' }" href="#/Spinner">Spinner</a>
 			</li>
 			<!-- <li>
@@ -57,15 +60,15 @@
 				<a class="{ active === 'Modal' ? 'active' : '' }" href="#/Modal">Modal</a>
 			</li>
 		</ul>
-		<!-- <div class="title">message</div>
+		<div class="title">message</div>
 		<ul>
-			<li>
+			<!-- <li>
 				<a class="{ active === 'Tooltip' ? 'active' : '' }" href="#/Tooltip">Tooltip</a>
-			</li>
+			</li> -->
 			<li>
-				<a class="{ active === 'Message' ? 'active' : '' }" href="#/Message">Message</a>
+				<a class="{ active === 'Note' ? 'active' : '' }" href="#/Note">Note</a>
 			</li>
-		</ul> -->
+		</ul>
 	</nav>
 </template>
 

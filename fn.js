@@ -31,9 +31,7 @@ Pure.note = ( content, type, timeout ) => {
 			this.$emit( 'notein' )
 		}
 	});
-	new Note2({
-
-	}).$inject( document.body );
+	new Note2().$inject( document.body );
 };
 
 export default Pure;

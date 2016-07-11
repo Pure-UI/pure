@@ -13,9 +13,31 @@
             }
         },
         {
-            "path": "Button/event.md",
+            "path": "Button/size.md",
             "attrs": {
                 "order": 2
+            },
+            "source": "\r\nSize\r\n\r\n```html\r\n<Button primary sm>Primary</Button>\r\n<Button sm>Normal</Button>\r\n```\r\n",
+            "html": "<p>Size</p>\n",
+            "code": {
+                "html": "<Button primary sm>Primary</Button>\n<Button sm>Normal</Button>"
+            }
+        },
+        {
+            "path": "Button/disabled.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\nDisabled\r\n\r\n```html\r\n<Button primary disabled>Disabled</Button>\r\n<Button disabled>Disabled</Button>\r\n```\r\n",
+            "html": "<p>Disabled</p>\n",
+            "code": {
+                "html": "<Button primary disabled>Disabled</Button>\n<Button disabled>Disabled</Button>"
+            }
+        },
+        {
+            "path": "Button/event.md",
+            "attrs": {
+                "order": 4
             },
             "source": "\r\nEvent\r\n\r\n```html\r\n<Button on-click=\"{ v = Math.random() }\">Random</Button>\r\n<Input value=\"{ v }\"></Input>\r\n```\r\n",
             "html": "<p>Event</p>\n",
@@ -92,6 +114,19 @@
             }
         }
     ],
+    "Icon": [
+        {
+            "path": "Icon/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Icon>&#xe603;</Icon>\r\n<Icon>&#xe601;</Icon>\r\n<Icon>&#xe602;</Icon>\r\n<Icon>&#xe600;</Icon>\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n",
+            "code": {
+                "html": "<Icon>&#xe603;</Icon>\n<Icon>&#xe601;</Icon>\n<Icon>&#xe602;</Icon>\n<Icon>&#xe600;</Icon>"
+            }
+        }
+    ],
     "Input": [
         {
             "path": "Input/basic.md",
@@ -151,6 +186,19 @@
             }
         }
     ],
+    "Note": [
+        {
+            "path": "Note/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Note type=\"info\">info</Note>\r\n<Note type=\"success\">success</Note>\r\n<Note type=\"warning\">warning</Note>\r\n<Note type=\"error\">error</Note>\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n",
+            "code": {
+                "html": "<Note type=\"info\">info</Note>\n<Note type=\"success\">success</Note>\n<Note type=\"warning\">warning</Note>\n<Note type=\"error\">error</Note>"
+            }
+        }
+    ],
     "Pagination": [
         {
             "path": "Pagination/basic.md",
@@ -205,8 +253,8 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nSpinner\r\n\r\n```html\r\n<Spinner></Spinner>\r\n```\r\n",
-            "html": "<p>Spinner</p>\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Spinner></Spinner>\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Spinner></Spinner>"
             }

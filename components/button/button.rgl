@@ -13,7 +13,7 @@
 
 <script>
 	import Regular from 'regularjs';
-	
+
 	const rAF = (function (w) {
 		let raf = w.requestAnimationFrame || w.mozRequestAnimationFrame || w.webkitRequestAnimationFrame
 
@@ -49,7 +49,7 @@
 			if( this.data.disabled ) {
 				return;
 			}
-			this.$emit( 'emit' );
+
 			this.$emit( 'click' );
 
 			if( !this.data.ripple ) {
@@ -155,6 +155,10 @@
 
 		&.r-button-basic {
 			color: #999;
+		}
+
+		&.r-button-primary {
+			background-color: tint(@primary-color, 45%);
 		}
 	}
 

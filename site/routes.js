@@ -13,4 +13,6 @@ export default {
 	'/Modal': () => dispatcher.emit( 'update', docs.Modal, 'Modal' ),
 	'/Form': () => dispatcher.emit( 'update', docs.Form, 'Form' ),
 	'/Spinner': () => dispatcher.emit( 'update', docs.Spinner, 'Spinner' ),
+	'/Icon': () => dispatcher.emit( 'update', docs.Icon, 'Icon' ),
+	'/Note': () => dispatcher.emit( 'update', docs.Note, 'Note' ),
 };
