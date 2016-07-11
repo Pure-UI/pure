@@ -1,7 +1,13 @@
 <template>
-	<td class="r-td">
-		{#inc this.$body}
-	</td>
+	{#if !nowrap}
+		<td class="r-td">
+			{#inc this.$body}
+		</td>
+	{#else}
+		<td class="r-td" nowrap>
+			{#inc this.$body}
+		</td>
+	{/if}
 </template>
 
 <script>

@@ -69,18 +69,18 @@
 		overflow-y: auto;
 
 		&::-webkit-scrollbar {
-			width: 4px;
-			height: 4px;
+			width: 6px;
+			height: 6px;
 		}
 
 		&::-webkit-scrollbar-track {
-			width: 4px;
-			height: 4px;
+			width: 6px;
+			height: 6px;
 		}
 
 		&::-webkit-scrollbar-thumb {
-			width: 4px;
-			height: 4px;
+			width: 6px;
+			height: 6px;
 			border-radius: 10px;
 			background-color: fade(@primary-color, 15%);
 		}

@@ -6,10 +6,10 @@ var App = Regular.extend({
 				<TD>{ ds.name.first + ds.name.last }</TD>
 				<TD>{ ds.gender }</TD>
 				<TD>{ ds.email }</TD>
-				<TD>
+				<TD nowrap>
 					<Button sm primary>查看</Button>
 				</TD>
-				<TD>
+				<TD nowrap>
 					<Button sm primary>编辑</Button>
 				</TD>
 			</TR>
