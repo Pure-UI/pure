@@ -1,5 +1,6 @@
-Pure.note( `发布成功`, 'success' );
-
+setTimeout(() => {
+	Pure.note( `发布成功`, 'success' );
+}, 1000);
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `

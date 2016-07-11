@@ -10,6 +10,7 @@ Pure.note = ( content, type, timeout ) => {
 				class="r-note-will-transition"
 				r-animation="
 					on: enter;
+					wait: 10;
 					class: r-note-in, 3;
 					wait: ${timeout || 2000};
 					class: r-note-out, 3;
@@ -27,7 +28,7 @@ Pure.note = ( content, type, timeout ) => {
 			});
 		},
 		init() {
-
+			this.$emit( 'notein' )
 		}
 	});
 	new Note2({
