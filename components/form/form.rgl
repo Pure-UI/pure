@@ -16,8 +16,10 @@
 <style lang="less">
 	.r-form.r-form-full {
 		.r-form-control {
+			flex: 1;
+
 			input, textarea, select {
-				width: 100%!important;
+				flex: 1;
 			}
 		}
 	}
