@@ -1,0 +1,98 @@
+<template>
+	<div class="r-note { fixed ? 'r-note-fixed' : '' }">
+		<span style="color: { color };"><Icon>{ icon }</Icon></span>
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	import '../icon/icon';
+
+	let convert = str => {
+		str = str.replace(/(\\u)(\w{4})/gi,function($0){
+			return (String.fromCharCode(parseInt((escape($0).replace(/(%5Cu)(\w{4})/g,"$2")),16)));
+		});
+		str = str.replace(/(&#x)(\w{4});/gi,function($0){
+			return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w{4})(%3B)/g,"$2"),16));
+		});
+		return str;
+	}
+
+	export default {
+		name: 'Note',
+		config() {
+
+		},
+		computed: {
+			color: function() {
+				const type = this.data.type;
+				let color = '';
+				switch( type ) {
+					case 'success':
+						color = '#6ed084';
+						break;
+					case 'warning':
+						color = '#fda411';
+						break;
+					case 'error':
+						color = '#F44556';
+						break;
+					default:
+						color = '#689eff';
+				}
+				return color;
+			},
+			icon: function() {
+				const type = this.data.type;
+				let icon = '';
+				switch( type ) {
+					case 'success':
+						icon = '&#xe602;';
+						break;
+					case 'warning':
+						icon = '&#xe603;';
+						break;
+					case 'error':
+						icon = '&#xe600;';
+						break;
+					default:
+						icon = '&#xe601;';
+				}
+				return convert( icon );
+			}
+		}
+	}
+</script>
+
+<style lang="less">
+	.r-note-will-transition {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		opacity: 0;
+		transform: translate3d(-50%,-50px,0);
+		transition: transform 1s ease, opacity 1s ease;
+	}
+
+	.r-note-in {
+		transform: translate3d(-50%,80px,0);
+		opacity: 1;
+	}
+
+	.r-note-out {
+		transform: translate3d(-50%,-50px,0);
+		opacity: 0;
+	}
+</style>
+
+<style lang="less" scoped>
+	.r-note {
+		padding: 8px 14px;
+		border-radius: 4px;
+		background-color: #FFF;
+		border: solid 1px #DDD;
+		color: #333;
+		box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.14);
+		font-size: 1rem;
+	}
+</style>

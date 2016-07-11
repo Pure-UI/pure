@@ -22,6 +22,16 @@ module.exports = {
 				exclude: /node_modules/
 			},
 			{
+				test: /\.(ttf|woff|svg|eot)$/,
+				loader: 'url',
+				exclude: /node_modules/
+			},
+			{
+				test: /\.css$/,
+				loader: ExtractTextPlugin.extract( 'style', 'css' ),
+				exclude: /node_modules/
+			},
+			{
 				test: /\.less$/,
 				loader: 'less',
 				exclude: /node_modules/

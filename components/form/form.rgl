@@ -21,6 +21,11 @@
 			input, textarea, select {
 				flex: 1;
 			}
+
+			.r-input-wrapper {
+				display: flex;
+				flex: 1;
+			}
 		}
 	}
 </style>

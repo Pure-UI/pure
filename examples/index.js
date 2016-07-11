@@ -1,4 +1,7 @@
+Pure.note( `发布成功`, 'success' );
+
 var App = Regular.extend({
+	// <Note type="success">Success</Note>
 	template: `
 		<Table fields="{ fields }">
 			{#list dataSource as ds}
