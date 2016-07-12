@@ -25,8 +25,14 @@
 
 			const tick = () => {
 				let format = this.data.format;
-				let o = duration( Date.now(), this.data.end );
+				const currentTime = +new Date();
+				let o = duration( currentTime, this.data.end );
 				let output = '';
+
+				if( currentTime >= this.data.end ) {
+					this.$emit( 'end' );
+					clearInterval( this.data.intervalId );
+				}
 
 				// TODO: other locales
 				// set default format according to locale
@@ -45,20 +51,16 @@
 
 				this.data.time = output;
 				this.$update();
-
-				if( Date.now() >= this.data.end ) {
-					this.$emit( 'end' );
-				}
 			};
 
 			tick();
 
-			const tid = setInterval(() => {
+			this.data.intervalId = setInterval(() => {
 				tick();
 			}, 1000);
 
 			this.$on( '$destroy', () => {
-				clearInterval( tid );
+				clearInterval( this.data.intervalId );
 			} );
 		}
 	};

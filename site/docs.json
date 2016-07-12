@@ -81,6 +81,52 @@
             }
         }
     ],
+    "Countdown": [
+        {
+            "path": "Countdown/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Countdown\r\n\tend=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\r\n></Countdown>\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n",
+            "code": {
+                "html": "<Countdown\n    end=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\n></Countdown>"
+            }
+        },
+        {
+            "path": "Countdown/locale.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\nLocale\r\n\r\n```html\r\n<Countdown\r\n\tend=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\r\n\tlocale=\"zh\"\r\n></Countdown>\r\n```\r\n",
+            "html": "<p>Locale</p>\n",
+            "code": {
+                "html": "<Countdown\n    end=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\n    locale=\"zh\"\n></Countdown>"
+            }
+        },
+        {
+            "path": "Countdown/format.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\nFormat\r\n\r\n```html\r\n<Countdown\r\n\tend=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\r\n\tformat=\"[D] or [DAY] 天 [H] or [HOUR] 时 [M] or [MINUTE] 分 [S] or [SECOND] 秒\"\r\n></Countdown>\r\n```\r\n",
+            "html": "<p>Format</p>\n",
+            "code": {
+                "html": "<Countdown\n    end=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\n    format=\"[D] or [DAY] 天 [H] or [HOUR] 时 [M] or [MINUTE] 分 [S] or [SECOND] 秒\"\n></Countdown>"
+            }
+        },
+        {
+            "path": "Countdown/event.md",
+            "attrs": {
+                "order": 4
+            },
+            "source": "\r\nEvent\r\n\r\n```html\r\n{#if !isTimeEnd}\r\n<Countdown end=\"{ v ? v : v = ( Date.now() + 1000 * 5 ) }\" on-end=\"{ isTimeEnd = true }\"></Countdown>\r\n{#else}\r\n<img src=\"http://i1.hdslb.com/icon/f8c84297779fb8f8d24f2476c78bbefc.gif\" />\r\n{/if}\r\n<br />\r\n<br />\r\nisTimeEnd: { isTimeEnd ? 'true' : 'false' }\r\n<br />\r\n<br />\r\n<Button sm primary on-click=\"{ v = Date.now() + 1000 * 5 && ( isTimeEnd = false ) }\">Reset</Button>\r\n```\r\n",
+            "html": "<p>Event</p>\n",
+            "code": {
+                "html": "{#if !isTimeEnd}\n<Countdown end=\"{ v ? v : v = ( Date.now() + 1000 * 5 ) }\" on-end=\"{ isTimeEnd = true }\"></Countdown>\n{#else}\n<img src=\"http://i1.hdslb.com/icon/f8c84297779fb8f8d24f2476c78bbefc.gif\" />\n{/if}\n<br />\n<br />\nisTimeEnd: { isTimeEnd ? 'true' : 'false' }\n<br />\n<br />\n<Button sm primary on-click=\"{ v = Date.now() + 1000 * 5 && ( isTimeEnd = false ) }\">Reset</Button>"
+            }
+        }
+    ],
     "Form": [
         {
             "path": "Form/intro.md",

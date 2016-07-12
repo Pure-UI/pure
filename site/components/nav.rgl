@@ -69,6 +69,12 @@
 				<a class="{ active === 'Note' ? 'active' : '' }" href="#/Note">Note</a>
 			</li>
 		</ul>
+		<div class="title">time</div>
+		<ul>
+			<li>
+				<a class="{ active === 'Countdown' ? 'active' : '' }" href="#/Countdown">Countdown</a>
+			</li>
+		</ul>
 	</nav>
 </template>
 

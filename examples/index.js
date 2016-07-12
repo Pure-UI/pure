@@ -4,7 +4,18 @@ setTimeout(() => {
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `
-		<Countdown end="{ end }" locale="zh" on-end=""></Countdown>
+		{#if !isTimeEnd}
+		<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 5 ) }" on-end="{ isTimeEnd = true }"></Countdown>
+		{#else}
+		end
+		{/if}
+		<br />
+		<br />
+		isTimeEnd: { isTimeEnd ? 'true' : 'false' }
+		<br />
+		<br />
+		<Button sm primary on-click="{ v = Date.now() + 1000 * 5 && ( isTimeEnd = false ) }">Reset</Button>
+
 		<Table fields="{ fields }">
 			{#list dataSource as ds}
 			<TR>

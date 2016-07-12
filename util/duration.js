@@ -9,7 +9,7 @@ const duration = ( s, e ) => {
 	const day = parseInt( delta / DAY );
 	const hour = parseInt( ( delta - day * DAY ) / HOUR );
 	const minute = parseInt( ( delta - day * DAY - hour * HOUR ) / MINUTE );
-	const second = parseInt( ( delta - day * DAY - hour * HOUR - minute * MINUTE ) / SECOND );
+	const second = Math.round( ( delta - day * DAY - hour * HOUR - minute * MINUTE ) / SECOND );
 
 	return { day, hour, minute, second };
 };
