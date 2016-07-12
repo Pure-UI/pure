@@ -2,3 +2,4 @@ node_modules
 /site/dist
 /site/index.html
 /site/regular.js
+/debug.log

@@ -4,6 +4,7 @@ setTimeout(() => {
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `
+		<Countdown end="{ end }" locale="zh" on-end=""></Countdown>
 		<Table fields="{ fields }">
 			{#list dataSource as ds}
 			<TR>
@@ -167,6 +168,7 @@ var App = Regular.extend({
 		this.$update();
 	},
 	config( data ) {
+		data.end = new Date().getTime() + 1000 * 60 * 60 * 24;
 		data.current = 5;
 		data.dataSource = [];
 		data.fields = [

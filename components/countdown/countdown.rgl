@@ -1,0 +1,69 @@
+<template>
+	<span>{ time }</span>
+</template>
+
+<script>
+	import duration from '../../util/duration';
+
+	const getMeta = key => {
+		return ({
+			'D': 'day',
+			'DAY': 'day',
+			'H': 'hour',
+			'HOUR': 'hour',
+			'M': 'minute',
+			'MINUTE': 'minute',
+			'S': 'second',
+			'SECOND': 'second',
+		})[ key ];
+	};
+
+	export default {
+		name: 'Countdown',
+		config() {
+			this.data.time = '';
+
+			const tick = () => {
+				let format = this.data.format;
+				let o = duration( Date.now(), this.data.end );
+				let output = '';
+
+				// TODO: other locales
+				// set default format according to locale
+				if( !format ) {
+					if( this.data.locale === 'zh' ) {
+						format = '[D]天[H]时[M]分[S]秒';
+					} else {
+						format = `[D] days [H] hours [M] minutes [S] seconds`;
+					}
+				}
+
+				output = format.replace(/\[(D|DAY|H|HOUR|M|MINUTE|S|SECOND)\]/g, ( _, key ) => {
+					const i = getMeta( key );
+					return typeof o[ i ] !== 'undefined' ? o[ i ] : `[${key}]`;
+				});
+
+				this.data.time = output;
+				this.$update();
+
+				if( Date.now() >= this.data.end ) {
+					this.$emit( 'end' );
+				}
+			};
+
+			tick();
+
+			const tid = setInterval(() => {
+				tick();
+			}, 1000);
+
+			this.$on( '$destroy', () => {
+				clearInterval( tid );
+			} );
+		}
+	};
+</script>
+
+<style lang="less" scoped>
+
+</style>
