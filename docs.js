@@ -32,6 +32,7 @@ glob('**/*.md', {
 
 	// parse
 	var doc;
+	var id = 0;
 	for( var i in docs ) {
 		doc = docs[ i ];
 		for( var j = 0, len = doc.length; j < len; j++ ) {
@@ -42,6 +43,7 @@ glob('**/*.md', {
 			codes = {};
 			doc[ j ].html = marked( parsed.body, { renderer: renderer } );
 			doc[ j ].code = codes;
+			doc[ j ].id = id++;
 		}
 
 		docs[ i ] = _.sortBy( docs[ i ], function( v ) {
@@ -49,6 +51,43 @@ glob('**/*.md', {
 		} );
 	}
 
+	// extract js
+	var output = '';
+	var assignStr = '';
+	_.each( docs, ( doc, name ) => {
+		_.each( doc, ( v, i ) => {
+			if( v.code.js ) {
+				assignStr += 'var ' + name + i + ' = ' + v.code.js + ';\n';
+			}
+		} );
+	} );
 
-	fs.writeFileSync( 'site/docs.json', JSON.stringify( docs, 0, 4 ) );
+	output += assignStr;
+	output += 'export default ';
+
+	var jscodes = {};
+	_.each( docs, ( doc, name ) => {
+		jscodes[ name ] = [];
+		_.each( doc, ( v, i ) => {
+			if( v.code.js ) {
+				jscodes[ name ].push( name + i );
+			}
+		} );
+	} );
+
+	jscodes = JSON.stringify( jscodes );
+
+	// e.g. "Table0" => Table0
+	var regStr = '"(' + Object.keys( docs ).map(function( doc ) {
+		return doc + '\\d+?';
+	}).join('|') + ')"';
+
+	jscodes = jscodes.replace(new RegExp( regStr, 'g' ), function(_, match) {
+		return match;
+	});
+
+	output += jscodes;
+
+	fs.writeFileSync( 'site/docs.json', JSON.stringify( docs, 0, 4 ), 'utf-8' );
+	fs.writeFileSync( 'site/docs-js.js', output, 'utf-8' );
 });

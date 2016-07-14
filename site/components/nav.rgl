@@ -42,6 +42,9 @@
 				<a class="{ active === 'Switch' ? 'active' : '' }" href="#/Switch">Switch</a>
 			</li>
 			<li>
+				<a class="{ active === 'Table' ? 'active' : '' }" href="#/Table">Table</a>
+			</li>
+			<li>
 				<a class="{ active === 'Form' ? 'active' : '' }" href="#/Form">Form</a>
 			</li>
 			<!-- <li>

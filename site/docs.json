@@ -5,12 +5,12 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n\r\n```css\r\n.c {\r\n\tcolor: #333;\r\n}\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "<Button primary>Primary</Button>\n<Button>Normal</Button>",
-                "css": ".c {\n    color: #333;\n}"
-            }
+                "html": "<Button primary>Primary</Button>\n<Button>Normal</Button>"
+            },
+            "id": 0
         },
         {
             "path": "Button/size.md",
@@ -21,7 +21,8 @@
             "html": "<p>Size</p>\n",
             "code": {
                 "html": "<Button primary sm>Primary</Button>\n<Button sm>Normal</Button>"
-            }
+            },
+            "id": 3
         },
         {
             "path": "Button/disabled.md",
@@ -32,7 +33,8 @@
             "html": "<p>Disabled</p>\n",
             "code": {
                 "html": "<Button primary disabled>Disabled</Button>\n<Button disabled>Disabled</Button>"
-            }
+            },
+            "id": 1
         },
         {
             "path": "Button/event.md",
@@ -43,7 +45,8 @@
             "html": "<p>Event</p>\n",
             "code": {
                 "html": "<Button on-click=\"{ v = Math.random() }\">Random</Button>\n<Input value=\"{ v }\"></Input>"
-            }
+            },
+            "id": 2
         }
     ],
     "Checkbox": [
@@ -56,7 +59,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Checkbox checked=\"{ false }\">Option</Checkbox>"
-            }
+            },
+            "id": 4
         },
         {
             "path": "Checkbox/group.md",
@@ -67,7 +71,8 @@
             "html": "<p>Group</p>\n",
             "code": {
                 "html": "<CheckboxGroup checked=\"{ 2 }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>"
-            }
+            },
+            "id": 6
         },
         {
             "path": "Checkbox/event.md",
@@ -78,7 +83,8 @@
             "html": "<p>Event</p>\n",
             "code": {
                 "html": "<CheckboxGroup on-change=\"{ v = $event }\">\n    <Checkbox value=\"{ 1 }\">Option 1</Checkbox>\n    <Checkbox value=\"{ 2 }\">Option 2</Checkbox>\n    <Checkbox value=\"{ 3 }\">Option 3</Checkbox>\n</CheckboxGroup>\n<br />\n<br />\nChecked：{ ( v && v.length > 0 ) ? v : 'none' }"
-            }
+            },
+            "id": 5
         }
     ],
     "Countdown": [
@@ -91,7 +97,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Countdown\n    end=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\n></Countdown>"
-            }
+            },
+            "id": 7
         },
         {
             "path": "Countdown/locale.md",
@@ -102,7 +109,8 @@
             "html": "<p>Locale</p>\n",
             "code": {
                 "html": "<Countdown\n    end=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\n    locale=\"zh\"\n></Countdown>"
-            }
+            },
+            "id": 10
         },
         {
             "path": "Countdown/format.md",
@@ -113,7 +121,8 @@
             "html": "<p>Format</p>\n",
             "code": {
                 "html": "<Countdown\n    end=\"{ Date.now() + 1000 * 60 * 60 * 24 * 7 }\"\n    format=\"[D] or [DAY] 天 [H] or [HOUR] 时 [M] or [MINUTE] 分 [S] or [SECOND] 秒\"\n></Countdown>"
-            }
+            },
+            "id": 9
         },
         {
             "path": "Countdown/event.md",
@@ -124,7 +133,8 @@
             "html": "<p>Event</p>\n",
             "code": {
                 "html": "{#if !isTimeEnd}\n<Countdown end=\"{ v ? v : v = ( Date.now() + 1000 * 5 ) }\" on-end=\"{ isTimeEnd = true }\"></Countdown>\n{#else}\n<img src=\"http://i1.hdslb.com/icon/f8c84297779fb8f8d24f2476c78bbefc.gif\" />\n{/if}\n<br />\n<br />\nisTimeEnd: { isTimeEnd ? 'true' : 'false' }\n<br />\n<br />\n<Button sm primary on-click=\"{ v = Date.now() + 1000 * 5 && ( isTimeEnd = false ) }\">Reset</Button>"
-            }
+            },
+            "id": 8
         }
     ],
     "Form": [
@@ -135,7 +145,8 @@
             },
             "source": "\r\n### Pure provides you two common form layout\r\n",
             "html": "<h3 id=\"pure-provides-you-two-common-form-layout\">Pure provides you two common form layout</h3>\n",
-            "code": {}
+            "code": {},
+            "id": 12
         },
         {
             "path": "Form/horizontal.md",
@@ -146,7 +157,8 @@
             "html": "<p>Horizontal</p>\n",
             "code": {
                 "html": "<Form>\n    <FormItem>\n        <FormLabel>Nickname</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Nickname\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel>Email</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Email\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Checkbox>Agree something</Checkbox>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Button primary>Register</Button>\n        </FormControl>\n    </FormItem>\n</Form>"
-            }
+            },
+            "id": 11
         },
         {
             "path": "Form/vertical.md",
@@ -157,7 +169,8 @@
             "html": "<p>Vertical</p>\n",
             "code": {
                 "html": "<Form v>\n    <FormItem>\n        <FormLabel>Nickname</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Nickname\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel>Email</FormLabel>\n        <FormControl>\n            <Input placeholder=\"Your Email\"></Input>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Checkbox>Agree something</Checkbox>\n        </FormControl>\n    </FormItem>\n\n    <FormItem>\n        <FormLabel></FormLabel>\n        <FormControl>\n            <Button primary>Register</Button>\n        </FormControl>\n    </FormItem>\n</Form>"
-            }
+            },
+            "id": 13
         }
     ],
     "Icon": [
@@ -170,7 +183,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Icon>&#xe603;</Icon>\n<Icon>&#xe601;</Icon>\n<Icon>&#xe602;</Icon>\n<Icon>&#xe600;</Icon>"
-            }
+            },
+            "id": 14
         }
     ],
     "Input": [
@@ -183,7 +197,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Input placeholder=\"placeholder\" value=\"v\"></Input>"
-            }
+            },
+            "id": 15
         },
         {
             "path": "Input/error.md",
@@ -194,7 +209,8 @@
             "html": "<p>Error Status</p>\n",
             "code": {
                 "html": "<Input error=\"{ true }\"></Input>"
-            }
+            },
+            "id": 17
         },
         {
             "path": "Input/error-with-message.md",
@@ -205,7 +221,8 @@
             "html": "<p>Error Status With Error Message</p>\n",
             "code": {
                 "html": "<Input error=\"{ true }\" error-message=\"{ 'This field is REQUIRED' }\"></Input>"
-            }
+            },
+            "id": 16
         },
         {
             "path": "Input/event.md",
@@ -216,7 +233,8 @@
             "html": "<p>Event</p>\n",
             "code": {
                 "html": "<Input on-change=\"{ v = $event }\"></Input>\n<Input value=\"{ v }\"></Input>"
-            }
+            },
+            "id": 18
         }
     ],
     "Modal": [
@@ -229,7 +247,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Button primary on-click=\"{ show = true }\">Open Modal</Button>\n{#if show}\n<Modal\n    title=\"Modal Title\"\n    ok-text=\"Confirm\"\n    cancel-text=\"Cancel\"\n    on-cancel=\"{ show = false }\"\n    on-ok=\"{ show = false }\"\n>\n    <div class=\"modal-example-center\">\n        <img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\">\n    </div>\n</Modal>\n{/if}"
-            }
+            },
+            "id": 19
         }
     ],
     "Note": [
@@ -242,7 +261,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Note type=\"info\">info</Note>\n<Note type=\"success\">success</Note>\n<Note type=\"warning\">warning</Note>\n<Note type=\"error\">error</Note>"
-            }
+            },
+            "id": 20
         }
     ],
     "Pagination": [
@@ -255,7 +275,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Pagination\n    min=\"{ 50 }\"\n    max=\"{ 100 }\"\n    current=\"{ current || 50 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\nCurrent: { current || 50 }"
-            }
+            },
+            "id": 21
         }
     ],
     "Radio": [
@@ -268,7 +289,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Radio checked=\"{ false }\">Option</Radio>"
-            }
+            },
+            "id": 22
         },
         {
             "path": "Radio/group.md",
@@ -279,7 +301,8 @@
             "html": "<p>Group</p>\n",
             "code": {
                 "html": "<RadioGroup checked=\"{ 2 }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>"
-            }
+            },
+            "id": 24
         },
         {
             "path": "Radio/event.md",
@@ -290,7 +313,8 @@
             "html": "<p>Event</p>\n",
             "code": {
                 "html": "<RadioGroup on-change=\"{ v = $event }\">\n    <Radio value=\"{ 1 }\">Option 1</Radio>\n    <Radio value=\"{ 2 }\">Option 2</Radio>\n    <Radio value=\"{ 3 }\">Option 3</Radio>\n</RadioGroup>\n<br />\n<br />\nChecked：{ v || 'none' }"
-            }
+            },
+            "id": 23
         }
     ],
     "Spinner": [
@@ -303,7 +327,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Spinner></Spinner>"
-            }
+            },
+            "id": 25
         }
     ],
     "Switch": [
@@ -316,7 +341,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Switch checked=\"{ false }\"></Switch>"
-            }
+            },
+            "id": 26
         },
         {
             "path": "Switch/event.md",
@@ -327,7 +353,36 @@
             "html": "<p>Event</p>\n",
             "code": {
                 "html": "<Switch on-change=\"{ v = $event }\"></Switch>\n<br />\n<br />\nChecked: { v !== undefined ? v : 'none' }"
-            }
+            },
+            "id": 27
+        }
+    ],
+    "Table": [
+        {
+            "path": "Table/render.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n{#if !loading}\r\n<Table fields=\"{ fields }\" data-source=\"{ dataSource }\"></Table>\r\n{#else}\r\n<Spinner></Spinner>\r\n{/if}\r\n```\r\n\r\n```js\r\n{\r\n\tconfig: function() {\r\n\t\tthis.data.loading = true;\r\n\t\tthis.data.fields = [\r\n\t\t\t{\r\n\t\t\t\tkey: 'name',\r\n\t\t\t\tlabel: 'Name',\r\n\t\t\t\trender( v, row ) {\r\n\t\t\t\t\treturn v.first + ' ' + v.last + ' <span style=\"color: #5fa4f9;\">:)</span>';\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tkey: 'gender',\r\n\t\t\t\tlabel: 'Gender',\r\n\t\t\t\trender( v, row ) {\r\n\t\t\t\t\t// if return nothing, this won't override default render function\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tkey: 'email',\r\n\t\t\t\tlabel: 'Email'\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tkey: 'other',\r\n\t\t\t\tlabel: 'Other',\r\n\t\t\t\trender( v, row ) {\r\n\t\t\t\t\treturn `\r\n\t\t\t\t\t\t<Note type=\"info\">Hi</Note>\r\n\t\t\t\t\t`;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t];\r\n\r\n\t\tthis.data.dataSource = [];\r\n\r\n\t\tfetch(\r\n\t\t\t`http://api.randomuser.me/?results=10&page=1&sortField=&sortOrder=`\r\n\t\t\t)\r\n\t\t\t.then(response => response.json())\r\n\t\t\t.then(json => json.results)\r\n\t\t\t.then(dataSource => {\r\n\t\t\t\tthis.data.dataSource = dataSource;\r\n\t\t\t\tthis.data.loading = false;\r\n\t\t\t\tthis.$update();\r\n\t\t\t})\r\n\t\t\t.catch(e => {\r\n\t\t\t\tthis.data.loading = false;\r\n\t\t\t\tthis.$update();\r\n\t\t\t});\r\n\t}\r\n}\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n",
+            "code": {
+                "html": "{#if !loading}\n<Table fields=\"{ fields }\" data-source=\"{ dataSource }\"></Table>\n{#else}\n<Spinner></Spinner>\n{/if}",
+                "js": "{\n    config: function() {\n        this.data.loading = true;\n        this.data.fields = [\n            {\n                key: 'name',\n                label: 'Name',\n                render( v, row ) {\n                    return v.first + ' ' + v.last + ' <span style=\"color: #5fa4f9;\">:)</span>';\n                }\n            },\n            {\n                key: 'gender',\n                label: 'Gender',\n                render( v, row ) {\n                    // if return nothing, this won't override default render function\n                }\n            },\n            {\n                key: 'email',\n                label: 'Email'\n            },\n            {\n                key: 'other',\n                label: 'Other',\n                render( v, row ) {\n                    return `\n                        <Note type=\"info\">Hi</Note>\n                    `;\n                }\n            }\n        ];\n\n        this.data.dataSource = [];\n\n        fetch(\n            `http://api.randomuser.me/?results=10&page=1&sortField=&sortOrder=`\n            )\n            .then(response => response.json())\n            .then(json => json.results)\n            .then(dataSource => {\n                this.data.dataSource = dataSource;\n                this.data.loading = false;\n                this.$update();\n            })\n            .catch(e => {\n                this.data.loading = false;\n                this.$update();\n            });\n    }\n}"
+            },
+            "id": 29
+        },
+        {
+            "path": "Table/interaction.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\nHaving some event to handle? use raw TR and TD instead\r\n\r\n```html\r\n<Table fields=\"{ fields }\">\r\n\t{#list dataSource as ds}\r\n\t<TR>\r\n\t\t<TD>{ ds.name }</TD>\r\n\t\t<TD>{ ds.email }</TD>\r\n\t\t<TD>\r\n\t\t\t<Button primary sm on-click=\"{ this.onClick( ds ) }\">Modify</Button>\r\n\t\t</TD>\r\n\t</TR>\r\n\t{/list}\r\n</Table>\r\n```\r\n\r\n```js\r\n{\r\n\tconfig: function() {\r\n\t\tthis.data.fields = [\r\n\t\t\t{\r\n\t\t\t\tlabel: 'Name'\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tlabel: 'Email'\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tlabel: 'Operation'\r\n\t\t\t}\r\n\t\t];\r\n\r\n\t\tthis.data.dataSource = [\r\n\t\t\t{\r\n\t\t\t\tname: 'Jim',\r\n\t\t\t\temail: 'jim@example.com'\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tname: 'Mike',\r\n\t\t\t\temail: 'mike@example.com'\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\tname: 'Sam',\r\n\t\t\t\temail: 'sam@example.com'\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\tonClick: function( v ) {\r\n\t\tPure.note( 'you clicked ' + v.name, 'info', 1000 );\r\n\t}\r\n}\r\n```\r\n",
+            "html": "<p>Having some event to handle? use raw TR and TD instead</p>\n",
+            "code": {
+                "html": "<Table fields=\"{ fields }\">\n    {#list dataSource as ds}\n    <TR>\n        <TD>{ ds.name }</TD>\n        <TD>{ ds.email }</TD>\n        <TD>\n            <Button primary sm on-click=\"{ this.onClick( ds ) }\">Modify</Button>\n        </TD>\n    </TR>\n    {/list}\n</Table>",
+                "js": "{\n    config: function() {\n        this.data.fields = [\n            {\n                label: 'Name'\n            },\n            {\n                label: 'Email'\n            },\n            {\n                label: 'Operation'\n            }\n        ];\n\n        this.data.dataSource = [\n            {\n                name: 'Jim',\n                email: 'jim@example.com'\n            },\n            {\n                name: 'Mike',\n                email: 'mike@example.com'\n            },\n            {\n                name: 'Sam',\n                email: 'sam@example.com'\n            }\n        ]\n    },\n    onClick: function( v ) {\n        Pure.note( 'you clicked ' + v.name, 'info', 1000 );\n    }\n}"
+            },
+            "id": 28
         }
     ],
     "Textarea": [
@@ -340,7 +395,8 @@
             "html": "<p>Basic Usage</p>\n",
             "code": {
                 "html": "<Textarea></Textarea>"
-            }
+            },
+            "id": 30
         }
     ]
 }

@@ -1,7 +1,7 @@
 import '../dist/pure.js';
 import '../dist/pure.css';
 import { Router } from 'director';
-import App from './app';
+import App from './components/app';
 import routes from './routes';
 
 new App().$inject( document.getElementById( 'app' ) );

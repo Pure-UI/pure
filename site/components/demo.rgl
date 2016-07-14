@@ -6,14 +6,18 @@
 		</div>
 		{/if}
 
-		{#if source}
+		{#if rgl}
 		<div class="demo-box">
-			{#inc source}
+			{#inc rgl}
 		</div>
 		{/if}
 
-		<div class="{ deindentSource ? 'code-box' : '' }">
-			<pre><code ref="c" class="lang-html">{ deindentSource }</code></pre>
+		<div class="{ deindentRgl ? 'code-box' : '' }">
+			<pre><code ref="r" class="lang-html">{ deindentRgl }</code></pre>
+		</div>
+
+		<div class="{ deindentJs ? 'code-box' : '' }">
+			<pre><code ref="j" class="lang-js">{ deindentJs }</code></pre>
 		</div>
 	</div>
 </template>
@@ -24,18 +28,73 @@
 	export default {
 		name: 'Demo',
 		config() {
-			if( !this.data.source ) {
-				return;
+			const hasOwn = Object.prototype.hasOwnProperty;
+
+			if( this.data.mixin ) {
+				if( this.data.mixin.config ) {
+					this.data.mixin.config.call( this );
+				}
+
+				for( let m in this.data.mixin ) {
+					if( !hasOwn.call( this, m ) ) {
+						this[ m ] = this.data.mixin[ m ];
+					}
+				}
 			}
-			this.data.deindentSource = deindent( this.data.source ).trim();
+
+			if( this.data.rgl ) {
+				this.data.deindentRgl = deindent( this.data.rgl ).trim();
+			}
+
+			if( this.data.js ) {
+				this.data.deindentJs = deindent( this.data.js ).trim();
+			}
 		},
 		init() {
-			if( this.data.deindentSource ) {
-				hljs.highlightBlock( this.$refs.c );
+			if( this.data.deindentRgl ) {
+				hljs.highlightBlock( this.$refs.r );
+			}
+			if( this.data.deindentJs ) {
+				hljs.highlightBlock( this.$refs.j );
 			}
 		}
 	};
 </script>
+
+<style lang="less">
+	.lang-html {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: 'html';
+			display: block;
+			padding: 2px 9px;
+			background-color: #d7dfe8;
+			border-radius: 0 0 0 4px;
+			color: #547ecb;
+			pointer-events: none;
+		}
+	}
+	.lang-js {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: 'javascript';
+			display: block;
+			padding: 2px 9px;
+			background-color: #d7dfe8;
+			border-radius: 0 0 0 4px;
+			color: #547ecb;
+			pointer-events: none;
+		}
+	}
+</style>
 
 <style lang="less" scoped>
 	.code-box {

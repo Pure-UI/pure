@@ -16,4 +16,5 @@ export default {
 	'/Icon': () => dispatcher.emit( 'update', docs.Icon, 'Icon' ),
 	'/Note': () => dispatcher.emit( 'update', docs.Note, 'Note' ),
 	'/Countdown': () => dispatcher.emit( 'update', docs.Countdown, 'Countdown' ),
+	'/Table': () => dispatcher.emit( 'update', docs.Table, 'Table' ),
 };

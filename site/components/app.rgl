@@ -6,7 +6,7 @@
 		<Nav active="{ active }"></Nav>
 		<div class="docs">
 			{#list doc as d}
-			<Demo source="{ d.code.html }" markdown="{ d.html }"></Demo>
+			<Demo rgl="{ d.code.html }" js="{ d.code.js }" markdown="{ d.html }" mixin="{ mixins[ active ][ d_index ] }"></Demo>
 			{/list}
 
 			<!-- TODO: api table -->
@@ -16,15 +16,17 @@
 </template>
 
 <script>
-	import './components/demo';
-	import './components/nav';
-	import dispatcher from './dispatcher';
-	import docs from './docs.json';
+	import '../components/demo';
+	import '../components/nav';
+	import dispatcher from '../dispatcher';
+	import docs from '../docs.json';
+	import mixins from '../docs-js';
 
 	export default {
 		config() {
 			this.data.active = 'Button';
 			this.data.doc = docs.Button;
+			this.data.mixins = mixins;
 
 			dispatcher.on('update', ( doc, name ) => {
 				this.data.doc = doc;

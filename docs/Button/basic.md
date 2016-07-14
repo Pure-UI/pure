@@ -8,9 +8,3 @@ Basic Usage
 <Button primary>Primary</Button>
 <Button>Normal</Button>
 ```
-
-```css
-.c {
-	color: #333;
-}
-```
