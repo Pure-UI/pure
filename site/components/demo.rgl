@@ -62,36 +62,33 @@
 </script>
 
 <style lang="less">
-	.lang-html {
-		position: relative;
+	.code-box {
+		.lang-html, .lang-js {
+			position: relative;
 
-		&::after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			content: 'html';
-			display: block;
-			padding: 2px 9px;
-			background-color: #d7dfe8;
-			border-radius: 0 0 0 4px;
-			color: #547ecb;
-			pointer-events: none;
+			&::after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: block;
+				padding: 2px 9px;
+				background-color: rgba(215, 223, 232, 0.6);
+				border-radius: 0 0 0 4px;
+				color: #547ecb;
+				pointer-events: none;
+			}
 		}
-	}
-	.lang-js {
-		position: relative;
 
-		&::after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			content: 'javascript';
-			display: block;
-			padding: 2px 9px;
-			background-color: #d7dfe8;
-			border-radius: 0 0 0 4px;
-			color: #547ecb;
-			pointer-events: none;
+		.lang-html {
+			&::after {
+				content: 'html';
+			}
+		}
+		
+		.lang-js {
+			&::after {
+				content: 'javascript';
+			}
 		}
 	}
 </style>
