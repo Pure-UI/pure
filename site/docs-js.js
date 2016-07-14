@@ -3,16 +3,25 @@ var Table0 = {
         this.data.loading = true;
         this.data.fields = [
             {
+                key: 'picture',
+                label: 'Avatar',
+                render: function( v, row ) {
+                    return `
+                        <img src="${ v.medium }" style="width: 50px;height: 50px;" />
+                    `
+                }
+            },
+            {
                 key: 'name',
                 label: 'Name',
-                render( v, row ) {
-                    return v.first + ' ' + v.last + ' <span style="color: #5fa4f9;">:)</span>';
+                render: function( v, row ) {
+                    return v.first + ' ' + v.last;
                 }
             },
             {
                 key: 'gender',
                 label: 'Gender',
-                render( v, row ) {
+                render: function( v, row ) {
                     // if return nothing, this won't override default render function
                 }
             },
@@ -23,7 +32,7 @@ var Table0 = {
             {
                 key: 'other',
                 label: 'Other',
-                render( v, row ) {
+                render: function( v, row ) {
                     return `
                         <Note type="info">Hi</Note>
                     `;
@@ -34,7 +43,7 @@ var Table0 = {
         this.data.dataSource = [];
 
         fetch(
-            `http://api.randomuser.me/?results=10&page=1&sortField=&sortOrder=`
+            `https://randomuser.me/api?results=10&page=1&sortField=&sortOrder=`
             )
             .then(response => response.json())
             .then(json => json.results)
