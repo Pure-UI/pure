@@ -6,12 +6,12 @@ Basic Usage
 
 ```html
 <Pagination
-	min="{ 1 }"
-	max="{ 10 }"
-	current="{ current || 5 }"
+	min="{ 50 }"
+	max="{ 100 }"
+	current="{ current || 50 }"
 	prev-text="<"
 	next-text=">"
 	on-change="{ current = $event }"
 ></Pagination>
-Current: { current || 5 }
+Current: { current || 50 }
 ```

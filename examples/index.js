@@ -36,7 +36,7 @@ var App = Regular.extend({
 		<br />
 		<br />
 
-		<Pagination min="{ 1 }" max="{ 10 }" current="{ current || 5 }" on-change="{ current = $event }"></Pagination>
+		<Pagination min="{ 50 }" max="{ 100 }" current="{ current || 60 }" on-change="{ current = $event }" prev-text="<" next-text=">"></Pagination>
 		<br />
 		Current: { current || 5 }
 
@@ -180,7 +180,7 @@ var App = Regular.extend({
 	},
 	config( data ) {
 		data.end = new Date().getTime() + 1000 * 60 * 60 * 24;
-		data.current = 5;
+		data.current = 60;
 		data.dataSource = [];
 		data.fields = [
 			{

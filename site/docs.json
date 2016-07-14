@@ -251,10 +251,10 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 1 }\"\r\n\tmax=\"{ 10 }\"\r\n\tcurrent=\"{ current || 5 }\"\r\n\tprev-text=\"<\"\r\n\tnext-text=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\nCurrent: { current || 5 }\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 50 }\"\r\n\tmax=\"{ 100 }\"\r\n\tcurrent=\"{ current || 50 }\"\r\n\tprev-text=\"<\"\r\n\tnext-text=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\nCurrent: { current || 50 }\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "<Pagination\n    min=\"{ 1 }\"\n    max=\"{ 10 }\"\n    current=\"{ current || 5 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\nCurrent: { current || 5 }"
+                "html": "<Pagination\n    min=\"{ 50 }\"\n    max=\"{ 100 }\"\n    current=\"{ current || 50 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\nCurrent: { current || 50 }"
             }
         }
     ],
