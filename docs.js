@@ -54,8 +54,8 @@ glob('**/*.md', {
 	// extract js
 	var output = '';
 	var assignStr = '';
-	_.each( docs, ( doc, name ) => {
-		_.each( doc, ( v, i ) => {
+	_.each( docs, function( doc, name ) {
+		_.each( doc, function( v, i ) {
 			if( v.code.js ) {
 				assignStr += 'var ' + name + i + ' = ' + v.code.js + ';\n';
 			}
@@ -66,9 +66,9 @@ glob('**/*.md', {
 	output += 'export default ';
 
 	var jscodes = {};
-	_.each( docs, ( doc, name ) => {
+	_.each( docs, function( doc, name ) {
 		jscodes[ name ] = [];
-		_.each( doc, ( v, i ) => {
+		_.each( doc, function( v, i ) {
 			if( v.code.js ) {
 				jscodes[ name ].push( name + i );
 			}

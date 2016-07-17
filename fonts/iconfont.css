@@ -14,7 +14,9 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-list:before { content: "\e604"; }
 .icon-warn:before { content: "\e603"; }
 .icon-info:before { content: "\e601"; }
+.icon-home:before { content: "\e605"; }
 .icon-success:before { content: "\e602"; }
 .icon-chongzhishibai:before { content: "\e600"; }

@@ -75,6 +75,7 @@
 				background-color: rgba(215, 223, 232, 0.6);
 				border-radius: 0 0 0 4px;
 				color: #547ecb;
+				font-size: 11px;
 				pointer-events: none;
 			}
 		}
@@ -84,7 +85,7 @@
 				content: 'html';
 			}
 		}
-		
+
 		.lang-js {
 			&::after {
 				content: 'javascript';

@@ -91,4 +91,4 @@ var Table1 = {
         Pure.note( 'you clicked ' + v.name, 'info', 1000 );
     }
 };
-export default {"Button":[],"Checkbox":[],"Countdown":[],"Form":[],"Icon":[],"Input":[],"Modal":[],"Note":[],"Pagination":[],"Radio":[],"Spinner":[],"Switch":[],"Table":[Table0,Table1],"Textarea":[]}
+export default {"Box":[],"Breadcrumb":[],"Button":[],"Checkbox":[],"Countdown":[],"Form":[],"Icon":[],"Input":[],"Modal":[],"Note":[],"Pagination":[],"Radio":[],"Spinner":[],"Switch":[],"Table":[Table0,Table1],"Textarea":[]}

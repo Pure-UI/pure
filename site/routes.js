@@ -17,4 +17,5 @@ export default {
 	'/Note': () => dispatcher.emit( 'update', docs.Note, 'Note' ),
 	'/Countdown': () => dispatcher.emit( 'update', docs.Countdown, 'Countdown' ),
 	'/Table': () => dispatcher.emit( 'update', docs.Table, 'Table' ),
+	'/Breadcrumb': () => dispatcher.emit( 'update', docs.Breadcrumb, 'Breadcrumb' ),
 };

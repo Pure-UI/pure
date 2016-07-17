@@ -23,6 +23,9 @@
 			<li>
 				<a class="{ active === 'Pagination' ? 'active' : '' }" href="#/Pagination">Pagination</a>
 			</li>
+			<li>
+				<a class="{ active === 'Breadcrumb' ? 'active' : '' }" href="#/Breadcrumb">Breadcrumb</a>
+			</li>
 		</ul>
 		<div class="title">form</div>
 		<ul>

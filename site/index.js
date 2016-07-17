@@ -7,4 +7,8 @@ import routes from './routes';
 new App().$inject( document.getElementById( 'app' ) );
 
 const router = Router( routes );
-router.init();
+router.configure({
+	// on() {
+	// 	window.scrollTo( 0, 0 );
+	// }
+}).init();

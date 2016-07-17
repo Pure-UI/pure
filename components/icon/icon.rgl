@@ -1,5 +1,5 @@
 <template>
-	<i class="iconfont">
+	<i class="r-icon iconfont">
 		{#inc this.$body}
 	</i>
 </template>
@@ -13,5 +13,7 @@
 </script>
 
 <style lang="less" scoped>
-
+	.r-icon {
+		min-width: 1em;
+	}
 </style>
