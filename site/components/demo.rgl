@@ -94,7 +94,7 @@
 	}
 </style>
 
-<style lang="less" scoped>
+<style lang="less">
 	.code-box {
 		.hljs {
 			border-radius: 4px;
@@ -107,5 +107,11 @@
 		margin-bottom: 20px;
 		border-bottom: solid 1px #f0f0f0;
 		color: #666;
+
+		code {
+			background-color: #eaeef3;
+			padding: 0.2rem 0.4rem;
+			border-radius: 2px;
+		}
 	}
 </style>

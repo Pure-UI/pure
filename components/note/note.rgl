@@ -69,9 +69,9 @@
 		position: fixed;
 		top: 0;
 		left: 50%;
-		opacity: 0;
-		transform: translate3d(-50%,0,0);
-		transition: transform .7s ease, opacity .7s ease;
+		opacity: .8;
+		transform: translate3d(-50%,-40px,0);
+		transition: transform .7s cubic-bezier(.4,0,0,1.39), opacity .7s cubic-bezier(.4,0,0,1.39);
 	}
 
 	.r-note-in {
@@ -80,8 +80,8 @@
 	}
 
 	.r-note-out {
-		transform: translate3d(-50%,0,0);
-		opacity: 0;
+		transform: translate3d(-50%,-40px,0);
+		opacity: .6;
 	}
 </style>
 

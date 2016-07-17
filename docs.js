@@ -71,6 +71,9 @@ glob('**/*.md', {
 		_.each( doc, function( v, i ) {
 			if( v.code.js ) {
 				jscodes[ name ].push( name + i );
+			} else {
+				// 占位
+				jscodes[ name ].push( 'void 0' );
 			}
 		} );
 	} );
@@ -83,6 +86,10 @@ glob('**/*.md', {
 	}).join('|') + ')"';
 
 	jscodes = jscodes.replace(new RegExp( regStr, 'g' ), function(_, match) {
+		return match;
+	});
+
+	jscodes = jscodes.replace(new RegExp( '"(void 0)"', 'g' ), function(_, match) {
 		return match;
 	});
 
