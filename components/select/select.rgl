@@ -1,20 +1,21 @@
 <template>
-	<!-- <div class="r-select-trigger">选中1项，共10项</div>
-	<div class="r-select-items">
-		{#inc this.$body}
-	</div> -->
 	<select class="r-select">
-		<option value="">Option 1</option>
-		<option value="">Option 2</option>
-		<option value="">Option 3</option>
-		<option value="">Option 4</option>
-		<option value="">Option 5</option>
+		{#list options as option}
+			{#if this.isObject( option )}
+			<option value="{ option.value }">{ option.text }</option>
+			{else}
+			<option value="{ option }">{ option }</option>
+			{/if}
+		{/list}
 	</select>
 </template>
 
 <script>
 	export default {
 		name: 'Select',
+		isObject( v ) {
+			return typeof v === 'object';
+		},
 		config() {
 
 		},
@@ -34,8 +35,5 @@
 		outline: none;
 	}
 
-	.r-select-items {
-		position: absolute;
-		width: 170px;
-	}
+
 </style>

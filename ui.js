@@ -33,7 +33,6 @@ import './components/checkbox/checkbox';
 import './components/checkbox/checkbox-group';
 // select
 import './components/select/select';
-import './components/select/option';
 // switch
 import './components/switch/switch';
 // Form
