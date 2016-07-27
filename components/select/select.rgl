@@ -1,9 +1,9 @@
 <template>
-	<select class="r-select">
+	<select ref="v" class="r-select" on-change="{ this.onChange() }">
 		{#list options as option}
 			{#if this.isObject( option )}
 			<option value="{ option.value }">{ option.text }</option>
-			{else}
+			{#else}
 			<option value="{ option }">{ option }</option>
 			{/if}
 		{/list}
@@ -21,6 +21,16 @@
 		},
 		init() {
 
+		},
+		onChange() {
+			const v = this.$refs.v.value;
+
+			let vs = this.data.options;
+			if( this.isObject( this.data.options[ 0 ] ) ) {
+				vs = this.data.options.map(v => ( v.value + '' ));
+			}
+
+			this.$emit( 'change', v, vs.indexOf( v ) );
 		}
 	}
 </script>
@@ -34,6 +44,4 @@
 		background-color: #FFF;
 		outline: none;
 	}
-
-
 </style>

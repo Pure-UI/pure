@@ -4,11 +4,12 @@ setTimeout(() => {
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `
+		<Select options="{ options }"></Select>
 		<Input disabled="{ true }"></Input>
 		<Box margin="" padding="20px">
 			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 5 ) }" on-end="{ isTimeEnd = true }"></Countdown>
 		</Box>
-		
+
 		<br />
 		<br />
 		isTimeEnd: { isTimeEnd ? 'true' : 'false' }
@@ -182,6 +183,20 @@ var App = Regular.extend({
 		data.end = new Date().getTime() + 1000 * 60 * 60 * 24;
 		data.current = 60;
 		data.dataSource = [];
+		data.options = [
+			{
+				text: 'Option 1',
+				value: 1
+			},
+			{
+				text: 'Option 2',
+				value: 2
+			},
+			{
+				text: 'Option 3',
+				value: 3
+			},
+		]
 		data.fields = [
 			{
 				key: 'name',
