@@ -4,7 +4,9 @@
   "description": "clean and lovely components, built with regularjs",
   "main": "index.js",
   "scripts": {
-    "dist": "webpack"
+    "dev": "webpack -w",
+    "dist": "webpack",
+    "doc": "node docs && webpack --config webpack.config.doc.js"
   },
   "author": "fengzilong",
   "license": "MIT",
