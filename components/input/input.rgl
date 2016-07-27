@@ -1,9 +1,10 @@
 <template>
 	<div class="r-input-wrapper">
 		<input
-			class="r-input { error ? 'r-input-error' : '' }"
+			class="r-input { error ? 'r-input-error' : '' } { disabled ? 'r-input-disabled' : '' }"
 			type="{ type || 'text' }"
 			value="{ value }"
+			disabled="{ disabled }"
 			placeholder="{ placeholder }"
 			on-input="{ this.onChange() }"
 			on-focus="{ this.onFocus() }"
@@ -65,5 +66,10 @@
 
 	.r-input-error {
 		border: solid 1px #fd8282;
+	}
+
+	.r-input-disabled {
+		background-color: #EEE;
+		cursor: not-allowed;
 	}
 </style>

@@ -6,9 +6,9 @@ const DAY = HOUR * 24;
 const duration = ( s, e ) => {
 	const delta = Math.abs( e - s );
 
-	const day = parseInt( delta / DAY );
-	const hour = parseInt( ( delta - day * DAY ) / HOUR );
-	const minute = parseInt( ( delta - day * DAY - hour * HOUR ) / MINUTE );
+	const day = ( delta / DAY ).toFixed( 0 );
+	const hour = ( ( delta - day * DAY ) / HOUR ).toFixed( 0 );
+	const minute = ( ( delta - day * DAY - hour * HOUR ) / MINUTE ).toFixed( 0 );
 	const second = Math.round( ( delta - day * DAY - hour * HOUR - minute * MINUTE ) / SECOND );
 
 	return { day, hour, minute, second };

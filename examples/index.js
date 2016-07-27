@@ -4,14 +4,11 @@ setTimeout(() => {
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `
+		<Input disabled="{ true }"></Input>
 		<Box margin="" padding="20px">
 			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 5 ) }" on-end="{ isTimeEnd = true }"></Countdown>
 		</Box>
-		{#if !isTimeEnd}
-		<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 5 ) }" on-end="{ isTimeEnd = true }"></Countdown>
-		{#else}
-		end
-		{/if}
+		
 		<br />
 		<br />
 		isTimeEnd: { isTimeEnd ? 'true' : 'false' }

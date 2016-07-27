@@ -1,5 +1,5 @@
 <template>
-	<span>{ time }</span>
+	{ time }
 </template>
 
 <script>
@@ -25,16 +25,19 @@
 
 			const tick = () => {
 				let format = this.data.format;
-				const currentTime = +new Date();
-				let o = duration( currentTime, this.data.end );
-				let output = '';
+				let currentTime = +new Date();
 
 				if( currentTime >= this.data.end ) {
 					this.$emit( 'end' );
 					clearInterval( this.data.intervalId );
+					currentTime = this.data.end;
 				}
 
+				let o = duration( currentTime, this.data.end );
+				let output = '';
+
 				// TODO: other locales
+
 				// set default format according to locale
 				if( !format ) {
 					if( this.data.locale === 'zh' ) {
