@@ -5,10 +5,10 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n\t<Box margin=\"10px 0 15px \" padding=\"0 10px\">\r\n\t\t<Button primary>Button in Box</Button>\r\n\t</Box>\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n\t<Box margin=\"10px 0 15px \" padding=\"0 40px\">\r\n\t\t<Button primary>Button in Box</Button>\r\n\t</Box>\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "    <Box margin=\"10px 0 15px \" padding=\"0 10px\">\n        <Button primary>Button in Box</Button>\n    </Box>"
+                "html": "    <Box margin=\"10px 0 15px \" padding=\"0 40px\">\n        <Button primary>Button in Box</Button>\n    </Box>"
             },
             "id": 0
         }

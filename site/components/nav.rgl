@@ -65,6 +65,9 @@
 			<li>
 				<a class="{ active === 'Modal' ? 'active' : '' }" href="#/Modal">Modal</a>
 			</li>
+			<li>
+				<a class="{ active === 'Box' ? 'active' : '' }" href="#/Box">Box</a>
+			</li>
 		</ul>
 		<div class="title">message</div>
 		<ul>
