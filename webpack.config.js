@@ -1,5 +1,6 @@
 var webpack = require( 'webpack' )
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+var autoprefixer = require( 'autoprefixer' );
 var cwd = process.cwd();
 
 module.exports = {
@@ -33,11 +34,14 @@ module.exports = {
 			},
 			{
 				test: /\.less$/,
-				loader: 'less',
+				loader: ExtractTextPlugin.extract( 'style', 'css!postcss!less' ),
 				exclude: /node_modules/
 			}
 		]
 	},
+	postcss: [
+		autoprefixer({ browsers: [ 'last 2 versions' ] })
+	],
 	regularjs: {
 		loaders: {
 			css: ExtractTextPlugin.extract( 'css' ),
