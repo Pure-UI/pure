@@ -4,6 +4,8 @@ setTimeout(() => {
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `
+		<ElementTree source="{ elementSource }"></ElementTree>
+
 		<Select options="{ options }"></Select>
 		<Input disabled="{ true }"></Input>
 		<Box margin="" padding="20px">
@@ -180,6 +182,47 @@ var App = Regular.extend({
 		this.$update();
 	},
 	config( data ) {
+		data.elementSource = [
+			{
+				text: 'div',
+				attrs: {
+					class: '111',
+					'on-click': 'this.onClick()'
+				},
+				children: [
+					{
+						text: 'a',
+						attrs: {},
+						children: []
+					},
+				]
+			},
+			{
+				text: 'div',
+				attrs: {},
+				children: [
+					{
+						text: 'span',
+						attrs: {},
+						children: [
+							{
+								text: 'div',
+								attrs: {},
+								children: [
+									{
+										text: 'span',
+										attrs: {},
+										children: [
+
+										]
+									},
+								]
+							}
+						]
+					},
+				]
+			}
+		];
 		data.end = new Date().getTime() + 1000 * 60 * 60 * 24;
 		data.current = 60;
 		data.dataSource = [];

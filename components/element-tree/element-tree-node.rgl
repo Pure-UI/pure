@@ -1,0 +1,70 @@
+<template>
+	<div class="r-element-tree-node { open ? 'r-element-tree-node-open' : '' }">
+		<!-- <span class="arrow">&gt;</span> -->
+		<button class="tagname tagname-open">
+			&lt;{ node.text }{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}&gt;
+		</button>
+
+		<div class="r-element-tree-node-children">
+			{#list node.children as child}
+				<ElementTreeNode node="{ child }"></ElementTreeNode>
+			{/list}
+		</div>
+
+		<button class="tagname tagname-close">
+			&lt;/{ node.text }&gt;
+		</button>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'ElementTreeNode',
+		config() {
+
+		},
+	};
+</script>
+
+<style lang="less" scoped>
+	.r-element-tree-node {
+		.arrow {
+		}
+		.tagname {
+			display: block;
+			width: 100%;
+			padding: 3px 8px;
+			text-align: left;
+			appearance: none;
+			color: #c71280;
+			background-color: transparent;
+			border: none;
+			outline: none;
+
+			&:focus {
+				background-color: rgb(56,121,217);
+				color: #FFF;
+			}
+		}
+		.tagname-open {
+			.attr-key {
+				color: #9a4500;
+			}
+			.attr-plain {
+				color: #a894a6;
+			}
+			.attr-value {
+				color: #1a1aa6;
+			}
+		}
+		.tagname-close {
+
+		}
+	}
+	.r-element-tree-node-children {
+		padding-left: 20px;
+	}
+	.r-element-tree-node-open {
+
+	}
+</style>

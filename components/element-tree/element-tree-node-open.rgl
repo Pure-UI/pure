@@ -1,0 +1,13 @@
+<template>
+
+</template>
+
+<script>
+	export default {
+		name: 'ElementTreeNodeOpen'
+	}
+</script>
+
+<style lang="less" scoped>
+
+</style>
