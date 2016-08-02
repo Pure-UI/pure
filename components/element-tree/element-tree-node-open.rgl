@@ -1,13 +1,55 @@
 <template>
-
+	<div class="r-element-tree-node-open { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 20 * depth }px">
+		&lt;{ node.text || node.name }{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}&gt;
+	</div>
 </template>
 
 <script>
 	export default {
-		name: 'ElementTreeNodeOpen'
+		name: 'ElementTreeNodeOpen',
+		onClick() {
+			this.$emit( 'click' );
+		}
 	}
 </script>
 
 <style lang="less" scoped>
+	.r-element-tree-node-open {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		padding: 3px 8px 3px 0;
+		text-align: left;
+		color: #c71280;
+		background-color: transparent;
 
+		&:hover {
+			background-color: #ebf2fc;
+		}
+
+		&.selected {
+			background-color: #3879d9;
+			color: #FFF;
+
+			.attr-key {
+				color: #BBB;
+			}
+			.attr-plain {
+				color: #BBB;
+			}
+			.attr-value {
+				color: #FFF;
+			}
+		}
+
+		.attr-key {
+			color: #9a4500;
+		}
+		.attr-plain {
+			color: #a894a6;
+		}
+		.attr-value {
+			color: #1a1aa6;
+		}
+	}
 </style>

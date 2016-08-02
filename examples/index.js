@@ -4,7 +4,7 @@ setTimeout(() => {
 var App = Regular.extend({
 	// <Note type="success">Success</Note>
 	template: `
-		<ElementTree source="{ elementSource }"></ElementTree>
+		<ElementTree source="{ elementSource }" on-select="{ this.onSelect( $event ) }"></ElementTree>
 
 		<Select options="{ options }"></Select>
 		<Input disabled="{ true }"></Input>
@@ -154,6 +154,9 @@ var App = Regular.extend({
 		</Modal>
 		{/if}
 	`,
+	onSelect( v ) {
+		console.log( 'onSelect', v );
+	},
 	onPaginationChange( v ) {
 		console.log( 'onPaginationChange', v );
 		this.data.current = v;

@@ -1,13 +1,35 @@
 <template>
-
+	<div class="r-element-tree-node-close { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 20 * depth }px">
+		&lt;/{ node.text || node.name }&gt;
+	</div>
 </template>
 
 <script>
 	export default {
-		name: 'ElementTreeNodeClose'
+		name: 'ElementTreeNodeClose',
+		onClick() {
+			this.$emit( 'click' );
+		}
 	}
 </script>
 
 <style lang="less" scoped>
+	.r-element-tree-node-close {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		padding: 3px 8px 3px 0;
+		text-align: left;
+		color: #c71280;
+		background-color: transparent;
 
+		&:hover {
+			background-color: #ebf2fc;
+		}
+
+		&.selected {
+			background-color: #3879d9;
+			color: #FFF;
+		}
+	}
 </style>

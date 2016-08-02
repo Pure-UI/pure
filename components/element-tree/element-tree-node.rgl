@@ -1,19 +1,15 @@
 <template>
 	<div class="r-element-tree-node { open ? 'r-element-tree-node-open' : '' }">
 		<!-- <span class="arrow">&gt;</span> -->
-		<button class="tagname tagname-open">
-			&lt;{ node.text }{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}&gt;
-		</button>
+		<ElementTreeNodeOpen node="{ node }" depth="{ depth }" on-click="{ this.onTagOpenClick() }" selected="{ tagOpenSelected }"></ElementTreeNodeOpen>
 
-		<div class="r-element-tree-node-children">
+		<div class="children">
 			{#list node.children as child}
-				<ElementTreeNode node="{ child }"></ElementTreeNode>
+				<ElementTreeNode node="{ child }" depth="{ depth + 1 }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
 			{/list}
 		</div>
 
-		<button class="tagname tagname-close">
-			&lt;/{ node.text }&gt;
-		</button>
+		<ElementTreeNodeClose node="{ node }" depth="{ depth }" on-click="{ this.onTagCloseClick() }" selected="{ tagCloseSelected }"></ElementTreeNodeClose>
 	</div>
 </template>
 
@@ -21,50 +17,59 @@
 	export default {
 		name: 'ElementTreeNode',
 		config() {
-
+			this.data.depth = this.data.depth || 0;
 		},
+		computed: {
+			tagOpenSelected: {
+				get() {
+					return this.data.selectedNode === this.data.node &&
+						this.data.selectedPosition === 'open';
+				},
+				set() {
+
+				}
+			},
+			tagCloseSelected: {
+				get() {
+					return this.data.selectedNode === this.data.node &&
+						this.data.selectedPosition === 'close';
+				},
+				set() {
+					
+				}
+			}
+		},
+		onTagOpenClick() {
+			if( this.data.tagOpenSelected ) {
+				return;
+			}
+			this.$emit( 'select', {
+				node: this.data.node,
+				position: 'open'
+			} );
+		},
+		onTagCloseClick() {
+			if( this.data.tagCloseSelected ) {
+				return;
+			}
+			this.$emit( 'select', {
+				node: this.data.node,
+				position: 'close'
+			} );
+		},
+		onSelect( v ) {
+			// 传递
+			this.$emit( 'select', v );
+		}
 	};
 </script>
 
 <style lang="less" scoped>
 	.r-element-tree-node {
+		cursor: default;
+
 		.arrow {
-		}
-		.tagname {
-			display: block;
-			width: 100%;
-			padding: 3px 8px;
-			text-align: left;
-			appearance: none;
-			color: #c71280;
-			background-color: transparent;
-			border: none;
-			outline: none;
-
-			&:focus {
-				background-color: rgb(56,121,217);
-				color: #FFF;
-			}
-		}
-		.tagname-open {
-			.attr-key {
-				color: #9a4500;
-			}
-			.attr-plain {
-				color: #a894a6;
-			}
-			.attr-value {
-				color: #1a1aa6;
-			}
-		}
-		.tagname-close {
 
 		}
-	}
-	.r-element-tree-node-children {
-		padding-left: 20px;
-	}
-	.r-element-tree-node-open {
-
 	}
 </style>
