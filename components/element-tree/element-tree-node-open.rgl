@@ -1,14 +1,23 @@
 <template>
-	<div class="r-element-tree-node-open { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 20 * depth }px">
-		&lt;{ node.text || node.name }{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}&gt;
+	<div class="r-element-tree-node-open { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 10 + 30 * depth }px">
+		<span class="arrow { open ? 'arrow-open' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe606;</Icon></span>&lt;{ node.text || node.name }{#if node.attrs}{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}{/if}&gt;{#if !open}{#if children}...{/if}&lt;/{ node.text || node.name }&gt;{/if}
 	</div>
 </template>
 
 <script>
+	import Icon from '../icon/icon';
+
 	export default {
 		name: 'ElementTreeNodeOpen',
+		component: {
+			Icon
+		},
 		onClick() {
 			this.$emit( 'click' );
+		},
+		onToggle( e ) {
+			e.stopPropagation();
+			this.$emit( 'toggle' );
 		}
 	}
 </script>
@@ -17,11 +26,19 @@
 	.r-element-tree-node-open {
 		box-sizing: border-box;
 		display: block;
-		width: 100%;
 		padding: 3px 8px 3px 0;
 		text-align: left;
 		color: #c71280;
 		background-color: transparent;
+
+		.arrow {
+			display: inline-block;
+			color: #666;
+
+			&.arrow-open {
+				transform: rotate(90deg);
+			}
+		}
 
 		&:hover {
 			background-color: #ebf2fc;
@@ -30,6 +47,10 @@
 		&.selected {
 			background-color: #3879d9;
 			color: #FFF;
+
+			.arrow {
+				color: #FFF;
+			}
 
 			.attr-key {
 				color: #BBB;

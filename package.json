@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -w",
     "dist": "webpack",
-    "doc": "node docs && webpack --config webpack.config.doc.js"
+    "docs": "node docs && webpack --config webpack.config.doc.js"
   },
   "author": "fengzilong",
   "license": "MIT",

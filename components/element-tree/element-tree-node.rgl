@@ -1,15 +1,18 @@
 <template>
 	<div class="r-element-tree-node { open ? 'r-element-tree-node-open' : '' }">
-		<!-- <span class="arrow">&gt;</span> -->
-		<ElementTreeNodeOpen node="{ node }" depth="{ depth }" on-click="{ this.onTagOpenClick() }" selected="{ tagOpenSelected }"></ElementTreeNodeOpen>
+		<ElementTreeNodeOpen node="{ node }" depth="{ depth }" selected="{ tagOpenSelected }"  on-click="{ this.onTagOpenClick() }" on-toggle="{ this.onToggle() }" children="{ node.children }" open="{ open }"></ElementTreeNodeOpen>
 
-		<div class="children">
-			{#list node.children as child}
-				<ElementTreeNode node="{ child }" depth="{ depth + 1 }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
-			{/list}
-		</div>
+		{#if open}
+			{#if node.children}
+				<div class="children">
+					{#list node.children as child}
+						<ElementTreeNode node="{ child }" depth="{ depth + 1 }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
+					{/list}
+				</div>
+			{/if}
 
-		<ElementTreeNodeClose node="{ node }" depth="{ depth }" on-click="{ this.onTagCloseClick() }" selected="{ tagCloseSelected }"></ElementTreeNodeClose>
+			<ElementTreeNodeClose node="{ node }" depth="{ depth }" on-click="{ this.onTagCloseClick() }" selected="{ tagCloseSelected }"></ElementTreeNodeClose>
+		{/if}
 	</div>
 </template>
 
@@ -18,6 +21,11 @@
 		name: 'ElementTreeNode',
 		config() {
 			this.data.depth = this.data.depth || 0;
+			if( this.data.node && this.data.node.children ) {
+				this.data.open = true;
+			} else {
+				this.data.open = false;
+			}
 		},
 		computed: {
 			tagOpenSelected: {
@@ -35,7 +43,7 @@
 						this.data.selectedPosition === 'close';
 				},
 				set() {
-					
+
 				}
 			}
 		},
@@ -60,6 +68,10 @@
 		onSelect( v ) {
 			// 传递
 			this.$emit( 'select', v );
+		},
+		onToggle() {
+			this.data.open = !this.data.open;
+			this.$update();
 		}
 	};
 </script>
@@ -67,9 +79,5 @@
 <style lang="less" scoped>
 	.r-element-tree-node {
 		cursor: default;
-
-		.arrow {
-
-		}
 	}
 </style>

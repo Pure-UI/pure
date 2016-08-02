@@ -1,5 +1,5 @@
 <template>
-	<div class="r-element-tree-node-close { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 20 * depth }px">
+	<div class="r-element-tree-node-close { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 10 + 30 * depth }px">
 		&lt;/{ node.text || node.name }&gt;
 	</div>
 </template>
@@ -17,11 +17,12 @@
 	.r-element-tree-node-close {
 		box-sizing: border-box;
 		display: block;
-		width: 100%;
 		padding: 3px 8px 3px 0;
 		text-align: left;
 		color: #c71280;
 		background-color: transparent;
+		/* 因为element-tree-node-open中增加了caret，保持对齐 */
+		text-indent: 1em;
 
 		&:hover {
 			background-color: #ebf2fc;
