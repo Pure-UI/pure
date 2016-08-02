@@ -1,7 +1,7 @@
 {
   "name": "pure",
   "version": "0.0.0",
-  "description": "clean and lovely components, built with regularjs",
+  "description": "elegant and lovely components, built with regularjs",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -w",
