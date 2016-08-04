@@ -36,6 +36,9 @@
 				let o = duration( currentTime, this.data.end );
 				let output = '';
 
+				// console.log( currentTime, this.data.end );
+				// console.log( o );
+
 				// TODO: other locales
 
 				// set default format according to locale
@@ -61,6 +64,14 @@
 			this.data.intervalId = setInterval(() => {
 				tick();
 			}, 1000);
+
+			this.$watch('end', () => {
+				tick();
+
+				this.data.intervalId = setInterval(() => {
+					tick();
+				}, 1000);
+			});
 
 			this.$on( '$destroy', () => {
 				clearInterval( this.data.intervalId );

@@ -9,7 +9,7 @@ var App = Regular.extend({
 		<Select options="{ options }"></Select>
 		<Input disabled="{ true }"></Input>
 		<Box margin="" padding="20px">
-			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 5 ) }" on-end="{ isTimeEnd = true }"></Countdown>
+			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 6 ) }" on-end="{ isTimeEnd = true }"></Countdown>
 		</Box>
 
 		<br />
