@@ -23,5 +23,7 @@
 </script>
 
 <style lang="less" scoped>
-
+	.r-element-tree {
+		position: relative;
+	}
 </style>

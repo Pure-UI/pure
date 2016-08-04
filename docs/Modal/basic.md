@@ -4,9 +4,13 @@ order: 1
 
 Basic Usage
 
+Pure doesn't set z-index for Modal, you should set it on your own, for example
+
+`.r-modal-mask { z-index: 1; }`
+
 ```html
-<Button primary on-click="{ show = true }">Open Modal</Button>
-{#if show}
+<Button primary on-click="{ showModal = true }">Open Modal</Button>
+{#if showModal}
 <Modal
 	title="Modal Title"
 	ok-text="Confirm"

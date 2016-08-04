@@ -1,17 +1,29 @@
 <template>
-	<div class="r-element-tree-node { open ? 'r-element-tree-node-open' : '' }">
-		<ElementTreeNodeOpen node="{ node }" depth="{ depth }" selected="{ tagOpenSelected }"  on-click="{ this.onTagOpenClick() }" on-toggle="{ this.onToggle() }" children="{ node.children }" open="{ open }"></ElementTreeNodeOpen>
+	<div class="r-element-tree-node">
+		<div
+			class="r-element-tree-node-open { tagOpenSelected ? 'selected' : '' } { tagOpenHovered ? 'hovered' : '' }"
+			on-click="{ this.onTagOpenClick() }"
+			on-mouseenter="{ this.onTagOpenMouseEnter() }"
+			on-mouseleave="{ this.onTagOpenMouseLeave() }"
+		>
+			<span class="arrow { open ? 'arrow-open' : '' } { !hasChild ? 'invisible' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe606;</Icon></span><span class="tag">&lt;{ node.name || node.text }{#if node.attrs}{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}{/if}&gt;{#if !open && hasChild}...{/if}{#if !open || !hasChild}&lt;/{ node.name || node.text }&gt;{/if}</span>
+		</div>
 
-		{#if open}
-			{#if node.children}
-				<div class="children">
-					{#list node.children as child}
-						<ElementTreeNode node="{ child }" depth="{ depth + 1 }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
-					{/list}
-				</div>
-			{/if}
+		{#if hasChild && open}
+			<div class="children">
+				{#list node.children as child}
+					<ElementTreeNode node="{ child }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
+				{/list}
+			</div>
 
-			<ElementTreeNodeClose node="{ node }" depth="{ depth }" on-click="{ this.onTagCloseClick() }" selected="{ tagCloseSelected }"></ElementTreeNodeClose>
+			<div
+				class="r-element-tree-node-close { tagCloseSelected ? 'selected' : '' } { tagCloseHovered ? 'hovered' : '' }"
+				on-click="{ this.onTagCloseClick() }"
+				on-mouseenter="{ this.onTagCloseMouseEnter() }"
+				on-mouseleave="{ this.onTagCloseMouseLeave() }"
+			>
+				<span class="tag">&lt;/{ node.name || node.text }&gt;</span>
+			</div>
 		{/if}
 	</div>
 </template>
@@ -20,7 +32,6 @@
 	export default {
 		name: 'ElementTreeNode',
 		config() {
-			this.data.depth = this.data.depth || 0;
 			if( this.data.node && this.data.node.children ) {
 				this.data.open = true;
 			} else {
@@ -28,23 +39,25 @@
 			}
 		},
 		computed: {
+			hasChild: {
+				get() {
+					return this.data.node.children && this.data.node.children.length > 0;
+				},
+				set() {}
+			},
 			tagOpenSelected: {
 				get() {
 					return this.data.selectedNode === this.data.node &&
 						this.data.selectedPosition === 'open';
 				},
-				set() {
-
-				}
+				set() {}
 			},
 			tagCloseSelected: {
 				get() {
 					return this.data.selectedNode === this.data.node &&
 						this.data.selectedPosition === 'close';
 				},
-				set() {
-
-				}
+				set() {}
 			}
 		},
 		onTagOpenClick() {
@@ -69,15 +82,155 @@
 			// 传递
 			this.$emit( 'select', v );
 		},
-		onToggle() {
+		onToggle( e ) {
+			e.stopPropagation();
 			this.data.open = !this.data.open;
 			this.$update();
-		}
+		},
+		onTagOpenMouseEnter() {
+			this.data.tagOpenHovered = true;
+			this.$update();
+		},
+		onTagOpenMouseLeave() {
+			this.data.tagOpenHovered = false;
+			this.$update();
+		},
+		onTagCloseMouseEnter() {
+			this.data.tagCloseHovered = true;
+			this.$update();
+		},
+		onTagCloseMouseLeave() {
+			this.data.tagCloseHovered = false;
+			this.$update();
+		},
+
 	};
 </script>
 
 <style lang="less" scoped>
 	.r-element-tree-node {
 		cursor: default;
+
+		.children {
+			padding-left: 30px;
+		}
+	}
+
+	.r-element-tree-node-open {
+		box-sizing: border-box;
+		display: block;
+		height: 2em;
+		line-height: 2em;
+		text-align: left;
+		color: #c71280;
+		background-color: transparent;
+
+		.arrow {
+			display: inline-block;
+			color: #666;
+			transform: rotate(0);
+			user-select: none;
+
+			&.arrow-open {
+				transform: rotate(90deg);
+			}
+		}
+
+		.invisible {
+			visibility: hidden;
+		}
+
+		&.hovered::before {
+			left: 0;
+			right: 0;
+			background-color: #ebf2fc;
+		}
+
+		&.selected::before {
+			left: 0;
+			right: 0;
+			background-color: #3879d9;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background-color: #DDD;
+			height: 2em;
+		}
+
+		.tag {
+			position: relative;
+		}
+
+		&.selected {
+			color: #FFF;
+
+			.arrow {
+				color: #FFF;
+			}
+
+			.attr-key {
+				color: #BBB;
+			}
+			.attr-plain {
+				color: #BBB;
+			}
+			.attr-value {
+				color: #FFF;
+			}
+		}
+
+		.attr-key {
+			color: #9a4500;
+		}
+		.attr-plain {
+			color: #a894a6;
+		}
+		.attr-value {
+			color: #1a1aa6;
+		}
+	}
+
+	.r-element-tree-node-close {
+		box-sizing: border-box;
+		display: block;
+		height: 2em;
+		line-height: 2em;
+		text-align: left;
+		color: #c71280;
+		background-color: transparent;
+		/* 因为element-tree-node-open中增加了caret，保持对齐 */
+		text-indent: 1em;
+
+		&.hovered::before {
+			left: 0;
+			right: 0;
+			background-color: #ebf2fc;
+		}
+
+		&.selected::before {
+			left: 0;
+			right: 0;
+			background-color: #3879d9;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background-color: #DDD;
+			height: 2em;
+		}
+
+		.tag {
+			position: relative;
+		}
+
+		&.selected {
+			background-color: #3879d9;
+			color: #FFF;
+		}
 	}
 </style>

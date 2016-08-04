@@ -1,6 +1,11 @@
 <template>
-	<div class="r-element-tree-node-open { selected ? 'selected' : '' }" on-click="{ this.onClick() }" style="padding-left: { 10 + 30 * depth }px">
-		<span class="arrow { open ? 'arrow-open' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe606;</Icon></span>&lt;{ node.text || node.name }{#if node.attrs}{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}{/if}&gt;{#if !open}{#if children}...{/if}&lt;/{ node.text || node.name }&gt;{/if}
+	<div
+		class="r-element-tree-node-open { selected ? 'selected' : '' } { hovered ? 'hovered' : '' }"
+		on-click="{ this.onClick() }"
+		on-mouseenter="{ this.onMouseEnter() }"
+		on-mouseleave="{ this.onMouseLeave() }"
+	>
+		<span class="arrow { open ? 'arrow-open' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe606;</Icon></span><span class="tag">&lt;{ node.text || node.name }{#if node.attrs}{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}{/if}&gt;{#if !open}{#if children}...{/if}&lt;/{ node.text || node.name }&gt;{/if}</span>
 	</div>
 </template>
 
@@ -15,6 +20,14 @@
 		onClick() {
 			this.$emit( 'click' );
 		},
+		onMouseEnter() {
+			this.data.hovered = true;
+			this.$update();
+		},
+		onMouseLeave() {
+			this.data.hovered = false;
+			this.$update();
+		},
 		onToggle( e ) {
 			e.stopPropagation();
 			this.$emit( 'toggle' );
@@ -26,26 +39,47 @@
 	.r-element-tree-node-open {
 		box-sizing: border-box;
 		display: block;
-		padding: 3px 8px 3px 0;
+		height: 2em;
+		line-height: 2em;
 		text-align: left;
 		color: #c71280;
 		background-color: transparent;
 
+		&.hovered::before {
+			left: 0;
+			right: 0;
+			background-color: #ebf2fc;
+		}
+
+		&.selected::before {
+			left: 0;
+			right: 0;
+			background-color: #3879d9;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background-color: #DDD;
+			height: 2em;
+		}
+
 		.arrow {
 			display: inline-block;
 			color: #666;
+			transform: rotate(0);
 
 			&.arrow-open {
 				transform: rotate(90deg);
 			}
 		}
 
-		&:hover {
-			background-color: #ebf2fc;
+		.tag {
+			position: relative;
 		}
 
 		&.selected {
-			background-color: #3879d9;
 			color: #FFF;
 
 			.arrow {
