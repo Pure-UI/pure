@@ -1,7 +1,7 @@
 setTimeout(() => {
 	Pure.note( `发布成功`, 'success' );
 }, 1000);
-var App = Regular.extend({
+var App = Pure.extend({
 	// <Note type="success">Success</Note>
 	template: `
 		<ElementTree source="{ elementSource }" on-select="{ this.onSelect( $event ) }"></ElementTree>

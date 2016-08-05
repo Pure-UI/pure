@@ -1,9 +1,10 @@
 import Regular from 'regularjs';
 
-const Pure = {};
+// 直接在此处继承Regular，如果外界已有Regular，使用Pure.extend可以避免Regular被覆盖的问题
+const Pure = Regular.extend({});
 
 Pure.note = ( content, type, timeout ) => {
-	const Note2 = Regular.extend({
+	const Note2 = Pure.extend({
 		template: `
 			{#if showNote}
 			<div
