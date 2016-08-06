@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+var CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 var webpack = require( 'webpack' );
 var cwd = process.cwd();
 
@@ -7,7 +8,7 @@ module.exports = {
 	entry: './site/index.js',
 	cwd: cwd,
 	output: {
-		path: './site/dist',
+		path: './public/dist',
 		publicPath: 'dist/',
 		filename: 'app-[hash:8].js',
 		jsonpFunction: 'Q'
@@ -57,6 +58,9 @@ module.exports = {
 			compress: {
 				warnings: false
 			}
-		})
+		}),
+		new CopyWebpackPlugin([
+			{ from: 'site/regular.js', to: '../regular.js' }
+		])
 	]
 };
