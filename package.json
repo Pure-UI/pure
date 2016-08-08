@@ -1,13 +1,13 @@
 {
   "name": "pure",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "elegant and lovely components, built with regularjs",
-  "main": "index.js",
+  "main": "dist/pure.js",
   "scripts": {
     "dev": "webpack -w",
     "dist": "webpack",
-    "docs": "node docs && webpack --config webpack.config.doc.js",
-    "gh-pages": "node gh-pages",
+    "docs": "node scripts/docs && webpack --config webpack.config.docs.js",
+    "gh-pages": "node scripts/gh-pages",
     "publish": "npm run dist && npm run docs && npm run gh-pages"
   },
   "author": "fengzilong",
@@ -36,7 +36,6 @@
     "less-loader": "^2.2.3",
     "lodash": "^4.13.1",
     "marked": "^0.3.5",
-    "nunjucks": "^2.4.2",
     "postcss-loader": "^0.9.1",
     "regularjs-loader": "^0.0.5",
     "style-loader": "^0.13.1",

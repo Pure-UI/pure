@@ -1,10 +1,10 @@
-var webpack = require( 'webpack' )
+var webpack = require( 'webpack' );
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 var autoprefixer = require( 'autoprefixer' );
 var cwd = process.cwd();
 
 var singleConfig = {
-	entry: './index.js',
+	entry: './src/index.js',
 	cwd: cwd,
 	output: {
 		path: './dist',
@@ -65,7 +65,7 @@ var singleConfig = {
 };
 
 var bundleConfig = {
-	entry: './index.js',
+	entry: './src/index.js',
 	cwd: cwd,
 	output: {
 		path: './dist',
