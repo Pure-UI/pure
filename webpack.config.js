@@ -1,6 +1,8 @@
 var webpack = require( 'webpack' );
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+var ProvidePlugin = require( './ProvidePlugin' );
 var autoprefixer = require( 'autoprefixer' );
+var path = require( 'path' );
 var cwd = process.cwd();
 
 var singleConfig = {
@@ -9,7 +11,9 @@ var singleConfig = {
 	output: {
 		path: './dist',
 		publicPath: 'dist/',
-		filename: 'pure.js'
+		filename: 'pure.js',
+		library: 'Pure',
+		libraryTarget: 'umd'
 	},
 	module: {
 		loaders: [
@@ -49,10 +53,11 @@ var singleConfig = {
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', '.less', '.rgl' ]
-	},
-	externals: {
-		'regularjs': 'Regular'
+		extensions: [ '', '.js', '.less', '.rgl' ],
+		// 覆盖regularjs
+		alias: {
+			'regularjs': path.resolve( __dirname, 'src/core.js' )
+		}
 	},
 	plugins: [
 		new ExtractTextPlugin( 'pure.css' ),
@@ -60,6 +65,10 @@ var singleConfig = {
 			compress: {
 				warnings: false
 			}
+		}),
+		new ProvidePlugin({
+			// 真正的Regular指向external
+			__REGULAR__: path.resolve( __dirname, 'src/external.js~' )
 		}),
 	]
 };
@@ -70,13 +79,16 @@ var bundleConfig = {
 	output: {
 		path: './dist',
 		publicPath: 'dist/',
-		filename: 'pure+regular.js'
+		filename: 'pure+regular.js',
+		library: 'Pure',
+		libraryTarget: 'umd'
 	},
 	module: {
 		loaders: [
 			{
 				test: /\.rgl$/,
-				loader: 'regularjs'
+				loader: 'regularjs',
+				include: /src/
 			},
 			{
 				test: /\.js$/,
@@ -110,12 +122,17 @@ var bundleConfig = {
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', '.less', '.rgl' ]
+		extensions: [ '', '.js', '.less', '.rgl' ],
+		// 覆盖regularjs
+		alias: {
+			'regularjs': path.resolve( __dirname, 'src/core.js' )
+		}
 	},
 	plugins: [
 		new ExtractTextPlugin( 'pure.css' ),
-		new webpack.DefinePlugin({
-			__BUNDLE_REGULAR__: true
+		new ProvidePlugin({
+			// 引入真正的regularjs
+			__REGULAR__: require.resolve( 'regularjs' )
 		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
