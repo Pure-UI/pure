@@ -4,9 +4,9 @@
   "description": "elegant and lovely components, built with regularjs",
   "main": "dist/pure.js",
   "scripts": {
-    "dev": "webpack -w",
-    "dist": "webpack",
-    "docs": "node scripts/docs && webpack --config webpack.config.docs.js",
+    "dev": "webpack --config scripts/webpack.config.js -w",
+    "dist": "webpack --config scripts/webpack.config.js",
+    "docs": "node scripts/docs && webpack --config scripts/webpack.config.docs.js",
     "gh-pages": "node scripts/gh-pages",
     "deploy": "npm run dist && npm run docs && npm run gh-pages"
   },

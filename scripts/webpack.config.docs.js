@@ -46,7 +46,7 @@ module.exports = {
 		extensions: [ '', '.js', 'json', '.css', '.rgl' ]
 	},
 	externals: {
-		'regularjs': 'Regular'
+		regularjs: 'Regular'
 	},
 	plugins: [
 		new ExtractTextPlugin( 'app-[hash:8].css' ),
@@ -60,7 +60,9 @@ module.exports = {
 			}
 		}),
 		new CopyWebpackPlugin([
-			{ from: 'site/regular.js', to: '../regular.js' }
+			{ from: 'site/regular.js', to: '../regular.js' },
+			{ from: 'dist/pure.js', to: '../pure.js' },
+			{ from: 'dist/pure.css', to: '../pure.css' }
 		])
 	]
 };

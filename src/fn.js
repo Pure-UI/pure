@@ -1,8 +1,9 @@
-// Pure直接继承Regular，如果外界已有Regular，使用Pure.extend可以避免Regular被覆盖的问题
-import Core from './core';
+import Regular from 'regularjs';
 
-Core.note = ( content, type, timeout ) => {
-	const Note2 = Core.extend({
+const Pure = Regular.extend({});
+
+Pure.note = ( content, type, timeout ) => {
+	const Note2 = Pure.extend({
 		template: `
 			{#if showNote}
 			<div
@@ -33,4 +34,4 @@ Core.note = ( content, type, timeout ) => {
 	new Note2().$inject( document.body );
 };
 
-export default Core;
+export default Pure;

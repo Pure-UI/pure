@@ -1,6 +1,5 @@
 var webpack = require( 'webpack' );
 var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-var ProvidePlugin = require( './ProvidePlugin' );
 var autoprefixer = require( 'autoprefixer' );
 var path = require( 'path' );
 var cwd = process.cwd();
@@ -53,10 +52,14 @@ var singleConfig = {
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', '.less', '.rgl' ],
-		// 覆盖regularjs
-		alias: {
-			'regularjs': path.resolve( __dirname, 'src/core.js' )
+		extensions: [ '', '.js', '.less', '.rgl' ]
+	},
+	externals: {
+		regularjs: {
+			root: 'Regular',
+			commonjs: 'regularjs',
+			commonjs2: 'regularjs',
+			amd: 'regularjs'
 		}
 	},
 	plugins: [
@@ -65,11 +68,7 @@ var singleConfig = {
 			compress: {
 				warnings: false
 			}
-		}),
-		new ProvidePlugin({
-			// 真正的Regular指向external
-			__REGULAR__: path.resolve( __dirname, 'src/external.js~' )
-		}),
+		})
 	]
 };
 
@@ -122,23 +121,15 @@ var bundleConfig = {
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', '.less', '.rgl' ],
-		// 覆盖regularjs
-		alias: {
-			'regularjs': path.resolve( __dirname, 'src/core.js' )
-		}
+		extensions: [ '', '.js', '.less', '.rgl' ]
 	},
 	plugins: [
 		new ExtractTextPlugin( 'pure.css' ),
-		new ProvidePlugin({
-			// 引入真正的regularjs
-			__REGULAR__: require.resolve( 'regularjs' )
-		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false
 			}
-		}),
+		})
 	]
 }
 

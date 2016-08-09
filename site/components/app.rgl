@@ -10,7 +10,7 @@
 			{/list}
 
 			<!-- TODO: api table -->
-			<!-- <API></API> -->
+			<!-- <APITable></APITable> -->
 		</div>
 	</div>
 </template>
