@@ -8,5 +8,6 @@ ghpages.publish( path.resolve( cwd, 'public' ), {
 		console.log(message);
 	}
 }, function() {
+	// TODO: 判断是否失败
 	console.log( 'ghpages published' );
 } );
