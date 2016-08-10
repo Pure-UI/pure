@@ -8,7 +8,7 @@
     "dist": "webpack --config scripts/webpack.config.js",
     "docs": "node scripts/docs && webpack --config scripts/webpack.config.docs.js",
     "gh-pages": "node scripts/gh-pages",
-    "deploy": "npm run dist && npm run docs && npm run gh-pages"
+    "deploy": "npm run docs && npm run gh-pages"
   },
   "author": "fengzilong",
   "license": "MIT",
