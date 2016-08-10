@@ -13,9 +13,6 @@
 			</li>
 			<!-- <li>
 				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
-			</li>
-			<li>
-				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">Icon</a>
 			</li> -->
 		</ul>
 		<div class="title">navigation</div>
@@ -127,11 +124,11 @@
 		text-decoration: none;
 
 		&:hover {
-			background-color: #eaeef3;
+			background-color: #F8F8F8;
 		}
 	}
 
 	.active {
-		background-color: #eaeef3;
+		color: #689eff;
 	}
 </style>
