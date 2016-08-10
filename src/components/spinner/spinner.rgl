@@ -1,10 +1,8 @@
 <template>
 	<div class="spinner">
-		<div class="rect1"></div>
-		<div class="rect2"></div>
-		<div class="rect3"></div>
-		<div class="rect4"></div>
-		<div class="rect5"></div>
+		<div class="dot dot1"></div>
+		<div class="dot dot2"></div>
+		<div class="dot dot3"></div>
 	</div>
 </template>
 
@@ -14,46 +12,43 @@
 	}
 </script>
 
-<style>
+<style lang="less" scoped>
 	.spinner {
-		padding: 2rem 0;
-		left: 0;
-		width: 100%;
-		height: 2rem;
-		text-align: center;
-		box-sizing: content-box;
-	}
-	.spinner > div {
 		display: inline-block;
-		margin: 0 3px;
-		height: 100%;
-		width: 4px;
-		animation: stretchdelay 1.2s infinite ease-in-out
+		font-size: 0;
+
+		.dot {
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			animation: pulse 1.5s infinite ease-in-out;
+
+			&:not(:last-child) {
+				margin-right: 5px;
+			}
+		}
+
+		.dot1 {
+			animation-delay: -1.5s;
+			background-color: rgba(104, 158, 255, .2);
+		}
+		.dot2 {
+			animation-delay: -1.35s;
+			background-color: rgba(104, 158, 255, .2);
+		}
+		.dot3 {
+			animation-delay: -1.2s;
+			background-color: rgba(104, 158, 255, .2);
+		}
 	}
-	.spinner .rect1 {
-		background-color: rgba(104, 158, 255, 0.1);
-	}
-	.spinner .rect2 {
-		animation-delay: -1.1s;
-		background-color: rgba(104, 158, 255, 0.15);
-	}
-	.spinner .rect3 {
-		animation-delay: -1s;
-		background-color: rgba(104, 158, 255, 0.2);
-	}
-	.spinner .rect4 {
-		animation-delay: -.9s;
-		background-color: rgba(104, 158, 255, 0.15);
-	}
-	.spinner .rect5 {
-		animation-delay: -.8s;
-		background-color: rgba(104, 158, 255, 0.1);
-	}
-	@keyframes stretchdelay {
+
+	@keyframes pulse {
 		0%, 40%, to {
-			transform: scaleY(.4)
+			opacity: 0;
+			transform: scale(.4)
 		}
 		20% {
+			opacity: 1;
 			transform: scaleY(1)
 		}
 	}

@@ -1,0 +1,19 @@
+<template>
+	<div class="flex-center" style="{ style || '' }">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'Center'
+	}
+</script>
+
+<style lang="less" scoped>
+	.flex-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>

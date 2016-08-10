@@ -49,6 +49,11 @@ import './components/box/box';
 // Note
 import './components/note/note';
 
+// Layout
+// Center
+import './components/layout/flex';
+import './components/layout/center';
+
 // Time
 // Countdown
 import './components/countdown/countdown';
