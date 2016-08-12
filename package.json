@@ -45,5 +45,7 @@
   "peerDependencies": {
     "regularjs": "^0.4.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dom-align": "^1.4.0"
+  }
 }

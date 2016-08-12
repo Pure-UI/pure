@@ -54,6 +54,10 @@ import './components/note/note';
 import './components/layout/flex';
 import './components/layout/center';
 
+// Locate
+// Track
+import './components/track/track';
+
 // Time
 // Countdown
 import './components/countdown/countdown';

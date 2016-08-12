@@ -5,6 +5,13 @@ var App = Pure.extend({
 	template: `
 		<Spinner></Spinner>
 
+		<div ref="trackTarget" style="width: 100px;height: 100px;background-color: #DDD;margin-top: 50px;margin-left: 40px;">
+		</div>
+
+		<Track target="{ trackTarget }">
+			<Button primary sm>button</Button>
+		</Track>
+
 		<br />
 		<br />
 
@@ -187,6 +194,10 @@ var App = Pure.extend({
 	onModalCancel() {
 		this.data.showModal = false;
 		this.$update();
+	},
+	init() {
+		console.log( 'outer init' );
+		this.$update( 'trackTarget', this.$refs.trackTarget );
 	},
 	config( data ) {
 		data.elementSource = [

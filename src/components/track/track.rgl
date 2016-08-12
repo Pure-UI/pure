@@ -1,0 +1,48 @@
+<template>
+	{#if isValidTarget}
+		<div ref="v" style="display: inline-block;">
+			{#inc this.$body}
+		</div>
+	{#else}
+		{#inc this.$body}
+	{/if}
+</template>
+
+<script>
+	import domAlign from 'dom-align';
+
+	export default {
+		name: 'Track',
+		computed: {
+			isValidTarget() {
+				const isValid = this.data.target instanceof HTMLElement;
+				return isValid;
+			}
+		},
+		config() {
+
+		},
+		init() {
+			console.log( 'init', this.data.target );
+			if( this.data.isValid  && this.$refs.v instanceof HTMLElement ) {
+				domAlign(
+					this.$refs.v,
+					this.data.target,
+					{
+						points: ['tl', 'tr'],
+						offset: [10, 20],
+						targetOffset: ['1%','1%']
+					}
+				)
+			}
+		}
+	};
+</script>
+
+<style lang="less" scoped>
+
+</style>
+
+<Track target="" by="right bottom" offset="0 10px">
+
+</Track>
