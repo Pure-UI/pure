@@ -8,11 +8,9 @@ Basic Usage
 {#if !loading}
 <Table fields="{ fields }" data-source="{ dataSource }"></Table>
 {#else}
-<Center>
-	<Box padding="2rem 0">
-		<Spinner></Spinner>
-	</Box>
-</Center>
+<Box padding="2em 0">
+	<Spinner block></Spinner>
+</Box>
 {/if}
 ```
 
