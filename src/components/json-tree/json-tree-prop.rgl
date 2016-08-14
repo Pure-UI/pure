@@ -1,0 +1,103 @@
+<template>
+	<div class="r-json-tree-prop-text">
+		<span class="r-json-tree-prop-arrow { isPrimitive ? 'invisible' : '' }"><Icon>&#xe606;</Icon></span><span class="r-json-tree-prop-key">{ key }</span>:
+		<span class="r-json-tree-prop-value { type }" style="width: { valueWidth };" on-dblclick="{ this.onEdit() }" ref="v">{#if !editing}{ displayValue }{#else}<input class="r-json-tree-prop-value-edit" style="width: { valueWidth };" value="{ type === 'string' ? JSON.stringify( value ) : isPrimitive ? value : displayValue }" spellcheck="false">{/if}</span>
+	</div>
+	{#if !isPrimitive}
+	<div class="r-json-tree-prop-children">
+		{#list Object.keys(value) as k}
+		<JSONTreeProp key="{ k }" value="{ value[ k ] }"></JSONTreeProp>
+		{/list}
+	</div>
+	{/if}
+</template>
+
+<script>
+	import type from '../../util/type';
+
+	export default {
+		name: 'JSONTreeProp',
+		config() {
+			this.data.type = type( this.data.value );
+			this.data.isPrimitive =
+				this.data.type === 'string' ||
+				this.data.type === 'number' ||
+				this.data.type === 'boolean';
+
+			let tmp = '';
+			switch( this.data.type ) {
+				case 'string':
+					tmp = JSON.stringify( this.data.value );
+					break;
+				case 'number':
+				case 'boolean':
+					tmp = this.data.value;
+					break;
+				case 'array':
+					tmp = `Array[${this.data.value.length}]`;
+					break;
+				case 'object':
+					tmp = `Object`;
+					break;
+			}
+			this.data.displayValue = tmp;
+			this.data.valueWidth = 'auto';
+		},
+		init() {
+			setTimeout(() => {
+				this.data.valueWidth = this.$refs.v.offsetWidth + 10 + 'px';
+				this.$update();
+			});
+		},
+		onEdit() {
+			this.data.editing = true;
+			this.$update();
+		}
+	};
+</script>
+
+<style lang="less" scoped>
+	@json-tree-number-color: #3F51B5;
+	@json-tree-string-color: #CF4643;
+	@json-tree-boolean-color: #3F51B5;
+	@json-tree-key-color: #9C27B0;
+
+	.r-json-tree-prop-text {
+		cursor: default;
+
+		.invisible {
+			visibility: hidden;
+		}
+
+		.r-json-tree-prop-key {
+			color: @json-tree-key-color;
+		}
+
+		.r-json-tree-prop-value {
+			color: #333;
+
+			&.number {
+				color: @json-tree-number-color;
+			}
+
+			&.string {
+				color: @json-tree-string-color;
+			}
+
+			&.boolean {
+				color: @json-tree-boolean-color;
+			}
+		}
+
+		.r-json-tree-prop-value-edit {
+			position: absolute;
+			padding: 0;
+			outline: none;
+			z-index: 1;
+		}
+	}
+
+	.r-json-tree-prop-children {
+		padding-left: 20px;
+	}
+</style>

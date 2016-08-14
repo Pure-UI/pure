@@ -13,6 +13,10 @@ import './components/pagination/pagination';
 import './components/breadcrumb/breadcrumb';
 import './components/breadcrumb/breadcrumb-item';
 
+// Tree
+// jsontree
+import './components/json-tree/json-tree';
+
 // Form
 // input
 import './components/input/input';

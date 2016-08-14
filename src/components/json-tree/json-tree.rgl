@@ -1,0 +1,19 @@
+<template>
+	<div>
+		{#list Object.keys(source) as k}
+			<JSONTreeProp key="{ k }" value="{ source[ k ] }" open="{ false }"></JSONTreeProp>
+		{/list}
+	</div>
+</template>
+
+<script>
+	import './json-tree-prop.rgl';
+
+	export default {
+		name: 'JSONTree'
+	};
+</script>
+
+<style lang="less" scoped>
+
+</style>
