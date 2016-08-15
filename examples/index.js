@@ -26,7 +26,7 @@ var App = Pure.extend({
 		<Select options="{ options }"></Select>
 		<Input disabled="{ true }"></Input>
 		<Box margin="" padding="20px">
-			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 6 ) }" on-end="{ isTimeEnd = true }"></Countdown>
+			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 65 ) }" on-end="{ isTimeEnd = true }"></Countdown>
 		</Box>
 
 		<br />
