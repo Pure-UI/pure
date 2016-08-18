@@ -46,6 +46,7 @@
     "regularjs": "^0.4.4"
   },
   "dependencies": {
+    "autosize": "^3.0.17",
     "dom-align": "^1.4.0"
   }
 }

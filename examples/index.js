@@ -3,6 +3,7 @@ setTimeout(() => {
 }, 1000);
 var App = Pure.extend({
 	template: `
+		<Textarea value="sss" auto></Textarea>
 		<Spinner block></Spinner>
 		<JSONTree source="{ jsonSource }"></JSONTree>
 

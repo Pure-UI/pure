@@ -108,6 +108,10 @@
 		border-bottom: solid 1px #f0f0f0;
 		color: #666;
 
+		p {
+			line-height: 1.7;
+		}
+
 		code {
 			background-color: #eaeef3;
 			padding: 0.2rem 0.4rem;

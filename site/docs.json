@@ -472,10 +472,22 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Textarea></Textarea>\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Textarea value=\"some content...\"></Textarea>\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "<Textarea></Textarea>"
+                "html": "<Textarea value=\"some content...\"></Textarea>"
+            },
+            "id": 37
+        },
+        {
+            "path": "Textarea/autosize.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\nAutosize\r\n\r\nDeclare `auto`, `autosize` or `autoresize` to make Textarea resize automatically when content changes. Just use the word which is easy enough to remember, both are ok.\r\n\r\n```html\r\n<Textarea value=\"some content...\" auto></Textarea>\r\n```\r\n",
+            "html": "<p>Autosize</p>\n<p>Declare <code>auto</code>, <code>autosize</code> or <code>autoresize</code> to make Textarea resize automatically when content changes. Just use the word which is easy enough to remember, both are ok.</p>\n",
+            "code": {
+                "html": "<Textarea value=\"some content...\" auto></Textarea>"
             },
             "id": 36
         }
