@@ -18,7 +18,8 @@ var singleConfig = {
 		loaders: [
 			{
 				test: /\.rgl$/,
-				loader: 'regularjs'
+				loader: 'regular',
+				include: /src/
 			},
 			{
 				test: /\.js$/,
@@ -45,7 +46,7 @@ var singleConfig = {
 	postcss: [
 		autoprefixer({ browsers: [ 'last 2 versions' ] })
 	],
-	regularjs: {
+	regular: {
 		loaders: {
 			css: ExtractTextPlugin.extract( 'css' ),
 			less: ExtractTextPlugin.extract( 'css!less' ),
@@ -86,7 +87,7 @@ var bundleConfig = {
 		loaders: [
 			{
 				test: /\.rgl$/,
-				loader: 'regularjs',
+				loader: 'regular',
 				include: /src/
 			},
 			{
@@ -131,9 +132,9 @@ var bundleConfig = {
 			}
 		})
 	]
-}
+};
 
 module.exports = [
 	singleConfig,
 	bundleConfig
-]
+];

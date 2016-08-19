@@ -17,7 +17,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.rgl$/,
-				loader: 'regularjs'
+				loader: 'regular'
 			},
 			{
 				test: /\.js$/,
