@@ -1,7 +1,6 @@
-setTimeout(() => {
-	Pure.note( `Success`, 'success' );
-}, 1000);
-var App = Pure.extend({
+Regular.use( Pure );
+
+var App = Regular.extend({
 	template: `
 		<Textarea value="sss" auto></Textarea>
 		<Spinner block></Spinner>

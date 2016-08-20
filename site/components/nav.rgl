@@ -92,10 +92,7 @@
 
 <script>
 	export default {
-		name: 'Nav',
-		config() {
-
-		}
+		name: 'Nav'
 	}
 </script>
 

@@ -12,8 +12,6 @@
 </template>
 
 <script>
-	import Regular from 'regularjs';
-
 	const rAF = (function (w) {
 		let raf = w.requestAnimationFrame || w.mozRequestAnimationFrame || w.webkitRequestAnimationFrame
 
@@ -41,7 +39,11 @@
 				}
 			}
 
-			Regular.dom.on( this.$refs.w, 'webkitAnimationEnd', handleAnimationEnd );
+			this.$refs.w.addEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
+
+			this.$on('$destroy', () => {
+				this.$refs.w.removeEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
+			});
 		},
 		onMouseDown() {
 		},
