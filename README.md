@@ -1,4 +1,4 @@
-# pure
+# pure [![npm package](https://img.shields.io/npm/v/pure-ui.svg?style=flat-square)](https://www.npmjs.org/package/pure-ui)
 
 > elegant and lovely components
 
@@ -26,7 +26,7 @@ import 'pure-ui/dist/pure.css';
 Regular.use( Pure );
 ```
 
-maybe you want to register pure components in another namespace
+if you want to register pure components in another namespace
 
 ```js
 var AnotherNameSpace = Regular.extend({});
@@ -58,6 +58,16 @@ Regular.use( Pure );
 ```
 
 Happy coding!
+
+## CDN
+
+pure.css: https://npmcdn.com/pure-ui/dist/pure.css
+
+pure.js: https://npmcdn.com/pure-ui/dist/pure.js
+
+## Playground
+
+https://jsfiddle.net/fengzilong/bc7rnqn5/
 
 ## License
 
