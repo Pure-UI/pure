@@ -1,7 +1,7 @@
 <template>
 	<div>
 		{#list Object.keys(source) as k}
-			<JSONTreeProp key="{ k }" value="{ source[ k ] }" open="{ false }"></JSONTreeProp>
+			<JSONTreeProp path="{ k }" key="{ k }" value="{ source[ k ] }" open="{ false }" opened="{ true }"></JSONTreeProp>
 		{/list}
 	</div>
 </template>
@@ -10,7 +10,17 @@
 	import './json-tree-prop.rgl';
 
 	export default {
-		name: 'JSONTree'
+		name: 'JSONTree',
+		config() {
+			var self = this;
+			function onClick(e) {
+				self.$emit('checkClickOutside', e.target);
+			}
+			document.addEventListener('click', onClick, false);
+			this.$on('$destroy', () => {
+				document.removeEventListener('click', onClick, false);
+			});
+		}
 	};
 </script>
 

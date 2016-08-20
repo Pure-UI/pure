@@ -1,12 +1,32 @@
 <template>
 	<div class="r-json-tree-prop-text">
-		<span class="r-json-tree-prop-arrow { isPrimitive ? 'invisible' : '' }"><Icon>&#xe606;</Icon></span><span class="r-json-tree-prop-key">{ key }</span>:
-		<span class="r-json-tree-prop-value { type }" style="width: { valueWidth };" on-dblclick="{ this.onEdit() }" ref="v">{#if !editing}{ displayValue }{#else}<input class="r-json-tree-prop-value-edit" style="width: { valueWidth };" value="{ type === 'string' ? JSON.stringify( value ) : isPrimitive ? value : displayValue }" spellcheck="false">{/if}</span>
+		<span
+			class="r-json-tree-prop-arrow { opened ? 'r-json-tree-prop-arrow-down' : '' } { isPrimitive ? 'invisible' : '' }"
+			on-click="{ opened = !opened }"
+		>
+			<Icon>&#xe606;</Icon>
+		</span>
+		<span class="r-json-tree-prop-key" on-click="{ opened = !opened }">{ key }</span>
+		<span class="r-json-tree-prop-delimiter">:</span>
+		{#if !editing}
+		<span class="r-json-tree-prop-value { type }" style="width: { valueWidth };" on-dblclick="{ this.onEdit() }" ref="v">
+			{ displayValue }
+		</span>
+		{/if}
+		<input
+			class="r-json-tree-prop-value-edit"
+			style="display: { editing ? '' : 'none' };width: { valueWidth };"
+			value="{ type === 'string' ? JSON.stringify( value ) : isPrimitive ? value : displayValue }"
+			spellcheck="false"
+			on-blur="{ this.onBlur($event) }"
+			on-keyup="{ this.onEnter($event) }"
+			ref="edit"
+		>
 	</div>
-	{#if !isPrimitive}
+	{#if !isPrimitive && opened}
 	<div class="r-json-tree-prop-children">
 		{#list Object.keys(value) as k}
-		<JSONTreeProp key="{ k }" value="{ value[ k ] }"></JSONTreeProp>
+		<JSONTreeProp path="{ path + '.' + k }" key="{ k }" value="{ value[ k ] }"></JSONTreeProp>
 		{/list}
 	</div>
 	{/if}
@@ -14,34 +34,55 @@
 
 <script>
 	import type from '../../util/type';
+	import isObj from 'is-obj';
 
 	export default {
 		name: 'JSONTreeProp',
-		config() {
-			this.data.type = type( this.data.value );
-			this.data.isPrimitive =
-				this.data.type === 'string' ||
-				this.data.type === 'number' ||
-				this.data.type === 'boolean';
-
-			let tmp = '';
-			switch( this.data.type ) {
-				case 'string':
-					tmp = JSON.stringify( this.data.value );
-					break;
-				case 'number':
-				case 'boolean':
-					tmp = this.data.value;
-					break;
-				case 'array':
-					tmp = `Array[${this.data.value.length}]`;
-					break;
-				case 'object':
-					tmp = `Object`;
-					break;
+		computed: {
+			isPrimitive: {
+				get() {
+					return !isObj( this.data.value );
+				}
+			},
+			displayValue: {
+				get() {
+					let tmp = '';
+					switch( this.data.type ) {
+						case 'string':
+							tmp = JSON.stringify( this.data.value );
+							break;
+						case 'number':
+						case 'boolean':
+							tmp = this.data.value;
+							break;
+						case 'array':
+							tmp = `Array[${this.data.value.length}]`;
+							break;
+						case 'object':
+							tmp = `Object`;
+							break;
+					}
+					return tmp;
+				}
 			}
-			this.data.displayValue = tmp;
+		},
+		config() {
+			this.data.editing = false;
+			this.data.opened = this.data.opened || false;
+			this.data.type = type( this.data.value );
 			this.data.valueWidth = 'auto';
+
+			this.$parent.$on('checkClickOutside', v => {
+				if(
+					this.$refs &&
+					this.$refs.edit &&
+					!this.$refs.edit.contains( v )
+				) {
+					this.data.editing = false;
+					this.$update();
+				}
+				this.$emit( 'checkClickOutside', v );
+			})
 		},
 		init() {
 			setTimeout(() => {
@@ -50,8 +91,53 @@
 			});
 		},
 		onEdit() {
+			// 非原始值 不可编辑
+			if( !this.$get( 'isPrimitive' ) ) {
+				return;
+			}
 			this.data.editing = true;
 			this.$update();
+			// auto select all when active
+			var input = this.$refs.edit;
+			input.setSelectionRange( 0, input.value.length );
+		},
+		editDone( v ) {
+			var tmp = this.data.value;
+			try {
+				tmp = JSON.parse(v);
+			} catch(e) {
+			}
+			// not primitive type, return
+			if( isObj(tmp) ) {
+				return;
+			}
+			if( tmp === this.data.value ) {
+				return;
+			}
+			var parent = this;
+			while(parent = parent.$parent) {
+				if( parent.name === 'JSONTree' ) {
+					parent.$emit('change', {
+						path: this.data.path,
+						value: tmp,
+						oldValue: this.data.value
+					});
+					break;
+				}
+			}
+			this.data.value = tmp;
+			this.$update();
+		},
+		onBlur( e ) {
+			this.data.editing = false;
+			this.$update();
+			this.editDone( e.target.value );
+		},
+		onEnter( e ) {
+			// press enter
+			if( e.which === 13 ) {
+				this.$refs.edit.blur();
+			}
 		}
 	};
 </script>
@@ -63,14 +149,29 @@
 	@json-tree-key-color: #9C27B0;
 
 	.r-json-tree-prop-text {
+		padding-bottom: 5px;
 		cursor: default;
+		font-size: 0;
 
 		.invisible {
 			visibility: hidden;
 		}
 
+		.r-json-tree-prop-arrow {
+			display: inline-block;
+			font-size: 1rem;
+		}
+
+		.r-json-tree-prop-arrow-down {
+			transform: rotate(90deg);
+		}
+
 		.r-json-tree-prop-key {
 			color: @json-tree-key-color;
+		}
+
+		.r-json-tree-prop-delimiter {
+			padding-right: 3px;
 		}
 
 		.r-json-tree-prop-value {
@@ -94,6 +195,13 @@
 			padding: 0;
 			outline: none;
 			z-index: 1;
+		}
+
+		.r-json-tree-prop-key,
+		.r-json-tree-prop-delimiter,
+		.r-json-tree-prop-value,
+		.r-json-tree-prop-value-edit {
+			font-size: 1rem;
 		}
 	}
 

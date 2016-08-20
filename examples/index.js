@@ -5,7 +5,7 @@ var App = Pure.extend({
 	template: `
 		<Textarea value="sss" auto></Textarea>
 		<Spinner block></Spinner>
-		<JSONTree source="{ jsonSource }"></JSONTree>
+		<JSONTree source="{ jsonSource }" on-change="{ this.onJsonTreeChange($event) }"></JSONTree>
 
 		<br />
 		<br />
@@ -172,6 +172,9 @@ var App = Pure.extend({
 		</Modal>
 		{/if}
 	`,
+	onJsonTreeChange( e ) {
+		console.log( e.path, 'changed from', e.oldValue, 'to', e.value );
+	},
 	onSelect( v ) {
 		console.log( 'onSelect', v );
 	},
@@ -207,7 +210,7 @@ var App = Pure.extend({
 		this.$update( 'trackTarget', this.$refs.trackTarget );
 	},
 	config( data ) {
-		data.jsonSource = {"gender":"male","name":{"title":"mr","first":"raymond","last":"ryan"},"location":{"street":"8927 the crescent","city":"wicklow","state":"longford","postcode":58460},"email":"raymond.ryan@example.com","login":{"username":"bigpanda480","password":"skinny","salt":"7qYJ3lkG","md5":"f62770e7c729942162379a3ac0c404cd","sha1":"0174615aa213464a38d5e5fa61a17c5fd2a8a7ab","sha256":"1076077bfba2644b0e9f13054677b636b202c9bddae0ab9ad28a2557e8bad5ff"},"registered":1059039509,"dob":998322805,"phone":"051-101-5357","cell":"081-245-2376","id":{"name":"PPS","value":"8211577T"},"picture":{"large":"https://randomuser.me/api/portraits/men/48.jpg","medium":"https://randomuser.me/api/portraits/med/men/48.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/48.jpg"},"nat":"IE"};
+		data.jsonSource = [{"gender":"male","name":{"title":"mr","first":"raymond","last":"ryan"},"location":{"street":"8927 the crescent","city":"wicklow","state":"longford","postcode":58460},"email":"raymond.ryan@example.com","login":{"username":"bigpanda480","password":"skinny","salt":"7qYJ3lkG","md5":"f62770e7c729942162379a3ac0c404cd","sha1":"0174615aa213464a38d5e5fa61a17c5fd2a8a7ab","sha256":"1076077bfba2644b0e9f13054677b636b202c9bddae0ab9ad28a2557e8bad5ff"},"registered":1059039509,"dob":998322805,"phone":"051-101-5357","cell":"081-245-2376","id":{"name":"PPS","value":"8211577T"},"picture":{"large":"https://randomuser.me/api/portraits/men/48.jpg","medium":"https://randomuser.me/api/portraits/med/men/48.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/48.jpg"},"nat":"IE"}, 1];
 		data.elementSource = [
 			{
 				text: 'div',
