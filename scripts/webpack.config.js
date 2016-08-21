@@ -9,7 +9,6 @@ var singleConfig = {
 	cwd: cwd,
 	output: {
 		path: './dist',
-		publicPath: 'dist/',
 		filename: 'pure.js',
 		library: 'Pure',
 		libraryTarget: 'umd'
