@@ -1,3 +1,3 @@
 z-index可配置，Pure.zIndex({});
-Pure作为Plugin导出
-分离pure-fns，当前仓库为纯组件
+分离pure-fns至单独的仓库，当前仓库为纯组件
+Icon增加name
