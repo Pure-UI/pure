@@ -20,4 +20,5 @@ export default {
 	'/Breadcrumb': () => dispatcher.emit( 'update', docs.Breadcrumb, 'Breadcrumb' ),
 	'/Box': () => dispatcher.emit( 'update', docs.Box, 'Box' ),
 	'/ElementTree': () => dispatcher.emit( 'update', docs.ElementTree, 'ElementTree' ),
+	'/Tabs': () => dispatcher.emit( 'update', docs.Tabs, 'Tabs' ),
 };

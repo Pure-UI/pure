@@ -466,6 +466,45 @@
             "id": 34
         }
     ],
+    "Tabs": [
+        {
+            "path": "Tabs/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Tabs selected=\"1\">\r\n\t<TabPane title=\"first\">\r\n\t\tContent in first tab\r\n\t</TabPane>\r\n\t<TabPane title=\"second\">\r\n\t\tContent in second tab\r\n\t</TabPane>\r\n</Tabs>\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n",
+            "code": {
+                "html": "<Tabs selected=\"1\">\n    <TabPane title=\"first\">\n        Content in first tab\n    </TabPane>\n    <TabPane title=\"second\">\n        Content in second tab\n    </TabPane>\n</Tabs>"
+            },
+            "id": 36
+        },
+        {
+            "path": "Tabs/key.md",
+            "attrs": {
+                "order": 2
+            },
+            "source": "\r\nUse key\r\n\r\n```html\r\n<Tabs selected=\"key1\">\r\n\t<TabPane key=\"key0\" title=\"first\">\r\n\t\tContent in first tab\r\n\t</TabPane>\r\n\t<TabPane key=\"key1\" title=\"second\">\r\n\t\tContent in second tab\r\n\t</TabPane>\r\n</Tabs>\r\n```\r\n",
+            "html": "<p>Use key</p>\n",
+            "code": {
+                "html": "<Tabs selected=\"key1\">\n    <TabPane key=\"key0\" title=\"first\">\n        Content in first tab\n    </TabPane>\n    <TabPane key=\"key1\" title=\"second\">\n        Content in second tab\n    </TabPane>\n</Tabs>"
+            },
+            "id": 38
+        },
+        {
+            "path": "Tabs/event.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\nEvent\r\n\r\n```html\r\n<Tabs selected=\"first\" on-change=\"{ this.onChange( $event ) }\">\r\n\t<TabPane key=\"first\" title=\"first\">\r\n\t\tContent in first tab\r\n\t</TabPane>\r\n\t<TabPane key=\"second\" title=\"second\">\r\n\t\tContent in second tab\r\n\t</TabPane>\r\n</Tabs>\r\n\r\nselected: { currentTabKey || 'first' }\r\n```\r\n\r\n```js\r\n{\r\n\tonChange( key ) {\r\n\t\tthis.data.currentTabKey = key;\r\n\t\tthis.$update();\r\n\t}\r\n}\r\n```\r\n",
+            "html": "<p>Event</p>\n",
+            "code": {
+                "html": "<Tabs selected=\"first\" on-change=\"{ this.onChange( $event ) }\">\n    <TabPane key=\"first\" title=\"first\">\n        Content in first tab\n    </TabPane>\n    <TabPane key=\"second\" title=\"second\">\n        Content in second tab\n    </TabPane>\n</Tabs>\n\nselected: { currentTabKey || 'first' }",
+                "js": "{\n    onChange( key ) {\n        this.data.currentTabKey = key;\n        this.$update();\n    }\n}"
+            },
+            "id": 37
+        }
+    ],
     "Textarea": [
         {
             "path": "Textarea/basic.md",
@@ -477,7 +516,7 @@
             "code": {
                 "html": "<Textarea value=\"some content...\"></Textarea>"
             },
-            "id": 37
+            "id": 40
         },
         {
             "path": "Textarea/autosize.md",
@@ -489,7 +528,7 @@
             "code": {
                 "html": "<Textarea value=\"some content...\" auto></Textarea>"
             },
-            "id": 36
+            "id": 39
         }
     ]
 }

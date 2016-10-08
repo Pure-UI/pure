@@ -23,6 +23,9 @@
 			<li>
 				<a class="{ active === 'Breadcrumb' ? 'active' : '' }" href="#/Breadcrumb">Breadcrumb</a>
 			</li>
+			<li>
+				<a class="{ active === 'Tabs' ? 'active' : '' }" href="#/Tabs">Tabs</a>
+			</li>
 		</ul>
 		<div class="title">form</div>
 		<ul>
