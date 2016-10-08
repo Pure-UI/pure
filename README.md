@@ -61,9 +61,9 @@ Happy coding!
 
 ## CDN
 
-pure.css: https://npmcdn.com/pure-ui/dist/pure.css
+pure.css: https://unpkg.com/pure-ui/dist/pure.css
 
-pure.js: https://npmcdn.com/pure-ui/dist/pure.js
+pure.js: https://unpkg.com/pure-ui/dist/pure.js
 
 ## Playground
 
