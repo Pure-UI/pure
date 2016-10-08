@@ -7,6 +7,8 @@ import Spinner from './components/spinner/spinner';
 import Pagination from './components/pagination/pagination';
 import Breadcrumb from './components/breadcrumb/breadcrumb';
 import BreadcrumbItem from './components/breadcrumb/breadcrumb-item';
+import Tabs from './components/tabs/tabs';
+import TabPane from './components/tabs/tab-pane';
 
 // Form
 import Input from './components/input/input';
@@ -126,6 +128,8 @@ let configs = [
 	Pagination,
 	Breadcrumb,
 	BreadcrumbItem,
+	Tabs,
+	TabPane,
 	Input,
 	Textarea,
 	Radio,

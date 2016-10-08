@@ -23,7 +23,7 @@
 
 		},
 		init() {
-			console.log( 'init', this.data.target );
+			// console.log( 'init', this.data.target );
 			if( this.data.isValid  && this.$refs.v instanceof HTMLElement ) {
 				domAlign(
 					this.$refs.v,

@@ -42,12 +42,12 @@
     "regularjs": "^0.4.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+	"autosize": "^3.0.17",
+    "dom-align": "^1.4.0",
+    "is-obj": "^1.0.1"
   },
   "peerDependencies": {},
   "dependencies": {
-    "autosize": "^3.0.17",
-    "dom-align": "^1.4.0",
-    "is-obj": "^1.0.1"
   }
 }

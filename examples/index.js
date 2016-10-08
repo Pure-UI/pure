@@ -2,6 +2,14 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
+		<Tabs selected="1">
+			<TabPane title="活动公告">
+				活动公告内容
+			</TabPane>
+			<TabPane title="优惠券">
+				优惠券内容
+			</TabPane>
+		</Tabs>
 		<Textarea value="sss" auto></Textarea>
 		<Spinner block></Spinner>
 		<JSONTree source="{ jsonSource }" on-change="{ this.onJsonTreeChange($event) }"></JSONTree>

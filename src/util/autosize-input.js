@@ -1,3 +1,8 @@
+/*
+ * MIT license
+ * https://github.com/yuanqing/autosize-input
+ */
+
 (function() {
 
   'use strict';

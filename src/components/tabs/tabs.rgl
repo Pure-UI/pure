@@ -1,0 +1,150 @@
+<template>
+	<div class="r-tabs">
+		<div class="r-tabs-header" ref="header">
+			<ul class="r-tabs-titles">
+				{#list titles as title}
+					<li ref="tabpane_{ title_index }" class="r-tabs-title" on-click="{ this.onTabPaneChange( title_index ) }">{ title }</li>
+				{/list}
+			</ul>
+			<div ref="indicator" class="r-tabs-indicator"></div>
+		</div>
+
+		<div class="r-tabs-body">
+			{#inc this.$body}
+		</div>
+	</div>
+</template>
+
+<script>
+	import nextTick from '../../util/nextTick';
+
+	export default {
+		name: 'Tabs',
+		config() {
+			this.count = 0;
+			this.tabPanes = [];
+			this.data.titles = [];
+			this.data.selected = this.data.selected || void 0;
+		},
+		init() {
+			const $header = this.$refs.header;
+			const $indicator = this.$refs.indicator;
+
+			this.$watch( 'selected', ( nv, ov ) => {
+				if ( !ov ) {
+					ov = ( this.tabPanes[ 0 ] && this.tabPanes[ 0 ].data.key ) || 0;
+				}
+
+				// judge direction
+				const keys = this.tabPanes.map( v => v.data.key );
+				if ( keys.indexOf( nv ) < keys.indexOf( ov ) ) {
+					$header.classList.add( 'backward' );
+				} else {
+					$header.classList.remove( 'backward' );
+				}
+
+				const index = keys.indexOf( nv );
+				const $title = this.$refs[ `tabpane_${ index }` ];
+				if ( $title ) {
+					const { width } = $header.getBoundingClientRect();
+
+					if ( width !== 0 ) {
+						calc();
+					} else {
+						nextTick( calc );
+					}
+
+					function calc() {
+						const { width } = $header.getBoundingClientRect();
+						const { left, right } = $title.getBoundingClientRect();
+						const leftRatio = left / width * 100 + '%';
+						const rightRatio = ( 1 - right / width ) * 100 + '%';
+						$indicator.style.left = leftRatio;
+						$indicator.style.right = rightRatio;
+					}
+				}
+			} );
+		},
+		onTabPaneChange( index ) {
+			this.data.selected = this.tabPanes[ index ].data.key;
+			this.tabPanes.forEach( v => {
+				if ( v.data.key === this.data.selected ) {
+					v.data.show = true;
+					v.$update();
+				} else {
+					v.data.show = false;
+					v.$update();
+				}
+			} );
+
+			this.$emit( 'change', this.data.selected );
+		},
+		ping( target ) {
+			if ( !target.data.key ) {
+				target.$update( {
+					key: this.count
+				} );
+			}
+
+			this.count++;
+			this.tabPanes.push( target );
+			this.data.titles.push( target.data.title );
+
+			// if selected not set, or selected and key matched
+			// use `==`, which means '1' == 1 is acceptable
+			if ( typeof this.data.selected === 'undefined' || this.data.selected == target.data.key ) {
+				this.data.selected = target.data.key;
+				target.data.show = true;
+				target.$update();
+			}
+		}
+	};
+</script>
+
+<style lang="less" scoped>
+	@import '../../variable.less';
+
+	.r-tabs {
+		display: block;
+	}
+
+	.r-tabs-titles, .r-tabs-title {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.r-tabs-header, .r-tabs-body {
+		font-size: 1rem;
+	}
+
+	.r-tabs-titles {
+		border-bottom: solid 1px #DDD;
+		overflow: hidden;
+
+		.r-tabs-title {
+			float: left;
+			padding: .9rem .6rem;
+			color: #333;
+			cursor: pointer;
+		}
+	}
+
+	.r-tabs-header {
+		position: relative;
+	}
+
+	.r-tabs-indicator {
+		position: absolute;
+		bottom: 0;
+		border-bottom: solid 2px @primary-color;
+		transition: left .4s .1s ease,right .4s 0s ease;
+	}
+
+	.r-tabs-header.backward {
+		.r-tabs-indicator {
+			transition: right .4s .1s ease,left .4s 0s ease;
+		}
+	}
+</style>
