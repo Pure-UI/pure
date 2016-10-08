@@ -3,7 +3,7 @@
 		<div class="r-tabs-header" ref="header">
 			<ul class="r-tabs-titles">
 				{#list titles as title}
-					<li ref="tabpane_{ title_index }" class="r-tabs-title" on-click="{ this.onTabPaneChange( title_index ) }">{ title }</li>
+					<li ref="tabpane_{ title_index }" class="r-tabs-title { title_index === selectedIndex ? 'tab-active' : '' }" on-click="{ this.onTabPaneChange( title_index ) }">{ title }</li>
 				{/list}
 			</ul>
 			<div ref="indicator" class="r-tabs-indicator"></div>
@@ -67,6 +67,7 @@
 		},
 		onTabPaneChange( index ) {
 			this.data.selected = this.tabPanes[ index ].data.key;
+			this.data.selectedIndex = index;
 			this.tabPanes.forEach( v => {
 				if ( v.data.key === this.data.selected ) {
 					v.data.show = true;
@@ -93,6 +94,7 @@
 			// if selected not set, or selected and key matched
 			// use `==`, which means '1' == 1 is acceptable
 			if ( typeof this.data.selected === 'undefined' || this.data.selected == target.data.key ) {
+				this.data.selectedIndex = this.tabPanes.length - 1;
 				this.data.selected = target.data.key;
 				target.data.show = true;
 				target.$update();
@@ -128,6 +130,14 @@
 			padding: .9rem .6rem;
 			color: #333;
 			cursor: pointer;
+
+			&:hover {
+				color: @primary-color;
+			}
+
+			&.tab-active {
+				color: @primary-color;
+			}
 		}
 	}
 
@@ -146,5 +156,9 @@
 		.r-tabs-indicator {
 			transition: right .4s .1s ease,left .4s 0s ease;
 		}
+	}
+
+	.r-tabs-body {
+		padding: 1rem .6rem;
 	}
 </style>
