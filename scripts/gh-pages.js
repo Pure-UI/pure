@@ -1,6 +1,6 @@
-var ghpages = require( 'gh-pages' );
-var path = require( 'path' );
-var cwd = process.cwd();
+const ghpages = require( 'gh-pages' );
+const path = require( 'path' );
+const cwd = process.cwd();
 
 ghpages.clean();
 ghpages.publish( path.resolve( cwd, 'public' ), {

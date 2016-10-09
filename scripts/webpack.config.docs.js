@@ -1,8 +1,9 @@
-var HtmlWebpackPlugin = require( 'html-webpack-plugin' );
-var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-var CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-var webpack = require( 'webpack' );
-var cwd = process.cwd();
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const webpack = require( 'webpack' );
+const path = require( 'path' )
+const cwd = process.cwd();
 
 module.exports = {
 	entry: './site/index.js',
@@ -34,7 +35,8 @@ module.exports = {
 				loader: 'json',
 				exclude: /node_modules/
 			}
-		]
+		],
+		noParse: [ /regularjs/, /dist\/pure/ ]
 	},
 	regularjs: {
 		loaders: {
@@ -43,11 +45,11 @@ module.exports = {
 		}
 	},
 	resolve: {
-		extensions: [ '', '.js', 'json', '.css', '.rgl' ]
+		extensions: [ '', '.js', 'json', '.css', '.rgl' ],
+		alias: {
+			regularjs: path.resolve( cwd, 'node_modules/regularjs/dist/regular.min.js' )
+		}
 	},
-	// externals: {
-	// 	regularjs: 'Regular'
-	// },
 	plugins: [
 		new ExtractTextPlugin( 'app-[hash:8].css' ),
 		new HtmlWebpackPlugin({

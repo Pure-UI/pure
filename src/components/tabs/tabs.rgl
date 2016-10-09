@@ -37,16 +37,8 @@
 
 				// judge direction
 				const keys = this.tabPanes.map( v => v.data.key );
-				if ( keys.indexOf( nv ) < keys.indexOf( ov ) ) {
-					$header.classList.add( 'backward' );
-				} else {
-					$header.classList.remove( 'backward' );
-				}
 
-				const rect = $header.getBoundingClientRect();
-				const width = rect.width;
-
-				if ( width !== 0 ) {
+				if ( this.$root.parentNode ) {
 					calc();
 				} else {
 					nextTick( calc );
@@ -60,15 +52,10 @@
 
 					if ( $title ) {
 						const rect = $header.getBoundingClientRect();
-						const width = rect.width;
 						const l = rect.left;
-						const r = rect.right;
-						const { left, right } = $title.getBoundingClientRect();
+						const { left, width } = $title.getBoundingClientRect();
 
-						const leftRatio = ( left - l ) / width * 100 + '%';
-						const rightRatio = ( r - right ) / width * 100 + '%';
-						$indicator.style.left = leftRatio;
-						$indicator.style.right = rightRatio;
+						$indicator.style.cssText = `left: ${ left - l }px;width: ${ width }px;`;
 					}
 				}
 			} );
@@ -138,6 +125,7 @@
 			padding: .9rem .6rem;
 			color: #333;
 			cursor: pointer;
+			transition: color .4s ease;
 
 			&:hover {
 				color: @primary-color;
@@ -157,13 +145,7 @@
 		position: absolute;
 		bottom: 0;
 		border-bottom: solid 2px @primary-color;
-		transition: left .4s .1s ease,right .4s 0s ease;
-	}
-
-	.r-tabs-header.backward {
-		.r-tabs-indicator {
-			transition: right .4s .1s ease,left .4s 0s ease;
-		}
+		transition: left .3s ease,width .3s ease;
 	}
 
 	.r-tabs-body {

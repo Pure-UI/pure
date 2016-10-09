@@ -1,10 +1,10 @@
-var webpack = require( 'webpack' );
-var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-var autoprefixer = require( 'autoprefixer' );
-var path = require( 'path' );
-var cwd = process.cwd();
+const webpack = require( 'webpack' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const autoprefixer = require( 'autoprefixer' );
+const path = require( 'path' );
+const cwd = process.cwd();
 
-var singleConfig = {
+module.exports = {
 	entry: './src/index.js',
 	cwd: cwd,
 	output: {
@@ -63,5 +63,3 @@ var singleConfig = {
 		})
 	]
 };
-
-module.exports = singleConfig;

@@ -14,7 +14,7 @@ renderer.code = function( code, language ) {
 	return '';
 };
 
-var docs = {};
+const docs = {};
 
 glob('**/*.md', {
 	cwd: path.resolve( cwd, 'docs' )
