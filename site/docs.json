@@ -523,8 +523,8 @@
             "attrs": {
                 "order": 2
             },
-            "source": "\r\nAutosize\r\n\r\nDeclare `auto`, `autosize` or `autoresize` to make Textarea resize automatically when content changes. Just use the word which is easy enough to remember, both are ok.\r\n\r\n```html\r\n<Textarea value=\"some content...\" auto></Textarea>\r\n```\r\n",
-            "html": "<p>Autosize</p>\n<p>Declare <code>auto</code>, <code>autosize</code> or <code>autoresize</code> to make Textarea resize automatically when content changes. Just use the word which is easy enough to remember, both are ok.</p>\n",
+            "source": "\r\nAutosize\r\n\r\nAdd `auto`, `autosize` or `autoresize` to make Textarea adjust height automatically to fit the content\r\n\r\n```html\r\n<Textarea value=\"some content...\" auto></Textarea>\r\n```\r\n",
+            "html": "<p>Autosize</p>\n<p>Add <code>auto</code>, <code>autosize</code> or <code>autoresize</code> to make Textarea adjust height automatically to fit the content</p>\n",
             "code": {
                 "html": "<Textarea value=\"some content...\" auto></Textarea>"
             },

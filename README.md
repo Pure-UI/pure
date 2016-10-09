@@ -6,6 +6,10 @@
 
 https://fengzilong.github.io/pure/
 
+## Playground
+
+https://jsfiddle.net/fengzilong/bc7rnqn5/
+
 ## Installation
 
 ```bash
@@ -19,7 +23,7 @@ $ npm install pure-ui
 ```js
 import Regular from 'regularjs';
 import Pure from 'pure-ui';
-// don't forget to import css
+// import css
 import 'pure-ui/dist/pure.css';
 
 // it's all done
@@ -33,7 +37,7 @@ var AnotherNameSpace = Regular.extend({});
 AnotherNameSpace.use( Pure );
 ```
 
-it just works fine, whatever you like
+it works
 
 **Option 2**: add hot-link in your page
 
@@ -48,8 +52,6 @@ it just works fine, whatever you like
 
 the order of regular and pure doesn't matter
 
-in your own js
-
 ```js
 Regular.use( Pure );
 // or
@@ -57,17 +59,13 @@ Regular.use( Pure );
 // AnotherNameSpace.use( Pure );
 ```
 
-Happy coding!
+enjoy!
 
 ## CDN
 
 pure.css: https://unpkg.com/pure-ui/dist/pure.css
 
 pure.js: https://unpkg.com/pure-ui/dist/pure.js
-
-## Playground
-
-https://jsfiddle.net/fengzilong/bc7rnqn5/
 
 ## License
 

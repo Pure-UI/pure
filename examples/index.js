@@ -2,7 +2,13 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
-		<Select options="{ options }"></Select>
+		<Select>
+			<Option value="0">
+				<span style="color: blue;">江苏</span>
+			</Option>
+			<Option value="1">浙江</Option>
+			<Option value="2">上海</Option>
+		</Select>
 
 		<br />
 		<br />

@@ -18,6 +18,7 @@ import RadioGroup from './components/radio/radio-group';
 import Checkbox from './components/checkbox/checkbox';
 import CheckboxGroup from './components/checkbox/checkbox-group';
 import Select from './components/select/select';
+import Option from './components/select/option';
 import Switch from './components/switch/switch';
 import Form from './components/form/form';
 import FormItem from './components/form/form-item';
@@ -137,6 +138,7 @@ let configs = [
 	Checkbox,
 	CheckboxGroup,
 	Select,
+	Option,
 	Switch,
 	Form,
 	FormItem,

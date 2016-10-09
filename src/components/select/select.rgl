@@ -1,6 +1,14 @@
 <template>
 	<div class="r-select">
-		<Input value=""></Input>
+		<Input placeholder="请选择" value="{ selected }" readonly round on-click="{ this.onToggleOptions() }"></Input>
+		<div class="r-select-icon">
+			<Icon>&#xe60b;</Icon>
+		</div>
+		{#if show}
+		<div class="r-options">
+			{#inc this.$body}
+		</div>
+		{/if}
 	</div>
 </template>
 
@@ -13,24 +21,59 @@
 		component: {
 			Input, Icon
 		},
-		isObject( v ) {
-			return typeof v === 'object';
+		config() {
+			this.data.show = false;
+			this.children = [];
 		},
-		onChange() {
-			const v = this.$refs.v.value;
+		optionPing( target ) {
+			this.children.push( target );
+		},
+		onOptionChange( target ) {
+			this.data.show = false;
+			this.data.selected = target.$refs.v.innerText;
 
-			let vs = this.data.options;
-			if( this.isObject( this.data.options[ 0 ] ) ) {
-				vs = this.data.options.map(v => ( v.value + '' ));
-			}
-
-			this.$emit( 'change', v, vs.indexOf( v ) );
+			const index = this.children.indexOf( target );
+			this.$emit( 'change', target.data.value, index, target );
+		},
+		onToggleOptions() {
+			this.data.show = !this.data.show;
 		}
 	}
 </script>
 
+<style lang="less">
+	.r-select {
+		.r-input-wrapper {
+			width: 100%;
+		}
+	}
+</style>
+
 <style lang="less" scoped>
 	.r-select {
-		
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+
+		.r-select-icon {
+			color: #666;
+			position: absolute;
+			top: 50%;
+			right: 5px;
+			transform: translate3d(0,-50%,0);
+			font-size: 16px;
+			pointer-events: none;
+		}
+
+		.r-options {
+			position: absolute;
+			width: 100%;
+			margin-top: 5px;
+			padding: 5px 0;
+			background-color: #FFF;
+			border: solid 1px #DDD;
+			border-radius: .28rem;
+			box-shadow: 1px 1px 6px 1px rgba(0,0,0,.1);
+		}
 	}
 </style>

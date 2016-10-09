@@ -54,8 +54,6 @@
 			this.$on( 'destroy-modal', () => {
 				destroy.call( this );
 			} );
-
-			// this.supr();
 		}
 	};
 </script>

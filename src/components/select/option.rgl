@@ -1,0 +1,34 @@
+<template>
+	<div class="r-option" ref="v" on-click="{ this.onClick() }">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'Option',
+		config() {
+			if ( this.$outer && this.$outer.optionPing ) {
+				this.$outer.optionPing( this );
+			}
+		},
+		onClick() {
+			if ( this.$outer && this.$outer.onOptionChange ) {
+				this.$outer.onOptionChange( this );
+			}
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+	@import '../../variable.less';
+
+	.r-option {
+		padding: 8px 10px;
+		overflow: hidden;
+
+		&:hover {
+			background-color: rgba(160, 168, 182, 0.15);
+		}
+	}
+</style>

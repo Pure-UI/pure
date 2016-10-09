@@ -1,11 +1,13 @@
 <template>
 	<div class="r-input-wrapper">
 		<input
-			class="r-input { error ? 'r-input-error' : '' } { disabled ? 'r-input-disabled' : '' }"
+			class="r-input { error ? 'r-input-error' : '' } { disabled ? 'r-input-disabled' : '' } { readonly ? 'r-input-readonly' : '' } { round ? 'r-input-round' : '' }"
 			type="{ type || 'text' }"
 			value="{ value }"
 			disabled="{ disabled }"
+			readonly="{ readonly }"
 			placeholder="{ placeholder }"
+			on-click="{ this.onClick() }"
 			on-input="{ this.onChange() }"
 			on-focus="{ this.onFocus() }"
 			ref="v"
@@ -22,11 +24,14 @@
 	export default {
 		name: 'Input',
 		onChange() {
-			this.$emit( 'emit', this.$refs.v.value );
 			this.$emit( 'change', this.$refs.v.value );
 		},
 		onFocus() {
 			this.data.error = false;
+			this.$emit( 'focus' );
+		},
+		onClick() {
+			this.$emit( 'click' );
 		}
 	}
 </script>
@@ -49,6 +54,7 @@
 	}
 
 	.r-input {
+		width: 100%;
 		background-color: #FFF;
 		color: @form-color;
 		outline: none;
@@ -58,9 +64,24 @@
 		vertical-align: middle;
 		box-sizing: border-box;
 		border: solid 1px #DDD;
+		cursor: inherit;
+
+		&.r-input-round {
+			border-radius: 4px;
+		}
 
 		&:focus {
 			border: solid 1px @primary-color;
+		}
+
+		&.r-input-readonly {
+			&:hover {
+				border: solid 1px shade(#DDD,15%);
+			}
+
+			&:focus {
+				border: solid 1px shade(#DDD,15%);
+			}
 		}
 	}
 
