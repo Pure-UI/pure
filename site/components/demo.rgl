@@ -103,6 +103,11 @@
 		}
 	}
 
+	.demo-box {
+		position: relative;
+		z-index: 1;
+	}
+
 	.markdown-box {
 		margin-bottom: 20px;
 		border-bottom: solid 1px #f0f0f0;

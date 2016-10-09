@@ -19,7 +19,7 @@ selected: { currentTabKey || 'first' }
 
 ```js
 {
-	onChange( key ) {
+	onChange: function( key ) {
 		this.data.currentTabKey = key;
 		this.$update();
 	}

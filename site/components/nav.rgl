@@ -36,6 +36,9 @@
 				<a class="{ active === 'Textarea' ? 'active' : '' }" href="#/Textarea">Textarea</a>
 			</li>
 			<li>
+				<a class="{ active === 'Select' ? 'active' : '' }" href="#/Select">Select</a>
+			</li>
+			<li>
 				<a class="{ active === 'Radio' ? 'active' : '' }" href="#/Radio">Radio</a>
 			</li>
 			<li>
