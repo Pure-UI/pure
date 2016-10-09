@@ -2,6 +2,11 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
+		<Select options="{ options }"></Select>
+
+		<br />
+		<br />
+
 		<Box margin="100px">
 			<Tabs selected="1">
 				<TabPane title="活动公告">
@@ -34,7 +39,6 @@ var App = Regular.extend({
 
 		<ElementTree source="{ elementSource }" on-select="{ this.onSelect( $event ) }"></ElementTree>
 
-		<Select options="{ options }"></Select>
 		<Input disabled="{ true }"></Input>
 		<Box margin="" padding="20px">
 			<Countdown end="{ v ? v : v = ( Date.now() + 1000 * 65 ) }" on-end="{ isTimeEnd = true }"></Countdown>

@@ -1,26 +1,20 @@
 <template>
-	<select ref="v" class="r-select" on-change="{ this.onChange() }">
-		{#list options as option}
-			{#if this.isObject( option )}
-			<option value="{ option.value }">{ option.text }</option>
-			{#else}
-			<option value="{ option }">{ option }</option>
-			{/if}
-		{/list}
-	</select>
+	<div class="r-select">
+		<Input value=""></Input>
+	</div>
 </template>
 
 <script>
+	import Input from '../input/input';
+	import Icon from '../icon/icon';
+
 	export default {
 		name: 'Select',
+		component: {
+			Input, Icon
+		},
 		isObject( v ) {
 			return typeof v === 'object';
-		},
-		config() {
-
-		},
-		init() {
-
 		},
 		onChange() {
 			const v = this.$refs.v.value;
@@ -37,11 +31,6 @@
 
 <style lang="less" scoped>
 	.r-select {
-		width: 170px;
-		border: solid 1px #DDD;
-		padding: .7em 10px;
-		font-size: 1rem;
-		background-color: #FFF;
-		outline: none;
+		
 	}
 </style>

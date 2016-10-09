@@ -15,9 +15,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-list:before { content: "\e604"; }
+.icon-yfselect:before { content: "\e608"; }
 .icon-warn:before { content: "\e603"; }
 .icon-info:before { content: "\e601"; }
+.icon-star:before { content: "\e607"; }
 .icon-home:before { content: "\e605"; }
 .icon-success:before { content: "\e602"; }
+.icon-arrow:before { content: "\e609"; }
+.icon-arrow-ud:before { content: "\e60a"; }
 .icon-iconfontcaret:before { content: "\e606"; }
 .icon-chongzhishibai:before { content: "\e600"; }

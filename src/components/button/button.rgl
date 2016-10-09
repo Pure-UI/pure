@@ -12,19 +12,7 @@
 </template>
 
 <script>
-	const rAF = (function (w) {
-		let raf = w.requestAnimationFrame || w.mozRequestAnimationFrame || w.webkitRequestAnimationFrame
-
-		if (!raf || /iP(ad|hone|od).*OS 6/.test(w.navigator.userAgent)) {
-			let lastTime = 0
-
-			raf = function (cb) {
-				let nowtime = Date.now(), timeout = Math.max(16 - (nowtime - lastTime), 0)
-				setTimeout(function () { cb(lastTime = nowtime + timeout) }, timeout)
-			}
-		}
-		return raf;
-	})(window || {});
+	import nextTick from '../../util/nextTick';
 
 	export default {
 		name: 'Button',
@@ -79,7 +67,7 @@
 			this.data.pressed = false;
 			this.$update();
 
-			rAF(() => {
+			nextTick(() => {
 				this.data.pressed = true;
 				this.$update();
 			});
@@ -114,7 +102,7 @@
 		pointer-events: none;
 
 		&.pressed {
-			animation: r-button-ripple 1.1s linear forwards;
+			animation: r-button-ripple .6s linear forwards;
 		}
 
 		&.r-button-wave-hidden {
@@ -133,8 +121,8 @@
 		position: relative;
 		-webkit-appearance: none;
 		border: none;
-		padding: .7em 1.5em;
-		font-size: 1rem;
+		padding: .5em 1.1em;
+		font-size: .9rem;
 		border-radius: .28rem;
 		outline: none;
 		cursor: pointer;
@@ -144,7 +132,7 @@
 		overflow: hidden;
 
 		&.r-button-sm {
-			padding: .5em .9em;
+			padding: .3em .9em;
 		}
 
 		&:not(.r-button-disabled):active {
