@@ -4,7 +4,7 @@ order: 2
 
 Autosize
 
-Declare `auto`, `autosize` or `autoresize` to make Textarea resize automatically when content changes. Just use the word which is easy enough to remember, both are ok.
+Add `auto`, `autosize` or `autoresize` to make Textarea adjust height automatically to fit the content
 
 ```html
 <Textarea value="some content..." auto></Textarea>
