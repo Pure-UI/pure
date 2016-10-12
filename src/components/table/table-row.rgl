@@ -1,7 +1,7 @@
 <template>
 	<tr class="r-tablerow">
 		{#list fields as field}
-			<td>{#include this.renderColumns( field ) }</td>
+			<td nowrap>{#include this.renderColumns( field ) }</td>
 		{/list}
 	</tr>
 </template>

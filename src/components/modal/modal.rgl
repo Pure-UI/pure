@@ -50,7 +50,6 @@
 			this.$emit( 'close-modal' );
 
 			const destroy = this.supr;
-
 			this.$on( 'destroy-modal', () => {
 				destroy.call( this );
 			} );
@@ -76,7 +75,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%,-50%,0);
-		min-width: 700px;
+		min-width: 360px;
 		max-width: 88%;
 		background-color: #FFF;
 		border-radius: 5px;
@@ -93,7 +92,6 @@
 	.r-modal-bd {
 		padding: 0 40px;
 		font-size: 15px;
-		height: 600px;
 		max-height: 70vh;
 		overflow-y: auto;
 

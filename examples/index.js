@@ -327,7 +327,7 @@ var App = Regular.extend({
 				render( v, row ) {
 					let rowData = JSON.stringify( row );
 					return `
-						<Button on-emit="{ this.onEmit( 'edit' ) }" primary>编辑</Button>
+						<Button on-emit="{ this.onEmit( 'edit' ) }" primary sm>编辑</Button>
 					`;
 				}
 			}
