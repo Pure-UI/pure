@@ -33,7 +33,7 @@
 		onClick() {
 			this.$emit( 'click' );
 		}
-	}
+	};
 </script>
 
 <style lang="less" scoped>
@@ -58,7 +58,7 @@
 		background-color: #FFF;
 		color: @form-color;
 		outline: none;
-		padding: .5em 10px;
+		padding: .56em 10px;
 		font-size: 1rem;
 		display: inline-block;
 		vertical-align: middle;
