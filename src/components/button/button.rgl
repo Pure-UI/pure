@@ -1,5 +1,5 @@
 <template>
-	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' }" on-mousedown="{ this.onMouseDown( $event ) }" on-mouseup="{ this.onMouseUp( $event ) }">
+	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' }" on-mouseup="{ this.onMouseUp( $event ) }">
 		<div
 			class="r-button-wave  { pressed ? 'pressed' : 'r-button-wave-hidden' }"
 			style="width: { waveWidth }px;height: { waveHeight }px;top: { waveTop }px;left: { waveLeft }px;"
@@ -17,6 +17,7 @@
 	export default {
 		name: 'Button',
 		config() {
+			// use ripple="{ false }" to disable ripple effect
 			this.data.ripple = this.data.ripple !== false;
 		},
 		init( data ) {
@@ -32,8 +33,6 @@
 			this.$on('$destroy', () => {
 				this.$refs.w.removeEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
 			});
-		},
-		onMouseDown() {
 		},
 		onMouseUp( e ) {
 			if( this.data.disabled ) {
@@ -80,20 +79,6 @@
 
 	@button-color: @primary-color;
 
-	@keyframes r-button-ripple {
-		from {
-			opacity: 1;
-			-webkit-transform: scale(0);
-			transform: scale(0)
-		}
-
-		to {
-			opacity: 0;
-			-webkit-transform: scale(2.5);
-			transform: scale(2.5)
-		}
-	}
-
 	.r-button-wave {
 		position: absolute;
 		background-color: rgba(0,0,0,.15);
@@ -114,14 +99,13 @@
 		position: relative;
 		left: 50%;
 		transform: translate3d(-50%,0,0);
-		z-index: 1;
 	}
 
 	.r-button {
 		position: relative;
 		-webkit-appearance: none;
 		border: none;
-		padding: .5em 1.1em;
+		padding: .56em 1.1em;
 		font-size: 1rem;
 		border-radius: .28rem;
 		outline: none;
@@ -132,7 +116,7 @@
 		overflow: hidden;
 
 		&.r-button-sm {
-			padding: .4em .8em;
+			padding: .45em .75em;
 		}
 
 		&:not(.r-button-disabled):active {
@@ -168,6 +152,20 @@
 
 		&:not(.r-button-disabled):hover, &:not(.r-button-disabled):focus {
 			background-color: shade(@button-color, 5%);
+		}
+	}
+
+	@keyframes r-button-ripple {
+		from {
+			opacity: 1;
+			-webkit-transform: scale(0);
+			transform: scale(0)
+		}
+
+		to {
+			opacity: 0;
+			-webkit-transform: scale(2.5);
+			transform: scale(2.5)
 		}
 	}
 </style>
