@@ -6,9 +6,11 @@
 	export default {
 		name: 'CheckboxGroup',
 		config() {
+			this.data.checked = this.data.checked || [];
 			this.checkboxChildren = [];
 		},
 		onCheckboxChange( target ) {
+			// toggle
 			target.data.checked = !target.data.checked;
 			target.$update();
 
@@ -20,10 +22,14 @@
 		},
 		ping( target ) {
 			this.checkboxChildren.push( target );
-			if( target.data.value === this.data.checked ) {
-				target.data.checked = true;
-				target.$update();
-			}
+			this.data.checked
+				.some( v => {
+					if ( target.data.value == v ) {
+						target.data.checked = true;
+						target.$update();
+						return true;
+					}
+				} );
 		}
 	}
 </script>
