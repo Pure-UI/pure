@@ -88,7 +88,7 @@
 <style lang="less" scoped>
 	.r-note {
 		display: inline-block;
-		padding: 8px 14px;
+		padding: 10px 20px;
 		border-radius: 4px;
 		background-color: #FFF;
 		border: solid 1px #DDD;

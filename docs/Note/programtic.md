@@ -2,7 +2,7 @@
 order: 1
 ---
 
-you can also use `Note` in programtic way
+Also use `Note` in programtic way
 
 ```html
 <Button on-click="{ this.onShowNote() }">Show Note</Button>

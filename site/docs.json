@@ -324,8 +324,8 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nyou can also use `Note` in programtic way\r\n\r\n```html\r\n<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>\r\n```\r\n\r\n```js\r\n{\r\n\tonShowNote: function() {\r\n\t\tvar i = Math.floor( Math.random() * 10 % 4 );\r\n\t\tvar types = 'info success warning danger'.split(' ');\r\n\t\tvar type = types[ i ];\r\n\r\n\t\tPure.note( \"Hey there ;)\", type );\r\n\t}\r\n}\r\n```\r\n",
-            "html": "<p>you can also use <code>Note</code> in programtic way</p>\n",
+            "source": "\r\nAlso use `Note` in programtic way\r\n\r\n```html\r\n<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>\r\n```\r\n\r\n```js\r\n{\r\n\tonShowNote: function() {\r\n\t\tvar i = Math.floor( Math.random() * 10 % 4 );\r\n\t\tvar types = 'info success warning danger'.split(' ');\r\n\t\tvar type = types[ i ];\r\n\r\n\t\tPure.note( \"Hey there ;)\", type );\r\n\t}\r\n}\r\n```\r\n",
+            "html": "<p>Also use <code>Note</code> in programtic way</p>\n",
             "code": {
                 "html": "<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>",
                 "js": "{\n    onShowNote: function() {\n        var i = Math.floor( Math.random() * 10 % 4 );\n        var types = 'info success warning danger'.split(' ');\n        var type = types[ i ];\n\n        Pure.note( \"Hey there ;)\", type );\n    }\n}"
