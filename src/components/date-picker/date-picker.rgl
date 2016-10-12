@@ -1,0 +1,23 @@
+<template>
+	<DateGrid year="{ year }" month="{ month }" date="{ date }"></DateGrid>
+</template>
+
+<script>
+	import DateGrid from './date-grid';
+
+	export default {
+		name: 'DatePicker',
+		components: {
+			DateGrid
+		},
+		config() {
+			this.data.year = 2016;
+			this.data.month = 10;
+			this.data.date = 12;
+		}
+	};
+</script>
+
+<style lang="less" scoped>
+
+</style>

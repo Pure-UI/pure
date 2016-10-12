@@ -186,8 +186,8 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\n### Pure provides you two common form layout\r\n",
-            "html": "<h3 id=\"pure-provides-you-two-common-form-layout\">Pure provides you two common form layout</h3>\n",
+            "source": "\r\n### Pure provides two common form layout\r\n",
+            "html": "<h3 id=\"pure-provides-two-common-form-layout\">Pure provides two common form layout</h3>\n",
             "code": {},
             "id": 15
         },
@@ -222,10 +222,10 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Icon>&#xe603;</Icon>\r\n<Icon>&#xe601;</Icon>\r\n<Icon>&#xe602;</Icon>\r\n<Icon>&#xe600;</Icon>\r\n<Icon>&#xe605;</Icon>\r\n<Icon>&#xe604;</Icon>\r\n```\r\n",
+            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<div class=\"demo-icons\">\r\n\t<Icon>&#xe603;</Icon>\r\n\t<Icon>&#xe601;</Icon>\r\n\t<Icon>&#xe602;</Icon>\r\n\t<Icon>&#xe600;</Icon>\r\n\t<Icon>&#xe605;</Icon>\r\n\t<Icon>&#xe604;</Icon>\r\n</div>\r\n```\r\n",
             "html": "<p>Basic Usage</p>\n",
             "code": {
-                "html": "<Icon>&#xe603;</Icon>\n<Icon>&#xe601;</Icon>\n<Icon>&#xe602;</Icon>\n<Icon>&#xe600;</Icon>\n<Icon>&#xe605;</Icon>\n<Icon>&#xe604;</Icon>"
+                "html": "<div class=\"demo-icons\">\n    <Icon>&#xe603;</Icon>\n    <Icon>&#xe601;</Icon>\n    <Icon>&#xe602;</Icon>\n    <Icon>&#xe600;</Icon>\n    <Icon>&#xe605;</Icon>\n    <Icon>&#xe604;</Icon>\n</div>"
             },
             "id": 17
         }
@@ -298,8 +298,8 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n**Pro Tip:** Pure doesn't set z-index for Modal, you should set it on your own\r\n\r\n```html\r\n<Button primary on-click=\"{ showModal = true }\">Open Modal</Button>\r\n{#if showModal}\r\n<Modal\r\n\ttitle=\"Modal Title\"\r\n\tok-text=\"Confirm\"\r\n\tcancel-text=\"Cancel\"\r\n\ton-cancel=\"{ showModal = false }\"\r\n\ton-ok=\"{ showModal = false }\"\r\n>\r\n\t<div class=\"modal-example-center\">\r\n\t\t<img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\">\r\n\t</div>\r\n</Modal>\r\n{/if}\r\n```\r\n",
-            "html": "<p>Basic Usage</p>\n<p><strong>Pro Tip:</strong> Pure doesn&#39;t set z-index for Modal, you should set it on your own</p>\n",
+            "source": "\r\nBasic Usage\r\n\r\nProTip: Pure doesn't set z-index for Modal, you should set it on your own\r\n\r\n```html\r\n<Button primary on-click=\"{ showModal = true }\">Open Modal</Button>\r\n{#if showModal}\r\n<Modal\r\n\ttitle=\"Modal Title\"\r\n\tok-text=\"Confirm\"\r\n\tcancel-text=\"Cancel\"\r\n\ton-cancel=\"{ showModal = false }\"\r\n\ton-ok=\"{ showModal = false }\"\r\n>\r\n\t<div class=\"modal-example-center\">\r\n\t\t<img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\">\r\n\t</div>\r\n</Modal>\r\n{/if}\r\n```\r\n",
+            "html": "<p>Basic Usage</p>\n<p>ProTip: Pure doesn&#39;t set z-index for Modal, you should set it on your own</p>\n",
             "code": {
                 "html": "<Button primary on-click=\"{ showModal = true }\">Open Modal</Button>\n{#if showModal}\n<Modal\n    title=\"Modal Title\"\n    ok-text=\"Confirm\"\n    cancel-text=\"Cancel\"\n    on-cancel=\"{ showModal = false }\"\n    on-ok=\"{ showModal = false }\"\n>\n    <div class=\"modal-example-center\">\n        <img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\">\n    </div>\n</Modal>\n{/if}"
             },

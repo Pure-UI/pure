@@ -28,6 +28,8 @@ import Table from './components/table/table';
 import TableRow from './components/table/table-row';
 import TR from './components/table/tr';
 import TD from './components/table/td';
+import DatePicker from './components/date-picker/date-picker';
+import DateGrid from './components/date-picker/date-grid';
 
 // Container and Layout
 import Modal from './components/modal/modal';
@@ -52,6 +54,64 @@ import JSONTreeProp from './components/json-tree/json-tree-prop';
 
 // fns
 import registerFns from './fn';
+
+const ID_KEY = '_pure_id';
+const SORT_MAX_TIMES = 100;
+
+let configs = [
+	Button,
+	Icon,
+	Spinner,
+	Pagination,
+	Breadcrumb,
+	BreadcrumbItem,
+	Tabs,
+	TabPane,
+	Input,
+	Textarea,
+	Radio,
+	RadioGroup,
+	Checkbox,
+	CheckboxGroup,
+	Select,
+	Option,
+	Switch,
+	Form,
+	FormItem,
+	FormLabel,
+	FormControl,
+	Table,
+	TableRow,
+	TR,
+	TD,
+	DatePicker,
+	DateGrid,
+	Modal,
+	Box,
+	Note,
+	Track,
+	Countdown,
+	ElementTree,
+	ElementTreeNode,
+	ElementTreeNodeOpen,
+	ElementTreeNodeClose,
+	JSONTree,
+	JSONTreeProp
+];
+configs = batchAddId( configs );
+
+// 注册顺序
+// 0依赖的优先进入sorted
+let sorted = [];
+sort( configs );
+
+const plugin = Component => {
+	let registerMap = {};
+	sorted.forEach(config => {
+		register( Component, config, registerMap );
+	});
+	registerFns( Component, plugin );
+};
 
 function batchAddId( configs ) {
 	for( let i = 0, len = configs.length; i < len; i++ ) {
@@ -118,61 +178,5 @@ function register( Namespace, config, registerMap ) {
 	config.name = name;
 	config[ ID_KEY ] = id;
 }
-
-const ID_KEY = '_pure_id';
-const SORT_MAX_TIMES = 100;
-
-let configs = [
-	Button,
-	Icon,
-	Spinner,
-	Pagination,
-	Breadcrumb,
-	BreadcrumbItem,
-	Tabs,
-	TabPane,
-	Input,
-	Textarea,
-	Radio,
-	RadioGroup,
-	Checkbox,
-	CheckboxGroup,
-	Select,
-	Option,
-	Switch,
-	Form,
-	FormItem,
-	FormLabel,
-	FormControl,
-	Table,
-	TableRow,
-	TR,
-	TD,
-	Modal,
-	Box,
-	Note,
-	Track,
-	Countdown,
-	ElementTree,
-	ElementTreeNode,
-	ElementTreeNodeOpen,
-	ElementTreeNodeClose,
-	JSONTree,
-	JSONTreeProp
-];
-configs = batchAddId( configs );
-
-// 注册顺序
-// 0依赖的优先进入sorted
-let sorted = [];
-sort( configs );
-
-const plugin = Component => {
-	let registerMap = {};
-	sorted.forEach(config => {
-		register( Component, config, registerMap );
-	});
-	registerFns( Component, plugin );
-};
 
 module.exports = plugin;

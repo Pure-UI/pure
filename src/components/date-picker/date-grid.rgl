@@ -1,0 +1,33 @@
+<template>
+	<div class="r-date-grid">
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+		<div class="r-date-grid-cell">1</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'DateGrid',
+		config() {
+
+		}
+	};
+</script>
+
+<style lang="less" scoped>
+	.r-date-grid {
+		display: flex;
+
+		.r-date-grid-cell {
+			box-sizing: border-box;
+			width: 14.28%;
+			border: solid 1px #DDD;
+		}
+	}
+</style>

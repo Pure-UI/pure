@@ -1,3 +1,8 @@
 .r-modal-mask {
 	z-index: 1;
 }
+
+.demo-icons .r-icon {
+	font-size: 22px;
+	margin-right: 5px;
+}
