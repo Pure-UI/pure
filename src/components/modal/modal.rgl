@@ -1,5 +1,5 @@
 <template>
-	<div class="r-modal-mask r-modal-mask-transition" r-animation="
+	<div style="width: { width || 'initial' }" class="r-modal-mask r-modal-mask-transition" r-animation="
 		on: close-modal;
 		wait: 0;
 		class: r-modal-mask-out, 3;

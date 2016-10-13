@@ -1,6 +1,6 @@
 <template>
 	<div class="r-select">
-		<Input placeholder="请选择" value="{ selected }" readonly round on-click="{ this.onToggleOptions() }"></Input>
+		<Input placeholder="{ placeholder || 'Choose' }" value="{ selected }" readonly round on-click="{ this.onToggleOptions() }"></Input>
 		<div class="r-select-icon">
 			<Icon>&#xe60b;</Icon>
 		</div>
