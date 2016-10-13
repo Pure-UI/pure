@@ -1,5 +1,5 @@
 <template>
-	<div class="r-option" ref="v" on-click="{ this.onClick() }">
+	<div class="r-option { checked ? 'r-option-checked' : '' }" ref="v" on-click="{ this.onClick() }">
 		{#inc this.$body}
 	</div>
 </template>
@@ -8,6 +8,8 @@
 	export default {
 		name: 'Option',
 		config() {
+			this.data.checked = false;
+
 			if ( this.$outer && this.$outer.optionPing ) {
 				this.$outer.optionPing( this );
 			}
@@ -29,6 +31,15 @@
 
 		&:hover {
 			background-color: rgba(160, 168, 182, 0.15);
+		}
+	}
+
+	.r-option-checked {
+		background-color: @primary-color;
+		color: #FFF;
+
+		&:hover {
+			background-color: shade(@primary-color, 5%);
 		}
 	}
 </style>

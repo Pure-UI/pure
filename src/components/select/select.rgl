@@ -1,14 +1,12 @@
 <template>
 	<div class="r-select">
-		<Input placeholder="{ placeholder || 'Choose' }" value="{ selected }" readonly round on-click="{ this.onToggleOptions() }"></Input>
+		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round on-click="{ this.onShowOptions() }"></Input>
 		<div class="r-select-icon">
 			<Icon>&#xe60b;</Icon>
 		</div>
-		{#if show}
-		<div class="r-options">
+		<div class="r-options" r-hide="{ !show }">
 			{#inc this.$body}
 		</div>
-		{/if}
 	</div>
 </template>
 
@@ -30,13 +28,26 @@
 		},
 		onOptionChange( target ) {
 			this.data.show = false;
-			this.data.selected = target.$refs.v.innerText;
+			this.data.text = target.$refs.v.innerText;
+			this.data.selected = target.data.value;
 
 			const index = this.children.indexOf( target );
 			this.$emit( 'change', target.data.value, index, target );
 		},
-		onToggleOptions() {
-			this.data.show = !this.data.show;
+		onShowOptions() {
+			this.data.show = true;
+
+			// highlight selected
+			const selected = this.data.selected;
+			this.children.forEach( v => {
+				if ( selected == v.data.value ) {
+					v.data.checked = true;
+					v.$update();
+				} else {
+					v.data.checked = false;
+					v.$update();
+				}
+			} );
 		}
 	}
 </script>
