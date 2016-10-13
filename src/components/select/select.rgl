@@ -1,5 +1,5 @@
 <template>
-	<div class="r-select">
+	<div class="r-select" ref="select">
 		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round on-click="{ this.onShowOptions() }"></Input>
 		<div class="r-select-icon">
 			<Icon>&#xe60b;</Icon>
@@ -22,6 +22,23 @@
 		config() {
 			this.data.show = false;
 			this.children = [];
+		},
+		init() {
+			// click outside, hide options
+			document.addEventListener( 'click', onClickOutside, false );
+			this.$on( '$destroy', () => {
+				document.removeEventListener( 'click', onClickOutside, false );
+			} );
+
+			const $select = this.$refs.select;
+			const self = this;
+			function onClickOutside( e ) {
+				const target = e.target;
+				if ( !$select.contains( target ) ) {
+					self.data.show = false;
+					self.$update();
+				}
+			}
 		},
 		optionPing( target ) {
 			this.children.push( target );
