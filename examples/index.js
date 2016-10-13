@@ -158,7 +158,7 @@ var App = Regular.extend({
 		<br />
 		<br />
 
-		<CheckboxGroup checked="3" on-change="{ this.onCheckboxChanged( $event ) }">
+		<CheckboxGroup checked="{ [ 1, 2 ] }" on-change="{ this.onCheckboxChanged( $event ) }">
 			<Checkbox value="1">测试1</Checkbox>
 			<Checkbox value="2">测试2</Checkbox>
 			<Checkbox value="3">测试3</Checkbox>
