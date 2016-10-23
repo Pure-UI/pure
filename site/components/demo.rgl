@@ -124,7 +124,7 @@
 		}
 
 		code {
-			background-color: #eaeef3;
+			background-color: #f3f8ff;
 			padding: 0.2rem 0.4rem;
 			border-radius: 2px;
 		}

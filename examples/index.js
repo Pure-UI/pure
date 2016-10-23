@@ -104,9 +104,16 @@ var App = Regular.extend({
 				</FormControl>
 			</FormItem>
 			<FormItem>
-				<FormLabel>萝莉保护协会</FormLabel>
+				<FormLabel>性别</FormLabel>
 				<FormControl>
-					<Select></Select>
+					<Select>
+						<Option value="0">男</Option>
+						<Option value="1">女</Option>
+					</Select>
+					<Select sm>
+						<Option value="0">男</Option>
+						<Option value="1">女</Option>
+					</Select>
 				</FormControl>
 			</FormItem>
 
@@ -231,7 +238,6 @@ var App = Regular.extend({
 		this.$update();
 	},
 	init() {
-		console.log( 'outer init' );
 		this.$update( 'trackTarget', this.$refs.trackTarget );
 	},
 	config( data ) {
