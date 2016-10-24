@@ -1,14 +1,11 @@
 <template>
-	<div class="r-select" ref="select">
-		{#if sm}
-		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round sm on-click="{ this.onShowOptions() }"></Input>
-		{#else}
-		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round on-click="{ this.onShowOptions() }"></Input>
-		{/if}
+	<div class="r-select { transparent ? 'r-select-transparent' : '' }" ref="select">
+		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round sm="{ sm }" transparent="{ transparent }" on-click="{ this.onShowOptions() }"></Input>
 
-		<div class="r-select-icon">
+		<div class="r-select-icon" style="{ show ? 'display: block;' : '' }">
 			<Icon>&#xe60b;</Icon>
 		</div>
+
 		<div class="r-options" r-hide="{ !show }">
 			{#inc this.$body}
 		</div>
@@ -108,6 +105,18 @@
 			border-radius: .28rem;
 			box-shadow: 1px 1px 6px 1px rgba(0,0,0,.1);
 			z-index: 1;
+		}
+
+		&.r-select-transparent {
+			.r-select-icon {
+				display: none;
+			}
+
+			&:hover {
+				.r-select-icon {
+					display: block;
+				}
+			}
 		}
 	}
 </style>

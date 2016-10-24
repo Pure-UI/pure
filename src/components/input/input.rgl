@@ -1,7 +1,7 @@
 <template>
 	<div class="r-input-wrapper">
 		<input
-			class="r-input { error ? 'r-input-error' : '' } { disabled ? 'r-input-disabled' : '' } { readonly ? 'r-input-readonly' : '' } { round ? 'r-input-round' : '' } { sm ? 'r-input-sm' : '' }"
+			class="r-input { error ? 'r-input-error' : '' } { disabled ? 'r-input-disabled' : '' } { readonly ? 'r-input-readonly' : '' } { round ? 'r-input-round' : '' } { transparent ? 'r-input-transparent' : '' } { sm ? 'r-input-sm' : '' }"
 			type="{ type || 'text' }"
 			value="{ value }"
 			disabled="{ disabled }"
@@ -66,12 +66,12 @@
 		border: solid 1px #DDD;
 		cursor: inherit;
 
-		&.r-input-round {
-			border-radius: 4px;
-		}
-
 		&:focus {
 			border: solid 1px @primary-color;
+		}
+
+		&.r-input-round {
+			border-radius: 4px;
 		}
 
 		&.r-input-readonly {
@@ -81,6 +81,14 @@
 
 			&:focus {
 				border: solid 1px shade(#DDD,15%);
+			}
+		}
+
+		&.r-input-transparent {
+			border: solid 1px transparent;
+
+			&:focus {
+				border: solid 1px @primary-color;
 			}
 		}
 	}

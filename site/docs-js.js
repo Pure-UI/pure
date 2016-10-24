@@ -61,7 +61,7 @@ var Note1 = {
         Pure.note( "Hey there ;)", type );
     }
 };
-var Select2 = {
+var Select3 = {
     onChange: function( value ) {
         this.data.selected = value;
     }
@@ -165,4 +165,4 @@ var Tabs2 = {
         this.$update();
     }
 };
-export default {"Box":[void 0],"Breadcrumb":[void 0],"Button":[void 0,void 0,void 0,void 0],"Checkbox":[void 0,void 0,void 0],"Countdown":[void 0,void 0,void 0,void 0],"ElementTree":[ElementTree0],"Form":[void 0,void 0,void 0],"Icon":[void 0],"Input":[void 0,void 0,void 0,void 0,void 0],"Modal":[void 0],"Note":[void 0,Note1],"Pagination":[void 0],"Radio":[void 0,void 0,void 0],"Select":[void 0,void 0,Select2],"Spinner":[void 0,void 0],"Switch":[void 0,void 0],"Table":[Table0,Table1],"Tabs":[void 0,void 0,Tabs2],"Textarea":[void 0,void 0]}
+export default {"Box":[void 0],"Breadcrumb":[void 0],"Button":[void 0,void 0,void 0,void 0],"Checkbox":[void 0,void 0,void 0],"Countdown":[void 0,void 0,void 0,void 0],"ElementTree":[ElementTree0],"Form":[void 0,void 0,void 0],"Icon":[void 0],"Input":[void 0,void 0,void 0,void 0,void 0,void 0],"Modal":[void 0],"Note":[void 0,Note1],"Pagination":[void 0],"Radio":[void 0,void 0,void 0],"Select":[void 0,void 0,void 0,Select3],"Spinner":[void 0,void 0],"Switch":[void 0,void 0],"Table":[Table0,Table1],"Tabs":[void 0,void 0,Tabs2],"Textarea":[void 0,void 0]}

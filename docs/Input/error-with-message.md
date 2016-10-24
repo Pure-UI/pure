@@ -1,9 +1,9 @@
 ---
-order: 3
+order: 4
 ---
 
 Error Status With Error Message
 
 ```html
-<Input error="{ true }" error-message="{ 'This field is REQUIRED' }"></Input>
+<Input error="{ true }" error-message="This field is REQUIRED"></Input>
 ```

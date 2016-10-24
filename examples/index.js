@@ -2,12 +2,14 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
+		<Input transparent></Input>
+
 		<DatePicker></DatePicker>
 
 		<br />
 		<br />
 
-		<Select>
+		<Select transparent>
 			<Option value="0">
 				<span style="color: blue;">江苏</span>
 			</Option>
