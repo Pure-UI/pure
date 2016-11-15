@@ -2,7 +2,7 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
-		<Input transparent></Input>
+		<Input transparent value="content"></Input>
 
 		<DatePicker></DatePicker>
 

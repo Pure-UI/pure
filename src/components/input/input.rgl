@@ -87,7 +87,7 @@
 		&.r-input-transparent {
 			border: solid 1px transparent;
 
-			&:focus {
+			&:hover {
 				border: solid 1px @primary-color;
 			}
 		}
