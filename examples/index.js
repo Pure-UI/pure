@@ -2,6 +2,14 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
+		<Select block>
+			<Option value="1">1</Option>
+			<Option value="2">2</Option>
+			<Option value="3">3</Option>
+		</Select>
+		<Input block></Input>
+		<Button block>Button</Button>
+
 		<Input transparent value="content"></Input>
 
 		<DatePicker></DatePicker>

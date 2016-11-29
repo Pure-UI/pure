@@ -1,5 +1,5 @@
 <template>
-	<div class="r-select { transparent ? 'r-select-transparent' : '' }" ref="select">
+	<div class="r-select { transparent ? 'r-select-transparent' : '' } { block ? 'r-select-block' : '' }" ref="select">
 		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round sm="{ sm }" transparent="{ transparent }" on-click="{ this.onShowOptions() }"></Input>
 
 		<div class="r-select-icon" style="{ show ? 'display: block;' : '' }">
@@ -117,6 +117,11 @@
 					display: block;
 				}
 			}
+		}
+
+		&.r-select-block {
+			display: block;
+			width: 100%;
 		}
 	}
 </style>

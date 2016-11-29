@@ -11,7 +11,7 @@ module.exports = {
 		path: './dist',
 		filename: 'pure.js',
 		library: 'Pure',
-		libraryTarget: 'umd'
+		libraryTarget: 'umd',
 	},
 	module: {
 		loaders: [
@@ -39,11 +39,11 @@ module.exports = {
 				test: /\.less$/,
 				loader: ExtractTextPlugin.extract( 'style', 'css!postcss!less' ),
 				exclude: /node_modules/
-			}
+			},
 		]
 	},
 	postcss: [
-		autoprefixer({ browsers: [ 'last 2 versions' ] })
+		autoprefixer( { browsers: [ 'last 2 versions' ] } ),
 	],
 	pure: {
 		loaders: {
@@ -60,6 +60,6 @@ module.exports = {
 			compress: {
 				warnings: false
 			}
-		})
+		}),
 	]
 };

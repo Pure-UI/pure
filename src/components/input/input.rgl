@@ -1,5 +1,5 @@
 <template>
-	<div class="r-input-wrapper">
+	<div class="r-input-wrapper { block ? 'r-input-wrapper-block' : '' }">
 		<input
 			class="r-input { error ? 'r-input-error' : '' } { disabled ? 'r-input-disabled' : '' } { readonly ? 'r-input-readonly' : '' } { round ? 'r-input-round' : '' } { transparent ? 'r-input-transparent' : '' } { sm ? 'r-input-sm' : '' }"
 			type="{ type || 'text' }"
@@ -104,5 +104,10 @@
 	.r-input-disabled {
 		background-color: #EEE;
 		cursor: not-allowed;
+	}
+
+	.r-input-wrapper-block {
+		display: block;
+		width: 100%;
 	}
 </style>
