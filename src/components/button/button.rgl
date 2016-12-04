@@ -1,10 +1,6 @@
 <template>
-	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' } { block ? 'r-button-block' : '' }" on-mouseup="{ this.onMouseUp( $event ) }">
-		<div
-			class="r-button-wave  { pressed ? 'pressed' : 'r-button-wave-hidden' }"
-			style="width: { waveWidth }px;height: { waveHeight }px;top: { waveTop }px;left: { waveLeft }px;"
-			ref="w"
-		></div>
+	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' } { block ? 'r-button-block' : '' }" on-mousedown="{ this.onMouseDown( $event ) }">
+		<div ref="ripples"></div>
 		<div class="r-button-text">
 			{#inc this.$body}
 		</div>
@@ -21,20 +17,8 @@
 			this.data.ripple = this.data.ripple !== false;
 		},
 		init( data ) {
-			const handleAnimationEnd = () => {
-				if( this.data.pressed !== false ) {
-					this.data.pressed = false;
-					this.$update();
-				}
-			}
-
-			this.$refs.w.addEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
-
-			this.$on('$destroy', () => {
-				this.$refs.w.removeEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
-			});
 		},
-		onMouseUp( e ) {
+		onMouseDown( e ) {
 			if( this.data.disabled ) {
 				return;
 			}
@@ -45,40 +29,53 @@
 				return;
 			}
 
-			const target = this.$refs.b;
 			const pageX = e.pageX;
 			const pageY = e.pageY;
 			const scrollY = window.scrollY;
 
+			const target = this.$refs.b;
 			const rect = target.getBoundingClientRect();
 			const top = rect.top;
 			const left = rect.left;
 			const width = rect.width;
-
 			const offsetX = pageX - left;
 			const offsetY = pageY - top - scrollY;
 
-			this.data.waveTop = offsetY - width / 2;
-			this.data.waveLeft = offsetX - width / 2;
-			this.data.waveWidth = width;
-			this.data.waveHeight = width;
+			const $ripple = makeRipple( {
+				top: offsetY - width / 2,
+				left: offsetX - width / 2,
+				width: width,
+				height: width,
+			} );
 
-			this.data.pressed = false;
-			this.$update();
+			const $ripples = this.$refs.ripples;
+			$ripple.classList.add( 'r-button-wave-hidden' );
+			$ripples.appendChild( $ripple );
+
+			$ripple.addEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
+			function handleAnimationEnd() {
+				$ripple.removeEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
+				$ripples.removeChild( $ripple );
+			}
 
 			nextTick(() => {
-				this.data.pressed = true;
-				this.$update();
+				$ripple.classList.remove( 'r-button-wave-hidden' );
+				$ripple.classList.add( 'pressed' );
 			});
 		}
 	};
+
+	function makeRipple( { top, left, width, height } ) {
+		const $ripple = document.createElement( 'div' );
+		$ripple.style.cssText = `
+			top: ${ top }px;left: ${ left }px;width: ${ width }px;height: ${ height }px;
+		`;
+		$ripple.className = 'r-button-wave';
+		return $ripple;
+	}
 </script>
 
-<style lang="less" scoped>
-	@import '../../variable.less';
-
-	@button-color: @primary-color;
-
+<style lang="less">
 	.r-button-wave {
 		position: absolute;
 		background-color: rgba(0,0,0,.15);
@@ -94,6 +91,12 @@
 			opacity: 0;
 		}
 	}
+</style>
+
+<style lang="less" scoped>
+	@import '../../variable.less';
+
+	@button-color: @primary-color;
 
 	.r-button-text {
 		position: relative;
