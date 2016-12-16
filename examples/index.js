@@ -51,7 +51,7 @@ var App = Regular.extend({
 		<div ref="trackTarget" style="width: 100px;height: 100px;background-color: #DDD;margin-top: 50px;margin-left: 40px;">
 		</div>
 
-		<Track target="{ trackTarget }">
+		<Track target="{ this.$refs.trackTarget }">
 			<Button primary sm>button</Button>
 		</Track>
 

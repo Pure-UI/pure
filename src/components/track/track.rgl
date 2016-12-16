@@ -19,12 +19,8 @@
 				return isValid;
 			}
 		},
-		config() {
-
-		},
 		init() {
-			// console.log( 'init', this.data.target );
-			if( this.data.isValid  && this.$refs.v instanceof HTMLElement ) {
+			if( this.$get( 'isValidTarget' ) && this.$refs.v ) {
 				domAlign(
 					this.$refs.v,
 					this.data.target,
