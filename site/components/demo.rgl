@@ -73,9 +73,9 @@
 				right: 0;
 				display: block;
 				padding: 2px 9px;
-				background-color: rgba(232,239,247,0.6);
+				background-color: rgba(232, 239, 247, 0.3);
 				border-radius: 0 0 0 4px;
-				color: #547ecb;
+				color: #b6c7e6;
 				font-size: 11px;
 				pointer-events: none;
 			}
@@ -105,6 +105,7 @@
 			border-radius: 4px;
 			line-height: 1.6;
 			padding: 15px;
+			font-family: Lato, -apple-system, Segoe UI, Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
 		}
 	}
 

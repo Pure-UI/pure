@@ -4,6 +4,7 @@ import routes from './routes';
 import Regular from 'regularjs';
 import Pure from '../dist/pure';
 import './site.css';
+import './highlight.css';
 
 Regular.use( Pure );
 window.Pure = Pure;

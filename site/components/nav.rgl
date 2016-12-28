@@ -105,7 +105,6 @@
 <style lang="less" scoped>
 	.nav {
 		color: #333;
-		flex-basis: 100px;
 	}
 
 	.title {
