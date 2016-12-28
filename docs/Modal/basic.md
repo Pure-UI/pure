@@ -2,7 +2,7 @@
 order: 1
 ---
 
-Basic Usage
+Basic
 
 ProTip: Pure doesn't set z-index for Modal, you should set it on your own
 
