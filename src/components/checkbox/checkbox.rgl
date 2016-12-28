@@ -15,7 +15,7 @@
 			}
 		},
 		onClick() {
-			// TODO: 解耦，不直接调用外部的具体方法，而是$emit $outer的child-checkbox-change事件，类似事件冒泡
+			// TODO: 不直接调用外部的具体方法，而是$emit $outer的child-checkbox-change事件
 			if( this.$outer && this.$outer.onCheckboxChange ) {
 				this.$outer.onCheckboxChange( this );
 			} else {
@@ -58,7 +58,7 @@
 			&::after {
 				content: '';
 				position: absolute;
-				top: 4px;
+				top: 6px;
 				left: 4px;
 				width: @checkbox-checkmark-width;
 				height: @checkbox-checkmark-height;
