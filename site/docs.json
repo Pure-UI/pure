@@ -33,8 +33,8 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic Usage\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n",
-            "html": "<p>Basic Usage</p>\n",
+            "source": "\r\nBasic\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n```\r\n",
+            "html": "<p>Basic</p>\n",
             "code": {
                 "html": "<Button primary>Primary</Button>\n<Button>Normal</Button>"
             },
@@ -45,10 +45,10 @@
             "attrs": {
                 "order": 2
             },
-            "source": "\r\nSize\r\n\r\n```html\r\n<Button primary sm>Primary</Button>\r\n<Button sm>Normal</Button>\r\n```\r\n",
+            "source": "\r\nSize\r\n\r\n```html\r\n<Button primary>Primary</Button>\r\n<Button>Normal</Button>\r\n<br />\r\n<br />\r\n<Button primary sm>Primary</Button>\r\n<Button sm>Normal</Button>\r\n```\r\n",
             "html": "<p>Size</p>\n",
             "code": {
-                "html": "<Button primary sm>Primary</Button>\n<Button sm>Normal</Button>"
+                "html": "<Button primary>Primary</Button>\n<Button>Normal</Button>\n<br />\n<br />\n<Button primary sm>Primary</Button>\n<Button sm>Normal</Button>"
             },
             "id": 5
         },

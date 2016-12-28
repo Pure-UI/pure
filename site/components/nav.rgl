@@ -105,11 +105,11 @@
 <style lang="less" scoped>
 	.nav {
 		color: #333;
-		flex: 0 0 20%;
+		flex: 0 0 30%;
 	}
 
 	.title {
-		font-size: 11px;
+		font-size: 13px;
 		padding: 10px;
 		color: #999;
 	}
@@ -122,16 +122,17 @@
 
 	a {
 		display: block;
-		padding: 10px;
+		padding: 10px 25px;
 		color: #333;
 		text-decoration: none;
 
 		&:hover {
-			background-color: #F8F8F8;
+			background-color: #edf3ff;
 		}
 	}
 
 	.active {
 		color: #689eff;
+		background-color: #edf3ff;
 	}
 </style>

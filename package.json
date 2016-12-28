@@ -4,7 +4,8 @@
   "description": "elegant and lovely components, built with regularjs",
   "main": "dist/pure.js",
   "scripts": {
-    "dev": "concurrent --kill-others \"webpack --config scripts/webpack.config.js -w\" \"anywhere\"",
+    "dev": "concurrent --kill-others \"npm run watch\" \"anywhere\"",
+    "watch": "npm run dist -- -w",
     "dist": "webpack --config scripts/webpack.config.js",
     "docs": "node scripts/docs && webpack --config scripts/webpack.config.docs.js",
     "gh-pages": "node scripts/gh-pages",
