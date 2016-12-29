@@ -4,7 +4,7 @@ order: 1
 
 Basic
 
-ProTip: Pure doesn't set z-index for Modal, you should set it on your own
+ProTip: Modal doesn't have z-index by default, set it on your own
 
 ```html
 <Button primary on-click="{ showModal = true }">Open Modal</Button>
