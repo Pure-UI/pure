@@ -13,8 +13,9 @@ import TabPane from './components/tabs/tab-pane';
 // Form
 import Input from './components/input/input';
 import Textarea from './components/textarea/textarea';
-import Radio from './components/radio/radio';
-import RadioGroup from './components/radio/radio-group';
+import Radio from './components/radio/Radio';
+import RadioButton from './components/radio/RadioButton';
+import RadioGroup from './components/radio/RadioGroup';
 import Checkbox from './components/checkbox/checkbox';
 import CheckboxGroup from './components/checkbox/checkbox-group';
 import Select from './components/select/select';
@@ -70,6 +71,7 @@ let configs = [
 	Input,
 	Textarea,
 	Radio,
+	RadioButton,
 	RadioGroup,
 	Checkbox,
 	CheckboxGroup,
@@ -102,19 +104,19 @@ configs = batchAddId( configs );
 
 // 注册顺序
 // 0依赖的优先进入sorted
-let sorted = [];
+const sorted = [];
 sort( configs );
 
 const plugin = Component => {
-	let registerMap = {};
-	sorted.forEach(config => {
+	const registerMap = {};
+	sorted.forEach( config => {
 		register( Component, config, registerMap );
-	});
+	} );
 	registerFns( Component, plugin );
 };
 
 function batchAddId( configs ) {
-	for( let i = 0, len = configs.length; i < len; i++ ) {
+	for ( let i = 0, len = configs.length; i < len; i++ ) {
 		configs[ i ][ ID_KEY ] = i;
 	}
 	return configs;
@@ -123,13 +125,13 @@ function batchAddId( configs ) {
 function isStable( c ) {
 	const components = c.components || {};
 
-	if( Object.keys( components ).length === 0 ) {
+	if ( Object.keys( components ).length === 0 ) {
 		return true;
 	}
 
 	let stable = true;
-	for( let i in components ) {
-		if( !~sorted.indexOf( components[ i ] ) ) {
+	for ( let i in components ) {
+		if ( !~sorted.indexOf( components[ i ] ) ) {
 			stable = false;
 			break;
 		}
@@ -138,12 +140,12 @@ function isStable( c ) {
 }
 
 function sort( configs ) {
-	let configsLen = configs.length;
+	const len = configs.length;
 	let counter = 0;
 
-	while( sorted.length < configsLen && counter < SORT_MAX_TIMES ) {
-		for( let i = 0; i < configsLen; i++ ) {
-			if(
+	while ( sorted.length < len && counter < SORT_MAX_TIMES ) {
+		for ( let i = 0; i < len; i++ ) {
+			if (
 				isStable( configs[ i ] ) &&
 				!~sorted.indexOf( configs[ i ] )
 			) {
@@ -166,9 +168,9 @@ function register( Namespace, config, registerMap ) {
 	const C = Namespace.extend( config );
 	Namespace.component( name, C );
 
-	for( let i in components ) {
-		let id = components[ i ][ ID_KEY ];
-		if( !( id in registerMap ) ) {
+	for ( let i in components ) {
+		const id = components[ i ][ ID_KEY ];
+		if ( !( id in registerMap ) ) {
 			registerMap[ id ] = Namespace.extend( components[ i ] );
 		}
 		C.component( i, registerMap[ id ] );

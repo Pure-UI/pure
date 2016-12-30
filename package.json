@@ -36,7 +36,7 @@
     "director": "^1.2.8",
     "dom-align": "^1.4.0",
     "eslint": "^3.8.1",
-    "eslint-config-mo": "0.0.2",
+    "eslint-config-mo": "latest",
     "eslint-plugin-rgl": "0.0.1",
     "eventemitter2": "^2.0.0",
     "extract-text-webpack-plugin": "^1.0.1",

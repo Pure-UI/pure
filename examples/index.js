@@ -2,6 +2,14 @@ Regular.use( Pure );
 
 var App = Regular.extend({
 	template: `
+		<div style="margin: 20px;">
+			<RadioGroup checked="3">
+				<RadioButton value="1">江苏</RadioButton>
+				<RadioButton value="2">浙江</RadioButton>
+				<RadioButton value="3">上海</RadioButton>
+			</RadioGroup>
+		</div>
+
 		<Select block>
 			<Option value="1">1</Option>
 			<Option value="2">2</Option>

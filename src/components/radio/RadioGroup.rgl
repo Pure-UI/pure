@@ -1,5 +1,7 @@
 <template>
-	{#inc this.$body}
+	<div class="r-radiogroup">
+		{#inc this.$body}
+	</div>
 </template>
 
 <script>
@@ -30,5 +32,7 @@
 </script>
 
 <style lang="less" scoped>
-
+	.r-radiogroup {
+		display: flex;
+	}
 </style>
