@@ -117,8 +117,10 @@
 	}
 
 	.r-modal-actions {
-		padding: 20px;
+		padding: 14px 20px;
 		text-align: center;
+		background-color: rgba(241, 241, 241, 0.39);
+		border-top: solid 1px #F0F0F0;
 	}
 
 	/* Transition */
