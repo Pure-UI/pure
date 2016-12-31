@@ -84,6 +84,7 @@
 		transition: all .5s cubic-bezier(0.4, 0, 0, 1.29);
 		transform: translate3d(-50%,-50%,0);
 		opacity: 0;
+		overflow: hidden;
 	}
 
 	.r-modal-hd {
@@ -93,7 +94,7 @@
 	}
 
 	.r-modal-bd {
-		padding: 0 40px;
+		padding: 20px 40px;
 		font-size: 15px;
 		max-height: 60vh;
 		overflow-y: auto;
