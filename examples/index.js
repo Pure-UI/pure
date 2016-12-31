@@ -161,12 +161,12 @@ var App = Regular.extend({
 		<br />
 		<br />
 
-		<Select>
-			<Option>选项1</Option>
-			<Option>选项2</Option>
-			<Option>选项3</Option>
-			<Option>选项4</Option>
-			<Option>选项5</Option>
+		<Select selected="1">
+			<Option value="0">选项1</Option>
+			<Option value="1">选项2</Option>
+			<Option value="2">选项3</Option>
+			<Option value="3">选项4</Option>
+			<Option value="4">选项5</Option>
 		</Select>
 
 		<br />
