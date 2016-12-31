@@ -248,10 +248,10 @@
             "attrs": {
                 "order": 0
             },
-            "source": "\r\nBasic\r\n\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"v\"></Input>\r\n```\r\n",
+            "source": "\r\nBasic\r\n\r\n```html\r\n<Input placeholder=\"placeholder\" value=\"content\"></Input>\r\n```\r\n",
             "html": "<p>Basic</p>\n",
             "code": {
-                "html": "<Input placeholder=\"placeholder\" value=\"v\"></Input>"
+                "html": "<Input placeholder=\"placeholder\" value=\"content\"></Input>"
             },
             "id": 19
         },

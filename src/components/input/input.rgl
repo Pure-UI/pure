@@ -88,6 +88,10 @@
 			border: solid 1px transparent;
 
 			&:hover {
+				border: solid 1px shade(#DDD,15%);
+			}
+
+			&:not(.r-input-readonly):focus {
 				border: solid 1px @primary-color;
 			}
 		}
