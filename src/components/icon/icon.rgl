@@ -1,7 +1,5 @@
 <template>
-	<i class="r-icon iconfont">
-		{#inc this.$body}
-	</i>
+	<i class="r-icon iconfont { spin ? 'r-icon-spin' : '' }">{#inc this.$body}</i>
 </template>
 
 <script>
@@ -16,5 +14,18 @@
 	.r-icon {
 		display: inline-block;
 		min-width: 1em;
+	}
+
+	.r-icon-spin {
+		animation: iconspin .8s linear infinite;
+	}
+
+	@keyframes iconspin {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
 	}
 </style>
