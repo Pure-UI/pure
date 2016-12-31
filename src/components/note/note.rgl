@@ -1,14 +1,18 @@
 <template>
 	<div class="r-note { fixed ? 'r-note-fixed' : '' }">
-		<span style="color: { color };"><Icon>{ icon }</Icon></span>
-		{#inc this.$body}
+		<div class="r-note-inner">
+			<div class="r-note-icon" style="color: { color };"><Icon>{ icon }</Icon></div>
+			<div class="r-note-content">
+				{#inc this.$body}
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 	import '../icon/icon';
 
-	let convert = str => {
+	function convert( str ) {
 		str = str.replace(/(\\u)(\w{4})/gi,function($0){
 			return (String.fromCharCode(parseInt((escape($0).replace(/(%5Cu)(\w{4})/g,"$2")),16)));
 		});
@@ -20,45 +24,26 @@
 
 	export default {
 		name: 'Note',
-		config() {
-
-		},
 		computed: {
 			color: function() {
-				const type = this.data.type;
-				let color = '';
-				switch( type ) {
-					case 'success':
-						color = '#6ed084';
-						break;
-					case 'warning':
-						color = '#fda411';
-						break;
-					case 'error':
-						color = '#F44556';
-						break;
-					default:
-						color = '#689eff';
-				}
-				return color;
+				const DEFAULT_COLOR = '#689eff';
+				const maps = {
+					success: '#6ed084',
+					warning: '#fda411',
+					error: '#F44556',
+				};
+
+				return maps[ this.data.type ] || DEFAULT_COLOR;
 			},
 			icon: function() {
-				const type = this.data.type;
-				let icon = '';
-				switch( type ) {
-					case 'success':
-						icon = '&#xe602;';
-						break;
-					case 'warning':
-						icon = '&#xe603;';
-						break;
-					case 'error':
-						icon = '&#xe600;';
-						break;
-					default:
-						icon = '&#xe601;';
-				}
-				return convert( icon );
+				const DEFAULT_ICON = '&#xe80c;';
+				const maps = {
+					success: '&#xe625;',
+					warning: '&#xe641;',
+					error: '&#xe6a0;',
+				};
+
+				return convert( maps[ this.data.type ] || DEFAULT_ICON );
 			}
 		}
 	}
@@ -88,12 +73,24 @@
 <style lang="less" scoped>
 	.r-note {
 		display: inline-block;
-		padding: 10px 20px;
-		border-radius: 4px;
-		background-color: #FFF;
-		border: solid 1px #DDD;
-		color: #666;
-		box-shadow: 2px 2px 8px -2px rgba(50, 50, 50, 0.14);
-		font-size: 1rem;
+
+		&-inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 32px;
+			padding: 0 15px;
+			border-radius: 4px;
+			background-color: #FFF;
+			border: solid 1px #DDD;
+			color: #666;
+			box-shadow: 2px 2px 8px -2px rgba(50, 50, 50, 0.14);
+			font-size: 1rem;
+		}
+
+		&-icon {
+			font-size: 16px;
+			margin-right: 7px;
+		}
 	}
 </style>

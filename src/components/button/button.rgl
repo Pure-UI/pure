@@ -1,17 +1,28 @@
 <template>
-	<button ref="b" class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' } { block ? 'r-button-block' : '' }" on-mousedown="{ this.onMouseDown( $event ) }">
+	<button
+		ref="b"
+		class="r-button { primary ? 'r-button-primary' : 'r-button-basic' } { sm ? 'r-button-sm' : '' } { disabled ? 'r-button-disabled' : '' } { block ? 'r-button-block' : '' }"
+		on-mousedown="{ this.onMouseDown( $event ) }"
+	>
 		<div ref="ripples"></div>
 		<div class="r-button-text">
+			{#if loading}
+			<Icon spin>&#xe602;</Icon>
+			{/if}
 			{#inc this.$body}
 		</div>
 	</button>
 </template>
 
 <script>
+	import Icon from '../icon/icon';
 	import nextTick from '../../util/nextTick';
 
 	export default {
 		name: 'Button',
+		components: {
+			Icon,
+		},
 		config() {
 			// use ripple="{ false }" to disable ripple effect
 			this.data.ripple = this.data.ripple !== false;
@@ -108,7 +119,7 @@
 		position: relative;
 		-webkit-appearance: none;
 		border: none;
-		padding: .56em 1.1em;
+		padding: .56em 1em;
 		font-size: 1rem;
 		border-radius: 3px;
 		outline: none;

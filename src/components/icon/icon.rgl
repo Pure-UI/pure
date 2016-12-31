@@ -17,7 +17,7 @@
 	}
 
 	.r-icon-spin {
-		animation: iconspin .8s linear infinite;
+		animation: iconspin 1.4s linear infinite;
 	}
 
 	@keyframes iconspin {

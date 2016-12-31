@@ -12,7 +12,7 @@ Also use `Note` in programtic way
 {
 	onShowNote: function() {
 		var i = Math.floor( Math.random() * 10 % 4 );
-		var types = 'info success warning danger'.split(' ');
+		var types = 'info success warning error'.split(' ');
 		var type = types[ i ];
 
 		Pure.note( "Hey there ;)", type );

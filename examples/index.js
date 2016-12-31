@@ -5,6 +5,10 @@ Regular.use( Pure );
 var App = Regular.extend({
 	template: `
 		<Icon spin>&#xe603;</Icon>
+
+		<Button primary loading>加载中...</Button>
+		<Button loading>加载中...</Button>
+
 		<div style="margin: 20px;">
 			<RadioGroup checked="3">
 				<RadioButton value="1">江苏</RadioButton>
