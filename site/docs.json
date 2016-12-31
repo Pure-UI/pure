@@ -296,10 +296,10 @@
             "attrs": {
                 "order": 4
             },
-            "source": "\r\nError Status With Error Message\r\n\r\n```html\r\n<Input error=\"{ true }\" error-message=\"This field is REQUIRED\"></Input>\r\n```\r\n",
+            "source": "\r\nError Status With Error Message\r\n\r\n```html\r\n<Input error=\"{ true }\" errorMessage=\"This field is REQUIRED\"></Input>\r\n```\r\n",
             "html": "<p>Error Status With Error Message</p>\n",
             "code": {
-                "html": "<Input error=\"{ true }\" error-message=\"This field is REQUIRED\"></Input>"
+                "html": "<Input error=\"{ true }\" errorMessage=\"This field is REQUIRED\"></Input>"
             },
             "id": 21
         },
@@ -363,10 +363,10 @@
             "attrs": {
                 "order": 1
             },
-            "source": "\r\nBasic\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 50 }\"\r\n\tmax=\"{ 100 }\"\r\n\tcurrent=\"{ current || 50 }\"\r\n\tprev-text=\"<\"\r\n\tnext-text=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\nCurrent: { current || 50 }\r\n```\r\n",
+            "source": "\r\nBasic\r\n\r\n```html\r\n<Pagination\r\n\tmin=\"{ 50 }\"\r\n\tmax=\"{ 100 }\"\r\n\tcurrent=\"{ current || 50 }\"\r\n\tprevText=\"<\"\r\n\tnextText=\">\"\r\n\ton-change=\"{ current = $event }\"\r\n></Pagination>\r\nCurrent: { current || 50 }\r\n```\r\n",
             "html": "<p>Basic</p>\n",
             "code": {
-                "html": "<Pagination\n    min=\"{ 50 }\"\n    max=\"{ 100 }\"\n    current=\"{ current || 50 }\"\n    prev-text=\"<\"\n    next-text=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\nCurrent: { current || 50 }"
+                "html": "<Pagination\n    min=\"{ 50 }\"\n    max=\"{ 100 }\"\n    current=\"{ current || 50 }\"\n    prevText=\"<\"\n    nextText=\">\"\n    on-change=\"{ current = $event }\"\n></Pagination>\nCurrent: { current || 50 }"
             },
             "id": 28
         }
