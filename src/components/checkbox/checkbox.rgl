@@ -65,7 +65,7 @@
 				border-left: solid 2px @primary-color;
 				border-bottom: solid 2px @primary-color;
 				transform: scale(0) rotate(-45deg);
-				transition: all .2s cubic-bezier(.78,.14,.15,.86);
+				transition: all .1s cubic-bezier(.78,.14,.15,.86);
 			}
 		}
 

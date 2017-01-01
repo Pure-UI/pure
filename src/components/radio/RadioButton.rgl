@@ -32,7 +32,7 @@
 <style lang="less" scoped>
 	@import '../../variable.less';
 
-	@border-radius: 4px;
+	@radiobutton-border-radius: 4px;
 
 	.r-radiobutton {
 		display: block;
@@ -47,14 +47,14 @@
 		border-left: none;
 
 		&:first-child {
-			border-top-left-radius: @border-radius;
-			border-bottom-left-radius: @border-radius;
+			border-top-left-radius: @radiobutton-border-radius;
+			border-bottom-left-radius: @radiobutton-border-radius;
 			border-left: solid 1px #d9d9d9;
 		}
 
 		&:last-child {
-			border-top-right-radius: @border-radius;
-			border-bottom-right-radius: @border-radius
+			border-top-right-radius: @radiobutton-border-radius;
+			border-bottom-right-radius: @radiobutton-border-radius
 		}
 	}
 
