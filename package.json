@@ -1,6 +1,6 @@
 {
   "name": "pure-ui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "elegant and lovely components, built with regularjs",
   "main": "dist/pure.js",
   "scripts": {
