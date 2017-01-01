@@ -42,7 +42,7 @@
 		line-height: 26px;
 		border: solid 1px #d9d9d9;
 		cursor: pointer;
-		font-size: 13px;
+		font-size: 1rem;
 		color: #666;
 		border-left: none;
 
