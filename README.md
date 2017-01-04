@@ -26,20 +26,10 @@ import Pure from 'pure-ui';
 // import css
 import 'pure-ui/dist/pure.css';
 
-// it's all done
 Regular.use( Pure );
 ```
 
-if you want to register pure components in another namespace
-
-```js
-var AnotherNameSpace = Regular.extend({});
-AnotherNameSpace.use( Pure );
-```
-
-it works
-
-**Option 2**: add hot-link in your page
+**Option 2**: add hot-link
 
 ```html
 <link rel="stylesheet" href="pure.css">
@@ -50,22 +40,20 @@ it works
 <script type="text/javascript" src="pure.js"></script>
 ```
 
-the order of regular and pure doesn't matter
-
 ```js
 Regular.use( Pure );
-// or
-// var AnotherNameSpace = Regular.extend({});
-// AnotherNameSpace.use( Pure );
 ```
 
-enjoy!
+Alternatively, you can register pure components in another namespace
+
+```js
+var Another = Regular.extend( {} );
+Another.use( Pure );
+```
 
 ## CDN
 
-pure.css: https://unpkg.com/pure-ui/dist/pure.css
-
-pure.js: https://unpkg.com/pure-ui/dist/pure.js
+[pure.js](https://unpkg.com/pure-ui/dist/pure.js) | [pure.css](https://unpkg.com/pure-ui/dist/pure.css)
 
 ## License
 
