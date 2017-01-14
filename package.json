@@ -3,6 +3,9 @@
   "version": "0.1.9",
   "description": "elegant and lovely components, built with regularjs",
   "main": "dist/pure.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "concurrent --kill-others \"npm run watch\" \"anywhere\"",
     "watch": "npm run dist -- -w",
