@@ -6,4 +6,6 @@ lerna-debug.log
 /dist
 /todo
 /packages/*/lib
+/packages/_theme/default.css
+/packages/_example/dist
 /examples

@@ -1,10 +1,9 @@
 {
   "name": "pure-theme",
   "version": "0.1.0",
-  "main": "pure.css",
+  "main": "default.css",
   "scripts": {
-    "build-default": "lessc default/index.less default.css",
-    "build": "lessc pure/index.less pure.css"
+    "build": "lessc default/index.less default.css"
   },
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT"
