@@ -1,0 +1,31 @@
+<template>
+	<div class="pure-radio-group">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.radioChildren = [];
+		},
+		onRadioChange( target ) {
+			target.data.checked = true;
+			this.radioChildren
+				.filter(v => v !== target)
+				.forEach(v => {
+					v.data.checked = false;
+				});
+			this.$update();
+
+			this.$emit( 'change', target.data.value );
+		},
+		ping( target ) {
+			this.radioChildren.push( target );
+			if( target.data.value === this.data.checked ) {
+				target.data.checked = true;
+				target.$update();
+			}
+		}
+	}
+</script>

@@ -1,0 +1,10 @@
+{
+  "name": "pure-tr",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=TR"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

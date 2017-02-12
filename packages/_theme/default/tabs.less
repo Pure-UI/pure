@@ -1,0 +1,52 @@
+@import './common/variable.less';
+
+.r-tabs {
+	display: block;
+}
+
+.r-tabs-titles, .r-tabs-title {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.r-tabs-header, .r-tabs-body {
+	font-size: 1rem;
+}
+
+.r-tabs-titles {
+	border-bottom: 1px solid #d7d7d7;
+	overflow: hidden;
+
+	.r-tabs-title {
+		float: left;
+		padding: .9rem .6rem;
+		color: #333;
+		cursor: pointer;
+		transition: color .4s ease;
+
+		&:hover {
+			color: @primary-color;
+		}
+
+		&.tab-active {
+			color: @primary-color;
+		}
+	}
+}
+
+.r-tabs-header {
+	position: relative;
+}
+
+.r-tabs-indicator {
+	position: absolute;
+	bottom: 0;
+	border-bottom: solid 2px @primary-color;
+	transition: left .3s ease,width .3s ease;
+}
+
+.r-tabs-body {
+	padding: 1rem .6rem;
+}

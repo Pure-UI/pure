@@ -1,0 +1,103 @@
+<template>
+	<div class="r-pagination">
+		<Button sm disabled="{ current === min }" on-click="{ this.onPrev() }">{ prevText || 'prev' }</Button>
+		{#if hasBeforeDot}
+			<Button sm ripple="{ false }" on-click="{ this.onClick(min) }">{ min }</Button>
+			<Button sm disabled>...</Button>
+			<Button sm ripple="{ false }" on-click="{ this.onClick(current - 2) }">{ current - 2 }</Button>
+			<Button sm ripple="{ false }" on-click="{ this.onClick(current - 1) }">{ current - 1 }</Button>
+		{#else}
+			{#list min2current as item}
+				<Button sm ripple="{ false }" on-click="{ this.onClick(item) }">{ item }</Button>
+			{/list}
+		{/if}
+
+		<Button sm primary>{ current }</Button>
+
+		{#if hasAfterDot}
+			<Button sm ripple="{ false }" on-click="{ this.onClick(current + 1) }">{ current + 1 }</Button>
+			<Button sm ripple="{ false }" on-click="{ this.onClick(current + 2) }">{ current + 2 }</Button>
+			<Button sm disabled>...</Button>
+			<Button sm ripple="{ false }" on-click="{ this.onClick(max) }">{ max }</Button>
+		{#else}
+			{#list current2max as item}
+				<Button sm ripple="{ false }" on-click="{ this.onClick(item) }">{ item }</Button>
+			{/list}
+		{/if}
+		<Button sm disabled="{ current === max }" on-click="{ this.onNext() }">{ nextText || 'next' }</Button>
+	</div>
+</template>
+
+<script>
+	import Button from 'pure-button';
+
+	export default {
+		components: {
+			Button,
+		},
+		config() {
+			this.data.current = this.data.current || this.data.min;
+		},
+		onClick( v ) {
+			this.$emit( 'change', v );
+		},
+		onPrev() {
+			this.$emit( 'change', this.data.current - 1 );
+		},
+		onNext() {
+			this.$emit( 'change', this.data.current + 1 );
+		},
+		computed: {
+			hasBeforeDot() {
+				const min = this.data.min || 1;
+				const max = this.data.max || 1;
+				const current = this.data.current || min;
+
+				let hasBeforeDot = false;
+				if( current - min > 3 ) {
+					hasBeforeDot = true;
+				}
+
+				return hasBeforeDot;
+			},
+			hasAfterDot() {
+				const min = this.data.min || 1;
+				const max = this.data.max || 1;
+				const current = this.data.current || min;
+
+				let hasAfterDot = false;
+				if( max - current > 3 ) {
+					hasAfterDot = true;
+				}
+
+				return hasAfterDot;
+			},
+			min2current() {
+				const min = this.data.min || 1;
+				const max = this.data.max || 1;
+				const current = this.data.current || min;
+
+				let min2current = [];
+
+				for( let i = min; i < current; i++ ) {
+					min2current.push( i );
+				}
+
+				return min2current;
+			},
+			current2max() {
+				const min = this.data.min || 1;
+				const max = this.data.max || 1;
+				const current = this.data.current || min;
+
+				let current2max = [];
+
+				for( let i = current + 1; i <= max; i++ ) {
+					current2max.push( i );
+				}
+
+				return current2max;
+			}
+		}
+	}
+</script>

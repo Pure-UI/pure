@@ -1,0 +1,10 @@
+{
+  "name": "pure-input",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Input"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

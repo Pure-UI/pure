@@ -1,0 +1,27 @@
+<template>
+	<div class="r-element-tree">
+		{#list source as s}
+			<ElementTreeNode node="{ s }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
+		{/list}
+	</div>
+</template>
+
+<script>
+	import ElementTreeNode from './element-tree-node.rgl';
+
+	export default {
+		components: {
+			ElementTreeNode,
+		},
+		onSelect( v ) {
+			// ElementTree对外只暴露选中节点，不告知位置
+			if( this.data.selectedNode !== v.node ) {
+				this.$emit( 'select', v.node );
+			}
+
+			this.data.selectedNode = v.node;
+			this.data.selectedPosition = v.position;
+			this.$update();
+		}
+	};
+</script>

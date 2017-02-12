@@ -1,0 +1,45 @@
+.spinner {
+	display: inline-block;
+	font-size: 0;
+
+	&.spinner-block {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.dot {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		animation: pulse 1.5s infinite ease-in-out;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	.dot1 {
+		animation-delay: -1.5s;
+		background-color: rgba(104, 158, 255, .2);
+	}
+	.dot2 {
+		animation-delay: -1.35s;
+		background-color: rgba(104, 158, 255, .2);
+	}
+	.dot3 {
+		animation-delay: -1.2s;
+		background-color: rgba(104, 158, 255, .2);
+	}
+}
+
+@keyframes pulse {
+	0%, 40%, to {
+		opacity: 0;
+		transform: scale(.4)
+	}
+	20% {
+		opacity: 1;
+		transform: scaleY(1)
+	}
+}

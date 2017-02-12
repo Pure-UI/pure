@@ -1,0 +1,10 @@
+{
+  "name": "pure-icon",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Icon"
+  },
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+@import './common/variable.less';
+
+.r-option {
+	padding: 8px 10px;
+	overflow: hidden;
+
+	&:hover {
+		background-color: rgba(160, 168, 182, 0.15);
+	}
+}
+
+.r-option-checked {
+	background-color: @primary-color;
+	color: #FFF;
+
+	&:hover {
+		background-color: shade(@primary-color, 5%);
+	}
+}

@@ -1,0 +1,38 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@table-prefix-cls: ~"@{pure-prefix}-table";
+
+.@{table-prefix-cls} {
+	width: 100%;
+	background: #FFF;
+	margin: 1em 0;
+	border: 1px solid rgba(34,36,38,.15);
+	box-shadow: none;
+	text-align: left;
+	color: rgba(0,0,0,.87);
+	border-collapse: separate;
+	border-spacing: 0;
+	font-size: 1rem;
+
+	& thead tr th {
+		background: #F9FAFB;
+		text-align: inherit;
+		color: #666;
+		padding: 1em .78571429em;
+		vertical-align: inherit;
+		font-style: none;
+		font-weight: 700;
+		text-transform: none;
+		border-bottom: 1px solid rgba(34,36,38,.1);
+		border-left: 1px solid rgba(34,36,38,.1);
+	}
+
+	& tr th:first-child {
+		border-left: none;
+	}
+}
+
+.@{table-prefix-cls}__head {
+	background-color: #F9FAFB;
+}

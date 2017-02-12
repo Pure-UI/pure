@@ -1,0 +1,77 @@
+@import './common/variable.less';
+
+.r-input-wrapper {
+	display: inline-block;
+}
+
+.r-input-error-message {
+	width: 100%;
+	color: #fd8282;
+	font-size: 11px;
+	background-color: #ffebeb;
+	border: solid 1px #ffebeb;
+	padding: 4px 10px;
+	box-sizing: border-box;
+}
+
+.r-input {
+	width: 100%;
+	background-color: #FFF;
+	color: @form-color;
+	outline: none;
+	padding: .56em 10px;
+	font-size: 1rem;
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	border: solid 1px #DDD;
+	cursor: inherit;
+
+	&:focus {
+		border: solid 1px @primary-color;
+	}
+
+	&.r-input-round {
+		border-radius: 3px;
+	}
+
+	&.r-input-readonly {
+		&:hover {
+			border: solid 1px shade(#DDD,15%);
+		}
+
+		&:focus {
+			border: solid 1px shade(#DDD,15%);
+		}
+	}
+
+	&.r-input-transparent {
+		border: solid 1px transparent;
+
+		&:hover {
+			border: solid 1px shade(#DDD,15%);
+		}
+
+		&:not(.r-input-readonly):focus {
+			border: solid 1px @primary-color;
+		}
+	}
+}
+
+.r-input-sm {
+	padding: .45em 10px;
+}
+
+.r-input-error {
+	border: solid 1px #fd8282;
+}
+
+.r-input-disabled {
+	background-color: #EEE;
+	cursor: not-allowed;
+}
+
+.r-input-wrapper-block {
+	display: block;
+	width: 100%;
+}

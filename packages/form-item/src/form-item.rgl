@@ -1,0 +1,9 @@
+<template>
+	<div class="pure-form-item">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {};
+</script>

@@ -1,0 +1,45 @@
+@import './common/variable.less';
+
+@checkbox-size: 18px;
+@checkbox-border-color: #DDD;
+@checkbox-checkmark-width: 10px;
+@checkbox-checkmark-height: 5px;
+
+.r-checkbox {
+	position: relative;
+	margin-right: 5px;
+	cursor: pointer;
+	user-select: none;
+	font-size: 1rem;
+
+	&.r-checkbox-checked {
+		.r-checkbox-inner::after {
+			transform: scale(1) rotate(-45deg);
+		}
+	}
+
+	.r-checkbox-inner {
+		width: @checkbox-size;
+		height: @checkbox-size;
+		display: inline-block;
+		border: solid 1px @checkbox-border-color;
+		vertical-align: middle;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 4px;
+			width: @checkbox-checkmark-width;
+			height: @checkbox-checkmark-height;
+			border-left: solid 2px @primary-color;
+			border-bottom: solid 2px @primary-color;
+			transform: scale(0) rotate(-45deg);
+			transition: all .1s cubic-bezier(.78,.14,.15,.86);
+		}
+	}
+
+	.r-checkbox-text {
+		vertical-align: middle;
+	}
+}

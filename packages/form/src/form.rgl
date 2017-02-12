@@ -1,0 +1,9 @@
+<template>
+	<div class="pure-form { stacked ? 'pure-form--stacked' : '' } { block ? 'pure-form--block' : '' }">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {};
+</script>

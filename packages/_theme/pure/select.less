@@ -1,0 +1,56 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@select-prefix-cls: ~"@{pure-prefix}-select";
+@input-prefix-cls: ~"@{pure-prefix}-input";
+
+.@{select-prefix-cls} {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.@{select-prefix-cls}__icon {
+	color: #666;
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	transform: translate3d(0,-50%,0);
+	font-size: 16px;
+	pointer-events: none;
+}
+
+.@{select-prefix-cls}__options {
+	position: absolute;
+	width: 100%;
+	margin-top: 5px;
+	padding: 5px 0;
+	background-color: #FFF;
+	border: solid 1px #DDD;
+	border-radius: .28rem;
+	box-shadow: 1px 1px 6px 1px rgba(0,0,0,.1);
+	z-index: 1;
+}
+
+.@{select-prefix-cls}--transparent {
+	.@{select-prefix-cls}__icon {
+		display: none;
+	}
+
+	&:hover {
+		.@{select-prefix-cls}__icon {
+			display: block;
+		}
+	}
+}
+
+.@{select-prefix-cls}--block {
+	display: block;
+	width: 100%;
+}
+
+.@{select-prefix-cls} {
+	.@{input-prefix-cls}__wrapper {
+		width: 100%;
+	}
+}

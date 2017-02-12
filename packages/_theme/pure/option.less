@@ -1,0 +1,22 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@option-prefix-cls: ~"@{pure-prefix}-option";
+
+.@{option-prefix-cls} {
+	padding: 8px 10px;
+	overflow: hidden;
+
+	&:hover {
+		background-color: rgba(160, 168, 182, 0.15);
+	}
+}
+
+.@{option-prefix-cls}--checked {
+	background-color: @primary-color;
+	color: #FFF;
+
+	&:hover {
+		background-color: shade(@primary-color, 5%);
+	}
+}

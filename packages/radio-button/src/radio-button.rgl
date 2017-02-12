@@ -1,0 +1,23 @@
+<template>
+	<div
+		class="pure-radio-button { checked ? 'pure-radio-button--checked' : '' }"
+		on-click="{ this.onToggle() }"
+	>
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			if( this.$outer && this.$outer.ping ) {
+				this.$outer.ping( this );
+			}
+		},
+		onToggle() {
+			if( this.$outer && this.$outer.onRadioChange ) {
+				this.$outer.onRadioChange( this );
+			}
+		},
+	};
+</script>

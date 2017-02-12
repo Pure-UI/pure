@@ -1,0 +1,14 @@
+{
+  "name": "pure-select",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Select"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "pure-icon": "^0.1.0",
+    "pure-input": "^0.1.0"
+  }
+}

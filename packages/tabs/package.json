@@ -1,0 +1,13 @@
+{
+  "name": "pure-tabs",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Tabs"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "pure-utils": "^0.1.0"
+  }
+}

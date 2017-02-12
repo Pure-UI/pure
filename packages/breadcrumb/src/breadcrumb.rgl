@@ -1,0 +1,13 @@
+<template>
+	<span class="pure-breadcrumb">
+		{#inc this.$body}
+	</span>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.$on( 'breadcrumb-item-click', href => location.href = href );
+		},
+	};
+</script>

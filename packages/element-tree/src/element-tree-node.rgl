@@ -1,0 +1,112 @@
+<template>
+	<div class="r-element-tree-node">
+		<div
+			class="r-element-tree-node-open { tagOpenSelected ? 'selected' : '' } { tagOpenHovered ? 'hovered' : '' }"
+			on-click="{ this.onTagOpenClick() }"
+			on-mouseenter="{ this.onTagOpenMouseEnter() }"
+			on-mouseleave="{ this.onTagOpenMouseLeave() }"
+		>
+			<span class="arrow { open ? 'arrow-open' : '' } { !hasChild ? 'invisible' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe68d;</Icon></span><span class="tag">&lt;{ node.name || node.text }{#if node.attrs}{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}{/if}&gt;{#if !open && hasChild}...{/if}{#if !open || !hasChild}&lt;/{ node.name || node.text }&gt;{/if}</span>
+		</div>
+
+		{#if hasChild && open}
+			<div class="children">
+				{#list node.children as child}
+					<ElementTreeNode node="{ child }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
+				{/list}
+			</div>
+
+			<div
+				class="r-element-tree-node-close { tagCloseSelected ? 'selected' : '' } { tagCloseHovered ? 'hovered' : '' }"
+				on-click="{ this.onTagCloseClick() }"
+				on-mouseenter="{ this.onTagCloseMouseEnter() }"
+				on-mouseleave="{ this.onTagCloseMouseLeave() }"
+			>
+				<span class="tag">&lt;/{ node.name || node.text }&gt;</span>
+			</div>
+		{/if}
+	</div>
+</template>
+
+<script>
+	const ElementTreeNode = {
+		config() {
+			if( this.data.node && this.data.node.children ) {
+				this.data.open = true;
+			} else {
+				this.data.open = false;
+			}
+		},
+		computed: {
+			hasChild: {
+				get() {
+					return this.data.node.children && this.data.node.children.length > 0;
+				},
+				set() {}
+			},
+			tagOpenSelected: {
+				get() {
+					return this.data.selectedNode === this.data.node &&
+						this.data.selectedPosition === 'open';
+				},
+				set() {}
+			},
+			tagCloseSelected: {
+				get() {
+					return this.data.selectedNode === this.data.node &&
+						this.data.selectedPosition === 'close';
+				},
+				set() {}
+			}
+		},
+		onTagOpenClick() {
+			if( this.data.tagOpenSelected ) {
+				return;
+			}
+			this.$emit( 'select', {
+				node: this.data.node,
+				position: 'open'
+			} );
+		},
+		onTagCloseClick() {
+			if( this.data.tagCloseSelected ) {
+				return;
+			}
+			this.$emit( 'select', {
+				node: this.data.node,
+				position: 'close'
+			} );
+		},
+		onSelect( v ) {
+			// 传递
+			this.$emit( 'select', v );
+		},
+		onToggle( e ) {
+			e.stopPropagation();
+			this.data.open = !this.data.open;
+			this.$update();
+		},
+		onTagOpenMouseEnter() {
+			this.data.tagOpenHovered = true;
+			this.$update();
+		},
+		onTagOpenMouseLeave() {
+			this.data.tagOpenHovered = false;
+			this.$update();
+		},
+		onTagCloseMouseEnter() {
+			this.data.tagCloseHovered = true;
+			this.$update();
+		},
+		onTagCloseMouseLeave() {
+			this.data.tagCloseHovered = false;
+			this.$update();
+		},
+	};
+
+	ElementTreeNode.components = {
+		ElementTreeNode,
+	};
+
+	export default ElementTreeNode;
+</script>

@@ -1,0 +1,22 @@
+<template>
+	<div class="pure-option { checked ? 'pure-option--checked' : '' }" ref="option" on-click="{ this.onClick() }">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.checked = false;
+
+			if ( this.$outer && this.$outer.optionPing ) {
+				this.$outer.optionPing( this );
+			}
+		},
+		onClick() {
+			if ( this.$outer && this.$outer.onOptionChange ) {
+				this.$outer.onOptionChange( this );
+			}
+		}
+	}
+</script>

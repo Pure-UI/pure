@@ -1,0 +1,25 @@
+<template>
+	<span class="pure-switch { checked ? 'pure-switch--checked' : '' }" on-mousedown="{ this.onMousedown() }" on-mouseup="{ this.onMouseup() }" on-click="{ this.onClick() }">
+		<span class="pure-switch__circle-mask { showMask ? 'pure-switch__circle-mask--show' : '' }"></span>
+		<span class="pure-switch__block"></span>
+	</span>
+</template>
+
+<script>
+	export default {
+		onMousedown() {
+			this.data.showMask = true;
+			this.$update();
+		},
+		onMouseup() {
+			this.data.showMask = false;
+			this.$update();
+		},
+		onClick() {
+			this.data.checked = !this.data.checked;
+			this.$update();
+
+			this.$emit( 'change', this.data.checked );
+		}
+	}
+</script>

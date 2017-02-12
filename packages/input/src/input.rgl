@@ -1,0 +1,36 @@
+<template>
+	<div class="pure-input__wrapper { block ? 'pure-input__wrapper--block' : '' }">
+		<input
+			class="pure-input { error ? 'pure-input--error' : '' } { disabled ? 'pure-input--disabled' : '' } { readonly ? 'pure-input--readonly' : '' } { round ? 'pure-input--round' : '' } { transparent ? 'pure-input--transparent' : '' } { sm ? 'pure-input--sm' : '' }"
+			type="{ type || 'text' }"
+			value="{ value }"
+			disabled="{ disabled }"
+			readonly="{ readonly }"
+			placeholder="{ placeholder }"
+			on-click="{ this.onClick() }"
+			on-input="{ this.onChange() }"
+			on-focus="{ this.onFocus() }"
+			ref="v"
+		>
+		{#if error && errorMessage}
+		<div class="pure-input__error-message">
+			{ errorMessage }
+		</div>
+		{/if}
+	</div>
+</template>
+
+<script>
+	export default {
+		onChange() {
+			this.$emit( 'change', this.$refs.v.value );
+		},
+		onFocus() {
+			this.data.error = false;
+			this.$emit( 'focus' );
+		},
+		onClick() {
+			this.$emit( 'click' );
+		}
+	};
+</script>

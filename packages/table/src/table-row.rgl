@@ -1,0 +1,29 @@
+<template>
+	<tr class="pure-table-row">
+		{#list fields as field}
+			<td nowrap>{#include this.renderColumn( field ) }</td>
+		{/list}
+	</tr>
+</template>
+
+<script>
+	export default {
+		renderColumn( field ) {
+			let rendered = '';
+			if ( typeof field.render === 'function' ) {
+				rendered = field.render( this.data.dataSource[ field.key ], this.data.dataSource );
+			}
+
+			if ( !rendered ) {
+				rendered = this.data.dataSource[ field.key ];
+			}
+
+			if ( typeof rendered !== 'string' ) {
+				// rendered = JSON.stringify( rendered );
+				rendered = rendered + '';
+			}
+
+			return rendered;
+		}
+	}
+</script>

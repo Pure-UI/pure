@@ -1,0 +1,32 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@form-prefix-cls: ~"@{pure-prefix}-form";
+@input-prefix-cls: ~"@{pure-prefix}-input";
+
+.@{form-prefix-cls}--block {
+	.@{form-prefix-cls}-control {
+		flex: 1;
+
+		input, textarea, select {
+			flex: 1;
+		}
+
+		.@{input-prefix-cls}__wrapper {
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.@{form-prefix-cls}--stacked {
+	.@{form-prefix-cls}-label {
+		text-align: left!important;
+		margin-bottom: 10px;
+	}
+
+	.@{form-prefix-cls}-item {
+		display: block!important;
+	}
+}

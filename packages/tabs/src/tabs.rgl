@@ -1,0 +1,98 @@
+<template>
+	<div class="pure-tabs">
+		<div class="pure-tabs__header" ref="header">
+			<ul class="pure-tabs__titles">
+				{#list titles as title}
+					<li class="pure-tabs__title { title_index === selectedIndex ? 'pure-tabs__title--active' : '' }" on-click="{ this.onTabPaneChange( title_index ) }">{ title }</li>
+				{/list}
+			</ul>
+			<div ref="indicator" class="pure-tabs__indicator"></div>
+		</div>
+
+		<div class="pure-tabs__body">
+			{#inc this.$body}
+		</div>
+	</div>
+</template>
+
+<script>
+	import nextTick from 'pure-utils/nextTick';
+
+	export default {
+		config() {
+			this.count = 0;
+			this.tabPanes = [];
+			this.data.titles = [];
+			this.data.selected = this.data.selected || void 0;
+		},
+		init() {
+			const $header = this.$refs.header;
+			const $indicator = this.$refs.indicator;
+
+			this.$watch( 'selected', ( nv, ov ) => {
+				if ( !ov ) {
+					ov = ( this.tabPanes[ 0 ] && this.tabPanes[ 0 ].data.key ) || 0;
+				}
+
+				// judge direction
+				const keys = this.tabPanes.map( v => v.data.key );
+
+				if ( this.$root.parentNode ) {
+					calc();
+				} else {
+					nextTick( calc );
+				}
+
+				function calc() {
+					const index = keys.indexOf( nv );
+					// dynamic $refs in #inc maybe has some issue, use querySelectorAll instead
+					const $titles = $header.querySelectorAll( 'li' );
+					const $title = $titles[ index ];
+
+					if ( $title ) {
+						const rect = $header.getBoundingClientRect();
+						const l = rect.left;
+						const { left, width } = $title.getBoundingClientRect();
+
+						$indicator.style.cssText = `left: ${ left - l }px;width: ${ width }px;`;
+					}
+				}
+			} );
+		},
+		onTabPaneChange( index ) {
+			this.data.selected = this.tabPanes[ index ].data.key;
+			this.data.selectedIndex = index;
+			this.tabPanes.forEach( v => {
+				if ( v.data.key === this.data.selected ) {
+					v.data.show = true;
+					v.$update();
+				} else {
+					v.data.show = false;
+					v.$update();
+				}
+			} );
+
+			this.$emit( 'change', this.data.selected );
+		},
+		ping( target ) {
+			if ( !target.data.key ) {
+				target.$update( {
+					key: this.count
+				} );
+			}
+
+			this.count++;
+			this.tabPanes.push( target );
+			this.data.titles.push( target.data.title );
+
+			// if selected not set, or selected and key matched
+			// use `==`, which means '1' == 1 is acceptable
+			if ( typeof this.data.selected === 'undefined' || this.data.selected == target.data.key ) {
+				this.data.selectedIndex = this.tabPanes.length - 1;
+				this.data.selected = target.data.key;
+				target.data.show = true;
+				target.$update();
+			}
+		}
+	};
+</script>

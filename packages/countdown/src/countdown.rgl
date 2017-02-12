@@ -1,0 +1,77 @@
+<template>
+	{ time }
+</template>
+
+<script>
+	import duration from './duration';
+
+	const getMeta = key => {
+		return ({
+			'D': 'day',
+			'DAY': 'day',
+			'H': 'hour',
+			'HOUR': 'hour',
+			'M': 'minute',
+			'MINUTE': 'minute',
+			'S': 'second',
+			'SECOND': 'second',
+		})[ key ];
+	};
+
+	export default {
+		config() {
+			this.data.time = '';
+
+			const tick = () => {
+				let format = this.data.format;
+				let currentTime = +new Date();
+
+				if( currentTime >= this.data.end ) {
+					this.$emit( 'end' );
+					clearInterval( this.data.intervalId );
+					currentTime = this.data.end;
+				}
+
+				const o = duration( currentTime, this.data.end );
+				let output = '';
+
+				// TODO: other locales
+
+				// set default format according to locale
+				if( !format ) {
+					if( this.data.locale === 'zh' ) {
+						format = '[D]天[H]时[M]分[S]秒';
+					} else {
+						format = `[D] days [H] hours [M] minutes [S] seconds`;
+					}
+				}
+
+				output = format.replace(/\[(D|DAY|H|HOUR|M|MINUTE|S|SECOND)\]/g, ( _, key ) => {
+					const i = getMeta( key );
+					return typeof o[ i ] !== 'undefined' ? o[ i ] : `[${key}]`;
+				});
+
+				this.data.time = output;
+				this.$update();
+			};
+
+			tick();
+
+			this.data.intervalId = setInterval(() => {
+				tick();
+			}, 1000);
+
+			this.$watch('end', () => {
+				tick();
+
+				this.data.intervalId = setInterval(() => {
+					tick();
+				}, 1000);
+			});
+
+			this.$on( '$destroy', () => {
+				clearInterval( this.data.intervalId );
+			} );
+		}
+	};
+</script>

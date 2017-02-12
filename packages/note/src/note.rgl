@@ -1,0 +1,52 @@
+<template>
+	<div class="pure-note">
+		<div class="pure-note__inner">
+			<div class="pure-note__icon" style="color: { color };"><Icon>{ icon }</Icon></div>
+			<div>
+				{#inc this.$body}
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	import Icon from 'pure-icon';
+
+	export default {
+		components: {
+			Icon,
+		},
+		computed: {
+			color: function() {
+				const DEFAULT_COLOR = '#689eff';
+				const maps = {
+					success: '#6ed084',
+					warning: '#fda411',
+					error: '#F44556',
+				};
+
+				return maps[ this.data.type ] || DEFAULT_COLOR;
+			},
+			icon: function() {
+				const DEFAULT_ICON = '&#xe80c;';
+				const maps = {
+					success: '&#xe625;',
+					warning: '&#xe641;',
+					error: '&#xe6a0;',
+				};
+
+				return convert( maps[ this.data.type ] || DEFAULT_ICON );
+			}
+		}
+	};
+
+	function convert( str ) {
+		str = str.replace(/(\\u)(\w{4})/gi,function($0){
+			return (String.fromCharCode(parseInt((escape($0).replace(/(%5Cu)(\w{4})/g,"$2")),16)));
+		});
+		str = str.replace(/(&#x)(\w{4});/gi,function($0){
+			return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w{4})(%3B)/g,"$2"),16));
+		});
+		return str;
+	}
+</script>

@@ -1,0 +1,83 @@
+<template>
+	<button
+		ref="button"
+		class="pure-button { primary ? 'pure-button--primary' : 'pure-button--basic' } { sm ? 'pure-button--sm' : '' } { disabled ? 'pure-button--disabled' : '' } { block ? 'pure-button--block' : '' }"
+		on-mousedown="{ this.onMouseDown( $event ) }"
+	>
+		<div ref="ripples"></div>
+		<div class="pure-button__text">
+			{#if loading}
+			<Icon spin>&#xe602;</Icon>
+			{/if}
+			{#inc this.$body}
+		</div>
+	</button>
+</template>
+
+<script>
+	import Icon from 'pure-icon';
+	import nextTick from 'pure-utils/nextTick';
+
+	export default {
+		components: {
+			Icon,
+		},
+		config() {
+			this.data.ripple = this.data.ripple !== false;
+		},
+		onMouseDown( e ) {
+			if( this.data.disabled ) {
+				return;
+			}
+
+			this.$emit( 'click' );
+
+			if( !this.data.ripple ) {
+				return;
+			}
+
+			const pageX = e.pageX;
+			const pageY = e.pageY;
+			const scrollY = window.scrollY;
+
+			const $target = this.$refs.button;
+			const rect = $target.getBoundingClientRect();
+			const top = rect.top;
+			const left = rect.left;
+			const width = rect.width;
+			const offsetX = pageX - left;
+			const offsetY = pageY - top - scrollY;
+
+			const $ripple = makeRipple( {
+				top: offsetY - width / 2,
+				left: offsetX - width / 2,
+				width: width,
+				height: width,
+			} );
+
+			const $ripples = this.$refs.ripples;
+			$ripple.classList.add( 'pure-button__wave--hidden' );
+			$ripples.appendChild( $ripple );
+
+			$ripple.addEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
+			function handleAnimationEnd() {
+				$ripple.removeEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
+				$ripples.removeChild( $ripple );
+			}
+
+			nextTick( () => {
+				$ripple.classList.remove( 'pure-button__wave--hidden' );
+				$ripple.classList.add( 'pure-button__wave--pressed' );
+			} );
+		}
+	};
+
+	function makeRipple( { top, left, width, height } ) {
+		const $ripple = document.createElement( 'div' );
+		$ripple.style.cssText = `
+			top: ${ top }px;left: ${ left }px;width: ${ width }px;height: ${ height }px;
+		`;
+		$ripple.className = 'pure-button__wave';
+		return $ripple;
+	}
+</script>

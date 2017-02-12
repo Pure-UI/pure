@@ -1,0 +1,21 @@
+@import "./common/var.less";
+
+@icon-prefix-cls: ~"@{pure-prefix}-icon";
+
+.@{icon-prefix-cls} {
+	display: inline-block;
+	min-width: 1em;
+}
+
+.@{icon-prefix-cls}--rotate {
+	animation: pureIconSpin 1.4s linear infinite;
+}
+
+@keyframes pureIconSpin {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

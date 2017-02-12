@@ -1,0 +1,7 @@
+<template>
+	<tr class="pure-tr">{#inc this.$body}</tr>
+</template>
+
+<script>
+	export default {};
+</script>

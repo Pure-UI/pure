@@ -1,0 +1,7 @@
+<template>
+	<td class="pure-td" {#if nowrap}nowrap{/if}>{#inc this.$body}</td>
+</template>
+
+<script>
+	export default {};
+</script>

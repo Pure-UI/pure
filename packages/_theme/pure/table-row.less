@@ -1,0 +1,25 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@table-row-prefix-cls: ~"@{pure-prefix}-table-row";
+
+.@{table-row-prefix-cls} {
+	& td {
+		padding: .78571429em;
+		border-top: 1px solid rgba(34,36,38,.1);
+		text-align: inherit;
+		border-left: 1px solid rgba(34,36,38,.1);
+	}
+
+	&:first-child td {
+		border-top: none
+	}
+
+	& td:first-child {
+		border-left: none;
+	}
+
+	&:nth-child(2n), &:nth-child(2n) {
+		background-color: rgba(0,0,50,.02);
+	}
+}

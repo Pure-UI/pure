@@ -1,0 +1,18 @@
+<template>
+	<span class="pure-breadcrumb-item { href ? 'pure-breadcrumb-item--link' : '' }" on-click="{ this.onClick( href ) }">
+		{#inc this.$body }
+		<span class="pure-breadcrumb-item__sep">/</span>
+	</span>
+</template>
+
+<script>
+	export default {
+		onClick( href ) {
+			this.$emit( 'click', href );
+
+			if( this.data.href && this.$outer ) {
+				this.$outer.$emit( 'breadcrumb-item-click', href );
+			}
+		}
+	};
+</script>

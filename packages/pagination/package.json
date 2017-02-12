@@ -1,0 +1,13 @@
+{
+  "name": "pure-pagination",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Pagination"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "pure-button": "^0.1.0"
+  }
+}

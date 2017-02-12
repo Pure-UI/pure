@@ -1,0 +1,17 @@
+<template>
+	{#if show}
+		{#inc this.$body}
+	{/if}
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.show = false;
+
+			if ( this.$outer && this.$outer.ping ) {
+				this.$outer.ping( this );
+			}
+		}
+	};
+</script>

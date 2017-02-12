@@ -1,0 +1,81 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@input-prefix-cls: ~"@{pure-prefix}-input";
+
+.@{input-prefix-cls}__wrapper {
+	display: inline-block;
+}
+
+.@{input-prefix-cls}__error-message {
+	width: 100%;
+	color: #fd8282;
+	font-size: 11px;
+	background-color: #ffebeb;
+	border: solid 1px #ffebeb;
+	padding: 4px 10px;
+	box-sizing: border-box;
+}
+
+.@{input-prefix-cls} {
+	width: 100%;
+	background-color: #FFF;
+	color: @form-color;
+	outline: none;
+	padding: .56em 10px;
+	font-size: 1rem;
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	border: solid 1px #DDD;
+	cursor: inherit;
+
+	&:focus {
+		border: solid 1px @primary-color;
+	}
+}
+
+.@{input-prefix-cls}--round {
+	border-radius: 3px;
+}
+
+.@{input-prefix-cls}--readonly {
+	&:hover {
+		border: solid 1px shade(#DDD,15%);
+	}
+
+	&:focus {
+		border: solid 1px shade(#DDD,15%);
+	}
+}
+
+.@{input-prefix-cls}--transparent {
+	border: solid 1px transparent;
+
+	&:hover {
+		border: solid 1px shade(#DDD,15%);
+	}
+
+	&:not(.@{input-prefix-cls}--readonly):focus {
+		border: solid 1px @primary-color;
+	}
+}
+
+.@{input-prefix-cls}--sm {
+	padding: .45em 10px;
+}
+
+.@{input-prefix-cls}--error {
+	border: solid 1px #fd8282;
+}
+
+.@{input-prefix-cls}--disabled {
+	background-color: #EEE;
+	border: solid 1px #DDD;
+	cursor: not-allowed;
+}
+
+.@{input-prefix-cls}__wrapper--block {
+	display: block;
+	width: 100%;
+}

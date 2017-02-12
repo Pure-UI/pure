@@ -1,0 +1,34 @@
+<template>
+	{#inc this.$body}
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.checked = this.data.checked || [];
+			this.checkboxChildren = [];
+		},
+		onCheckboxChange( target ) {
+			// toggle
+			target.data.checked = !target.data.checked;
+			target.$update();
+
+			const checkedValues = this.checkboxChildren
+				.filter(v => v.data.checked === true)
+				.map(v => v.data.value);
+
+			this.$emit( 'change', checkedValues );
+		},
+		ping( target ) {
+			this.checkboxChildren.push( target );
+			this.data.checked
+				.some( v => {
+					if ( target.data.value == v ) {
+						target.data.checked = true;
+						target.$update();
+						return true;
+					}
+				} );
+		}
+	}
+</script>

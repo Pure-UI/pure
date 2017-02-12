@@ -1,0 +1,10 @@
+{
+  "name": "pure-form-control",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=FormControl"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,71 @@
+<template>
+	<div class="pure-select { transparent ? 'pure-select--transparent' : '' } { block ? 'pure-select--block' : '' }" ref="select">
+		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round sm="{ sm }" transparent="{ transparent }" on-click="{ this.onShowOptions() }"></Input>
+
+		<div class="pure-select__icon" style="{ show ? 'display: block;' : '' }">
+			<Icon>&#xe60b;</Icon>
+		</div>
+
+		<div class="pure-select__options" r-hide="{ !show }">
+			{#inc this.$body}
+		</div>
+	</div>
+</template>
+
+<script>
+	import Input from 'pure-input';
+	import Icon from 'pure-icon';
+
+	export default {
+		component: {
+			Input, Icon
+		},
+		config() {
+			this.data.show = false;
+			this.children = [];
+		},
+		init() {
+			// click outside, hide options
+			document.addEventListener( 'click', onClickOutside, false );
+			this.$on( '$destroy', () => {
+				document.removeEventListener( 'click', onClickOutside, false );
+			} );
+
+			const $select = this.$refs.select;
+			const self = this;
+			function onClickOutside( e ) {
+				const target = e.target;
+				if ( !$select.contains( target ) ) {
+					self.data.show = false;
+					self.$update();
+				}
+			}
+		},
+		optionPing( target ) {
+			this.children.push( target );
+		},
+		onOptionChange( target ) {
+			this.data.show = false;
+			this.data.text = target.$refs.option.innerText;
+			this.data.selected = target.data.value;
+
+			const index = this.children.indexOf( target );
+			this.$emit( 'change', target.data.value, index, target );
+		},
+		onShowOptions() {
+			this.data.show = true;
+
+			// highlight selected
+			const selected = this.data.selected;
+			this.children.forEach( v => {
+				if ( selected == v.data.value ) {
+					v.data.checked = true;
+					v.$update();
+				} else {
+					v.data.checked = false;
+					v.$update();
+				}
+			} );
+		}
+	}
+</script>

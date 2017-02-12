@@ -1,0 +1,60 @@
+<template>
+	<div class="pure-modal-mask" r-animation="
+		on: close-modal;
+		wait: 0;
+		class: pure-modal-mask--out, 3;
+	">
+		<div class="pure-modal"
+			style="width: { width || 'initial' }"
+			r-animation="
+				on: open-modal;
+				wait: 0;
+				class: pure-modal--in, 3;
+			"
+			r-animation="
+				on: close-modal;
+				wait: 0;
+				class: pure-modal--out, 3;
+				emit: destroy-modal;
+			"
+		>
+			<div class="pure-modal__head">
+				{ title }
+			</div>
+			<div class="pure-modal__body">
+				{#inc this.$body}
+			</div>
+			<div class="pure-modal__actions">
+				<Button on-click="{ this.onCancel() }">{ cancelText || 'Cancel' }</Button>
+				<Button primary on-click="{ this.onOk() }">{ okText || 'Confirm' }</Button>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	import Button from 'pure-button';
+
+	export default {
+		components: {
+			Button,
+		},
+		onCancel() {
+			this.$emit( 'cancel' );
+		},
+		onOk() {
+			this.$emit( 'ok' );
+		},
+		init() {
+			this.$emit( 'open-modal' );
+		},
+		destroy() {
+			this.$emit( 'close-modal' );
+
+			const destroy = this.supr;
+			this.$on( 'destroy-modal', () => {
+				destroy.call( this );
+			} );
+		}
+	};
+</script>

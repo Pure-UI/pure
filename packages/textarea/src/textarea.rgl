@@ -1,0 +1,19 @@
+<template>
+	<textarea ref="textarea" class="pure-textarea" value="{ value }"></textarea>
+</template>
+
+<script>
+	import autosize from 'autosize';
+
+	export default {
+		init() {
+			const $textarea = this.$refs.textarea;
+			const isAutoResize = this.data.autoresize || this.data.autosize || this.data.auto;
+
+			if ( isAutoResize ) {
+				autosize( $textarea );
+				this.$on( '$destroy', () => autosize.destroy( $textarea ) );
+			}
+		}
+	}
+</script>

@@ -1,0 +1,10 @@
+{
+  "name": "pure-breadcrumb-item",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=BreadcrumbItem"
+  },
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

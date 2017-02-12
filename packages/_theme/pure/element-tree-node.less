@@ -1,0 +1,125 @@
+.r-element-tree-node {
+	cursor: default;
+
+	.children {
+		padding-left: 30px;
+	}
+}
+
+.r-element-tree-node-open {
+	box-sizing: border-box;
+	display: block;
+	height: 2em;
+	line-height: 2em;
+	text-align: left;
+	color: #c71280;
+	background-color: transparent;
+
+	.arrow {
+		display: inline-block;
+		color: #666;
+		transform: rotate(-90deg);
+		user-select: none;
+
+		&.arrow-open {
+			transform: rotate(0);
+		}
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	&.hovered::before {
+		left: 0;
+		right: 0;
+		background-color: #ebf2fc;
+	}
+
+	&.selected::before {
+		left: 0;
+		right: 0;
+		background-color: #3879d9;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		background-color: #DDD;
+		height: 2em;
+	}
+
+	.tag {
+		position: relative;
+	}
+
+	&.selected {
+		color: #FFF;
+
+		.arrow {
+			color: #FFF;
+		}
+
+		.attr-key {
+			color: #BBB;
+		}
+		.attr-plain {
+			color: #BBB;
+		}
+		.attr-value {
+			color: #FFF;
+		}
+	}
+
+	.attr-key {
+		color: #9a4500;
+	}
+	.attr-plain {
+		color: #a894a6;
+	}
+	.attr-value {
+		color: #1a1aa6;
+	}
+}
+
+.r-element-tree-node-close {
+	box-sizing: border-box;
+	display: block;
+	height: 2em;
+	line-height: 2em;
+	text-align: left;
+	color: #c71280;
+	background-color: transparent;
+	/* 因为element-tree-node-open中增加了caret，保持对齐 */
+	text-indent: 1em;
+
+	&.hovered::before {
+		left: 0;
+		right: 0;
+		background-color: #ebf2fc;
+	}
+
+	&.selected::before {
+		left: 0;
+		right: 0;
+		background-color: #3879d9;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		background-color: #DDD;
+		height: 2em;
+	}
+
+	.tag {
+		position: relative;
+	}
+
+	&.selected {
+		background-color: #3879d9;
+		color: #FFF;
+	}
+}

@@ -1,0 +1,11 @@
+<template>
+	<div class="pure-spinner { block ? 'pure-spinner--block' : '' }">
+		<div class="pure-spinner__dot pure-spinner__dot-1"></div>
+		<div class="pure-spinner__dot pure-spinner__dot-2"></div>
+		<div class="pure-spinner__dot pure-spinner__dot-3"></div>
+	</div>
+</template>
+
+<script>
+	export default {};
+</script>

@@ -1,0 +1,14 @@
+<template>
+	<div style="margin: { margin };padding: { padding }">
+		{#inc this.$body}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.margin = this.data.margin || '0';
+			this.data.padding = this.data.padding || '0';
+		}
+	};
+</script>

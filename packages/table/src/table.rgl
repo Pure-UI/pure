@@ -1,0 +1,29 @@
+<template>
+	<table class="pure-table">
+		<thead class="pure-table__head">
+			<tr>
+				{#list fields as field}
+					<th>{ field.label }</th>
+				{/list}
+			</tr>
+		</thead>
+		<tbody>
+			{#inc this.$body}
+			{#if dataSource}
+				{#list dataSource as ds}
+					<TableRow dataSource="{ ds }" fields="{ fields }"></TableRow>
+				{/list}
+			{/if}
+		</tbody>
+	</table>
+</template>
+
+<script>
+	import TableRow from './table-row.rgl';
+
+	export default {
+		components: {
+			TableRow,
+		},
+	};
+</script>

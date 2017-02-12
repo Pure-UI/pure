@@ -1,0 +1,98 @@
+@import './common/variable.less';
+
+@button-color: @primary-color;
+
+.r-button-text {
+	position: relative;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+}
+
+.r-button {
+	position: relative;
+	-webkit-appearance: none;
+	border: none;
+	padding: .56em 1em;
+	font-size: 1rem;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	border: solid 1px transparent;
+	vertical-align: middle;
+	overflow: hidden;
+
+	&.r-button-sm {
+		padding: .45em .75em;
+	}
+
+	&:not(.r-button-disabled):active {
+		box-shadow: inset 0 1px 5px rgba(0,0,0,.15);
+	}
+}
+
+.r-button-disabled {
+	cursor: not-allowed;
+
+	&.r-button-basic {
+		color: #999;
+	}
+
+	&.r-button-primary {
+		background-color: tint(@primary-color, 45%);
+	}
+}
+
+.r-button-basic {
+	background-color: #FFF;
+	border: solid 1px #DDD;
+	color: #333;
+
+	&:not(.r-button-disabled):hover, &:not(.r-button-disabled):focus {
+		background-color: shade(#FFF, 3%);
+	}
+}
+
+.r-button-primary {
+	background-color: @button-color;
+	color: #fff;
+
+	&:not(.r-button-disabled):hover, &:not(.r-button-disabled):focus {
+		background-color: shade(@button-color, 5%);
+	}
+}
+
+.r-button-block {
+	display: block;
+	width: 100%;
+}
+
+@keyframes r-button-ripple {
+	from {
+		opacity: 1;
+		transform: scale(0)
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(2.5)
+	}
+}
+
+/**/
+
+.r-button-wave {
+	position: absolute;
+	background-color: rgba(0,0,0,.15);
+	border-radius: 50%;
+	transform: scale(0);
+	pointer-events: none;
+
+	&.pressed {
+		animation: r-button-ripple .6s linear forwards;
+	}
+
+	&.r-button-wave-hidden {
+		opacity: 0;
+	}
+}

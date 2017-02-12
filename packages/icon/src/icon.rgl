@@ -1,0 +1,7 @@
+<template>
+	<i class="pure-icon { spin ? 'pure-icon--rotate' : '' } iconfont">{#inc this.$body}</i>
+</template>
+
+<script>
+	export default {};
+</script>

@@ -1,0 +1,11 @@
+{
+  "name": "pure-theme",
+  "version": "0.1.0",
+  "main": "pure.css",
+  "scripts": {
+    "build-default": "lessc default/index.less default.css",
+    "build": "lessc pure/index.less pure.css"
+  },
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+<template>
+	<span class="pure-radio { checked ? 'pure-radio--checked' : '' }" on-click="{ this.onClick() }">
+		<span class="pure-radio__inner"></span>
+		<span class="pure-radio__text">
+			{#inc this.$body}
+		</span>
+	</span>
+</template>
+
+<script>
+	export default {
+		config() {
+			if( this.$outer && this.$outer.ping ) {
+				this.$outer.ping( this );
+			}
+		},
+		onClick() {
+			if( this.$outer && this.$outer.onRadioChange ) {
+				this.$outer.onRadioChange( this );
+			} else {
+				if( !this.data.checked ) {
+					this.$emit( 'change', true );
+				}
+				this.data.checked = true;
+				this.$update();
+			}
+		}
+	}
+</script>

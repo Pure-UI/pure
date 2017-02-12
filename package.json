@@ -7,6 +7,7 @@
     "dist"
   ],
   "scripts": {
+    "serve": "opn http://127.0.0.1:8000/packages/_example/ && anywhere -p 8000 -s",
     "dev": "concurrent --kill-others \"npm run watch\" \"anywhere\"",
     "watch": "npm run dist -- -w",
     "dist": "webpack --config scripts/webpack.config.js",
@@ -14,17 +15,17 @@
     "gh-pages": "node scripts/gh-pages",
     "deploy": "npm run docs && npm run gh-pages",
     "patch": "np patch --skip-cleanup",
-    "lint": "eslint src src/**/*.rgl"
+    "lint": "eslint src src/**/*.rgl",
+    "boot": "lerna bootstrap",
+    "build": "lerna run build && lerna run example",
+    "example": "lerna run example",
+    "clean": "lerna clean"
   },
-  "eslintConfig": {
-    "extends": "mo/browser",
-    "plugins": [
-      "rgl"
-    ]
-  },
+  "eslintConfig": {},
   "author": "fengzilong",
   "license": "MIT",
   "devDependencies": {
+    "anywhere": "^1.4.0",
     "autoprefixer": "^6.3.7",
     "autosize": "^3.0.17",
     "babel-core": "^6.10.4",
@@ -50,10 +51,12 @@
     "html-webpack-plugin": "^2.22.0",
     "is-obj": "^1.0.1",
     "json-loader": "^0.5.4",
+    "lerna": "2.0.0-beta.32",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "lodash": "^4.13.1",
     "marked": "^0.3.5",
+    "opn-cli": "^3.1.0",
     "postcss-loader": "^0.9.1",
     "pure-loader": "0.0.1",
     "regular-loader": "^0.1.0",

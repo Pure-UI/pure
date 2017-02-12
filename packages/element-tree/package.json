@@ -1,0 +1,10 @@
+{
+  "name": "pure-element-tree",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=ElementTree"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "pure-button",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Button"
+  },
+  "version": "0.1.0",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "pure-icon": "^0.1.0",
+    "pure-utils": "^0.1.0"
+  }
+}
