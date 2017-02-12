@@ -4,7 +4,7 @@
 
 ## Docs
 
-https://fengzilong.github.io/pure/
+https://pure.js.org
 
 ## Playground
 
