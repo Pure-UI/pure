@@ -696,81 +696,31 @@
   text-align: inherit;
   border-left: 1px solid rgba(34, 36, 38, 0.1);
 }
-.r-element-tree {
+.pure-element-tree {
   position: relative;
 }
-.r-element-tree-node {
+.pure-element-tree-node {
   cursor: default;
 }
-.r-element-tree-node .children {
+.pure-element-tree-node__children {
   padding-left: 30px;
 }
-.r-element-tree-node-open {
-  box-sizing: border-box;
-  display: block;
-  height: 2em;
-  line-height: 2em;
-  text-align: left;
-  color: #c71280;
-  background-color: transparent;
+.pure-element-tree-node__tag {
+  position: relative;
 }
-.r-element-tree-node-open .arrow {
+.pure-element-tree-node__arrow {
   display: inline-block;
   color: #666;
   transform: rotate(-90deg);
   user-select: none;
 }
-.r-element-tree-node-open .arrow.arrow-open {
+.pure-element-tree-node__arrow.pure-element-tree-node__arrow--open {
   transform: rotate(0);
 }
-.r-element-tree-node-open .invisible {
+.pure-element-tree-node__arrow.pure-element-tree-node__arrow--invisible {
   visibility: hidden;
 }
-.r-element-tree-node-open.hovered::before {
-  left: 0;
-  right: 0;
-  background-color: #ebf2fc;
-}
-.r-element-tree-node-open.selected::before {
-  left: 0;
-  right: 0;
-  background-color: #3879d9;
-}
-.r-element-tree-node-open::before {
-  display: block;
-  content: '';
-  position: absolute;
-  background-color: #DDD;
-  height: 2em;
-}
-.r-element-tree-node-open .tag {
-  position: relative;
-}
-.r-element-tree-node-open.selected {
-  color: #FFF;
-}
-.r-element-tree-node-open.selected .arrow {
-  color: #FFF;
-}
-.r-element-tree-node-open.selected .attr-key {
-  color: #BBB;
-}
-.r-element-tree-node-open.selected .attr-plain {
-  color: #BBB;
-}
-.r-element-tree-node-open.selected .attr-value {
-  color: #FFF;
-}
-.r-element-tree-node-open .attr-key {
-  color: #9a4500;
-}
-.r-element-tree-node-open .attr-plain {
-  color: #a894a6;
-}
-.r-element-tree-node-open .attr-value {
-  color: #1a1aa6;
-}
-.r-element-tree-node-close {
+.pure-element-tree-node__open {
   box-sizing: border-box;
   display: block;
   height: 2em;
@@ -778,30 +728,76 @@
   text-align: left;
   color: #c71280;
   background-color: transparent;
-  /* 因为element-tree-node-open中增加了caret，保持对齐 */
-  text-indent: 1em;
 }
-.r-element-tree-node-close.hovered::before {
-  left: 0;
-  right: 0;
-  background-color: #ebf2fc;
-}
-.r-element-tree-node-close.selected::before {
-  left: 0;
-  right: 0;
-  background-color: #3879d9;
-}
-.r-element-tree-node-close::before {
+.pure-element-tree-node__open::before {
   display: block;
   content: '';
   position: absolute;
   background-color: #DDD;
   height: 2em;
 }
-.r-element-tree-node-close .tag {
-  position: relative;
+.pure-element-tree-node__open.pure-element-tree-node--hovered::before {
+  left: 0;
+  right: 0;
+  background-color: #ebf2fc;
 }
-.r-element-tree-node-close.selected {
+.pure-element-tree-node__open.pure-element-tree-node--selected::before {
+  left: 0;
+  right: 0;
   background-color: #3879d9;
+}
+.pure-element-tree-node__close {
+  box-sizing: border-box;
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  text-align: left;
+  color: #c71280;
+  background-color: transparent;
+  text-indent: 1em;
+}
+.pure-element-tree-node__close::before {
+  display: block;
+  content: '';
+  position: absolute;
+  background-color: #DDD;
+  height: 2em;
+}
+.pure-element-tree-node__close.pure-element-tree-node--hovered::before {
+  left: 0;
+  right: 0;
+  background-color: #ebf2fc;
+}
+.pure-element-tree-node__close.pure-element-tree-node--selected {
+  background-color: #3879d9;
+  color: #FFF;
+}
+.pure-element-tree-node__close.pure-element-tree-node--selected::before {
+  left: 0;
+  right: 0;
+  background-color: #3879d9;
+}
+.pure-element-tree-node__attr-key {
+  color: #9a4500;
+}
+.pure-element-tree-node__attr-plain {
+  color: #a894a6;
+}
+.pure-element-tree-node__attr-value {
+  color: #1a1aa6;
+}
+.pure-element-tree-node--selected {
+  color: #FFF;
+}
+.pure-element-tree-node--selected .pure-element-tree-node__arrow {
+  color: #FFF;
+}
+.pure-element-tree-node--selected .pure-element-tree-node__attr-key {
+  color: #BBB;
+}
+.pure-element-tree-node--selected .pure-element-tree-node__attr-plain {
+  color: #BBB;
+}
+.pure-element-tree-node--selected .pure-element-tree-node__attr-value {
   color: #FFF;
 }

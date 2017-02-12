@@ -1,28 +1,28 @@
 <template>
-	<div class="r-element-tree-node">
+	<div class="pure-element-tree-node">
 		<div
-			class="r-element-tree-node-open { tagOpenSelected ? 'selected' : '' } { tagOpenHovered ? 'hovered' : '' }"
+			class="pure-element-tree-node__open { tagOpenSelected ? 'pure-element-tree-node--selected' : '' } { tagOpenHovered ? 'pure-element-tree-node--hovered' : '' }"
 			on-click="{ this.onTagOpenClick() }"
 			on-mouseenter="{ this.onTagOpenMouseEnter() }"
 			on-mouseleave="{ this.onTagOpenMouseLeave() }"
 		>
-			<span class="arrow { open ? 'arrow-open' : '' } { !hasChild ? 'invisible' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe68d;</Icon></span><span class="tag">&lt;{ node.name || node.text }{#if node.attrs}{#list node.attrs as attr} <span class="attr-key">{ attr_key }</span><span class="attr-plain">="</span><span class="attr-value">{ attr }</span><span class="attr-plain">"</span>{/list}{/if}&gt;{#if !open && hasChild}...{/if}{#if !open || !hasChild}&lt;/{ node.name || node.text }&gt;{/if}</span>
+			<span class="pure-element-tree-node__arrow { open ? 'pure-element-tree-node__arrow--open' : '' } { !hasChild ? 'pure-element-tree-node__arrow--invisible' : '' }" on-click="{ this.onToggle( $event ) }"><Icon>&#xe68d;</Icon></span><span class="pure-element-tree-node__tag">&lt;{ node.name || node.text }{#if node.attrs}{#list node.attrs as attr} <span class="pure-element-tree-node__attr-key">{ attr_key }</span><span class="pure-element-tree-node__attr-plain">="</span><span class="pure-element-tree-node__attr-value">{ attr }</span><span class="pure-element-tree-node__attr-plain">"</span>{/list}{/if}&gt;{#if !open && hasChild}...{/if}{#if !open || !hasChild}&lt;/{ node.name || node.text }&gt;{/if}</span>
 		</div>
 
 		{#if hasChild && open}
-			<div class="children">
+			<div class="pure-element-tree-node__children">
 				{#list node.children as child}
 					<ElementTreeNode node="{ child }" on-select="{ this.onSelect( $event ) }" selectedNode="{ selectedNode }" selectedPosition="{ selectedPosition }"></ElementTreeNode>
 				{/list}
 			</div>
 
 			<div
-				class="r-element-tree-node-close { tagCloseSelected ? 'selected' : '' } { tagCloseHovered ? 'hovered' : '' }"
+				class="pure-element-tree-node__close { tagCloseSelected ? 'pure-element-tree-node--selected' : '' } { tagCloseHovered ? 'pure-element-tree-node--hovered' : '' }"
 				on-click="{ this.onTagCloseClick() }"
 				on-mouseenter="{ this.onTagCloseMouseEnter() }"
 				on-mouseleave="{ this.onTagCloseMouseLeave() }"
 			>
-				<span class="tag">&lt;/{ node.name || node.text }&gt;</span>
+				<span class="pure-element-tree-node__tag">&lt;/{ node.name || node.text }&gt;</span>
 			</div>
 		{/if}
 	</div>
