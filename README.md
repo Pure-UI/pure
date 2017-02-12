@@ -8,7 +8,7 @@ https://pure.js.org
 
 ## Playground
 
-https://jsfiddle.net/fengzilong/bc7rnqn5/
+[jsfiddle](https://jsfiddle.net/fengzilong/bc7rnqn5/)
 
 ## Installation
 
@@ -32,12 +32,12 @@ Regular.use( Pure );
 **Option 2**: add hot-link
 
 ```html
-<link rel="stylesheet" href="pure.css">
+<link rel="stylesheet" href="https://unpkg.com/pure-ui/dist/pure.css">
 ```
 
 ```html
-<script type="text/javascript" src="regular.js"></script>
-<script type="text/javascript" src="pure.js"></script>
+<script type="text/javascript" src="https://unpkg.com/regularjs@0.5.2/dist/regular.js"></script>
+<script type="text/javascript" src="https://unpkg.com/pure-ui/dist/pure.js"></script>
 ```
 
 ```js
