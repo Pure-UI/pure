@@ -3,20 +3,6 @@
 
 @input-prefix-cls: ~"@{pure-prefix}-input";
 
-.@{input-prefix-cls}__wrapper {
-	display: inline-block;
-}
-
-.@{input-prefix-cls}__error-message {
-	width: 100%;
-	color: #fd8282;
-	font-size: 11px;
-	background-color: #ffebeb;
-	border: solid 1px #ffebeb;
-	padding: 4px 10px;
-	box-sizing: border-box;
-}
-
 .@{input-prefix-cls} {
 	width: 100%;
 	background-color: #FFF;
@@ -29,6 +15,7 @@
 	box-sizing: border-box;
 	border: solid 1px #DDD;
 	cursor: inherit;
+	font-family: inherit;
 
 	&:focus {
 		border: solid 1px @primary-color;
@@ -75,7 +62,21 @@
 	cursor: not-allowed;
 }
 
+.@{input-prefix-cls}__wrapper {
+	display: inline-block;
+}
+
 .@{input-prefix-cls}__wrapper--block {
 	display: block;
 	width: 100%;
+}
+
+.@{input-prefix-cls}__error-message {
+	width: 100%;
+	color: #fd8282;
+	font-size: 11px;
+	background-color: #ffebeb;
+	border: solid 1px #ffebeb;
+	padding: 4px 10px;
+	box-sizing: border-box;
 }
