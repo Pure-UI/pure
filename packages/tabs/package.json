@@ -8,6 +8,6 @@
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "pure-utils": "^0.1.0"
+    "pure-helpers": "^0.1.0"
   }
 }
