@@ -15,13 +15,18 @@
     "gh-pages": "node scripts/gh-pages",
     "deploy": "npm run docs && npm run gh-pages",
     "patch": "np patch --skip-cleanup",
-    "lint": "eslint src src/**/*.rgl",
+    "lint": "eslint packages packages/**/*.rgl",
     "boot": "lerna bootstrap",
     "build": "lerna run build && lerna run example",
     "example": "lerna run example",
     "clean": "lerna clean"
   },
-  "eslintConfig": {},
+  "eslintConfig": {
+    "extends": "mo/browser",
+    "plugins": [
+      "rgl"
+    ]
+  },
   "author": "fengzilong",
   "license": "MIT",
   "devDependencies": {
@@ -39,8 +44,8 @@
     "de-indent": "^1.0.2",
     "director": "^1.2.8",
     "dom-align": "^1.4.0",
-    "eslint": "^3.8.1",
-    "eslint-config-mo": "latest",
+    "eslint": "^3.15.0",
+    "eslint-config-mo": "^0.1.0",
     "eslint-plugin-rgl": "0.0.1",
     "eventemitter2": "^2.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
