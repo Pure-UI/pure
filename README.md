@@ -1,4 +1,6 @@
-# pure [![build status][build-status-image]][build-status-url] [![npm package][npm-package-image]][npm-package-url]
+# pure
+
+[![build status][build-status-image]][build-status-url] [![npm package][npm-package-image]][npm-package-url]
 
 > elegant and lovely components
 
