@@ -1,4 +1,4 @@
-# pure [![npm package](https://img.shields.io/npm/v/pure-ui.svg?style=flat-square)](https://www.npmjs.org/package/pure-ui)
+# pure [![build status][build-status-image]][build-status-url] [![npm package][npm-package-image]][npm-package-url]
 
 > elegant and lovely components
 
@@ -58,3 +58,9 @@ Another.use( Pure );
 ## License
 
 MIT &copy; [fengzilong](https://github.com/fengzilong)
+
+[build-status-image]: https://img.shields.io/circleci/project/fengzilong/pure/master.svg?style=flat-square
+[build-status-url]: https://circleci.com/gh/fengzilong/pure
+
+[npm-package-image]: https://img.shields.io/npm/v/pure-ui.svg?style=flat-square
+[npm-package-url]: https://www.npmjs.org/package/pure-ui
