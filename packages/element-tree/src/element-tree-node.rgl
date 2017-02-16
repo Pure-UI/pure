@@ -31,7 +31,7 @@
 <script>
 	const ElementTreeNode = {
 		config() {
-			if( this.data.node && this.data.node.children ) {
+			if ( this.data.node && this.data.node.children ) {
 				this.data.open = true;
 			} else {
 				this.data.open = false;
@@ -60,7 +60,7 @@
 			}
 		},
 		onTagOpenClick() {
-			if( this.data.tagOpenSelected ) {
+			if ( this.data.tagOpenSelected ) {
 				return;
 			}
 			this.$emit( 'select', {
@@ -69,7 +69,7 @@
 			} );
 		},
 		onTagCloseClick() {
-			if( this.data.tagCloseSelected ) {
+			if ( this.data.tagCloseSelected ) {
 				return;
 			}
 			this.$emit( 'select', {

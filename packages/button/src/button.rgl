@@ -26,13 +26,13 @@
 			this.data.ripple = this.data.ripple !== false;
 		},
 		onMouseDown( e ) {
-			if( this.data.disabled ) {
+			if ( this.data.disabled ) {
 				return;
 			}
 
 			this.$emit( 'click' );
 
-			if( !this.data.ripple ) {
+			if ( !this.data.ripple ) {
 				return;
 			}
 
@@ -49,8 +49,8 @@
 			const offsetY = pageY - top - scrollY;
 
 			const $ripple = makeRipple( {
-				top: offsetY - width / 2,
-				left: offsetX - width / 2,
+				top: offsetY - ( width / 2 ),
+				left: offsetX - ( width / 2 ),
 				width: width,
 				height: width,
 			} );

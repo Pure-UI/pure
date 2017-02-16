@@ -17,6 +17,6 @@
 			if ( this.$outer && this.$outer.onOptionChange ) {
 				this.$outer.onOptionChange( this );
 			}
-		}
-	}
+		},
+	};
 </script>

@@ -7,7 +7,9 @@
 <script>
 	export default {
 		config() {
-			this.$on( 'breadcrumb-item-click', href => location.href = href );
+			this.$on( 'breadcrumb-item-click', href => {
+				location.href = href;
+			} );
 		},
 	};
 </script>

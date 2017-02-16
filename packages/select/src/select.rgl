@@ -18,7 +18,8 @@
 
 	export default {
 		component: {
-			Input, Icon
+			Input,
+			Icon,
 		},
 		config() {
 			this.data.show = false;
@@ -58,6 +59,7 @@
 			// highlight selected
 			const selected = this.data.selected;
 			this.children.forEach( v => {
+				/* eslint-disable eqeqeq */
 				if ( selected == v.data.value ) {
 					v.data.checked = true;
 					v.$update();
@@ -65,7 +67,8 @@
 					v.data.checked = false;
 					v.$update();
 				}
+				/* eslint-enable eqeqeq */
 			} );
-		}
-	}
+		},
+	};
 </script>

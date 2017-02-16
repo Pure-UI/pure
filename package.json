@@ -15,7 +15,7 @@
     "gh-pages": "node scripts/gh-pages",
     "deploy": "npm run docs && npm run gh-pages",
     "patch": "np patch --skip-cleanup",
-    "lint": "eslint packages/**/*.rgl",
+    "lint": "eslint packages/**/*.rgl --quiet",
     "boot": "lerna bootstrap",
     "build": "lerna run build && lerna run example",
     "example": "lerna run example",

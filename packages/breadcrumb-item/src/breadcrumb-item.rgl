@@ -10,7 +10,7 @@
 		onClick( href ) {
 			this.$emit( 'click', href );
 
-			if( this.data.href && this.$outer ) {
+			if ( this.data.href && this.$outer ) {
 				this.$outer.$emit( 'breadcrumb-item-click', href );
 			}
 		}

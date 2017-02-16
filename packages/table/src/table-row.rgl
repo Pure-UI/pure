@@ -20,10 +20,10 @@
 
 			if ( typeof rendered !== 'string' ) {
 				// rendered = JSON.stringify( rendered );
-				rendered = rendered + '';
+				rendered = String( rendered );
 			}
 
 			return rendered;
-		}
-	}
+		},
+	};
 </script>

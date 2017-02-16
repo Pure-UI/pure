@@ -14,8 +14,8 @@
 			target.$update();
 
 			const checkedValues = this.checkboxChildren
-				.filter(v => v.data.checked === true)
-				.map(v => v.data.value);
+				.filter( v => v.data.checked === true )
+				.map( v => v.data.value );
 
 			this.$emit( 'change', checkedValues );
 		},
@@ -23,12 +23,16 @@
 			this.checkboxChildren.push( target );
 			this.data.checked
 				.some( v => {
+					/* eslint-disable eqeqeq */
 					if ( target.data.value == v ) {
 						target.data.checked = true;
 						target.$update();
 						return true;
 					}
+					/* eslint-enable eqeqeq */
+
+					return false;
 				} );
-		}
-	}
+		},
+	};
 </script>

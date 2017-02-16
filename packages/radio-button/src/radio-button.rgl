@@ -10,12 +10,12 @@
 <script>
 	export default {
 		config() {
-			if( this.$outer && this.$outer.ping ) {
+			if ( this.$outer && this.$outer.ping ) {
 				this.$outer.ping( this );
 			}
 		},
 		onToggle() {
-			if( this.$outer && this.$outer.onRadioChange ) {
+			if ( this.$outer && this.$outer.onRadioChange ) {
 				this.$outer.onRadioChange( this );
 			}
 		},

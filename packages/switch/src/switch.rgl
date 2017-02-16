@@ -20,6 +20,6 @@
 			this.$update();
 
 			this.$emit( 'change', this.data.checked );
-		}
-	}
+		},
+	};
 </script>

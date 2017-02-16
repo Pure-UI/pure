@@ -87,12 +87,14 @@
 
 			// if selected not set, or selected and key matched
 			// use `==`, which means '1' == 1 is acceptable
+			/* eslint-disable eqeqeq */
 			if ( typeof this.data.selected === 'undefined' || this.data.selected == target.data.key ) {
 				this.data.selectedIndex = this.tabPanes.length - 1;
 				this.data.selected = target.data.key;
 				target.data.show = true;
 				target.$update();
 			}
-		}
+			/* eslint-enable eqeqeq */
+		},
 	};
 </script>

@@ -15,7 +15,7 @@
 		},
 		onSelect( v ) {
 			// ElementTree对外只暴露选中节点，不告知位置
-			if( this.data.selectedNode !== v.node ) {
+			if ( this.data.selectedNode !== v.node ) {
 				this.$emit( 'select', v.node );
 			}
 

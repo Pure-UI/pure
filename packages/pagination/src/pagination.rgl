@@ -50,11 +50,10 @@
 		computed: {
 			hasBeforeDot() {
 				const min = this.data.min || 1;
-				const max = this.data.max || 1;
 				const current = this.data.current || min;
 
 				let hasBeforeDot = false;
-				if( current - min > 3 ) {
+				if ( current - min > 3 ) {
 					hasBeforeDot = true;
 				}
 
@@ -66,7 +65,7 @@
 				const current = this.data.current || min;
 
 				let hasAfterDot = false;
-				if( max - current > 3 ) {
+				if ( max - current > 3 ) {
 					hasAfterDot = true;
 				}
 
@@ -74,12 +73,11 @@
 			},
 			min2current() {
 				const min = this.data.min || 1;
-				const max = this.data.max || 1;
 				const current = this.data.current || min;
 
 				let min2current = [];
 
-				for( let i = min; i < current; i++ ) {
+				for ( let i = min; i < current; i++ ) {
 					min2current.push( i );
 				}
 
@@ -92,12 +90,12 @@
 
 				let current2max = [];
 
-				for( let i = current + 1; i <= max; i++ ) {
+				for ( let i = current + 1; i <= max; i++ ) {
 					current2max.push( i );
 				}
 
 				return current2max;
-			}
-		}
-	}
+			},
+		},
+	};
 </script>

@@ -7,7 +7,9 @@
 <script>
 	export default {
 		init() {
-			this.$outer && this.$outer.ping && this.$outer.ping( this );
+			if ( this.$outer && this.$outer.ping ) {
+				this.$outer.ping( this );
+			}
 		}
 	};
 </script>
