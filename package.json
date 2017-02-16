@@ -16,17 +16,26 @@
     "deploy": "npm run docs && npm run gh-pages",
     "patch": "np patch --skip-cleanup",
     "lint": "eslint packages/**/*.rgl --quiet",
+    "lintcss": "stylelint packages/_theme/**/*.less",
     "boot": "lerna bootstrap",
     "build": "lerna run build && lerna run example",
     "example": "lerna run example",
     "clean": "lerna clean",
-    "test": "npm run lint"
+    "test": "npm run lint && npm run lintcss"
   },
   "eslintConfig": {
     "extends": "mo/browser",
     "plugins": [
       "rgl"
     ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": "tab",
+      "number-leading-zero": "never",
+      "function-comma-space-after": "never"
+    }
   },
   "author": "fengzilong",
   "license": "MIT",
@@ -66,6 +75,8 @@
     "pure-loader": "^1.0.2",
     "regularjs": "^0.4.4",
     "style-loader": "^0.13.1",
+    "stylelint": "^7.8.0",
+    "stylelint-config-standard": "^16.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1"
   },

@@ -5,14 +5,15 @@
 @td-prefix-cls: ~"@{pure-prefix}-td";
 
 .@{tr-prefix-cls} {
-	&:nth-child(2n), &:nth-child(2n) {
+	&:nth-child(2n),
+	&:nth-child(2n) {
 		background-color: rgba(0,0,50,.02);
 	}
 }
 
 .@{tr-prefix-cls} {
 	&:first-child .@{td-prefix-cls} {
-		border-top: none
+		border-top: none;
 	}
 
 	.@{td-prefix-cls}:first-child {

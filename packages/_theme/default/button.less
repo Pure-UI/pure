@@ -48,12 +48,12 @@
 @keyframes pureButtonRipple {
 	from {
 		opacity: 1;
-		transform: scale(0)
+		transform: scale(0);
 	}
 
 	to {
 		opacity: 0;
-		transform: scale(2.5)
+		transform: scale(2.5);
 	}
 }
 
@@ -62,12 +62,13 @@
 }
 
 .@{button-prefix-cls}--basic {
-	background-color: #FFF;
-	border: solid 1px #DDD;
+	background-color: #fff;
+	border: solid 1px #ddd;
 	color: #333;
 
-	&:hover, &:focus {
-		background-color: shade(#FFF, 3%);
+	&:hover,
+	&:focus {
+		background-color: shade(#fff,3%);
 	}
 }
 
@@ -75,8 +76,9 @@
 	background-color: @button-color;
 	color: #fff;
 
-	&:hover, &:focus {
-		background-color: shade(@button-color, 5%);
+	&:hover,
+	&:focus {
+		background-color: shade(@button-color,5%);
 	}
 }
 
@@ -88,13 +90,13 @@
 	}
 
 	&.@{button-prefix-cls}--basic {
-		background-color: #FFF;
+		background-color: #fff;
 		color: #999;
 	}
 
 	&.@{button-prefix-cls}--primary {
-		background-color: tint(@primary-color, 45%);
-		color: #FFF;
+		background-color: tint(@primary-color,45%);
+		color: #fff;
 	}
 }
 

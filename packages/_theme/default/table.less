@@ -2,10 +2,11 @@
 @import './common/color.less';
 
 @table-prefix-cls: ~"@{pure-prefix}-table";
+@table-background-color: #f9fafb;
 
 .@{table-prefix-cls} {
 	width: 100%;
-	background: #FFF;
+	background: #fff;
 	margin: 1em 0;
 	border: 1px solid rgba(34,36,38,.15);
 	box-shadow: none;
@@ -16,7 +17,7 @@
 	font-size: 1rem;
 
 	& thead tr th {
-		background: #F9FAFB;
+		background: @table-background-color;
 		text-align: inherit;
 		color: #666;
 		padding: 1em .78571429em;
@@ -34,5 +35,5 @@
 }
 
 .@{table-prefix-cls}__head {
-	background-color: #F9FAFB;
+	background-color: @table-background-color;
 }
