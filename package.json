@@ -19,7 +19,8 @@
     "boot": "lerna bootstrap",
     "build": "lerna run build && lerna run example",
     "example": "lerna run example",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "test": "npm run lint"
   },
   "eslintConfig": {
     "extends": "mo/browser",
