@@ -1,6 +1,6 @@
 module.exports = function install( name, definition ) {
 	return function ( Parent, Regular ) {
-		const { Ctor, components } = construct( definition );
+		const { Ctor, components } = construct( definition, Regular );
 
 		Object.keys( components || {} ).forEach( function ( key ) {
 			install( key, components[ key ] )( Ctor, Regular );
@@ -10,7 +10,7 @@ module.exports = function install( name, definition ) {
 	};
 };
 
-function construct( definition ) {
+function construct( definition, Regular ) {
 	const { components } = definition;
 
 	delete definition.components;

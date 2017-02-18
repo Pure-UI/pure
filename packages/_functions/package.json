@@ -1,0 +1,14 @@
+{
+  "name": "pure-functions",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name pureFunctions"
+  },
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "pure-install": "^0.1.0",
+    "pure-note": "^0.1.0"
+  }
+}

@@ -1,8 +1,12 @@
-.r-modal-mask {
+.pure-modal-mask {
 	z-index: 1;
 }
 
-.demo-icons .r-icon {
+.pure-note--fix {
+	z-index: 1;
+}
+
+.demo-icons .pure-icon {
 	font-size: 22px;
 	margin-right: 5px;
 }

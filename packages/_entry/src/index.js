@@ -1,4 +1,5 @@
 import install from 'pure-install';
+import functions from 'pure-functions';
 
 import Box from 'pure-box/src';
 import Breadcrumb from 'pure-breadcrumb/src';
@@ -65,7 +66,9 @@ export {
 	TR,
 };
 
-export default function ( Component ) {
+export default function Pure( Component ) {
+	functions( Component, Pure );
+
 	Component.use( install( 'Box', Box ) );
 	Component.use( install( 'Breadcrumb', Breadcrumb ) );
 	Component.use( install( 'BreadcrumbItem', BreadcrumbItem ) );

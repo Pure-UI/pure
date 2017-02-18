@@ -1656,7 +1656,7 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extract-text-webpack-plugin@^1.0.1:
+extract-text-webpack-plugin:
   version "1.0.1"
   resolved "https://registry.npmjs.org/extract-text-webpack-plugin/-/extract-text-webpack-plugin-1.0.1.tgz#c95bf3cbaac49dc96f1dc6e072549fbb654ccd2c"
   dependencies:
@@ -2530,13 +2530,7 @@ lerna@2.0.0-beta.32:
     signal-exit "^2.1.2"
     sync-exec "^0.6.2"
 
-less-loader@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.npmjs.org/less-loader/-/less-loader-2.2.3.tgz#b6d8f8139c8493df09d992a93a00734b08f84528"
-  dependencies:
-    loader-utils "^0.2.5"
-
-less@^2.7.1:
+less:
   version "2.7.2"
   resolved "https://registry.npmjs.org/less/-/less-2.7.2.tgz#368d6cc73e1fb03981183280918743c5dcf9b3df"
   optionalDependencies:
@@ -2548,6 +2542,12 @@ less@^2.7.1:
     promise "^7.1.1"
     request "^2.72.0"
     source-map "^0.5.3"
+
+less-loader:
+  version "2.2.3"
+  resolved "https://registry.npmjs.org/less-loader/-/less-loader-2.2.3.tgz#b6d8f8139c8493df09d992a93a00734b08f84528"
+  dependencies:
+    loader-utils "^0.2.5"
 
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
@@ -3741,9 +3741,26 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-regularjs@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.npmjs.org/regularjs/-/regularjs-0.4.4.tgz#af4b8498f65c04db73c12485e2da2e694f2dae72"
+regular-loader:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/regular-loader/-/regular-loader-0.1.4.tgz#732fe5cc8809b65ed8b30b5df159adf2410543cd"
+  dependencies:
+    autoprefixer "^6.3.6"
+    es6-promise "^3.2.1"
+    es6-templates "^0.2.2"
+    fastparse "^1.1.1"
+    hash-sum "^1.0.2"
+    loader-utils "^0.2.15"
+    lru-cache "^4.0.1"
+    object-assign "^4.1.0"
+    parse5 "^2.1.5"
+    postcss "^5.0.21"
+    postcss-selector-parser "^2.1.0"
+    source-map "^0.5.6"
+
+regularjs@0.6.0-beta.1:
+  version "0.6.0-beta.1"
+  resolved "https://registry.npmjs.org/regularjs/-/regularjs-0.6.0-beta.1.tgz#a6314d6f92c262ff87895637f5bf5dc849ebfeec"
 
 relateurl@0.2.x:
   version "0.2.7"

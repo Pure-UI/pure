@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const webpack = require( 'webpack' );
-const path = require( 'path' )
+const path = require( 'path' );
 const cwd = process.cwd();
 
 module.exports = {
@@ -10,7 +10,6 @@ module.exports = {
 	cwd: cwd,
 	output: {
 		path: './public/dist',
-		publicPath: 'dist/',
 		filename: 'app-[hash:8].js',
 		jsonpFunction: 'Q'
 	},
@@ -23,7 +22,10 @@ module.exports = {
 			{
 				test: /\.js$/,
 				loader: 'babel',
-				exclude: /node_modules/
+				exclude: /node_modules/,
+				query: {
+					presets: 'es2015'
+				}
 			},
 			{
 				test: /\.css$/,
@@ -38,7 +40,7 @@ module.exports = {
 		],
 		noParse: [ /regularjs/, /dist\/pure/ ]
 	},
-	regularjs: {
+	regular: {
 		loaders: {
 			css: ExtractTextPlugin.extract( 'css' ),
 			less: ExtractTextPlugin.extract( 'css!less' ),
@@ -62,7 +64,7 @@ module.exports = {
 			}
 		}),
 		new CopyWebpackPlugin([
-			{ from: 'dist/pure.css', to: '../pure.css' }
+			{ from: 'packages/_theme/default.css', to: '../pure.css' }
 		])
 	]
 };

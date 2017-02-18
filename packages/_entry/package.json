@@ -10,6 +10,7 @@
   "devDependencies": {
     "pure-helpers": "^0.1.0",
     "pure-install": "^0.1.0",
+    "pure-functions": "^0.1.0",
     "pure-box": "^0.1.0",
     "pure-breadcrumb": "^0.1.0",
     "pure-breadcrumb-item": "^0.1.0",

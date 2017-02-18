@@ -26,12 +26,15 @@
 	}
 }
 
-.@{note-prefix-cls}--will-transition {
+.@{note-prefix-cls}--fixed {
 	position: fixed;
 	top: 0;
 	left: 50%;
-	opacity: .8;
 	transform: translate3d(-50%,-40px,0);
+}
+
+.@{note-prefix-cls}--will-transition {
+	opacity: .8;
 	transition: transform .7s cubic-bezier(.4,0,0,1.39), opacity .7s cubic-bezier(.4,0,0,1.39);
 }
 

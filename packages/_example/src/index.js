@@ -30,6 +30,8 @@ import TR from 'pure-tr';
 import TD from 'pure-td';
 import ElementTree from 'pure-element-tree';
 
+import 'pure-theme';
+
 Regular.use( install( 'Icon', Icon ) );
 Regular.use( install( 'Button', Button ) );
 Regular.use( install( 'Input', Input ) );
