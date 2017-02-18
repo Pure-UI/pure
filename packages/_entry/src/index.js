@@ -32,6 +32,9 @@ import TD from 'pure-td/src';
 import Textarea from 'pure-textarea/src';
 import TR from 'pure-tr/src';
 
+// default theme
+import 'pure-theme';
+
 export {
 	install,
 	Box,

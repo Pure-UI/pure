@@ -1,13 +1,19 @@
 {
-  "name": "pure-entry",
-  "version": "0.1.0",
+  "name": "pure-ui",
+  "version": "0.1.9",
+  "description": "elegant and lovely components, built with regularjs",
   "main": "lib/index.js",
+  "style": "lib/index.css",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "pure --name=Pure --bundle"
+    "entry": "pure --name=Pure --bundle"
   },
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "pure-theme": "^0.1.0",
     "pure-helpers": "^0.1.0",
     "pure-install": "^0.1.0",
     "pure-functions": "^0.1.0",

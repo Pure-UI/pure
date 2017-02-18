@@ -1,11 +1,7 @@
 {
-  "name": "pure-ui",
-  "version": "0.1.9",
-  "description": "elegant and lovely components, built with regularjs",
-  "main": "dist/pure.js",
-  "files": [
-    "dist"
-  ],
+  "private": true,
+  "author": "fengzilong",
+  "license": "MIT",
   "scripts": {
     "serve": "opn http://127.0.0.1:8000/packages/_example/ && anywhere -p 8000 -s",
     "docs": "node scripts/docs && webpack --config scripts/webpack.config.site.js",
@@ -15,7 +11,7 @@
     "lint": "eslint packages/**/*.rgl --quiet",
     "lintcss": "stylelint packages/_theme/**/*.less",
     "boot": "lerna bootstrap",
-    "build": "lerna run build && lerna run example",
+    "build": "lerna run build && lerna run entry && lerna run example",
     "example": "lerna run example",
     "clean": "lerna clean",
     "test": "npm run lint && npm run lintcss"
@@ -34,8 +30,6 @@
       "function-comma-space-after": "never"
     }
   },
-  "author": "fengzilong",
-  "license": "MIT",
   "devDependencies": {
     "anywhere": "^1.4.0",
     "autoprefixer": "^6.3.7",
