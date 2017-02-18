@@ -54,17 +54,17 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin( 'app-[hash:8].css' ),
-		new HtmlWebpackPlugin({
+		new HtmlWebpackPlugin( {
 			template: 'site/_index.html',
 			filename: '../index.html',
-		}),
-		new webpack.optimize.UglifyJsPlugin({
+		} ),
+		new webpack.optimize.UglifyJsPlugin( {
 			compress: {
 				warnings: false
 			}
-		}),
-		new CopyWebpackPlugin([
-			{ from: 'packages/_theme/default.css', to: '../pure.css' }
-		])
+		} ),
+		new CopyWebpackPlugin( [
+			{ from: 'site/CNAME', to: '../' },
+		] ),
 	]
 };

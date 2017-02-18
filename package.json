@@ -8,9 +8,6 @@
   ],
   "scripts": {
     "serve": "opn http://127.0.0.1:8000/packages/_example/ && anywhere -p 8000 -s",
-    "dev": "concurrent --kill-others \"npm run watch\" \"anywhere\"",
-    "watch": "npm run dist -- -w",
-    "dist": "webpack --config scripts/webpack.config.js",
     "docs": "node scripts/docs && webpack --config scripts/webpack.config.docs.js",
     "gh-pages": "node scripts/gh-pages",
     "deploy": "npm run docs && npm run gh-pages",
