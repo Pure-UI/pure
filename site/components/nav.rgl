@@ -104,6 +104,7 @@
 
 <style lang="less" scoped>
 	.nav {
+		width: 170px;
 		color: #333;
 	}
 

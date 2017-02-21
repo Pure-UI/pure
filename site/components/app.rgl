@@ -58,24 +58,27 @@
 <style lang="less" scoped>
 	header {
 		width: 100%;
-		background: -webkit-gradient(linear,left top,right bottom,from(#689eff),to(#ffebf6));
-		padding: 0 21%;
-		height: 50px;
+		background: #FFF;
+		border-bottom: solid 1px #DDD;
+		padding: 0 10%;
+		height: 60px;
+		line-height: 60px;
 		box-sizing: border-box;
+		box-shadow: 0 1px 1px rgba(0,0,0,.08);
 
 		.logo {
-			color: #FFF;
+			color: #689eff;
 			font-size: 20px;
 			font-weight: 700;
-			line-height: 50px;
 			text-decoration: none;
 			font-family: cursive;
+			margin-left: 15px;
 		}
 	}
 
 	.wrapper {
 		display: flex;
-		width: 60%;
+		width: 80%;
 		margin: 0 auto;
 		padding: 30px 0;
 	}
