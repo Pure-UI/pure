@@ -28,13 +28,13 @@
 			this.data.doc = docs.Button;
 			this.data.mixins = mixins;
 
-			dispatcher.on('update', ( doc, name ) => {
+			dispatcher.on( 'update', ( doc, name ) => {
 				this.data.doc = doc;
 				this.data.active = name;
 				this.$update();
-			});
-		}
-	}
+			} );
+		},
+	};
 </script>
 
 <style>

@@ -57,7 +57,7 @@
 			if( this.data.deindentJs ) {
 				hljs.highlightBlock( this.$refs.j );
 			}
-		}
+		},
 	};
 </script>
 

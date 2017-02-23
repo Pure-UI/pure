@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "pure-site",
+  "author": "fengzilong <fengzilong1992@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "pure-ui": "^0.1.9",
+    "pure-theme": "^0.1.0"
+  }
+}

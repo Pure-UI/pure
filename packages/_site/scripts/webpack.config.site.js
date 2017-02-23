@@ -3,10 +3,12 @@ const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const webpack = require( 'webpack' );
 const path = require( 'path' );
+
+process.chdir( path.resolve( __dirname, '../' ) );
 const cwd = process.cwd();
 
 module.exports = {
-	entry: './site/index.js',
+	entry: './src/index.js',
 	cwd: cwd,
 	output: {
 		path: './public/dist',
@@ -49,13 +51,13 @@ module.exports = {
 	resolve: {
 		extensions: [ '', '.js', 'json', '.css', '.rgl' ],
 		alias: {
-			regularjs: path.resolve( cwd, 'node_modules/regularjs/dist/regular.min.js' )
-		}
+			regularjs: path.resolve( '../../node_modules/regularjs/dist/regular.min.js' ),
+		},
 	},
 	plugins: [
 		new ExtractTextPlugin( 'app-[hash:8].css' ),
 		new HtmlWebpackPlugin( {
-			template: 'site/_index.html',
+			template: 'src/_index.html',
 			filename: '../index.html',
 		} ),
 		new webpack.optimize.UglifyJsPlugin( {
@@ -64,7 +66,7 @@ module.exports = {
 			}
 		} ),
 		new CopyWebpackPlugin( [
-			{ from: 'site/CNAME', to: '../' },
+			{ from: 'src/CNAME', to: '../' },
 		] ),
 	]
 };

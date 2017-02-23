@@ -2,7 +2,7 @@ node_modules
 npm-debug.log
 lerna-debug.log
 /debug.log
-/public
+/packages/_site/public
 /dist
 /todo
 /packages/*/lib

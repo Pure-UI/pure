@@ -5,6 +5,8 @@ const _ = require( 'lodash' );
 const path = require( 'path' );
 const fs = require( 'fs' );
 
+process.chdir( path.resolve( __dirname, '../' ) );
+
 const cwd = process.cwd();
 const renderer = new marked.Renderer();
 var codes = {};
@@ -16,7 +18,7 @@ renderer.code = function( code, language ) {
 
 const docs = {};
 
-glob('**/*.md', {
+glob( '**/*.md', {
 	cwd: path.resolve( cwd, 'docs' )
 }, function( err, files ) {
 	if( err ) return;
@@ -95,6 +97,6 @@ glob('**/*.md', {
 
 	output += jscodes;
 
-	fs.writeFileSync( 'site/docs.json', JSON.stringify( docs, 0, 4 ), 'utf-8' );
-	fs.writeFileSync( 'site/docs-js.js', output, 'utf-8' );
-});
+	fs.writeFileSync( 'src/docs.json', JSON.stringify( docs, 0, 4 ), 'utf-8' );
+	fs.writeFileSync( 'src/docs-js.js', output, 'utf-8' );
+} );

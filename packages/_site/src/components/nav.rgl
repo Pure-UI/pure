@@ -1,6 +1,6 @@
 <template>
 	<nav class="nav">
-		<div class="title">basic</div>
+		<div class="title">BASIC</div>
 		<ul>
 			<li>
 				<a class="{ active === 'Button' ? 'active' : '' }" href="#/Button">Button</a>
@@ -15,7 +15,7 @@
 				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
 			</li> -->
 		</ul>
-		<div class="title">navigation</div>
+		<div class="title">NAVIGATION</div>
 		<ul>
 			<li>
 				<a class="{ active === 'Pagination' ? 'active' : '' }" href="#/Pagination">Pagination</a>
@@ -27,7 +27,7 @@
 				<a class="{ active === 'Tabs' ? 'active' : '' }" href="#/Tabs">Tabs</a>
 			</li>
 		</ul>
-		<div class="title">form</div>
+		<div class="title">FORM</div>
 		<ul>
 			<li>
 				<a class="{ active === 'Input' ? 'active' : '' }" href="#/Input">Input</a>
@@ -63,7 +63,7 @@
 				<a class="{ active === 'Progress' ? 'active' : '' }" href="#/Progress">Progress</a>
 			</li> -->
 		</ul>
-		<div class="title">container</div>
+		<div class="title">CONTAINER</div>
 		<ul>
 			<li>
 				<a class="{ active === 'Modal' ? 'active' : '' }" href="#/Modal">Modal</a>
@@ -72,13 +72,13 @@
 				<a class="{ active === 'Box' ? 'active' : '' }" href="#/Box">Box</a>
 			</li>
 		</ul>
-		<div class="title">tree</div>
+		<div class="title">TREE</div>
 		<ul>
 			<li>
 				<a class="{ active === 'ElementTree' ? 'active' : '' }" href="#/ElementTree">ElementTree</a>
 			</li>
 		</ul>
-		<div class="title">message</div>
+		<div class="title">MESSAGE</div>
 		<ul>
 			<!-- <li>
 				<a class="{ active === 'Tooltip' ? 'active' : '' }" href="#/Tooltip">Tooltip</a>
@@ -87,7 +87,7 @@
 				<a class="{ active === 'Note' ? 'active' : '' }" href="#/Note">Note</a>
 			</li>
 		</ul>
-		<div class="title">time</div>
+		<div class="title">TIME</div>
 		<ul>
 			<li>
 				<a class="{ active === 'Countdown' ? 'active' : '' }" href="#/Countdown">Countdown</a>
@@ -98,8 +98,8 @@
 
 <script>
 	export default {
-		name: 'Nav'
-	}
+		name: 'Nav',
+	};
 </script>
 
 <style lang="less" scoped>
