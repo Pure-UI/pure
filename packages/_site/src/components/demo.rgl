@@ -23,6 +23,8 @@
 </template>
 
 <script>
+	/* global hljs */
+
 	import deindent from 'de-indent';
 
 	export default {
@@ -30,31 +32,31 @@
 		config() {
 			const hasOwn = Object.prototype.hasOwnProperty;
 
-			if( this.data.mixin ) {
-				if( this.data.mixin.config ) {
+			if ( this.data.mixin ) {
+				if ( this.data.mixin.config ) {
 					this.data.mixin.config.call( this );
 				}
 
-				for( let m in this.data.mixin ) {
-					if( !hasOwn.call( this, m ) ) {
+				for ( let m in this.data.mixin ) {
+					if ( !hasOwn.call( this, m ) ) {
 						this[ m ] = this.data.mixin[ m ];
 					}
 				}
 			}
 
-			if( this.data.rgl ) {
+			if ( this.data.rgl ) {
 				this.data.deindentRgl = deindent( this.data.rgl ).trim();
 			}
 
-			if( this.data.js ) {
+			if ( this.data.js ) {
 				this.data.deindentJs = deindent( this.data.js ).trim();
 			}
 		},
 		init() {
-			if( this.data.deindentRgl ) {
+			if ( this.data.deindentRgl ) {
 				hljs.highlightBlock( this.$refs.r );
 			}
-			if( this.data.deindentJs ) {
+			if ( this.data.deindentJs ) {
 				hljs.highlightBlock( this.$refs.j );
 			}
 		},
