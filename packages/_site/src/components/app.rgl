@@ -61,7 +61,7 @@
 <style lang="less" scoped>
 	.wrapper {
 		display: flex;
-		width: 80%;
+		width: 70%;
 		margin: 0 auto;
 		padding: 30px 0;
 	}
