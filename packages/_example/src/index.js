@@ -71,6 +71,7 @@ const Demo = Regular.extend( {
 		<Button primary disabled sm>press me</Button>
 		<Button disabled sm>press me</Button>
 		<Button>press me</Button>
+		<Button loading primary sm>press me</Button>
 		<Button loading sm>press me</Button>
 
 		<Input value="content"></Input>

@@ -7,12 +7,14 @@
   url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+.pure-icon {
   font-family:"iconfont" !important;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-github:before { content: "\e69f"; }
 
 .icon-category:before { content: "\e601"; }
 

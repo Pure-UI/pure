@@ -7,7 +7,7 @@
 		<div ref="ripples"></div>
 		<div class="pure-button__text">
 			{#if loading}
-			<Icon spin>&#xe602;</Icon>
+			<Icon opacity=".8" size="11px" spin>&#xe602;</Icon>
 			{/if}
 			{#inc this.$body}
 		</div>
