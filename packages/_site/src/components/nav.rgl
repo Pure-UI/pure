@@ -97,9 +97,7 @@
 </template>
 
 <script>
-	export default {
-		name: 'Nav',
-	};
+	export default {};
 </script>
 
 <style lang="less" scoped>

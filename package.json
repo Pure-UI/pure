@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "opn http://127.0.0.1:8000/packages/_example/ && anywhere -p 8000 -s",
     "site": "node packages/_site/scripts/docs && webpack --config packages/_site/scripts/webpack.config.site.js",
+    "site:watch": "webpack --config packages/_site/scripts/webpack.config.site.js -w",
     "gh-pages": "node packages/_site/scripts/gh-pages",
     "deploy": "npm run site && npm run gh-pages",
     "patch": "np patch --skip-cleanup",

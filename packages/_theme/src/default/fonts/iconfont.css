@@ -18,7 +18,11 @@
 
 .icon-category:before { content: "\e601"; }
 
+.icon-apaint:before { content: "\e66e"; }
+
 .icon-home:before { content: "\e629"; }
+
+.icon-category1:before { content: "\e613"; }
 
 .icon-down:before { content: "\e68d"; }
 

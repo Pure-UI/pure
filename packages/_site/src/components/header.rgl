@@ -1,0 +1,85 @@
+<template>
+	<header class="header">
+		<a class="logo" href="#/">Pure</a>
+		<ul class="links">
+			<li class="link link--active">
+				<a href="#/">
+					<Icon size="20px">&#xe66e;</Icon>
+					组件
+				</a>
+			</li>
+			<li class="link">
+				<a href="https://github.com/fengzilong/pure" target="_blank">
+					<Icon size="20px">&#xe69f;</Icon>
+					Github
+				</a>
+			</li>
+		</ul>
+	</header>
+</template>
+
+<script>
+	export default {};
+</script>
+
+<style lang="less" scoped>
+	.header {
+		display: flex;
+		width: 100%;
+		background: #FFF;
+		border-bottom: solid 1px #DDD;
+		padding: 0 10%;
+		height: 60px;
+		line-height: 60px;
+		box-sizing: border-box;
+		box-shadow: 0 1px 1px rgba(0,0,0,.08);
+
+		.logo {
+			display: block;
+			color: #689eff;
+			font-size: 20px;
+			font-weight: 700;
+			text-decoration: none;
+			font-family: cursive;
+			margin-left: 15px;
+		}
+
+		.links,
+		.link {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.links {
+			display: flex;
+			justify-content: flex-end;
+			flex: 1;
+			font-size: 14px;
+		}
+
+		.link {
+			display: flex;
+			align-items: stretch;
+
+			a {
+				display: block;
+				text-decoration: none;
+				color: #333;
+				padding: 0 14px 0 6px;
+
+				&:hover {
+					border-bottom: solid 2px #689eff;
+					color: #689eff;
+				}
+			}
+		}
+
+		.link--active {
+			a {
+				border-bottom: solid 2px #689eff;
+				color: #689eff;
+			}
+		}
+	}
+</style>
