@@ -15,7 +15,7 @@ https://pure.js.org
 ## Installation
 
 ```bash
-$ npm install pure-ui
+$ npm install pure-ui --save
 ```
 
 ## Usage
