@@ -66,7 +66,7 @@
 	.code-box {
 		.lang-html, .lang-js {
 			position: relative;
-			background-color: #F7FAFF;
+			background-color: #fafafa;
 
 			&::after {
 				position: absolute;
