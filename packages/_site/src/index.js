@@ -16,6 +16,8 @@ new App().$inject( document.getElementById( 'app' ) );
 
 const router = new Router();
 router.on( '/:component', component => {
+	component = component || '';
+	document.title = ( component ? component + ' - ' : '' ) + 'Pure Docs';
 	dispatcher.emit( 'update', docs[ component ], component );
 } );
 router.init();

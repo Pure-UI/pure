@@ -5,12 +5,12 @@ order: 1
 in programtic way
 
 ```html
-<Button on-click="{ this.onShowNote() }">Show Note</Button>
+<Button primary on-click="{ this.onShowMessage() }">Show Message</Button>
 ```
 
 ```js
 {
-	onShowNote: function() {
+	onShowMessage: function() {
 		var i = Math.floor( Math.random() * 10 % 4 );
 		var types = 'info success warning error'.split( ' ' );
 		var type = types[ i ];

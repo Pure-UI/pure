@@ -9,7 +9,7 @@
 	color: #bfcbfa;
 }
 .hljs-name {
-	color: #7ba8fe;
+	color: #4c5c77;
 }
 .hljs-attr, .hljs-keyword {
 	color: #e550aa;
@@ -21,7 +21,7 @@
 	color: #8cabcf;
 }
 .hljs-title,.hljs-section,.hljs-built_in,.hljs-literal,.hljs-type,.hljs-addition,.hljs-quote,.hljs-selector-id,.hljs-selector-class {
-	color: #7ba8fe;
+	color: #4c5c77;
 }
 .hljs-meta,.hljs-subst,.hljs-symbol,.hljs-regexp,.hljs-attribute,.hljs-deletion,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-bullet {
 	color: #ed55b1;

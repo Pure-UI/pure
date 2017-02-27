@@ -2,6 +2,7 @@
 @import './common/color.less';
 
 @spinner-prefix-cls: ~"@{pure-prefix}-spinner";
+@spinner-color: tint(@primary-color,10%);
 
 .@{spinner-prefix-cls} {
 	display: inline-block;
@@ -21,17 +22,17 @@
 
 .@{spinner-prefix-cls}__dot-1 {
 	animation-delay: -1.5s;
-	background-color: rgba(104,158,255,.2);
+	background-color: @spinner-color;
 }
 
 .@{spinner-prefix-cls}__dot-2 {
 	animation-delay: -1.35s;
-	background-color: rgba(104,158,255,.2);
+	background-color: @spinner-color;
 }
 
 .@{spinner-prefix-cls}__dot-3 {
 	animation-delay: -1.2s;
-	background-color: rgba(104,158,255,.2);
+	background-color: @spinner-color;
 }
 
 @keyframes pureSpinnerDotPluse {

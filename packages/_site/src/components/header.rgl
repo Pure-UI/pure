@@ -23,6 +23,8 @@
 </script>
 
 <style lang="less" scoped>
+	@import '../../../_theme/src/default/common/color.less';
+
 	.header {
 		display: flex;
 		width: 100%;
@@ -36,7 +38,7 @@
 
 		.logo {
 			display: block;
-			color: #689eff;
+			color: @primary-color;
 			font-size: 20px;
 			font-weight: 700;
 			text-decoration: none;
@@ -66,19 +68,19 @@
 				display: block;
 				text-decoration: none;
 				color: #333;
-				padding: 0 14px 0 6px;
+				padding: 0 21px 0 13px;
 
 				&:hover {
-					border-bottom: solid 2px #689eff;
-					color: #689eff;
+					border-bottom: solid 2px @primary-color;
+					color: @primary-color;
 				}
 			}
 		}
 
 		.link--active {
 			a {
-				border-bottom: solid 2px #689eff;
-				color: #689eff;
+				border-bottom: solid 2px @primary-color;
+				color: @primary-color;
 			}
 		}
 	}

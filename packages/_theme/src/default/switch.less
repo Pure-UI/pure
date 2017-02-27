@@ -52,7 +52,7 @@
 }
 
 .@{switch-prefix-cls}--checked {
-	background-color: #bbd3ff;
+	background-color: tint(@primary-color,50%);
 
 	.@{switch-prefix-cls}__circle-mask {
 		background-color: @primary-color;
@@ -62,6 +62,6 @@
 
 	.@{switch-prefix-cls}__block {
 		transform: translate3d(@switch-tracker-width - @switch-block-size,0,0);
-		background-color: #689eff;
+		background-color: @primary-color;
 	}
 }

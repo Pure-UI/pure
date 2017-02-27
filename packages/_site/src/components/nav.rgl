@@ -101,6 +101,10 @@
 </script>
 
 <style lang="less" scoped>
+	@import '../../../_theme/src/default/common/color.less';
+
+	@hover-bgcolor: fade(tint(@primary-color,80%),30%);
+
 	.nav {
 		width: 170px;
 		color: #333;
@@ -121,16 +125,18 @@
 	a {
 		display: block;
 		padding: 10px 25px;
+		min-width: 170px;
 		color: #333;
 		text-decoration: none;
+		box-sizing: border-box;
 
 		&:hover {
-			background-color: #edf3ff;
+			background-color: @hover-bgcolor;
 		}
 	}
 
 	.active {
-		color: #689eff;
-		background-color: #edf3ff;
+		color: @primary-color;
+		background-color: @hover-bgcolor;
 	}
 </style>
