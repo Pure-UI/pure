@@ -1,5 +1,5 @@
 <template>
-	<textarea ref="textarea" class="pure-textarea" value="{ value }"></textarea>
+	<textarea ref="textarea" class="pure-textarea { block ? 'pure-textarea--block' : '' }" value="{ value }"></textarea>
 </template>
 
 <script>

@@ -105,6 +105,7 @@ const Demo = Regular.extend( {
 		</Breadcrumb>
 
 		<Textarea value="content" auto></Textarea>
+		<Textarea value="content" auto block></Textarea>
 
 		<CheckboxGroup checked="{ [ 1, 2 ] }">
 			<Checkbox value="{ 1 }">Option 1</Checkbox>
