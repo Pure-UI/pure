@@ -328,6 +328,33 @@
             "id": 24
         }
     ],
+    "Message": [
+        {
+            "path": "Message/basic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nBasic\r\n\r\n```html\r\n<Message type=\"info\">info</Message>\r\n<Message type=\"success\">success</Message>\r\n<Message type=\"warning\">warning</Message>\r\n<Message type=\"error\">error</Message>\r\n```\r\n",
+            "html": "<p>Basic</p>\n",
+            "code": {
+                "html": "<Message type=\"info\">info</Message>\n<Message type=\"success\">success</Message>\n<Message type=\"warning\">warning</Message>\n<Message type=\"error\">error</Message>"
+            },
+            "id": 26
+        },
+        {
+            "path": "Message/programtic.md",
+            "attrs": {
+                "order": 1
+            },
+            "source": "\r\nin programtic way\r\n\r\n```html\r\n<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>\r\n```\r\n\r\n```js\r\n{\r\n\tonShowNote: function() {\r\n\t\tvar i = Math.floor( Math.random() * 10 % 4 );\r\n\t\tvar types = 'info success warning error'.split( ' ' );\r\n\t\tvar type = types[ i ];\r\n\r\n\t\tPure.message( 'Hey there ;)', type );\r\n\t}\r\n}\r\n```\r\n",
+            "html": "<p>in programtic way</p>\n",
+            "code": {
+                "html": "<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>",
+                "js": "{\n    onShowNote: function() {\n        var i = Math.floor( Math.random() * 10 % 4 );\n        var types = 'info success warning error'.split( ' ' );\n        var type = types[ i ];\n\n        Pure.message( 'Hey there ;)', type );\n    }\n}"
+            },
+            "id": 27
+        }
+    ],
     "Modal": [
         {
             "path": "Modal/basic.md",
@@ -338,33 +365,6 @@
             "html": "<p>Basic</p>\n<p>ProTip: Modal doesn&#39;t have z-index by default, set it on your own</p>\n",
             "code": {
                 "html": "<Button primary on-click=\"{ showModal = true }\">Open Modal</Button>\n{#if showModal}\n<Modal\n    title=\"Modal Title\"\n    ok-text=\"Confirm\"\n    cancel-text=\"Cancel\"\n    on-cancel=\"{ showModal = false }\"\n    on-ok=\"{ showModal = false }\"\n>\n    <div class=\"modal-example-center\">\n        <img src=\"http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif\">\n    </div>\n</Modal>\n{/if}"
-            },
-            "id": 26
-        }
-    ],
-    "Note": [
-        {
-            "path": "Note/basic.md",
-            "attrs": {
-                "order": 1
-            },
-            "source": "\r\nBasic\r\n\r\n```html\r\n<Note type=\"info\">info</Note>\r\n<Note type=\"success\">success</Note>\r\n<Note type=\"warning\">warning</Note>\r\n<Note type=\"error\">error</Note>\r\n```\r\n",
-            "html": "<p>Basic</p>\n",
-            "code": {
-                "html": "<Note type=\"info\">info</Note>\n<Note type=\"success\">success</Note>\n<Note type=\"warning\">warning</Note>\n<Note type=\"error\">error</Note>"
-            },
-            "id": 27
-        },
-        {
-            "path": "Note/programtic.md",
-            "attrs": {
-                "order": 1
-            },
-            "source": "\r\nAlso use `Note` in programtic way\r\n\r\n```html\r\n<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>\r\n```\r\n\r\n```js\r\n{\r\n\tonShowNote: function() {\r\n\t\tvar i = Math.floor( Math.random() * 10 % 4 );\r\n\t\tvar types = 'info success warning error'.split(' ');\r\n\t\tvar type = types[ i ];\r\n\r\n\t\tPure.note( \"Hey there ;)\", type );\r\n\t}\r\n}\r\n```\r\n",
-            "html": "<p>Also use <code>Note</code> in programtic way</p>\n",
-            "code": {
-                "html": "<Button on-click=\"{ this.onShowNote() }\">Show Note</Button>",
-                "js": "{\n    onShowNote: function() {\n        var i = Math.floor( Math.random() * 10 % 4 );\n        var types = 'info success warning error'.split(' ');\n        var type = types[ i ];\n\n        Pure.note( \"Hey there ;)\", type );\n    }\n}"
             },
             "id": 28
         }
@@ -622,10 +622,10 @@
             "attrs": {
                 "order": 2
             },
-            "source": "\nBlock\n\n```html\n<Textarea block value=\"some content...\"></Textarea>\n```\n",
+            "source": "\nBlock\n\n```html\n<Textarea value=\"some content...\" block></Textarea>\n```\n",
             "html": "<p>Block</p>\n",
             "code": {
-                "html": "<Textarea block value=\"some content...\"></Textarea>"
+                "html": "<Textarea value=\"some content...\" block></Textarea>"
             },
             "id": 49
         },

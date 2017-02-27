@@ -14,7 +14,7 @@ export default {
 	'/Form': () => dispatcher.emit( 'update', docs.Form, 'Form' ),
 	'/Spinner': () => dispatcher.emit( 'update', docs.Spinner, 'Spinner' ),
 	'/Icon': () => dispatcher.emit( 'update', docs.Icon, 'Icon' ),
-	'/Note': () => dispatcher.emit( 'update', docs.Note, 'Note' ),
+	'/Message': () => dispatcher.emit( 'update', docs.Message, 'Message' ),
 	'/Countdown': () => dispatcher.emit( 'update', docs.Countdown, 'Countdown' ),
 	'/Table': () => dispatcher.emit( 'update', docs.Table, 'Table' ),
 	'/Breadcrumb': () => dispatcher.emit( 'update', docs.Breadcrumb, 'Breadcrumb' ),
