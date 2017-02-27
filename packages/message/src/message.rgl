@@ -1,7 +1,7 @@
 <template>
-	<div class="pure-note">
-		<div class="pure-note__inner">
-			<div class="pure-note__icon" style="color: { color };"><Icon>{ icon }</Icon></div>
+	<div class="pure-message">
+		<div class="pure-message__inner">
+			<div class="pure-message__icon" style="color: { color };"><Icon>{ icon }</Icon></div>
 			<div>
 				{#inc this.$body}
 			</div>

@@ -25,7 +25,7 @@ import FormControl from 'pure-form-control';
 import Select from 'pure-select';
 import Option from 'pure-option';
 import Pagination from 'pure-pagination';
-import Note from 'pure-note';
+import Message from 'pure-message';
 import Modal from 'pure-modal';
 import Table from 'pure-table';
 import TR from 'pure-tr';
@@ -58,7 +58,7 @@ Regular.use( install( 'FormControl', FormControl ) );
 Regular.use( install( 'Select', Select ) );
 Regular.use( install( 'Option', Option ) );
 Regular.use( install( 'Pagination', Pagination ) );
-Regular.use( install( 'Note', Note ) );
+Regular.use( install( 'Message', Message ) );
 Regular.use( install( 'Modal', Modal ) );
 Regular.use( install( 'Table', Table ) );
 Regular.use( install( 'TR', TR ) );
@@ -224,10 +224,10 @@ const Demo = Regular.extend( {
 		></Pagination>
 		Current: { current || 50 }
 
-		<Note type="info">info</Note>
-		<Note type="success">success</Note>
-		<Note type="warning">warning</Note>
-		<Note type="error">error</Note>
+		<Message type="info">info</Message>
+		<Message type="success">success</Message>
+		<Message type="warning">warning</Message>
+		<Message type="error">error</Message>
 
 		<Button primary on-click="{ showModal = true }">Open Modal</Button>
 		{#if showModal}
@@ -297,7 +297,7 @@ const Demo = Regular.extend( {
 				key: 'other',
 				label: 'Other',
 				render: function( v, row ) {
-					return `<Note type="info">Hi</Note>`;
+					return `<Message type="info">Hi</Message>`;
 				}
 			}
 		];
@@ -395,7 +395,7 @@ const Demo = Regular.extend( {
 	},
 	onClick( v ) {
 		console.log( 'you clicked ', v.name );
-		$.note( v.name, 'success' );
+		$.message( v.name, 'success' );
 	},
 } );
 

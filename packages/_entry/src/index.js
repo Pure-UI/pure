@@ -16,7 +16,7 @@ import FormLabel from 'pure-form-label/src';
 import Icon from 'pure-icon/src';
 import Input from 'pure-input/src';
 import Modal from 'pure-modal/src';
-import Note from 'pure-note/src';
+import Message from 'pure-message/src';
 import Option from 'pure-option/src';
 import Pagination from 'pure-pagination/src';
 import Radio from 'pure-radio/src';
@@ -52,7 +52,7 @@ export {
 	Icon,
 	Input,
 	Modal,
-	Note,
+	Message,
 	Option,
 	Pagination,
 	Radio,
@@ -87,7 +87,7 @@ export default function Pure( Component ) {
 	Component.use( install( 'Icon', Icon ) );
 	Component.use( install( 'Input', Input ) );
 	Component.use( install( 'Modal', Modal ) );
-	Component.use( install( 'Note', Note ) );
+	Component.use( install( 'Message', Message ) );
 	Component.use( install( 'Option', Option ) );
 	Component.use( install( 'Pagination', Pagination ) );
 	Component.use( install( 'Radio', Radio ) );

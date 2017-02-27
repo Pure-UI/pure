@@ -84,7 +84,7 @@
 				<a class="{ active === 'Tooltip' ? 'active' : '' }" href="#/Tooltip">Tooltip</a>
 			</li> -->
 			<li>
-				<a class="{ active === 'Note' ? 'active' : '' }" href="#/Note">Note</a>
+				<a class="{ active === 'Message' ? 'active' : '' }" href="#/Message">Message</a>
 			</li>
 		</ul>
 		<div class="title">TIME</div>

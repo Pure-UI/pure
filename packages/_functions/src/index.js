@@ -1,31 +1,31 @@
 import install from 'pure-install';
-import Note from 'pure-note';
+import Message from 'pure-message';
 
 export default function ( Component, target = {} ) {
 	Component.use( function ( Component, Regular ) {
-		const AnimNote = Regular.extend( {
+		const AnimMessage = Regular.extend( {
 			template: `
-				{#if showNote}
-					<div class="pure-note--fixed pure-note--will-transition" r-animation="on: enter;wait: 10;class: pure-note--in, 3;wait: { timeout };class: pure-note--out, 3;emit: remove;">
-						<Note type="{ type }">{ content }</Note>
+				{#if showMessage}
+					<div class="pure-message--fixed pure-message--will-transition" r-animation="on: enter;wait: 10;class: pure-message--in, 3;wait: { timeout };class: pure-message--out, 3;emit: remove;">
+						<Message type="{ type }">{ content }</Message>
 					</div>
 				{/if}
 			`,
 			config() {
 				this.data.timeout = this.data.timeout || 2000;
-				this.data.showNote = true;
+				this.data.showMessage = true;
 				this.$on( 'remove', () => {
-					this.data.showNote = false;
+					this.data.showMessage = false;
 					this.$update();
 				} );
 			},
 		} );
 
-		AnimNote.use( install( 'Note', Note ) );
+		AnimMessage.use( install( 'Message', Message ) );
 
 		Object.assign( target, {
-			note( content, type, timeout ) {
-				new AnimNote( {
+			message( content, type, timeout ) {
+				new AnimMessage( {
 					data: {
 						content,
 						type,
