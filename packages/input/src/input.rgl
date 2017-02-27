@@ -1,7 +1,7 @@
 <template>
 	<div class="pure-input__wrapper { block ? 'pure-input__wrapper--block' : '' }">
 		<input
-			class="pure-input { error ? 'pure-input--error' : '' } { disabled ? 'pure-input--disabled' : '' } { readonly ? 'pure-input--readonly' : '' } { round ? 'pure-input--round' : '' } { transparent ? 'pure-input--transparent' : '' } { sm ? 'pure-input--sm' : '' }"
+			class="pure-input { error ? 'pure-input--error' : '' } { disabled ? 'pure-input--disabled' : '' } { readonly ? 'pure-input--readonly' : '' } { block ? 'pure-input--block' : '' } { round ? 'pure-input--round' : '' } { transparent ? 'pure-input--transparent' : '' } { sm ? 'pure-input--sm' : '' }"
 			type="{ type || 'text' }"
 			value="{ value }"
 			disabled="{ disabled }"
