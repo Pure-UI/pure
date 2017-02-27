@@ -68,7 +68,7 @@
 				display: block;
 				text-decoration: none;
 				color: #333;
-				padding: 0 21px 0 13px;
+				padding: 0 14px 0 5px;
 
 				&:hover {
 					border-bottom: solid 2px @primary-color;
