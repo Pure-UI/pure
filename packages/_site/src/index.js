@@ -1,6 +1,7 @@
 import { Router } from 'director';
+import docs from './docs.json';
+import dispatcher from './dispatcher';
 import App from './components/app';
-import routes from './routes';
 import Regular from 'regularjs';
 import Pure from 'pure-ui';
 
@@ -13,5 +14,8 @@ window.Pure = Pure;
 
 new App().$inject( document.getElementById( 'app' ) );
 
-const router = Router( routes );
+const router = new Router();
+router.on( '/:component', component => {
+	dispatcher.emit( 'update', docs[ component ], component );
+} );
 router.init();

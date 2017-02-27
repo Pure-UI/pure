@@ -49,7 +49,7 @@ Having some event to handle? use raw TR and TD instead
 		]
 	},
 	onClick: function( v ) {
-		Pure.note( 'you clicked ' + v.name, 'info', 1000 );
+		Pure.message( 'you clicked ' + v.name, 'info', 1000 );
 	}
 }
 ```
