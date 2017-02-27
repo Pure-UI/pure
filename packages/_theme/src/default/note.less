@@ -35,15 +35,15 @@
 
 .@{note-prefix-cls}--will-transition {
 	opacity: .8;
-	transition: transform .7s cubic-bezier(.4,0,0,1.39), opacity .7s cubic-bezier(.4,0,0,1.39);
+	transition: transform .3s cubic-bezier(.4,0,0,1), opacity .7s cubic-bezier(.4,0,0,1);
 }
 
 .@{note-prefix-cls}--in {
-	transform: translate3d(-50%,90px,0);
+	transform: translate3d(-50%,15px,0);
 	opacity: 1;
 }
 
 .@{note-prefix-cls}--out {
-	transform: translate3d(-50%,-40px,0);
-	opacity: .6;
+	transform: translate3d(-50%,10px,0);
+	opacity: 0;
 }
