@@ -39,6 +39,7 @@
     "pure-td": "^0.1.0",
     "pure-element-tree": "^0.1.0",
     "pure-install": "^0.1.0",
-    "pure-theme": "^0.1.0"
+    "pure-theme": "^0.1.0",
+    "pure-functions": "^0.1.0"
   }
 }

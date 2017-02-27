@@ -1,4 +1,6 @@
 import install from 'pure-install';
+import functions from 'pure-functions'
+
 import Icon from 'pure-icon';
 import Button from 'pure-button';
 import Input from 'pure-input';
@@ -62,6 +64,10 @@ Regular.use( install( 'Table', Table ) );
 Regular.use( install( 'TR', TR ) );
 Regular.use( install( 'TD', TD ) );
 Regular.use( install( 'ElementTree', ElementTree ) );
+
+const $ = {};
+
+functions( Regular, $ );
 
 const Demo = Regular.extend( {
 	template: `
@@ -388,6 +394,7 @@ const Demo = Regular.extend( {
 	},
 	onClick( v ) {
 		console.log( 'you clicked ', v.name );
+		$.note( v.name, 'success' );
 	},
 } );
 
