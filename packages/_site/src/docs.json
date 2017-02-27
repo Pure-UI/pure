@@ -606,12 +606,24 @@
             "id": 47
         },
         {
-            "path": "Textarea/autosize.md",
+            "path": "Textarea/block.md",
             "attrs": {
                 "order": 2
             },
-            "source": "\r\nAutosize\r\n\r\nAdd `auto`, `autosize` or `autoresize` to make Textarea adjust height automatically to fit the content\r\n\r\n```html\r\n<Textarea value=\"some content...\" auto></Textarea>\r\n```\r\n",
-            "html": "<p>Autosize</p>\n<p>Add <code>auto</code>, <code>autosize</code> or <code>autoresize</code> to make Textarea adjust height automatically to fit the content</p>\n",
+            "source": "\nBlock\n\n```html\n<Textarea block value=\"some content...\"></Textarea>\n```\n",
+            "html": "<p>Block</p>\n",
+            "code": {
+                "html": "<Textarea block value=\"some content...\"></Textarea>"
+            },
+            "id": 48
+        },
+        {
+            "path": "Textarea/autosize.md",
+            "attrs": {
+                "order": 3
+            },
+            "source": "\r\nAutosize\r\n\r\nuse `auto`, `autosize` or `autoresize` property to make Textarea adjust height automatically to fit its content\r\n\r\n```html\r\n<Textarea value=\"some content...\" auto></Textarea>\r\n```\r\n",
+            "html": "<p>Autosize</p>\n<p>use <code>auto</code>, <code>autosize</code> or <code>autoresize</code> property to make Textarea adjust height automatically to fit its content</p>\n",
             "code": {
                 "html": "<Textarea value=\"some content...\" auto></Textarea>"
             },
