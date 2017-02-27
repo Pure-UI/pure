@@ -5,13 +5,13 @@
 			<li class="link link--active">
 				<a href="#/">
 					<Icon size="20px">&#xe66e;</Icon>
-					组件
+					Components
 				</a>
 			</li>
 			<li class="link">
 				<a href="https://github.com/fengzilong/pure" target="_blank">
 					<Icon size="20px">&#xe69f;</Icon>
-					Github
+					GitHub
 				</a>
 			</li>
 		</ul>
