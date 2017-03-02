@@ -2,10 +2,10 @@
 order: 3
 ---
 
-Vertical
+Stacked
 
 ```html
-<Form v>
+<Form stacked>
 	<FormItem>
 		<FormLabel>Nickname</FormLabel>
 		<FormControl>
