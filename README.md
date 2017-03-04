@@ -61,7 +61,7 @@ Another.use( Pure );
 
 ## Contributing
 
-Before you start opening an issue or working on your pull request, please read [CONTRIBUTING.md](CONTRIBUTING.md) first
+Every contribution is appreciated! But before you start working on your pull request, please read [CONTRIBUTING.md](CONTRIBUTING.md) first.There are some guidelines and tips you may want to know :)
 
 ## License
 
