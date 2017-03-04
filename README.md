@@ -1,6 +1,8 @@
 # pure
 
-[![build status][build-status-image]][build-status-url] [![npm package][npm-package-image]][npm-package-url]
+[![build status][build-status-image]][build-status-url]
+[![npm package][npm-package-image]][npm-package-url]
+[![license][license-image]][license-url]
 
 > elegant and lovely components
 
@@ -10,7 +12,7 @@ https://pure.js.org
 
 ## Playground
 
-[jsfiddle](https://jsfiddle.net/fengzilong/bc7rnqn5/)
+[JSFiddle](https://jsfiddle.net/fengzilong/bc7rnqn5/)
 
 ## Installation
 
@@ -57,12 +59,19 @@ Another.use( Pure );
 
 [pure.js](https://unpkg.com/pure-ui/dist/pure.js) | [pure.css](https://unpkg.com/pure-ui/dist/pure.css)
 
+## Contributing
+
+Before you start opening an issue or working on your pull request, please read [CONTRIBUTING.md](CONTRIBUTING.md) first
+
 ## License
 
-MIT &copy; [fengzilong](https://github.com/fengzilong)
+MIT
 
 [build-status-image]: https://img.shields.io/circleci/project/fengzilong/pure/master.svg?style=flat-square
 [build-status-url]: https://circleci.com/gh/fengzilong/pure
 
 [npm-package-image]: https://img.shields.io/npm/v/pure-ui.svg?style=flat-square
 [npm-package-url]: https://www.npmjs.org/package/pure-ui
+
+[license-image]: https://img.shields.io/badge/license-MIT-000000.svg?style=flat-square
+[license-url]: LICENSE
