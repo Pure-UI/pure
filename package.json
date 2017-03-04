@@ -15,7 +15,8 @@
     "build": "lerna run build && lerna run entry && lerna run example",
     "example": "lerna run example && npm run serve",
     "clean": "lerna clean",
-    "test": "npm run lint && npm run lintcss"
+    "test": "npm run lint && npm run lintcss",
+    "precommit": "npm test"
   },
   "eslintConfig": {
     "extends": "mo/browser",
@@ -55,6 +56,7 @@
     "gh-pages": "^0.11.0",
     "glob": "^7.0.5",
     "html-webpack-plugin": "^2.22.0",
+    "husky": "^0.13.2",
     "is-obj": "^1.0.1",
     "json-loader": "^0.5.4",
     "lerna": "2.0.0-beta.32",
