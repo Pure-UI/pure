@@ -35,6 +35,7 @@
 				this.data.doc = doc;
 				this.data.active = name;
 				this.$update();
+				window.scrollTo( 0, 0 );
 			} );
 		},
 	};

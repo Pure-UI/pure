@@ -13,5 +13,6 @@ Basic
 	nextText=">"
 	on-change="{ current = $event }"
 ></Pagination>
+<br>
 Current: { current || 50 }
 ```

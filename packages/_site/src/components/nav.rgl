@@ -108,6 +108,7 @@
 	.nav {
 		width: 170px;
 		color: #333;
+		border-right: solid 1px #f2f2f2;
 	}
 
 	.title {
@@ -126,6 +127,7 @@
 		display: block;
 		padding: 10px 25px;
 		min-width: 170px;
+		height: 38px;
 		color: #333;
 		text-decoration: none;
 		box-sizing: border-box;
@@ -138,5 +140,7 @@
 	.active {
 		color: @primary-color;
 		background-color: @hover-bgcolor;
+		border-right: solid 1px @primary-color;
+		font-weight: 500;
 	}
 </style>

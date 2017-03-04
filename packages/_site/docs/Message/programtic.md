@@ -5,7 +5,7 @@ order: 1
 in programtic way
 
 ```html
-<Button primary on-click="{ this.onShowMessage() }">Show Message</Button>
+<Button on-click="{ this.onShowMessage() }">Show Message</Button>
 ```
 
 ```js

@@ -106,6 +106,8 @@
 			border-radius: 4px;
 			line-height: 1.6;
 			padding: 15px;
+			word-break: break-all;
+			white-space: pre-wrap;
 			font-family: Lato, -apple-system, Segoe UI, Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
 		}
 	}
