@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const webpack = require( 'webpack' );
+const autoprefixer = require( 'autoprefixer' );
 const path = require( 'path' );
 
 process.chdir( path.resolve( __dirname, '../' ) );
@@ -30,23 +31,33 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.css$/,
-				loader: ExtractTextPlugin.extract( 'style', 'css' ),
+				test: /\.(css|less)$/,
+				loader: ExtractTextPlugin.extract( 'style-loader', 'css-loader!postcss-loader!less-loader' ),
 				exclude: /node_modules/
 			},
 			{
 				test: /\.json$/,
 				loader: 'json',
 				exclude: /node_modules/
-			}
+			},
+			{
+				test: /\.(ttf|woff|eot|svg)(\?t=\d+)*$/,
+				exclude: /node_modules/,
+				loader: 'url-loader?limit=102400&name=[name].[ext]?[hash:8]'
+			},
 		],
-		noParse: [ /regularjs/, /dist\/pure/ ]
+		noParse: [ /regularjs/, /pure-ui/ ]
 	},
 	regular: {
 		loaders: {
 			css: ExtractTextPlugin.extract( 'css' ),
 			less: ExtractTextPlugin.extract( 'css!less' ),
 		}
+	},
+	postcss: function () {
+		return [
+			autoprefixer(),
+		]
 	},
 	resolve: {
 		extensions: [ '', '.js', 'json', '.css', '.rgl' ],

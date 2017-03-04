@@ -18,6 +18,13 @@
 				emit: destroy-modal;
 			"
 		>
+			{#if closable}
+			<div
+				class="pure-modal__close"
+				on-click="{ this.onClose() }"
+			><Icon>&#xe603;</Icon></div>
+			{/if}
+
 			<div class="pure-modal__head">
 				{ title }
 			</div>
@@ -26,24 +33,29 @@
 			</div>
 			<div class="pure-modal__actions">
 				<Button on-click="{ this.onCancel() }">{ cancelText || 'Cancel' }</Button>
-				<Button primary on-click="{ this.onOk() }">{ okText || 'Confirm' }</Button>
+				<Button primary on-click="{ this.onConfirm() }">{ confirmText || 'Confirm' }</Button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import Icon from 'pure-icon';
 	import Button from 'pure-button';
 
 	export default {
 		components: {
+			Icon,
 			Button,
+		},
+		onClose() {
+			this.$emit( 'close' );
 		},
 		onCancel() {
 			this.$emit( 'cancel' );
 		},
-		onOk() {
-			this.$emit( 'ok' );
+		onConfirm() {
+			this.$emit( 'confirm' );
 		},
 		init() {
 			this.$emit( 'open-modal' );

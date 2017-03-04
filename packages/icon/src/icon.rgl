@@ -1,14 +1,7 @@
 <template>
-	<span class="pure-icon { spin ? 'pure-icon--rotate' : '' }" style="{ opacityStyle + sizeStyle }">{#inc this.$body}</span>
+	<span class="pure-icon { spin ? 'pure-icon--rotate' : '' }" style="{ opacity ? 'opacity: ' + opacity + ';' : '' }{ size ? 'font-size: ' + size + ';' : '' }">{#inc this.$body}</span>
 </template>
 
 <script>
-	export default {
-		config() {
-			const opacity = this.data.opacity;
-			const size = this.data.size;
-			this.data.opacityStyle = opacity ? 'opacity: ' + opacity + ';' : '';
-			this.data.sizeStyle = size ? 'font-size: ' + size + ';' : '';
-		}
-	};
+	export default {};
 </script>
