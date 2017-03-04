@@ -8,6 +8,7 @@
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "autosize": "^3.0.20"
+    "autosize": "^3.0.20",
+    "pure-cli": "latest"
   }
 }

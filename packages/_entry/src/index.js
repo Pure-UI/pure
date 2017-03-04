@@ -31,6 +31,7 @@ import Tabs from 'pure-tabs/src';
 import TD from 'pure-td/src';
 import Textarea from 'pure-textarea/src';
 import TR from 'pure-tr/src';
+import Rate from 'pure-rate/src';
 
 // default theme
 import 'pure-theme';
@@ -67,6 +68,7 @@ export {
 	TD,
 	Textarea,
 	TR,
+	Rate,
 };
 
 export default function Pure( Component ) {
@@ -102,4 +104,5 @@ export default function Pure( Component ) {
 	Component.use( install( 'TD', TD ) );
 	Component.use( install( 'Textarea', Textarea ) );
 	Component.use( install( 'TR', TR ) );
+	Component.use( install( 'Rate', Rate ) );
 };

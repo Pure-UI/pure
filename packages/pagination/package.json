@@ -9,5 +9,8 @@
   "license": "MIT",
   "peerDependencies": {
     "pure-button": "^0.1.0"
+  },
+  "devDependencies": {
+    "pure-cli": "latest"
   }
 }

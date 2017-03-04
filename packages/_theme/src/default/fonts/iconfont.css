@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1488619399716'); /* IE9*/
-  src: url('iconfont.eot?t=1488619399716#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1488619399716') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1488619399716') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1488619399716#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1488634856198'); /* IE9*/
+  src: url('iconfont.eot?t=1488634856198#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1488634856198') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1488634856198') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1488634856198#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .pure-icon {
@@ -19,6 +19,8 @@
 .icon-close:before { content: "\e603"; }
 
 .icon-category:before { content: "\e601"; }
+
+.icon-star:before { content: "\e62f"; }
 
 .icon-paint:before { content: "\e66e"; }
 

@@ -31,6 +31,7 @@ import Table from 'pure-table';
 import TR from 'pure-tr';
 import TD from 'pure-td';
 import ElementTree from 'pure-element-tree';
+import Rate from 'pure-rate';
 
 import 'pure-theme';
 
@@ -64,6 +65,7 @@ Regular.use( install( 'Table', Table ) );
 Regular.use( install( 'TR', TR ) );
 Regular.use( install( 'TD', TD ) );
 Regular.use( install( 'ElementTree', ElementTree ) );
+Regular.use( install( 'Rate', Rate ) );
 
 const $ = {};
 
@@ -71,6 +73,9 @@ functions( Regular, $ );
 
 const Demo = Regular.extend( {
 	template: `
+		<Rate total="10" value="6" on-change="{ this.onRateChange( $event ) }"></Rate>
+		<Rate total="10" value="6" readonly></Rate>
+		<br />
 		<Icon spin>&#xe625;</Icon>
 		<Button primary sm>press me</Button>
 		<Button sm>press me</Button>
@@ -398,6 +403,9 @@ const Demo = Regular.extend( {
 	onClick( v ) {
 		console.log( 'you clicked ', v.name );
 		$.message( v.name, 'success' );
+	},
+	onRateChange( v ) {
+		console.log( v );
 	},
 } );
 

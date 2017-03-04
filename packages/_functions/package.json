@@ -10,5 +10,8 @@
   "peerDependencies": {
     "pure-install": "^0.1.0",
     "pure-message": "^0.1.0"
+  },
+  "devDependencies": {
+    "pure-cli": "latest"
   }
 }

@@ -11,6 +11,9 @@
 			<li>
 				<a class="{ active === 'Spinner' ? 'active' : '' }" href="#/Spinner">Spinner</a>
 			</li>
+			<li>
+				<a class="{ active === 'Rate' ? 'active' : '' }" href="#/Rate">Rate</a>
+			</li>
 			<!-- <li>
 				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
 			</li> -->

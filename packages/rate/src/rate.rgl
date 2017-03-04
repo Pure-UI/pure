@@ -1,0 +1,53 @@
+<template>
+	<div
+		class="pure-rate pure-icon { readonly ? 'pure-rate--readonly' : '' }"
+		on-mouseenter="{ this.onMouseEnter() }"
+		on-mouseleave="{ this.onMouseLeave() }"
+	>
+		{#list 1..total as i}
+		<div
+			class="pure-rate__star"
+			delegate-mousemove="{ this.onMouseMove( i ) }"
+			delegate-click="{ this.onConfirm( i ) }"
+		>
+			<span class="pure-rate__star-highlight { i <= ( in && !readonly ? activeIndex : value ) ? 'pure-rate__star-highlight--full' : '' }">&#xe62f;</span>
+		</div>
+		{/list}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.total = Number( this.data.total || 5 );
+			this.data.value = Number( this.data.value || 0 );
+			this.data.activeIndex = 0;
+			this.data.in = false;
+			this.data.readonly = Boolean( this.data.readonly );
+		},
+		onMouseMove( index ) {
+			if ( this.data.readonly ) {
+				return;
+			}
+
+			if ( this.lastIndex !== index ) {
+				this.lastIndex = index;
+				this.data.activeIndex = index;
+				this.$emit( 'change', index );
+			}
+		},
+		onMouseEnter() {
+			this.data.in = true;
+		},
+		onMouseLeave() {
+			this.data.in = false;
+		},
+		onConfirm( index ) {
+			if ( this.data.readonly ) {
+				return;
+			}
+
+			this.data.value = index;
+		},
+	};
+</script>

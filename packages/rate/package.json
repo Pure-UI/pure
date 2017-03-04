@@ -1,8 +1,8 @@
 {
-  "name": "pure-radio",
+  "name": "pure-rate",
   "main": "lib/index.js",
   "scripts": {
-    "build": "pure --name=Radio"
+    "build": "pure --name=Rate"
   },
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
