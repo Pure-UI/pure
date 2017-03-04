@@ -33,7 +33,6 @@
 			if ( this.lastIndex !== index ) {
 				this.lastIndex = index;
 				this.data.activeIndex = index;
-				this.$emit( 'change', index );
 			}
 		},
 		onMouseEnter() {
@@ -48,6 +47,7 @@
 			}
 
 			this.data.value = index;
+			this.$emit( 'change', index );
 		},
 	};
 </script>
