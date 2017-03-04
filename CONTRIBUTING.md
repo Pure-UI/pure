@@ -11,11 +11,16 @@ Please spend serveral minutes reading the following guidelines and tips before c
 
 ## Project Setup
 
-Make sure nodejs has been installed before you start
+Make sure nodejs has been installed before starting your work
 
 ```bash
 # Install dependencies
 $ npm install
+# bootstrap packages
+$ npm run boot
+```
+
+```bash
 # Build for production
 $ npm run build
 ```
