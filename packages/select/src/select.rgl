@@ -1,6 +1,6 @@
 <template>
 	<div class="pure-select { transparent ? 'pure-select--transparent' : '' } { block ? 'pure-select--block' : '' }" ref="select">
-		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly round sm="{ sm }" transparent="{ transparent }" on-click="{ this.onShowOptions() }"></Input>
+		<Input placeholder="{ placeholder || 'Choose' }" value="{ text }" readonly sm="{ sm }" transparent="{ transparent }" on-click="{ this.onShowOptions() }"></Input>
 
 		<div class="pure-select__icon" style="{ show ? 'display: block;' : '' }">
 			<Icon>&#xe60b;</Icon>
