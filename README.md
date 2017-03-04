@@ -6,13 +6,8 @@
 
 > elegant and lovely components
 
-## Docs
-
-https://pure.js.org
-
-## Playground
-
-[JSFiddle](https://jsfiddle.net/fengzilong/bc7rnqn5/)
+| [:book: Docs](https://pure.js.org) | [⛹ Playground](https://jsfiddle.net/fengzilong/bc7rnqn5/) |
+| :---: | :---: |
 
 ## Installation
 
@@ -57,11 +52,12 @@ Another.use( Pure );
 
 ## CDN
 
-[pure.js](https://unpkg.com/pure-ui/dist/pure.js) | [pure.css](https://unpkg.com/pure-ui/dist/pure.css)
+| [pure.js](https://unpkg.com/pure-ui/dist/pure.js) | [pure.css](https://unpkg.com/pure-ui/dist/pure.css) |
+| :---: | :---: |
 
 ## Contributing
 
-Every contribution is appreciated! But before you start working on your pull request, please read [CONTRIBUTING.md](CONTRIBUTING.md) first.There are some guidelines and tips you may want to know :)
+Every contribution is appreciated! But before you start working on your pull request, please read [CONTRIBUTING.md](CONTRIBUTING.md) first. There are some guidelines and tips you may want to know :)
 
 ## License
 
