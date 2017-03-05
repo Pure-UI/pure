@@ -15,6 +15,7 @@
     "build": "lerna run build --concurrency 10 && lerna run entry && lerna run example",
     "example": "lerna run example && npm run serve",
     "clean": "lerna clean",
+    "play": "play",
     "test": "npm run lint && npm run lintcss",
     "precommit": "npm test"
   },
@@ -69,6 +70,7 @@
     "pure-cli": "latest",
     "pure-loader": "^1.0.2",
     "regular-loader": "^0.1.4",
+    "regular-play-cli": "^0.2.1",
     "regularjs": "0.4.4",
     "style-loader": "^0.13.1",
     "stylelint": "^7.8.0",
