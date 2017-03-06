@@ -6,7 +6,7 @@
 
 > elegant and lovely components
 
-| [:book: Docs](https://pure.js.org) | [⛹ Playground](https://jsfiddle.net/fengzilong/bc7rnqn5/) |
+| [:book: Docs](https://pure.js.org) | [:snowboarder: Playground](https://jsfiddle.net/fengzilong/bc7rnqn5/) |
 | :---: | :---: |
 
 ## Installation
