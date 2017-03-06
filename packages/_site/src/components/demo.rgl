@@ -129,7 +129,8 @@
 		}
 
 		code {
-			background-color: #f3f8ff;
+			background-color: #fafafa;
+			color: #7287d2;
 			padding: 0.2rem 0.4rem;
 			border-radius: 2px;
 		}

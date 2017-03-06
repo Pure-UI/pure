@@ -1,4 +1,4 @@
-import Rate from '../packages/rate/src';
+import Rate from 'pure-rate/src';
 
 play( Rate, module )
 	.name( 'Rate' )
