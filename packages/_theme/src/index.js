@@ -1,2 +1,7 @@
 import './default/fonts/iconfont.css';
-import './default/index.less';
+
+function load( requireContext ) {
+	return requireContext.keys().map( requireContext );
+}
+
+load( require.context( './default', true, /\.less$/ ) );
