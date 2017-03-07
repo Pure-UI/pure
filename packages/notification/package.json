@@ -1,13 +1,16 @@
 {
-  "name": "pure-td",
+  "name": "pure-notification",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {
-    "build": "pure --name=TD"
+    "build": "pure --name=Notification"
   },
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
+  "devDependencies": {
+    "pure-icon": "^0.1.0"
+  },
   "devDependencies": {
     "pure-cli": "latest"
   }

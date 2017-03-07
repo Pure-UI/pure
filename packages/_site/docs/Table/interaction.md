@@ -11,7 +11,7 @@ Having some event to handle? use raw TR and TD instead
 		<TD>{ ds.name }</TD>
 		<TD>{ ds.email }</TD>
 		<TD>
-			<Button primary sm on-click="{ this.onClick( ds ) }">Modify</Button>
+			<Button sm on-click="{ this.onClick( ds ) }">Modify</Button>
 		</TD>
 	</TR>
 	{/list}
@@ -49,7 +49,11 @@ Having some event to handle? use raw TR and TD instead
 		]
 	},
 	onClick: function( v ) {
-		Pure.message( 'you clicked ' + v.name, 'info', 1000 );
+		Pure.message( {
+			type: 'info',
+			content: 'you clicked ' + v.name,
+			duration: 1000,
+		} );
 	}
 }
 ```

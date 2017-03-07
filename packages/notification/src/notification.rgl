@@ -1,0 +1,77 @@
+<template>
+	<div class="pure-notification { closable ? 'pure-notification--closable' : '' } { iconStr ? 'pure-notification--with-icon' : '' }">
+
+		{#if iconStr}
+		<div class="pure-notification__icon" style="color: { iconColorStr };">
+			<Icon>{ iconStr }</Icon>
+		</div>
+		{/if}
+
+		<div class="pure-notification__content">
+			<div class="pure-notification__title">
+				{ title }
+			</div>
+			<div class="pure-notification__description">
+				{ description }
+			</div>
+		</div>
+
+		{#if closable}
+		<div class="pure-notification__close" on-click="{ this.onClose() }">
+			<Icon>&#xe603;</Icon>
+		</div>
+		{/if}
+	</div>
+</template>
+
+<script>
+	import Icon from 'pure-icon';
+
+	export default {
+		components: {
+			Icon,
+		},
+		computed: {
+			iconColorStr() {
+				const maps = {
+					info: '#689eff',
+					success: '#6ed084',
+					warning: '#fda411',
+					error: '#F44556',
+				};
+
+				return maps[ this.data.type ] || this.data.iconColor || '#333';
+			},
+			iconStr() {
+				const maps = {
+					info: '&#xe80c;',
+					success: '&#xe625;',
+					warning: '&#xe641;',
+					error: '&#xe6a0;',
+				};
+				const icon = maps[ this.data.type ];
+
+				if ( icon ) {
+					return convert( icon );
+				}
+
+				return this.data.icon || '';
+			}
+		},
+		config() {
+		},
+		onClose() {
+			this.$emit( 'close' );
+		}
+	};
+
+	function convert( str ) {
+		str = str.replace( /(\\u)(\w{4})/gi, function ( $0 ) {
+			return ( String.fromCharCode( parseInt( ( escape( $0 ).replace( /(%5Cu)(\w{4})/g, '$2' ) ), 16 ) ) );
+		} );
+		str = str.replace( /(&#x)(\w{4});/gi, function ( $0 ) {
+			return String.fromCharCode( parseInt( escape( $0 ).replace( /(%26%23x)(\w{4})(%3B)/g, '$2' ), 16 ) );
+		} );
+		return str;
+	}
+</script>

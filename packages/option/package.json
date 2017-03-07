@@ -1,6 +1,7 @@
 {
   "name": "pure-option",
   "main": "lib/index.js",
+  "play:main": "src/index.js",
   "scripts": {
     "build": "pure --name=Option"
   },

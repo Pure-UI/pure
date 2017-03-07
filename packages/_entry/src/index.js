@@ -32,6 +32,7 @@ import TD from 'pure-td/src';
 import Textarea from 'pure-textarea/src';
 import TR from 'pure-tr/src';
 import Rate from 'pure-rate/src';
+import Notification from 'pure-notification/src';
 
 // default theme
 import 'pure-theme';
@@ -69,6 +70,7 @@ export {
 	Textarea,
 	TR,
 	Rate,
+	Notification,
 };
 
 export default function Pure( Component ) {
@@ -105,4 +107,5 @@ export default function Pure( Component ) {
 	Component.use( install( 'Textarea', Textarea ) );
 	Component.use( install( 'TR', TR ) );
 	Component.use( install( 'Rate', Rate ) );
+	Component.use( install( 'Notification', Notification ) );
 };

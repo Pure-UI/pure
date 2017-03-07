@@ -89,6 +89,9 @@
 			<li>
 				<a class="{ active === 'Message' ? 'active' : '' }" href="#/Message">Message</a>
 			</li>
+			<li>
+				<a class="{ active === 'Notification' ? 'active' : '' }" href="#/Notification">Notification</a>
+			</li>
 		</ul>
 		<div class="title">TIME</div>
 		<ul>

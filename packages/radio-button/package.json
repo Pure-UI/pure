@@ -1,6 +1,7 @@
 {
   "name": "pure-radio-button",
   "main": "lib/index.js",
+  "play:main": "src/index.js",
   "scripts": {
     "build": "pure --name=RadioButton"
   },

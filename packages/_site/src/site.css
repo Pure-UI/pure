@@ -10,3 +10,7 @@
 	font-size: 22px;
 	margin-right: 5px;
 }
+
+.pure-notification-container {
+	z-index: 1;
+}

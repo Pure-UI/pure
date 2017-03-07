@@ -402,7 +402,10 @@ const Demo = Regular.extend( {
 	},
 	onClick( v ) {
 		console.log( 'you clicked ', v.name );
-		$.message( v.name, 'success' );
+		$.message( {
+			type: 'success',
+			content: v.name,
+		} );
 	},
 	onRateChange( v ) {
 		console.log( v );

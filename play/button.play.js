@@ -1,4 +1,4 @@
-import Button from 'pure-button/src';
+import Button from 'pure-button';
 
 play( Button, module )
 	.name( 'Button' )
@@ -13,4 +13,8 @@ play( Button, module )
 	.add( 'disabled', `
 		<Button primary disabled>Normal</Button>
 		<Button disabled>Normal</Button>
+	` )
+	.add( 'loading', `
+		<Button primary loading>Normal</Button>
+		<Button loading>Normal</Button>
 	` )

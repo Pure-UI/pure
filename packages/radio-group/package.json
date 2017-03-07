@@ -1,6 +1,7 @@
 {
   "name": "pure-radio-group",
   "main": "lib/index.js",
+  "play:main": "src/index.js",
   "scripts": {
     "build": "pure --name=RadioGroup"
   },

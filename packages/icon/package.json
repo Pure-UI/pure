@@ -2,6 +2,7 @@
   "name": "pure-icon",
   "version": "0.1.0",
   "main": "lib/index.js",
+  "play:main": "src/index.js",
   "scripts": {
     "build": "pure --name=Icon"
   },

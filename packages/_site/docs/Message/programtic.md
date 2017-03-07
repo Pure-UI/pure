@@ -5,17 +5,19 @@ order: 1
 in programtic way
 
 ```html
-<Button on-click="{ this.onShowMessage() }">Show Message</Button>
+<Button on-click="{ this.onMessage( 'info' ) }">info</Button>
+<Button on-click="{ this.onMessage( 'success' ) }">success</Button>
+<Button on-click="{ this.onMessage( 'warning' ) }">warning</Button>
+<Button on-click="{ this.onMessage( 'error' ) }">error</Button>
 ```
 
 ```js
 {
-	onShowMessage: function() {
-		var i = Math.floor( Math.random() * 10 % 4 );
-		var types = 'info success warning error'.split( ' ' );
-		var type = types[ i ];
-
-		Pure.message( 'Hey there ;)', type );
+	onMessage: function( type ) {
+		Pure.message( {
+			type: type,
+			content: 'Hey there ;)',
+		} );
 	}
 }
 ```

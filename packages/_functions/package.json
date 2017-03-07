@@ -2,6 +2,7 @@
   "name": "pure-functions",
   "version": "0.1.0",
   "main": "lib/index.js",
+  "play:main": "src/index.js",
   "scripts": {
     "build": "pure --name pureFunctions"
   },
@@ -9,7 +10,8 @@
   "license": "MIT",
   "peerDependencies": {
     "pure-install": "^0.1.0",
-    "pure-message": "^0.1.0"
+    "pure-message": "^0.1.0",
+    "pure-notification": "^0.1.0"
   },
   "devDependencies": {
     "pure-cli": "latest"

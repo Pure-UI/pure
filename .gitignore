@@ -3,11 +3,8 @@ npm-debug.log
 lerna-debug.log
 /debug.log
 /packages/_site/public
-/dist
 /todo
 /packages/*/lib
-/packages/_theme/default.css
 /packages/_example/dist
-/examples
 /packages/_site/src/docs.json
 /packages/_site/src/docs-js.js

@@ -1,6 +1,7 @@
 {
   "name": "pure-countdown",
   "main": "lib/index.js",
+  "play:main": "src/index.js",
   "scripts": {
     "build": "pure --name=Countdown"
   },
