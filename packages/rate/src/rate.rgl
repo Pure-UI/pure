@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="pure-rate pure-icon { readonly ? 'pure-rate--readonly' : '' }"
+		class="pure-rate pure-icon--di { readonly ? 'pure-rate--readonly' : '' }"
 		on-mouseenter="{ this.onMouseEnter() }"
 		on-mouseleave="{ this.onMouseLeave() }"
 	>

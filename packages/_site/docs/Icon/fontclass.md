@@ -2,7 +2,7 @@
 order: 1
 ---
 
-With type ( Recommanded )
+With type ( Recommended )
 
 ```html
 <div class="demo-icons">

@@ -7,12 +7,12 @@ Basic
 ```html
 <Breadcrumb>
 	<BreadcrumbItem href="#!Home">
-		<Icon>&#xe629;</Icon>
+		<Icon type="home"></Icon>
 		Home
 	</BreadcrumbItem>
 
 	<BreadcrumbItem href="#!Category">
-		<Icon>&#xe601;</Icon>
+		<Icon type="category"></Icon>
 		Category
 	</BreadcrumbItem>
 
