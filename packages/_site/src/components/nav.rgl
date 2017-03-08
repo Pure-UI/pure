@@ -9,6 +9,9 @@
 				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">Icon</a>
 			</li>
 			<li>
+				<a class="{ active === 'Badge' ? 'active' : '' }" href="#/Badge">Badge</a>
+			</li>
+			<li>
 				<a class="{ active === 'Spinner' ? 'active' : '' }" href="#/Spinner">Spinner</a>
 			</li>
 			<li>

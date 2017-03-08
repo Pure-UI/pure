@@ -33,6 +33,7 @@ import Textarea from 'pure-textarea/src';
 import TR from 'pure-tr/src';
 import Rate from 'pure-rate/src';
 import Notification from 'pure-notification/src';
+import Badge from 'pure-badge/src';
 
 // default theme
 import 'pure-theme';
@@ -71,6 +72,7 @@ export {
 	TR,
 	Rate,
 	Notification,
+	Badge,
 };
 
 export default function Pure( Component ) {
@@ -108,4 +110,5 @@ export default function Pure( Component ) {
 	Component.use( install( 'TR', TR ) );
 	Component.use( install( 'Rate', Rate ) );
 	Component.use( install( 'Notification', Notification ) );
+	Component.use( install( 'Badge', Badge ) );
 };

@@ -12,7 +12,7 @@
     "lint": "eslint packages/**/*.rgl --quiet",
     "lintcss": "stylelint packages/_theme/**/*.less",
     "boot": "lerna bootstrap",
-    "build": "lerna run build --concurrency 10 && lerna run entry && lerna run example",
+    "build": "npm run boot && lerna run build --concurrency 10 && lerna run entry && lerna run example",
     "play": "npm run boot && opn http://127.0.0.1:9000 && play --resolve-fallback play/node_modules --preview-template play/template.html",
     "test": "npm run lint && npm run lintcss",
     "precommit": "npm test"

@@ -1,0 +1,24 @@
+<template>
+	<div class="pure-badge__wrapper">
+		{#inc this.$body}
+
+		{#if show !== false}
+		<div class="pure-badge { ( !count || dot ) ? 'pure-badge--dot' : '' }">{ count ? ( ( count <= max ) ? count : ( max + '+' ) ) : '' }</div>
+		{/if}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			if ( typeof this.data.count !== 'undefined' ) {
+				this.data.count = Number( this.data.count );
+			}
+			if ( typeof this.data.max !== 'undefined' ) {
+				this.data.max = Number( this.data.max );
+			}
+
+			this.data.max = this.data.max || Infinity;
+		},
+	};
+</script>
