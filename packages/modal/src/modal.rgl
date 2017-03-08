@@ -22,7 +22,7 @@
 			<div
 				class="pure-modal__close"
 				on-click="{ this.onClose() }"
-			><Icon>&#xe603;</Icon></div>
+			><Icon size="20px">&#xe603;</Icon></div>
 			{/if}
 
 			<div class="pure-modal__head">
