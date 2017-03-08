@@ -1,7 +1,12 @@
 <template>
-	<span class="pure-icon { spin ? 'pure-icon--rotate' : '' }" style="{ opacity ? 'opacity: ' + opacity + ';' : '' }{ size ? 'font-size: ' + size + ';' : '' }">{#inc this.$body}</span>
+	<span class="pure-icon pure-icon--{ iconset } { type ? iconset + '-' + type : '' } { spin ? 'pure-icon--rotate' : '' }" style="{ opacity ? 'opacity: ' + opacity + ';' : '' }{ size ? 'font-size: ' + size + ';' : '' }">{#inc this.$body}</span>
 </template>
 
 <script>
-	export default {};
+	export default {
+		config() {
+			// `di` means default icon
+			this.data.iconset = this.data.iconset || 'di';
+		}
+	};
 </script>

@@ -9,6 +9,13 @@
 .demo-icons .pure-icon {
 	font-size: 22px;
 	margin-right: 5px;
+	color: #4c5c77;
+	transition: all ease .4s;
+	transform-origin: center;
+}
+
+.demo-icons .pure-icon:hover {
+	transform: scale(1.4);
 }
 
 .pure-notification-container {

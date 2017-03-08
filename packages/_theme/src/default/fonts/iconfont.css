@@ -7,38 +7,37 @@
   url('iconfont.svg?t=1488634856198#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.pure-icon {
+.pure-icon--di {
   font-family:"iconfont" !important;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-github:before { content: "\e69f"; }
+.di-github:before { content: "\e69f"; }
 
-.icon-close:before { content: "\e603"; }
+.di-close:before { content: "\e603"; }
 
-.icon-category:before { content: "\e601"; }
+.di-category:before { content: "\e601"; }
 
-.icon-star:before { content: "\e62f"; }
+.di-star:before { content: "\e62f"; }
 
-.icon-paint:before { content: "\e66e"; }
+.di-paint:before { content: "\e66e"; }
 
-.icon-home:before { content: "\e629"; }
+.di-home:before { content: "\e629"; }
 
-.icon-category1:before { content: "\e613"; }
+.di-category1:before { content: "\e613"; }
 
-.icon-down:before { content: "\e68d"; }
+.di-down:before { content: "\e68d"; }
 
-.icon-error:before { content: "\e6a0"; }
+.di-error:before { content: "\e6a0"; }
 
-.icon-warn:before { content: "\e641"; }
+.di-warn:before { content: "\e641"; }
 
-.icon-down2:before { content: "\e60b"; }
+.di-down2:before { content: "\e60b"; }
 
-.icon-success:before { content: "\e625"; }
+.di-success:before { content: "\e625"; }
 
-.icon-info:before { content: "\e80c"; }
+.di-info:before { content: "\e80c"; }
 
-.icon-loading:before { content: "\e602"; }
-
+.di-loading:before { content: "\e602"; }
