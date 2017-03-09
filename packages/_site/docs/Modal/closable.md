@@ -5,7 +5,7 @@ order: 1
 Closable
 
 ```html
-<Button primary on-click="{ showModal = true }">Open Modal</Button>
+<Button on-click="{ showModal = true }">Open Modal</Button>
 {#if showModal}
 <Modal
 	title="Modal Title"

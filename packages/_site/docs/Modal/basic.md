@@ -7,7 +7,7 @@ Basic
 ProTip: Modal has no z-index by default
 
 ```html
-<Button primary on-click="{ showModal = true }">Open Modal</Button>
+<Button on-click="{ showModal = true }">Open Modal</Button>
 {#if showModal}
 <Modal
 	title="Modal Title"
