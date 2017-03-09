@@ -6,7 +6,6 @@ Event
 
 ```html
 <Switch on-change="{ v = $event }"></Switch>
-<br />
-<br />
+<br><br>
 Checked: { v !== undefined ? v : 'none' }
 ```

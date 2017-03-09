@@ -7,8 +7,7 @@ Size
 ```html
 <Button primary>Primary</Button>
 <Button>Normal</Button>
-<br />
-<br />
+<br><br>
 <Button primary sm>Primary</Button>
 <Button sm>Normal</Button>
 ```

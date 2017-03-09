@@ -2,7 +2,7 @@
 order: 2
 ---
 
-Having some event to handle? use raw TR and TD instead
+Wanna handle events in table? use raw TR and TD instead
 
 ```html
 <Table fields="{ fields }">

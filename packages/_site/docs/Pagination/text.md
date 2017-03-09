@@ -1,8 +1,8 @@
 ---
-order: 1
+order: 2
 ---
 
-Basic
+PrevText and NextText
 
 ```html
 <Pagination
@@ -10,6 +10,8 @@ Basic
 	max="{ 100 }"
 	current="{ current || 50 }"
 	on-change="{ current = $event }"
+	prevText="<"
+	nextText=">"
 ></Pagination>
 <br>
 Current: { current || 50 }

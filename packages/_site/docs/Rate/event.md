@@ -6,7 +6,6 @@ Event
 
 ```html
 <Rate on-change="{ value = $event }"></Rate>
-<br />
-<br />
+<br><br>
 { value }
 ```

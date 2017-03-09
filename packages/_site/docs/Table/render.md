@@ -6,7 +6,7 @@ Basic
 
 ```html
 {#if !loading}
-<Table fields="{ fields }" data-source="{ dataSource }"></Table>
+<Table fields="{ fields }" dataSource="{ dataSource }"></Table>
 {#else}
 <Box padding="2em 0">
 	<Spinner block></Spinner>

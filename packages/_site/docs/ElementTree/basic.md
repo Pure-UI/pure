@@ -4,7 +4,7 @@ order: 1
 
 ```html
 <ElementTree source="{ source }" on-select="{ this.onSelect( $event ) }"></ElementTree>
-<br />
+<br>
 Selected: { JSON.stringify( selected ) }
 ```
 

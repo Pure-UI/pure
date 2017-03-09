@@ -27,10 +27,10 @@
 
 	import deindent from 'de-indent';
 
+	const hasOwn = Object.prototype.hasOwnProperty;
+
 	export default {
 		config() {
-			const hasOwn = Object.prototype.hasOwnProperty;
-
 			if ( this.data.mixin ) {
 				if ( this.data.mixin.config ) {
 					this.data.mixin.config.call( this );
@@ -44,11 +44,15 @@
 			}
 
 			if ( this.data.rgl ) {
-				this.data.deindentRgl = deindent( this.data.rgl ).trim();
+				this.data.deindentRgl = deindent( this.data.rgl )
+					.trim()
+					.replace( /<br>/g, '' )
+					.replace( /<br\s*\/>/g, '' );
 			}
 
 			if ( this.data.js ) {
-				this.data.deindentJs = deindent( this.data.js ).trim();
+				this.data.deindentJs = deindent( this.data.js )
+					.trim();
 			}
 		},
 		init() {

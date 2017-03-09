@@ -10,7 +10,6 @@ Event
 	<Radio value="{ 2 }">Option 2</Radio>
 	<Radio value="{ 3 }">Option 3</Radio>
 </RadioGroup>
-<br />
-<br />
+<br><br>
 Checked：{ v || 'none' }
 ```

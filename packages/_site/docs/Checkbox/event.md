@@ -10,7 +10,6 @@ Event
 	<Checkbox value="{ 2 }">Option 2</Checkbox>
 	<Checkbox value="{ 3 }">Option 3</Checkbox>
 </CheckboxGroup>
-<br />
-<br />
+<br><br>
 Checked：{ ( v && v.length > 0 ) ? v : 'none' }
 ```
