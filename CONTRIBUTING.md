@@ -21,6 +21,8 @@ $ npm run boot
 ```
 
 ```bash
+# Develop with regular-play
+$ npm run play
 # Build for production
 $ npm run build
 ```
