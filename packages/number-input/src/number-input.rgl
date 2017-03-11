@@ -1,0 +1,52 @@
+<template>
+	<div class="pure-number-input { block ? 'pure-number-input--block' : '' }">
+		<input class="pure-number-input__inner" value="{ @(value) }" type="number" on-input="{ this.onInput() }" ref="input">
+
+		<div class="pure-number-input__buttons">
+			<div class="pure-number-input__add" on-click="{ this.onAdd() }">
+				<div class="pure-number-input__add--rotate"><Icon type="down2"></Icon></div>
+			</div>
+			<div class="pure-number-input__subtract" on-click="{ this.onSubtract() }">
+				<Icon type="down2"></Icon>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	import Icon from 'pure-icon';
+
+	export default {
+		components: {
+			Icon
+		},
+		config() {
+			this.data.value = Number( this.data.value ) || 0;
+			this.data.step = Number( this.data.step ) || 1;
+		},
+		onSubtract() {
+			const value = this.data.value;
+			const step = this.data.step;
+
+			const newValue = value - step;
+			this.$refs.input.value = newValue;
+			this.data.value = newValue;
+			this.$emit( 'change', newValue );
+		},
+		onAdd() {
+			const value = this.data.value;
+			const step = this.data.step;
+
+			const newValue = value + step;
+			this.$refs.input.value = newValue;
+			this.data.value = newValue;
+			this.$emit( 'change', newValue );
+		},
+		onInput() {
+			const $input = this.$refs.input;
+			const newValue = Number( $input.value ) || this.data.value;
+			this.data.value = newValue;
+			this.$emit( 'change', newValue );
+		},
+	};
+</script>

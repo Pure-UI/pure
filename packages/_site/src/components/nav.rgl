@@ -39,6 +39,9 @@
 				<a class="{ active === 'Input' ? 'active' : '' }" href="#/Input">Input</a>
 			</li>
 			<li>
+				<a class="{ active === 'NumberInput' ? 'active' : '' }" href="#/NumberInput">NumberInput</a>
+			</li>
+			<li>
 				<a class="{ active === 'Textarea' ? 'active' : '' }" href="#/Textarea">Textarea</a>
 			</li>
 			<li>

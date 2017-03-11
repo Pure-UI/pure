@@ -41,6 +41,7 @@
     "pure-tr": "^0.1.0",
     "pure-rate": "^0.1.0",
     "pure-notification": "^0.1.0",
-    "pure-badge": "^0.1.0"
+    "pure-badge": "^0.1.0",
+    "pure-number-input": "^0.1.0"
   }
 }

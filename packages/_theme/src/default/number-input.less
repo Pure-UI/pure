@@ -1,0 +1,73 @@
+@import './common/color.less';
+@import './common/var.less';
+
+@number-input-prefix-cls: ~"@{pure-prefix}-number-input";
+
+.@{number-input-prefix-cls} {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+
+	&__inner {
+		width: 100%;
+		background-color: #fff;
+		color: @form-color;
+		outline: none;
+		padding: .56em 10px;
+		font-size: 1rem;
+		display: inline-block;
+		vertical-align: middle;
+		box-sizing: border-box;
+		border: solid 1px #ddd;
+		cursor: inherit;
+		font-family: inherit;
+		-webkit-appearance: none;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&:focus {
+			border: solid 1px @primary-color;
+		}
+	}
+
+	&__buttons {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		box-sizing: border-box;
+		border-top: solid 1px transparent;
+		border-bottom: solid 1px transparent;
+		border-right: solid 1px transparent;
+		user-select: none;
+	}
+
+	&__add {
+		color: #666;
+		cursor: pointer;
+		width: 20px;
+		border-left: solid 1px #ddd;
+		border-bottom: solid 1px #ddd;
+		text-align: center;
+
+		&--rotate {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__subtract {
+		color: #666;
+		cursor: pointer;
+		width: 20px;
+		border-left: solid 1px #ddd;
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 50%;
+	}
+}
