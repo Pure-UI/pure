@@ -117,10 +117,8 @@
 	}
 
 	.demo-box {
-		position: relative;
 		padding: 10px 0;
 		border-bottom: 1px solid #f0f0f0;
-		z-index: 1;
 	}
 
 	.markdown-box {
