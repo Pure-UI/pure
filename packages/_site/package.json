@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "pure-site",
+  "name": "site",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {

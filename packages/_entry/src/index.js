@@ -35,6 +35,7 @@ import Rate from 'pure-rate/src';
 import Notification from 'pure-notification/src';
 import Badge from 'pure-badge/src';
 import NumberInput from 'pure-number-input/src';
+import Tooltip from 'pure-tooltip/src';
 
 // default theme
 import 'pure-theme';
@@ -75,6 +76,7 @@ export {
 	Notification,
 	Badge,
 	NumberInput,
+	Tooltip,
 };
 
 export default function Pure( Component ) {
@@ -114,4 +116,5 @@ export default function Pure( Component ) {
 	Component.use( install( 'Notification', Notification ) );
 	Component.use( install( 'Badge', Badge ) );
 	Component.use( install( 'NumberInput', NumberInput ) );
+	Component.use( install( 'Tooltip', Tooltip ) );
 };

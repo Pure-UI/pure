@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "pure-example",
+  "name": "example",
   "scripts": {
     "example": "pure --bundle"
   },
@@ -45,6 +45,7 @@
     "pure-notification": "^0.1.0",
     "pure-badge": "^0.1.0",
     "pure-number-input": "^0.1.0",
+    "pure-tooltip": "^0.1.0",
     "pure-cli": "latest"
   }
 }

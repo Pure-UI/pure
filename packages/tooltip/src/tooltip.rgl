@@ -1,0 +1,64 @@
+<template>
+	<div
+		ref="target"
+		class="pure-tooltip__target"
+		on-mouseenter="{ this.onShow() }"
+		on-mouseleave="{ this.onHide() }"
+	>
+		{#inc this.$body}
+	</div>
+
+	<div
+		ref="tooltip"
+		class="pure-tooltip pure-tooltip--placement-{ placement }"
+		r-animation="on:tooltip-will-enter;class:pure-tooltip--enter,3;"
+		r-animation="on:tooltip-will-leave;class:pure-tooltip--enter,4;"
+	>
+		<div class="pure-tooltip__arrow"></div>
+		<div class="pure-tooltip__content">
+			{ content }
+		</div>
+	</div>
+</template>
+
+<script>
+	import domAlign from 'dom-align';
+
+	export default {
+		config() {
+			this.data.placement = this.data.placement || 'top';
+			this.data.show = false;
+		},
+		onShow() {
+			const $target = this.$refs.target;
+			const $tooltip = this.$refs.tooltip;
+			domAlign( $tooltip, $target, getAlignOptions( this.data.placement ) );
+			this.$emit( 'tooltip-will-enter' );
+		},
+		onHide() {
+			this.$emit( 'tooltip-will-leave' );
+		},
+	};
+
+	function getAlignOptions( placement ) {
+		const alignOptionsMap = {
+			top: {
+				points: [ 'bc', 'tc' ],
+				offset: [ 0, -8 ],
+			},
+			bottom: {
+				points: [ 'tc', 'bc' ],
+				offset: [ 0, 8 ],
+			},
+			left: {
+				points: [ 'cr', 'cl' ],
+				offset: [ -8, 0 ],
+			},
+			right: {
+				points: [ 'cl', 'cr' ],
+				offset: [ 8, 0 ],
+			},
+		};
+		return alignOptionsMap[ placement ] || alignOptionsMap.top;
+	}
+</script>

@@ -89,9 +89,9 @@
 		</ul>
 		<div class="title">MESSAGE</div>
 		<ul>
-			<!-- <li>
+			<li>
 				<a class="{ active === 'Tooltip' ? 'active' : '' }" href="#/Tooltip">Tooltip</a>
-			</li> -->
+			</li>
 			<li>
 				<a class="{ active === 'Message' ? 'active' : '' }" href="#/Message">Message</a>
 			</li>

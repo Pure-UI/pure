@@ -12,7 +12,7 @@
     "lint": "eslint packages/**/*.rgl --quiet",
     "lintcss": "stylelint packages/_theme/**/*.less",
     "boot": "lerna bootstrap",
-    "build": "npm run boot && lerna run build --concurrency 10 && lerna run entry && lerna run example",
+    "build": "npm run boot && lerna run build --concurrency 10 && lerna run entry",
     "play": "npm run boot && opn http://127.0.0.1:9000 && play --resolve-fallback play/node_modules --preview-template play/template.html",
     "test": "npm run lint && npm run lintcss",
     "precommit": "npm test"
@@ -44,7 +44,6 @@
     "css-loader": "^0.23.1",
     "de-indent": "^1.0.2",
     "director": "^1.2.8",
-    "dom-align": "^1.4.0",
     "eslint": "^3.15.0",
     "eslint-config-mo": "^0.2.0",
     "eslint-plugin-rgl": "0.0.1",
