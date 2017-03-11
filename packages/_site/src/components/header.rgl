@@ -26,6 +26,7 @@
 	@import '../../../_theme/src/default/common/color.less';
 
 	.header {
+		position: fixed;
 		display: flex;
 		width: 100%;
 		background: #FFF;
@@ -35,16 +36,16 @@
 		line-height: 60px;
 		box-sizing: border-box;
 		box-shadow: 0 1px 1px rgba(0,0,0,.08);
+		z-index: 1;
 	}
 
 	.logo {
 		display: block;
 		color: @primary-color;
-		font-size: 20px;
-		font-weight: 700;
+		font-size: 24px;
 		text-decoration: none;
-		font-family: cursive;
-		margin-left: 15px;
+		font-family: Pacifico,cursive;
+		margin-left: 18px;
 	}
 
 	.links,
