@@ -2,7 +2,7 @@
 order: 2
 ---
 
-Basic
+Step
 
 ```html
 <NumberInput value="1" step=".5"></NumberInput>
