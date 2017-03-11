@@ -15,7 +15,11 @@
     "build": "npm run boot && lerna run build --concurrency 10 && lerna run entry",
     "play": "npm run boot && opn http://127.0.0.1:9000 && play --resolve-fallback play/node_modules --preview-template play/template.html",
     "test": "npm run lint && npm run lintcss",
-    "precommit": "npm test"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "packages/**/*.rgl": "eslint",
+    "packages/_theme/**/*.less": "stylelint"
   },
   "eslintConfig": {
     "extends": "mo/browser",
@@ -60,6 +64,7 @@
     "lerna": "2.0.0-beta.38",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
+    "lint-staged": "^3.3.1",
     "lodash": "^4.13.1",
     "marked": "^0.3.5",
     "opn-cli": "^3.1.0",
