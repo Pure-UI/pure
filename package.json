@@ -3,7 +3,7 @@
   "author": "fengzilong",
   "license": "MIT",
   "scripts": {
-    "site": "node packages/_site/scripts/docs && webpack --config packages/_site/scripts/webpack.config.site.js",
+    "site": "npm run boot && lerna run theme && lerna run entry && node packages/_site/scripts/docs && webpack --config packages/_site/scripts/webpack.config.site.js",
     "site:watch": "webpack --config packages/_site/scripts/webpack.config.site.js -w",
     "gh-pages": "node packages/_site/scripts/gh-pages",
     "deploy": "npm run site && npm run gh-pages",
@@ -12,7 +12,7 @@
     "lint": "eslint packages/**/*.rgl --quiet",
     "lintcss": "stylelint packages/_theme/**/*.less",
     "boot": "lerna bootstrap",
-    "build": "npm run boot && lerna run build --concurrency 10 && lerna run entry",
+    "build": "npm run boot && lerna run build --concurrency 10 && lerna run theme && lerna run entry",
     "play": "npm run boot && opn http://127.0.0.1:9000 && play --resolve-fallback play/node_modules --preview-template play/template.html",
     "test": "npm run lint && npm run lintcss",
     "precommit": "lint-staged"

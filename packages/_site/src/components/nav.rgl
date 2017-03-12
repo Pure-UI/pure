@@ -17,6 +17,9 @@
 			<li>
 				<a class="{ active === 'Rate' ? 'active' : '' }" href="#/Rate">Rate</a>
 			</li>
+			<li>
+				<a class="{ active === 'ProgressBar' ? 'active' : '' }" href="#/ProgressBar">ProgressBar</a>
+			</li>
 			<!-- <li>
 				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
 			</li> -->
@@ -63,13 +66,7 @@
 				<a class="{ active === 'Form' ? 'active' : '' }" href="#/Form">Form</a>
 			</li>
 			<!-- <li>
-				<a class="{ active === 'NumberInput' ? 'active' : '' }" href="#/NumberInput">NumberInput</a>
-			</li> -->
-			<!-- <li>
 				<a class="{ active === 'DatePicker' ? 'active' : '' }" href="#/DatePicker">DatePicker</a>
-			</li> -->
-			<!-- <li>
-				<a class="{ active === 'Progress' ? 'active' : '' }" href="#/Progress">Progress</a>
 			</li> -->
 		</ul>
 		<div class="title">CONTAINER</div>

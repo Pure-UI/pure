@@ -1,0 +1,28 @@
+<template>
+	<div class="pure-progress-bar__container">
+		<div class="pure-progress-bar { textInside ? 'pure-progress-bar--text-inside' : '' }">
+			<div class="pure-progress-bar__outer { textInside ? 'pure-progress-bar__outer--text-inside' : '' }">
+				<div class="pure-progress-bar__inner" style="{ this.isNotUndefined( percentage ) ? 'width: ' + percentage + '%;' : '' }">
+					{#if textInside}
+					<div class="pure-progress-bar__text pure-progress-bar__text--inside">{ this.isNotUndefined( percentage ) ? percentage + '%' : '' }</div>
+					{/if}
+				</div>
+			</div>
+		</div>
+		{#if !textInside}
+		<div class="pure-progress-bar__text">{ this.isNotUndefined( percentage ) ? percentage + '%' : '' }</div>
+		{/if}
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.percentage = Number( this.data.percentage );
+			this.data.textInside = Boolean( this.data.textInside );
+		},
+		isNotUndefined( v ) {
+			return typeof v !== 'undefined';
+		}
+	};
+</script>
