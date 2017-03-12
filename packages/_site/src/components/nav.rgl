@@ -20,6 +20,9 @@
 			<li>
 				<a class="{ active === 'ProgressBar' ? 'active' : '' }" href="#/ProgressBar">ProgressBar</a>
 			</li>
+			<li>
+				<a class="{ active === 'ProgressCircle' ? 'active' : '' }" href="#/ProgressCircle">ProgressCircle</a>
+			</li>
 			<!-- <li>
 				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
 			</li> -->

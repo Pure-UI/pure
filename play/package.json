@@ -44,6 +44,7 @@
     "pure-badge": "^0.1.0",
     "pure-number-input": "^0.1.0",
     "pure-tooltip": "^0.1.0",
-    "pure-progress-bar": "^0.1.0"
+    "pure-progress-bar": "^0.1.0",
+    "pure-progress-circle": "^0.1.0"
   }
 }

@@ -37,6 +37,7 @@ import Badge from 'pure-badge/src';
 import NumberInput from 'pure-number-input/src';
 import Tooltip from 'pure-tooltip/src';
 import ProgressBar from 'pure-progress-bar/src';
+import ProgressCircle from 'pure-progress-circle/src';
 
 // default theme
 import 'pure-theme';
@@ -79,6 +80,7 @@ export {
 	NumberInput,
 	Tooltip,
 	ProgressBar,
+	ProgressCircle,
 };
 
 export default function Pure( Component ) {
@@ -120,4 +122,5 @@ export default function Pure( Component ) {
 	Component.use( install( 'NumberInput', NumberInput ) );
 	Component.use( install( 'Tooltip', Tooltip ) );
 	Component.use( install( 'ProgressBar', ProgressBar ) );
+	Component.use( install( 'ProgressCircle', ProgressCircle ) );
 };

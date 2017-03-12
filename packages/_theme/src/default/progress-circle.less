@@ -1,0 +1,18 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@progress-circle-prefix-cls: ~"@{pure-prefix}-progress-circle";
+
+.@{progress-circle-prefix-cls} {
+	position: relative;
+
+	&__text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+		color: #333;
+		font-size: 17px;
+		word-break: break-all;
+	}
+}
