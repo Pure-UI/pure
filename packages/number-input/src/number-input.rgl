@@ -1,12 +1,22 @@
 <template>
-	<div class="pure-number-input { block ? 'pure-number-input--block' : '' }">
-		<input class="pure-number-input__inner" value="{ @(value) }" type="number" on-input="{ this.onInput() }" ref="input">
+	<div
+		class="pure-number-input { block ? 'pure-number-input--block' : '' } { disabled ? 'pure-number-input--disabled' : '' }"
+		style="{ size ? 'width: ' + size + 'px' : '' }"
+	>
+		<input
+			ref="input"
+			class="pure-number-input__inner"
+			value="{ @(value) }"
+			type="number"
+			disabled="{ disabled }"
+			on-input="{ this.onInput() }"
+		>
 
 		<div class="pure-number-input__buttons">
-			<div class="pure-number-input__add" on-click="{ this.onAdd() }">
-				<div class="pure-number-input__add--rotate"><Icon type="down2"></Icon></div>
+			<div class="pure-number-input__button { disabled || isAddDisabled ? 'pure-number-input__button--disabled' : '' }" on-click="{ this.onAdd() }">
+				<div class="pure-number-input__button-inner--rotate"><Icon type="down2"></Icon></div>
 			</div>
-			<div class="pure-number-input__subtract" on-click="{ this.onSubtract() }">
+			<div class="pure-number-input__button { disabled || isSubtractDisabled ? 'pure-number-input__button--disabled' : '' }" on-click="{ this.onSubtract() }">
 				<Icon type="down2"></Icon>
 			</div>
 		</div>
@@ -20,24 +30,72 @@
 		components: {
 			Icon
 		},
+		computed: {
+			isAddDisabled() {
+				const max = this.data.max;
+				const step = this.data.step;
+				const value = this.data.value;
+
+				if ( value === max || value + step > max ) {
+					return true;
+				}
+
+				return false;
+			},
+			isSubtractDisabled() {
+				const min = this.data.min;
+				const step = this.data.step;
+				const value = this.data.value;
+
+				if ( value === min || value - step < min ) {
+					return true;
+				}
+
+				return false;
+			},
+		},
 		config() {
 			this.data.value = Number( this.data.value ) || 0;
 			this.data.step = Number( this.data.step ) || 1;
+			this.data.min = this.data.min ? Number( this.data.min ) : -Infinity;
+			this.data.max = this.data.max ? Number( this.data.max ) : Infinity;
+			this.data.size = this.data.size ? parseFloat( this.data.size ) : '';
+		},
+		isValid( v ) {
+			return v >= this.data.min && v <= this.data.max;
 		},
 		onSubtract() {
+			if ( this.data.disabled ) {
+				return;
+			}
+
 			const value = this.data.value;
 			const step = this.data.step;
 
 			const newValue = value - step;
+
+			if ( !this.isValid( newValue ) ) {
+				return;
+			}
+
 			this.$refs.input.value = newValue;
 			this.data.value = newValue;
 			this.$emit( 'change', newValue );
 		},
 		onAdd() {
+			if ( this.data.disabled ) {
+				return;
+			}
+
 			const value = this.data.value;
 			const step = this.data.step;
 
 			const newValue = value + step;
+
+			if ( !this.isValid( newValue ) ) {
+				return;
+			}
+
 			this.$refs.input.value = newValue;
 			this.data.value = newValue;
 			this.$emit( 'change', newValue );
