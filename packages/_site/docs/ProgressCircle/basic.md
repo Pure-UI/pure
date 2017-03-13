@@ -7,7 +7,7 @@ Basic
 ```html
 <ProgressCircle percentage="{ percentage }"></ProgressCircle>
 <br>
-<NumberInput value="{ percentage }" step="10" on-change="{ this.onChange($event) }"></NumberInput>
+<NumberInput value="{ percentage }" step="10" min="0" max="100" on-change="{ this.onChange($event) }"></NumberInput>
 ```
 
 ```js
