@@ -1,0 +1,17 @@
+{
+  "name": "pure-tag",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "pure --name=Tag"
+  },
+  "version": "0.1.0",
+  "author": "jerryni jerryni2014@gmail.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "pure-icon": "^0.1.0",
+    "pure-helpers": "^0.1.0"
+  },
+  "devDependencies": {
+    "pure-cli": "latest"
+  }
+}

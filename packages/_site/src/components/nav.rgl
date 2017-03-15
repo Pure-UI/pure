@@ -6,6 +6,9 @@
 				<a class="{ active === 'Button' ? 'active' : '' }" href="#/Button">Button</a>
 			</li>
 			<li>
+				<a class="{ active === 'Tag' ? 'active' : '' }" href="#/Tag">Tag</a>
+			</li>
+			<li>
 				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">Icon</a>
 			</li>
 			<li>

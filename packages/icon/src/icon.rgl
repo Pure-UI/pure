@@ -1,5 +1,5 @@
 <template>
-	<span class="pure-icon pure-icon--{ iconset } { type ? iconset + '-' + type : '' } { spin ? 'pure-icon--rotate' : '' }" style="{ opacity ? 'opacity: ' + opacity + ';' : '' }{ size ? 'font-size: ' + size + ';' : '' }">{#inc this.$body}</span>
+	<span class="pure-icon pure-icon--{ iconset } { type ? iconset + '-' + type : '' } { spin ? 'pure-icon--rotate' : '' }" style="{ opacity ? 'opacity: ' + opacity + ';' : '' }{ size ? 'font-size: ' + size + ';' : '' }" on-click="{this.onClick($event)}">{#inc this.$body}</span>
 </template>
 
 <script>
@@ -7,6 +7,9 @@
 		config() {
 			// `di` means default icon
 			this.data.iconset = this.data.iconset || 'di';
+		},
+		onClick( e ) {
+			this.$emit( 'click', e );
 		}
 	};
 </script>

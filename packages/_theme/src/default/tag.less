@@ -1,0 +1,59 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@tag-prefix-cls: ~"@{pure-prefix}-tag";
+
+.@{tag-prefix-cls} {
+	display: inline-block;
+	line-height: 20px;
+	height: 22px;
+	padding: 0 8px;
+	border-radius: @border-radius-base;
+	border: @border-width-base @border-style-base @border-color-split;
+	background: @background-color-base;
+	font-size: @font-size-base;
+	transition: all .3s;
+	opacity: 1;
+	margin-right: 8px;
+	cursor: pointer;
+	white-space: nowrap;
+
+	&:hover {
+		opacity: .85;
+	}
+
+	&,
+	a,
+	a:hover {
+		color: @text-color;
+	}
+
+	&-checkable {
+		background-color: transparent;
+		border-color: transparent;
+
+		&:hover,
+		&:active,
+		&-checked {
+			color: #fff;
+		}
+
+		&:hover,
+		&:active,
+		&-checked {
+			background-color: @primary-color;
+		}
+	}
+
+	&-text {
+		a:first-child:last-child {
+			display: inline-block;
+			margin: 0 -8px;
+			padding: 0 8px;
+		}
+	}
+
+	&.hide {
+		display: none;
+	}
+}
