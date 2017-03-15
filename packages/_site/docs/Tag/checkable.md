@@ -1,18 +1,10 @@
 ---
-order: 3
+order: 2
 ---
 
 Checkable
 
 ```html
-<Tag checkable on-check={this.check($event)}>checkable</Tag>
+<Tag checkable>checkable</Tag>
 <Tag checkable checked>checked</Tag>
-```
-
-```js
-{
-    check( status ){
-        alert(status)
-    }
-}
 ```

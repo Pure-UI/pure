@@ -1,43 +1,48 @@
 <template>
-	{#if !checkable}
-	<span ref="tag" class="pure-tag"
-		on-click="{this.onClick($event)}">
-		{#inc this.$body}
-		{#if closable}
-		<Icon size="11px" type="close" on-click="{this.onClose($event)}"></Icon>
-		{/if}
-	</span>
-	{/if}
 	{#if checkable}
-	<span class="pure-tag pure-tag-checkable" 
-		r-class="{{'pure-tag-checkable-checked':checked}}"
-		on-click="{this.onToggle($event)}">
-		{#inc this.$body}
-	</span>
+		<span
+			class="pure-tag pure-tag--checkable { checked ? 'pure-tag--checked' : '' }"
+			on-click="{this.onToggle($event)}"
+		>
+			{#inc this.$body}
+		</span>
+	{#else}
+		<span
+			ref="tag"
+			class="pure-tag"
+			on-click="{ this.onClick($event) }"
+		>
+			{#inc this.$body}
+
+			{#if closable}
+				<span class="pure-tag__close" on-click="{ this.onClose($event) }">
+					<Icon type="close"></Icon>
+				</span>
+			{/if}
+		</span>
 	{/if}
 </template>
 
 <script>
-import Icon from 'pure-icon';
+	import Icon from 'pure-icon';
 
-export default {
-	components: {
-		Icon
-	},
-	config() {
-		this.data.checked = Boolean( this.data.checked );
-	},
-	onClose( e ) {
-		e.event.stopPropagation();
-		this.$emit( 'close' );
-	},
-	onClick() {
-		this.$emit( 'click' );
-	},
-
-	onToggle() {
-		this.data.checked = !this.data.checked;
-		this.$emit( 'check', this.data.checked );
-	}
-};
+	export default {
+		components: {
+			Icon
+		},
+		config() {
+			this.data.checked = Boolean( this.data.checked );
+		},
+		onClose( e ) {
+			e.stopPropagation();
+			this.$emit( 'close' );
+		},
+		onClick() {
+			this.$emit( 'click' );
+		},
+		onToggle() {
+			this.data.checked = !this.data.checked;
+			this.$emit( 'check', this.data.checked );
+		}
+	};
 </script>

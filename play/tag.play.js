@@ -1,22 +1,30 @@
-import Tag from '../packages/tag/src';
+import Tag from 'pure-tag';
 
 play( Tag, module )
 	.name( 'Tag' )
 	.add( 'basic', {
 		template: `
-            <Tag on-click={this.clickTag()} 
-                 on-close={this.tagClose($event)} 
-                 closable>closable</Tag>
-            <Tag checkable on-check={this.check($event)}>checkable</Tag>
-            <Tag checkable checked>checked</Tag>
+			<Tag
+				on-click="{ this.onClick() }"
+				on-close="{ this.onClose($event) }"
+				closable
+			>
+				closable
+			</Tag>
+			<Tag checkable on-check="{ this.onCheck($event) }">
+				checkable
+			</Tag>
+			<Tag checkable checked>
+				checked
+			</Tag>
 		`,
-		tagClose() {
-			this.$log('closed');
+		onClose() {
+			this.$log( 'closed' );
 		},
-        clickTag() {
-            this.$log( 'clicked' )
-        },
-        check( status ){
-            this.$log('check:' + status)
-        }
+		onClick() {
+			this.$log( 'clicked' );
+		},
+		onCheck( status ){
+			this.$log( 'check:' + status );
+		},
 	} );
