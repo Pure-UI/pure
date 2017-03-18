@@ -16,7 +16,7 @@
 	border-spacing: 0;
 	font-size: 1rem;
 
-	& thead tr th {
+	thead tr th {
 		background: @table-background-color;
 		text-align: inherit;
 		color: #666;
@@ -29,11 +29,11 @@
 		border-left: 1px solid rgba(34,36,38,.1);
 	}
 
-	& tr th:first-child {
+	tr th:first-child {
 		border-left: none;
 	}
-}
 
-.@{table-prefix-cls}__head {
-	background-color: @table-background-color;
+	&__head {
+		background-color: @table-background-color;
+	}
 }

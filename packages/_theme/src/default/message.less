@@ -6,6 +6,28 @@
 .@{note-prefix-cls} {
 	display: inline-block;
 
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translate3d(-50%,-40px,0);
+	}
+
+	&--will-transition {
+		opacity: .8;
+		transition: transform .3s cubic-bezier(.4,0,0,1), opacity .7s cubic-bezier(.4,0,0,1);
+	}
+
+	&--in {
+		transform: translate3d(-50%,15px,0);
+		opacity: 1;
+	}
+
+	&--out {
+		transform: translate3d(-50%,10px,0);
+		opacity: 0;
+	}
+
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -24,26 +46,4 @@
 		font-size: 16px;
 		margin-right: 7px;
 	}
-}
-
-.@{note-prefix-cls}--fixed {
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform: translate3d(-50%,-40px,0);
-}
-
-.@{note-prefix-cls}--will-transition {
-	opacity: .8;
-	transition: transform .3s cubic-bezier(.4,0,0,1), opacity .7s cubic-bezier(.4,0,0,1);
-}
-
-.@{note-prefix-cls}--in {
-	transform: translate3d(-50%,15px,0);
-	opacity: 1;
-}
-
-.@{note-prefix-cls}--out {
-	transform: translate3d(-50%,10px,0);
-	opacity: 0;
 }

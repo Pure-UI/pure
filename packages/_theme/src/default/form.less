@@ -2,10 +2,13 @@
 @import './common/color.less';
 
 @form-prefix-cls: ~"@{pure-prefix}-form";
+@form-label-prefix-cls: ~"@{pure-prefix}-form-label";
+@form-control-prefix-cls: ~"@{pure-prefix}-form-control";
+@form-item-prefix-cls: ~"@{pure-prefix}-form-item";
 @input-prefix-cls: ~"@{pure-prefix}-input";
 
 .@{form-prefix-cls}--block {
-	.@{form-prefix-cls}-control {
+	.@{form-control-prefix-cls} {
 		flex: 1;
 
 		input,
@@ -23,12 +26,12 @@
 }
 
 .@{form-prefix-cls}--stacked {
-	.@{form-prefix-cls}-label {
+	.@{form-label-prefix-cls} {
 		text-align: left !important;
 		margin-bottom: 10px;
 	}
 
-	.@{form-prefix-cls}-item {
+	.@{form-item-prefix-cls} {
 		display: block !important;
 	}
 }

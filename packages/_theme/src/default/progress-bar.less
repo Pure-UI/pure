@@ -8,10 +8,6 @@
 @progress-bar-default-height: 8px;
 @progress-bar-text-inside-height: 15px;
 
-.@{progress-bar-prefix-cls}__container {
-	font-size: 0;
-}
-
 .@{progress-bar-prefix-cls} {
 	display: inline-block;
 	width: 100%;
@@ -22,6 +18,10 @@
 	&--text-inside {
 		padding-right: 0;
 		margin-right: 0;
+	}
+
+	&__container {
+		font-size: 0;
 	}
 
 	&__outer {

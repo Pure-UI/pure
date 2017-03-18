@@ -7,32 +7,38 @@
 .@{spinner-prefix-cls} {
 	display: inline-block;
 	font-size: 0;
-}
 
-.@{spinner-prefix-cls}__dot {
-	display: inline-block;
-	width: 6px;
-	height: 6px;
-	animation: pureSpinnerDotPluse 1.5s infinite ease-in-out;
-
-	&:not(:last-child) {
-		margin-right: 5px;
+	&--block {
+		display: block;
+		width: 100%;
+		text-align: center;
 	}
-}
 
-.@{spinner-prefix-cls}__dot-1 {
-	animation-delay: -1.5s;
-	background-color: @spinner-color;
-}
+	&__dot {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		animation: pureSpinnerDotPluse 1.5s infinite ease-in-out;
 
-.@{spinner-prefix-cls}__dot-2 {
-	animation-delay: -1.35s;
-	background-color: @spinner-color;
-}
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
 
-.@{spinner-prefix-cls}__dot-3 {
-	animation-delay: -1.2s;
-	background-color: @spinner-color;
+	&__dot-1 {
+		animation-delay: -1.5s;
+		background-color: @spinner-color;
+	}
+
+	&__dot-2 {
+		animation-delay: -1.35s;
+		background-color: @spinner-color;
+	}
+
+	&__dot-3 {
+		animation-delay: -1.2s;
+		background-color: @spinner-color;
+	}
 }
 
 @keyframes pureSpinnerDotPluse {
@@ -47,10 +53,4 @@
 		opacity: 1;
 		transform: scaleY(1);
 	}
-}
-
-.@{spinner-prefix-cls}--block {
-	display: block;
-	width: 100%;
-	text-align: center;
 }

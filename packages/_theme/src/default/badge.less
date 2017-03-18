@@ -3,11 +3,6 @@
 
 @badge-prefix-cls: ~"@{pure-prefix}-badge";
 
-.@{badge-prefix-cls}__wrapper {
-	position: relative;
-	display: inline-block;
-}
-
 .@{badge-prefix-cls} {
 	position: absolute;
 	top: 0;
@@ -25,5 +20,10 @@
 		padding: 0;
 		width: 7px;
 		height: 7px;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: inline-block;
 	}
 }
