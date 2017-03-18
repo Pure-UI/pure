@@ -118,7 +118,8 @@
 <style lang="less" scoped>
 	@import '../../../_theme/src/default/common/color.less';
 
-	@hover-bgcolor: fade(tint(@primary-color,80%),30%);
+	@hover-bgcolor: fade(tint(@primary-color,80%),14%);
+	@active-bgcolor: fade(tint(@primary-color,80%),30%);
 
 	.nav {
 		width: 170px;
@@ -154,8 +155,12 @@
 
 	.active {
 		color: @primary-color;
-		background-color: @hover-bgcolor;
+		background-color: @active-bgcolor;
 		border-right: solid 1px @primary-color;
 		font-weight: 500;
+
+		&:hover {
+			background-color: @active-bgcolor;
+		}
 	}
 </style>
