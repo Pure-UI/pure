@@ -2,6 +2,7 @@
 @import './common/color.less';
 
 @element-tree-node-prefix-cls: ~"@{pure-prefix}-element-tree-node";
+@hover-color: #f0f0f0;
 
 .@{element-tree-node-prefix-cls} {
 	cursor: default;
@@ -50,7 +51,7 @@
 	&.@{element-tree-node-prefix-cls}--hovered::before {
 		left: 0;
 		right: 0;
-		background-color: #ebf2fc;
+		background-color: @hover-color;
 	}
 
 	&.@{element-tree-node-prefix-cls}--selected::before {
@@ -81,7 +82,7 @@
 	&.@{element-tree-node-prefix-cls}--hovered::before {
 		left: 0;
 		right: 0;
-		background-color: #f0f0f0;
+		background-color: @hover-color;
 	}
 
 	&.@{element-tree-node-prefix-cls}--selected {
