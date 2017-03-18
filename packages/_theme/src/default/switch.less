@@ -18,50 +18,50 @@
 	cursor: pointer;
 	user-select: none;
 	transition: all .3s ease;
-}
 
-.@{switch-prefix-cls}__circle-mask {
-	display: block;
-	background-color: #999;
-	border-radius: 50%;
-	position: absolute;
-	width: @switch-mask-size;
-	height: @switch-mask-size;
-	opacity: .1;
-	transform: scale3d(0,0,0);
-	transition: background-color .1s ease, left .1s ease, transform .1s ease, -webkit-transform .1s ease;
-	top: -(@switch-mask-size - @switch-tracker-height) / 2;
-	left: -@switch-mask-size / 2 + @switch-block-size / 2;
+	&--checked {
+		background-color: tint(@primary-color,50%);
 
-	&&--show {
-		transform: scale3d(1,1,1);
+		.@{switch-prefix-cls}__circle-mask {
+			background-color: @primary-color;
+			top: -(@switch-mask-size - @switch-tracker-height) / 2;
+			left: @switch-tracker-width - @switch-mask-size / 2 - @switch-block-size / 2;
+		}
+
+		.@{switch-prefix-cls}__block {
+			transform: translate3d(@switch-tracker-width - @switch-block-size,0,0);
+			background-color: @primary-color;
+		}
 	}
-}
 
-.@{switch-prefix-cls}__block {
-	display: block;
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	width: @switch-block-size;
-	height: @switch-block-size;
-	top: (@switch-tracker-height - @switch-block-size) / 2;
-	left: 0;
-	box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
-	transition: all .3s ease;
-}
-
-.@{switch-prefix-cls}--checked {
-	background-color: tint(@primary-color,50%);
-
-	.@{switch-prefix-cls}__circle-mask {
-		background-color: @primary-color;
+	&__circle-mask {
+		display: block;
+		background-color: #999;
+		border-radius: 50%;
+		position: absolute;
+		width: @switch-mask-size;
+		height: @switch-mask-size;
+		opacity: .1;
+		transform: scale3d(0,0,0);
+		transition: background-color .1s ease, left .1s ease, transform .1s ease, -webkit-transform .1s ease;
 		top: -(@switch-mask-size - @switch-tracker-height) / 2;
-		left: @switch-tracker-width - @switch-mask-size / 2 - @switch-block-size / 2;
+		left: -@switch-mask-size / 2 + @switch-block-size / 2;
+
+		&&--show {
+			transform: scale3d(1,1,1);
+		}
 	}
 
-	.@{switch-prefix-cls}__block {
-		transform: translate3d(@switch-tracker-width - @switch-block-size,0,0);
-		background-color: @primary-color;
+	&__block {
+		display: block;
+		background-color: #fff;
+		border-radius: 50%;
+		position: absolute;
+		width: @switch-block-size;
+		height: @switch-block-size;
+		top: (@switch-tracker-height - @switch-block-size) / 2;
+		left: 0;
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+		transition: all .3s ease;
 	}
 }

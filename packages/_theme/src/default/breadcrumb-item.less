@@ -9,6 +9,10 @@
 	vertical-align: middle;
 	font-size: 1rem;
 
+	&--link {
+		cursor: pointer;
+	}
+
 	&:last-child {
 		color: @breadcrumb-current-color;
 		font-weight: bold;
@@ -17,13 +21,9 @@
 			display: none;
 		}
 	}
-}
 
-.@{breadcrumb-item-prefix-cls}__sep {
-	margin: 0 4px;
-	color: #ddd;
-}
-
-.@{breadcrumb-item-prefix-cls}--link {
-	cursor: pointer;
+	&__sep {
+		margin: 0 4px;
+		color: #ddd;
+	}
 }

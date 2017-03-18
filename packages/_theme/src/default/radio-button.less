@@ -3,7 +3,7 @@
 
 @radio-button-prefix-cls: ~"@{pure-prefix}-radio-button";
 
-@radiobutton-border-radius: 4px;
+@radio-button-border-radius: 4px;
 
 .@{radio-button-prefix-cls} {
 	display: block;
@@ -18,25 +18,25 @@
 	border-left: none;
 
 	&:first-child {
-		border-top-left-radius: @radiobutton-border-radius;
-		border-bottom-left-radius: @radiobutton-border-radius;
+		border-top-left-radius: @radio-button-border-radius;
+		border-bottom-left-radius: @radio-button-border-radius;
 		border-left: solid 1px #d9d9d9;
 	}
 
 	&:last-child {
-		border-top-right-radius: @radiobutton-border-radius;
-		border-bottom-right-radius: @radiobutton-border-radius;
+		border-top-right-radius: @radio-button-border-radius;
+		border-bottom-right-radius: @radio-button-border-radius;
 	}
-}
 
-.@{radio-button-prefix-cls}--checked {
-	background: #fff;
-	border-color: @primary-color;
-	color: @primary-color;
-	box-shadow: -1px 0 0 0 lighten(@primary-color,5%);
-
-	&:first-child {
+	&--checked {
+		background: #fff;
 		border-color: @primary-color;
-		box-shadow: none;
+		color: @primary-color;
+		box-shadow: -1px 0 0 0 lighten(@primary-color,5%);
+
+		&:first-child {
+			border-color: @primary-color;
+			box-shadow: none;
+		}
 	}
 }

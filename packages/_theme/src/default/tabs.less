@@ -5,50 +5,50 @@
 
 .@{tabs-prefix-cls} {
 	display: block;
-}
 
-.@{tabs-prefix-cls}__titles,
-.@{tabs-prefix-cls}__title {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.@{tabs-prefix-cls}__titles {
-	border-bottom: 1px solid #d7d7d7;
-	overflow: hidden;
-}
-
-.@{tabs-prefix-cls}__title {
-	float: left;
-	padding: .9rem .6rem;
-	color: #333;
-	cursor: pointer;
-	transition: color .4s ease;
-
-	&:hover {
-		color: @primary-color;
+	&__titles,
+	&__title {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 
-	&&--active {
-		color: @primary-color;
+	&__titles {
+		border-bottom: 1px solid #d7d7d7;
+		overflow: hidden;
 	}
-}
 
-.@{tabs-prefix-cls}__header {
-	font-size: 1rem;
-	position: relative;
-}
+	&__title {
+		float: left;
+		padding: .9rem .6rem;
+		color: #333;
+		cursor: pointer;
+		transition: color .4s ease;
 
-.@{tabs-prefix-cls}__body {
-	font-size: 1rem;
-	padding: 1rem .6rem;
-}
+		&:hover {
+			color: @primary-color;
+		}
 
-.@{tabs-prefix-cls}__indicator {
-	position: absolute;
-	bottom: 0;
-	border-bottom: solid 2px @primary-color;
-	transition: left .3s ease, width .3s ease;
+		&&--active {
+			color: @primary-color;
+		}
+	}
+
+	&__header {
+		font-size: 1rem;
+		position: relative;
+	}
+
+	&__body {
+		font-size: 1rem;
+		padding: 1rem .6rem;
+	}
+
+	&__indicator {
+		position: absolute;
+		bottom: 0;
+		border-bottom: solid 2px @primary-color;
+		transition: left .3s ease, width .3s ease;
+	}
 }

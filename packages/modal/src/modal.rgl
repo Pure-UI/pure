@@ -1,8 +1,8 @@
 <template>
-	<div class="pure-modal-mask" r-animation="
+	<div class="pure-modal__mask" r-animation="
 		on: close-modal;
 		wait: 0;
-		class: pure-modal-mask--out, 3;
+		class: pure-modal__mask--out, 3;
 	">
 		<div class="pure-modal"
 			style="width: { width || 'initial' }"

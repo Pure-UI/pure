@@ -20,70 +20,70 @@
 	&:focus {
 		border: solid 1px @primary-color;
 	}
-}
 
-.@{input-prefix-cls}--block {
-	display: block;
-	width: 100%;
-}
-
-.@{input-prefix-cls}--round {
-	border-radius: 3px;
-}
-
-.@{input-prefix-cls}--readonly {
-	&:hover {
-		border: solid 1px shade(#ddd,15%);
+	&--block {
+		display: block;
+		width: 100%;
 	}
 
-	&:focus {
-		border: solid 1px shade(#ddd,15%);
-	}
-}
-
-.@{input-prefix-cls}--transparent {
-	border: solid 1px transparent;
-
-	&:hover {
-		border: solid 1px shade(#ddd,15%);
+	&--round {
+		border-radius: 3px;
 	}
 
-	&:not(.@{input-prefix-cls}--readonly):focus {
-		border: solid 1px @primary-color;
+	&--readonly {
+		&:hover {
+			border: solid 1px shade(#ddd,15%);
+		}
+
+		&:focus {
+			border: solid 1px shade(#ddd,15%);
+		}
 	}
-}
 
-.@{input-prefix-cls}--sm {
-	padding: .45em 10px;
-}
+	&--transparent {
+		border: solid 1px transparent;
 
-.@{input-prefix-cls}--error {
-	border: solid 1px #fd8282;
-}
+		&:hover {
+			border: solid 1px shade(#ddd,15%);
+		}
 
-.@{input-prefix-cls}--disabled {
-	background-color: #eee;
-	border: solid 1px #ddd;
-	cursor: not-allowed;
-}
+		&:not(.@{input-prefix-cls}--readonly):focus {
+			border: solid 1px @primary-color;
+		}
+	}
 
-.@{input-prefix-cls}__wrapper {
-	display: inline-block;
-	vertical-align: top;
-}
+	&--sm {
+		padding: .45em 10px;
+	}
 
-.@{input-prefix-cls}__wrapper--block {
-	display: block;
-	width: 100%;
-}
+	&--error {
+		border: solid 1px #fd8282;
+	}
 
-.@{input-prefix-cls}__error-message {
-	width: 100%;
-	color: #fd8282;
-	font-size: 11px;
-	background-color: #ffebeb;
-	border: solid 1px #ffebeb;
-	padding: 4px 10px;
-	box-sizing: border-box;
-	word-break: break-all;
+	&--disabled {
+		background-color: #eee;
+		border: solid 1px #ddd;
+		cursor: not-allowed;
+	}
+
+	&__wrapper {
+		display: inline-block;
+		vertical-align: top;
+
+		&--block {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__error-message {
+		width: 100%;
+		color: #fd8282;
+		font-size: 11px;
+		background-color: #ffebeb;
+		border: solid 1px #ffebeb;
+		padding: 4px 10px;
+		box-sizing: border-box;
+		word-break: break-all;
+	}
 }
