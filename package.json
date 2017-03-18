@@ -8,7 +8,6 @@
     "gh-pages": "node packages/_site/scripts/gh-pages",
     "deploy": "npm run site && npm run gh-pages",
     "clean": "lerna clean",
-    "patch": "np patch --skip-cleanup",
     "lint": "eslint packages/**/*.rgl --quiet",
     "lintcss": "stylelint packages/_theme/**/*.less",
     "boot": "lerna bootstrap",
