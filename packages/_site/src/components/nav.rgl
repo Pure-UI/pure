@@ -128,7 +128,7 @@
 	}
 
 	.title {
-		font-size: 13px;
+		font-size: 11px;
 		padding: 10px;
 		color: #999;
 	}
