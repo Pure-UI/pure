@@ -4,7 +4,7 @@
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "pure-ui": "^0.1.9",
+    "pure-ui": "^0.3.0",
     "pure-theme": "^0.1.0"
   }
 }
