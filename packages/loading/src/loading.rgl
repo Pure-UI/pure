@@ -1,0 +1,61 @@
+<template>
+	<div
+		class="pure-loading { transition ? 'pure-loading--transition' : '' }"
+		style="width:{ percentage }%;opacity: { opacity };"
+		on-webkitTransitionEnd="{ this.onTransitionEnd() }"
+	></div>
+</template>
+
+<script>
+	export default {
+		config() {
+			this.data.opacity = 1;
+			this.data.transition = true;
+			this.data.percentage = this.data.percentage || 0;
+		},
+		onTransitionEnd() {
+			if ( this.data.opacity === 0 ) { // reset
+				this.data.transition = false;
+				this.data.percentage = 0;
+				this.data.opacity = 1;
+				this.$update();
+				this.data.transition = true;
+				this.$update();
+			}
+
+			if ( this.data.percentage === 100 ) { // fadeOut
+				this.data.opacity = 0;
+				this.$update();
+			}
+		},
+		current() {
+			return this.data.percentage;
+		},
+		update( percentage ) {
+			this.data.percentage = percentage;
+			this.$update();
+		},
+		incLittle() {
+			if ( this.data.percentage >= 100 ) {
+				return;
+			}
+
+			const maxRange = 99 - this.data.percentage;
+			const inc = Math.random() * Math.min( 10, maxRange );
+			this.update( this.data.percentage + inc );
+		},
+		inc() {
+			if ( this.data.percentage >= 100 ) {
+				return;
+			}
+
+			const maxRange = 99 - this.data.percentage;
+			const inc = Math.random() * maxRange;
+			this.update( this.data.percentage + inc );
+		},
+		finish() {
+			this.data.percentage = 100;
+			this.$update();
+		},
+	};
+</script>

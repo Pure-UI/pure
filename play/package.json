@@ -46,6 +46,7 @@
     "pure-tooltip": "^0.1.0",
     "pure-progress-bar": "^0.1.0",
     "pure-progress-circle": "^0.1.0",
-    "pure-tag": "^0.1.0"
+    "pure-tag": "^0.1.0",
+    "pure-loading": "^0.1.0"
   }
 }

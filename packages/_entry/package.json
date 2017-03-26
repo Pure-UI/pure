@@ -8,7 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "entry": "pure --name=Pure --bundle"
+    "entry": "pure --name=Pure --bundle --prefer-source"
   },
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
@@ -55,6 +55,7 @@
     "pure-progress-bar": "^0.1.0",
     "pure-progress-circle": "^0.1.0",
     "pure-tag": "^0.1.0",
+    "pure-loading": "^0.1.0",
     "pure-cli": "latest"
   }
 }

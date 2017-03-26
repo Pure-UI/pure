@@ -1,44 +1,45 @@
 import install from 'pure-install';
 import functions from 'pure-functions';
 
-import Box from 'pure-box/src';
-import Breadcrumb from 'pure-breadcrumb/src';
-import BreadcrumbItem from 'pure-breadcrumb-item/src';
-import Button from 'pure-button/src';
-import Checkbox from 'pure-checkbox/src';
-import CheckboxGroup from 'pure-checkbox-group/src';
-import Countdown from 'pure-countdown/src';
-import ElementTree from 'pure-element-tree/src';
-import Form from 'pure-form/src';
-import FormControl from 'pure-form-control/src';
-import FormItem from 'pure-form-item/src';
-import FormLabel from 'pure-form-label/src';
-import Icon from 'pure-icon/src';
-import Input from 'pure-input/src';
-import Modal from 'pure-modal/src';
-import Message from 'pure-message/src';
-import Option from 'pure-option/src';
-import Pagination from 'pure-pagination/src';
-import Radio from 'pure-radio/src';
-import RadioButton from 'pure-radio-button/src';
-import RadioGroup from 'pure-radio-group/src';
-import Select from 'pure-select/src';
-import Spinner from 'pure-spinner/src';
-import Switch from 'pure-switch/src';
-import TabPane from 'pure-tab-pane/src';
-import Table from 'pure-table/src';
-import Tabs from 'pure-tabs/src';
-import TD from 'pure-td/src';
-import Textarea from 'pure-textarea/src';
-import TR from 'pure-tr/src';
-import Rate from 'pure-rate/src';
-import Notification from 'pure-notification/src';
-import Badge from 'pure-badge/src';
-import NumberInput from 'pure-number-input/src';
-import Tooltip from 'pure-tooltip/src';
-import ProgressBar from 'pure-progress-bar/src';
-import ProgressCircle from 'pure-progress-circle/src';
-import Tag from 'pure-tag/src';
+import Box from 'pure-box';
+import Breadcrumb from 'pure-breadcrumb';
+import BreadcrumbItem from 'pure-breadcrumb-item';
+import Button from 'pure-button';
+import Checkbox from 'pure-checkbox';
+import CheckboxGroup from 'pure-checkbox-group';
+import Countdown from 'pure-countdown';
+import ElementTree from 'pure-element-tree';
+import Form from 'pure-form';
+import FormControl from 'pure-form-control';
+import FormItem from 'pure-form-item';
+import FormLabel from 'pure-form-label';
+import Icon from 'pure-icon';
+import Input from 'pure-input';
+import Modal from 'pure-modal';
+import Message from 'pure-message';
+import Option from 'pure-option';
+import Pagination from 'pure-pagination';
+import Radio from 'pure-radio';
+import RadioButton from 'pure-radio-button';
+import RadioGroup from 'pure-radio-group';
+import Select from 'pure-select';
+import Spinner from 'pure-spinner';
+import Switch from 'pure-switch';
+import TabPane from 'pure-tab-pane';
+import Table from 'pure-table';
+import Tabs from 'pure-tabs';
+import TD from 'pure-td';
+import Textarea from 'pure-textarea';
+import TR from 'pure-tr';
+import Rate from 'pure-rate';
+import Notification from 'pure-notification';
+import Badge from 'pure-badge';
+import NumberInput from 'pure-number-input';
+import Tooltip from 'pure-tooltip';
+import ProgressBar from 'pure-progress-bar';
+import ProgressCircle from 'pure-progress-circle';
+import Tag from 'pure-tag';
+import Loading from 'pure-loading';
 
 // default theme
 import 'pure-theme';
@@ -84,6 +85,7 @@ export default function Pure( Component ) {
 	Component.use( install( 'ProgressBar', ProgressBar ) );
 	Component.use( install( 'ProgressCircle', ProgressCircle ) );
 	Component.use( install( 'Tag', Tag ) );
+	Component.use( install( 'Loading', Loading ) );
 };
 
 Object.assign( Pure, {
@@ -125,4 +127,5 @@ Object.assign( Pure, {
 	Tooltip,
 	ProgressBar,
 	ProgressCircle,
+	Loading,
 } );

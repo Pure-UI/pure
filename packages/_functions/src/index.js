@@ -1,5 +1,6 @@
 import message from './message';
 import notification from './notification';
+import loading from './loading';
 
 export default function ( Component, target = {} ) {
 	Component.use( function ( Component, Regular ) {
@@ -7,6 +8,7 @@ export default function ( Component, target = {} ) {
 			message: message( Regular ),
 			notify: notification( Regular ),
 			notification: notification( Regular ),
+			loading: loading( Regular ),
 		} );
 	} );
 };
