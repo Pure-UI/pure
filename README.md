@@ -17,7 +17,7 @@ $ npm install pure-ui --save
 
 ## Usage
 
-**Option 1**: with webpack
+**Option 1**: with webpack ( Recommended )
 
 ```js
 import Regular from 'regularjs';
