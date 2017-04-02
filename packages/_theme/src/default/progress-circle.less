@@ -6,6 +6,14 @@
 .@{progress-circle-prefix-cls} {
 	position: relative;
 
+	&__track {
+		stroke: tint(@primary-color,90%);
+	}
+
+	&__stroker {
+		stroke: @primary-color;
+	}
+
 	&__text {
 		position: absolute;
 		top: 50%;

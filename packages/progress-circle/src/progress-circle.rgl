@@ -2,15 +2,15 @@
 	<div class="pure-progress-circle" style="width: { size }px;height: { size }px;">
 		<svg viewBox="0 0 100 100">
 			<path
+				class="pure-progress-circle__track"
 				d="{ d }"
-				stroke="#dee2ea"
 				stroke-width="{ relativeStrokeWidth }"
 				fill="none"
 			></path>
 			<path
+				class="pure-progress-circle__stroker"
 				d="{ d }"
 				stroke-linecap="round"
-				stroke="#4c5c77"
 				stroke-width="{ relativeStrokeWidth }"
 				fill="none"
 				style="{ circleStyle }"
