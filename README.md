@@ -1,5 +1,7 @@
 # pure
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Pure-UI/pure.svg)](https://greenkeeper.io/)
+
 [![build status][build-status-image]][build-status-url]
 [![npm package][npm-package-image]][npm-package-url]
 [![license][license-image]][license-url]
