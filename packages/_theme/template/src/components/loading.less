@@ -1,0 +1,27 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@loading-prefix-cls: ~"@{pure-prefix}-loading";
+
+.@{loading-prefix-cls} {
+	position: relative;
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: @primary-color;
+	opacity: 1;
+
+	&__container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	&--transition {
+		transition: width .3s ease-in-out, opacity 1s ease-in-out;
+	}
+}

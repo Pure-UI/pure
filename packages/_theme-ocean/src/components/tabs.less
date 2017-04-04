@@ -1,0 +1,54 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@tabs-prefix-cls: ~"@{pure-prefix}-tabs";
+
+.@{tabs-prefix-cls} {
+	display: block;
+
+	&__titles,
+	&__title {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__titles {
+		border-bottom: 1px solid #d7d7d7;
+		overflow: hidden;
+	}
+
+	&__title {
+		float: left;
+		padding: .9rem .6rem;
+		color: #333;
+		cursor: pointer;
+		transition: color .4s ease;
+
+		&:hover {
+			color: @primary-color;
+		}
+
+		&&--active {
+			color: @primary-color;
+		}
+	}
+
+	&__header {
+		font-size: 1rem;
+		position: relative;
+	}
+
+	&__body {
+		font-size: 1rem;
+		padding: 1rem .6rem;
+	}
+
+	&__indicator {
+		position: absolute;
+		bottom: 0;
+		border-bottom: solid 2px @primary-color;
+		transition: left .3s ease, width .3s ease;
+	}
+}

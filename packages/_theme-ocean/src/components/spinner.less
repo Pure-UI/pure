@@ -1,0 +1,56 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@spinner-prefix-cls: ~"@{pure-prefix}-spinner";
+@spinner-color: tint(@primary-color,10%);
+
+.@{spinner-prefix-cls} {
+	display: inline-block;
+	font-size: 0;
+
+	&--block {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__dot {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		animation: pureSpinnerDotPluse 1.5s infinite ease-in-out;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	&__dot-1 {
+		animation-delay: -1.5s;
+		background-color: @spinner-color;
+	}
+
+	&__dot-2 {
+		animation-delay: -1.35s;
+		background-color: @spinner-color;
+	}
+
+	&__dot-3 {
+		animation-delay: -1.2s;
+		background-color: @spinner-color;
+	}
+}
+
+@keyframes pureSpinnerDotPluse {
+	0%,
+	40%,
+	100% {
+		opacity: 0;
+		transform: scale(.4);
+	}
+
+	20% {
+		opacity: 1;
+		transform: scaleY(1);
+	}
+}

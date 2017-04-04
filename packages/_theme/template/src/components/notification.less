@@ -1,0 +1,89 @@
+@import './common/var.less';
+@import './common/color.less';
+@import './common/mixin.less';
+
+@notification-prefix-cls: ~"@{pure-prefix}-notification";
+@notification-title-color: #333;
+@notification-description-color: #999;
+
+.@{notification-prefix-cls} {
+	position: relative;
+	padding: 20px 15px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 6px 1px rgba(50,50,50,.14);
+	background-color: #fff;
+	overflow: hidden;
+
+	.clearfix();
+
+	&--closable {
+		.@{notification-prefix-cls}__title {
+			padding-right: 25px;
+		}
+	}
+
+	&--with-icon {
+		.@{notification-prefix-cls}__content {
+			margin-left: 44px;
+		}
+	}
+
+	&__icon {
+		float: left;
+		font-size: 29px;
+		line-height: 32px;
+	}
+
+	&__title {
+		font-size: 14px;
+		margin-bottom: 5px;
+		color: @notification-title-color;
+	}
+
+	&__description {
+		font-size: 12px;
+		color: @notification-description-color;
+	}
+
+	&__close {
+		position: absolute;
+		top: 12px;
+		right: 15px;
+		cursor: pointer;
+		padding: 1px 3px;
+		color: #999;
+		font-size: 12px;
+
+		&:hover {
+			background-color: #f2f2f2;
+			color: #333;
+			border-radius: 3px;
+		}
+	}
+}
+
+.@{notification-prefix-cls}-container {
+	position: fixed;
+	top: 20px;
+	right: 0;
+	margin-right: 20px;
+	width: 320px;
+
+	.@{notification-prefix-cls} {
+		margin-bottom: 10px;
+
+		&--will-transition {
+			transition: transform .5s cubic-bezier(.79,.05,0,.96), opacity .5s ease;
+			transform: translate3d(100%,0,0);
+		}
+
+		&--in {
+			transform: translate3d(0,0,0);
+		}
+
+		&--out {
+			transform: translate3d(0,-10px,0);
+			opacity: 0;
+		}
+	}
+}

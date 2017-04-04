@@ -1,0 +1,29 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@badge-prefix-cls: ~"@{pure-prefix}-badge";
+
+.@{badge-prefix-cls} {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate3d(50%,-50%,0);
+	padding: 0 4px;
+	border-radius: 10px;
+	background-color: #e91e63;
+	font-size: 11px;
+	color: #fff;
+	overflow: hidden;
+
+	&--dot {
+		border-radius: 50%;
+		padding: 0;
+		width: 7px;
+		height: 7px;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: inline-block;
+	}
+}

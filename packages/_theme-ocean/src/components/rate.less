@@ -1,0 +1,42 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@rate-prefix-cls: ~"@{pure-prefix}-rate";
+
+@rate-active-color: @primary-color;
+@rate-inactive-color: #e2e2e2;
+
+.@{rate-prefix-cls} {
+	display: inline-block;
+	cursor: pointer;
+
+	&--readonly {
+		cursor: default;
+	}
+
+	&__star {
+		position: relative;
+		display: inline-block;
+		line-height: 1;
+		font-size: 21px;
+		color: @rate-inactive-color;
+
+		&::before {
+			content: '\e62f';
+			display: block;
+		}
+	}
+
+	&__star-highlight {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		overflow: hidden;
+		color: @rate-active-color;
+
+		&--full {
+			width: 100%;
+		}
+	}
+}

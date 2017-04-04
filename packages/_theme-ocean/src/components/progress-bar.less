@@ -1,0 +1,60 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@progress-bar-prefix-cls: ~"@{pure-prefix}-progress-bar";
+
+@progress-bar-track-color: #dee2ea;
+@progress-bar-color: @primary-color;
+@progress-bar-default-height: 8px;
+@progress-bar-text-inside-height: 15px;
+
+.@{progress-bar-prefix-cls} {
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	padding-right: 35px;
+	margin-right: -37px;
+
+	&--text-inside {
+		padding-right: 0;
+		margin-right: 0;
+	}
+
+	&__container {
+		font-size: 0;
+	}
+
+	&__outer {
+		position: relative;
+		border-radius: 10px;
+		height: @progress-bar-default-height;
+		background-color: @progress-bar-track-color;
+		overflow: hidden;
+
+		&--text-inside {
+			height: @progress-bar-text-inside-height;
+		}
+	}
+
+	&__inner {
+		position: absolute;
+		background-color: @progress-bar-color;
+		height: 100%;
+		transition: width .3s ease-in-out;
+		border-radius: 10px;
+		font-size: 11px;
+		text-align: right;
+	}
+
+	&__text {
+		display: inline-block;
+		font-size: 11px;
+		color: #333;
+		margin: 0 5px;
+
+		&--inside {
+			line-height: @progress-bar-text-inside-height;
+			color: #fff;
+		}
+	}
+}

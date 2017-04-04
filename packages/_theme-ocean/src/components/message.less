@@ -1,0 +1,49 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@note-prefix-cls: ~"@{pure-prefix}-message";
+
+.@{note-prefix-cls} {
+	display: inline-block;
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translate3d(-50%,-40px,0);
+	}
+
+	&--will-transition {
+		opacity: .8;
+		transition: transform .3s cubic-bezier(.4,0,0,1), opacity .7s cubic-bezier(.4,0,0,1);
+	}
+
+	&--in {
+		transform: translate3d(-50%,15px,0);
+		opacity: 1;
+	}
+
+	&--out {
+		transform: translate3d(-50%,10px,0);
+		opacity: 0;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 32px;
+		padding: 0 15px;
+		border-radius: 4px;
+		background-color: #fff;
+		border: solid 1px #ddd;
+		color: #666;
+		box-shadow: 2px 2px 8px -2px rgba(50,50,50,.14);
+		font-size: 1rem;
+	}
+
+	&__icon {
+		font-size: 16px;
+		margin-right: 7px;
+	}
+}

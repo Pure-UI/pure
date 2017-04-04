@@ -1,0 +1,38 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@option-prefix-cls: ~"@{pure-prefix}-option";
+
+.@{option-prefix-cls} {
+	padding: 6px 10px;
+	overflow: hidden;
+
+	&:hover {
+		background-color: fade(@primary-color,5%);
+	}
+
+	&--checked {
+		position: relative;
+		background-color: fade(@primary-color,5%);
+		color: @primary-color;
+
+		&::after {
+			font-family: 'pureicon';
+			font-style: normal;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			display: block;
+			content: '\e63f';
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translate3d(0,-50%,0);
+			color: @primary-color;
+			font-size: 13px;
+		}
+
+		&:hover {
+			background-color: fade(@primary-color,10%);
+		}
+	}
+}

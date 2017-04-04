@@ -1,0 +1,67 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@switch-prefix-cls: ~"@{pure-prefix}-switch";
+
+@switch-tracker-width: 40px;
+@switch-tracker-height: 14px;
+@switch-block-size: 20px;
+@switch-mask-size: @switch-block-size * 3;
+
+.@{switch-prefix-cls} {
+	position: relative;
+	width: @switch-tracker-width;
+	height: @switch-tracker-height;
+	background-color: #eee;
+	border-radius: 40px;
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+	transition: all .3s ease;
+
+	&--checked {
+		background-color: tint(@primary-color,50%);
+
+		.@{switch-prefix-cls}__circle-mask {
+			background-color: @primary-color;
+			top: -(@switch-mask-size - @switch-tracker-height) / 2;
+			left: @switch-tracker-width - @switch-mask-size / 2 - @switch-block-size / 2;
+		}
+
+		.@{switch-prefix-cls}__block {
+			transform: translate3d(@switch-tracker-width - @switch-block-size,0,0);
+			background-color: @primary-color;
+		}
+	}
+
+	&__circle-mask {
+		display: block;
+		background-color: #999;
+		border-radius: 50%;
+		position: absolute;
+		width: @switch-mask-size;
+		height: @switch-mask-size;
+		opacity: .1;
+		transform: scale3d(0,0,0);
+		transition: background-color .1s ease, left .1s ease, transform .1s ease, -webkit-transform .1s ease;
+		top: -(@switch-mask-size - @switch-tracker-height) / 2;
+		left: -@switch-mask-size / 2 + @switch-block-size / 2;
+
+		&&--show {
+			transform: scale3d(1,1,1);
+		}
+	}
+
+	&__block {
+		display: block;
+		background-color: #fff;
+		border-radius: 50%;
+		position: absolute;
+		width: @switch-block-size;
+		height: @switch-block-size;
+		top: (@switch-tracker-height - @switch-block-size) / 2;
+		left: 0;
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+		transition: all .3s ease;
+	}
+}

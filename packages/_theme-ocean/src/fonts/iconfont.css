@@ -1,0 +1,51 @@
+
+@font-face {font-family: "pureicon";
+  src: url('iconfont.eot?t=1491153671130'); /* IE9*/
+  src: url('iconfont.eot?t=1491153671130#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1491153671130') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1491153671130') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1491153671130#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.pure-icon--di {
+  font-family:"pureicon" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.di-shangchuan:before { content: "\e636"; }
+
+.di-github:before { content: "\e69f"; }
+
+.di-close:before { content: "\e603"; }
+
+.di-category:before { content: "\e601"; }
+
+.di-star:before { content: "\e62f"; }
+
+.di-paint:before { content: "\e66e"; }
+
+.di-home:before { content: "\e629"; }
+
+.di-category1:before { content: "\e613"; }
+
+.di-down:before { content: "\e68d"; }
+
+.di-error:before { content: "\e6a0"; }
+
+.di-warn:before { content: "\e641"; }
+
+.di-unknown:before { content: "\e611"; }
+
+.di-down2:before { content: "\e60b"; }
+
+.di-success:before { content: "\e625"; }
+
+.di-info:before { content: "\e80c"; }
+
+.di-wenjian:before { content: "\e631"; }
+
+.di-loading:before { content: "\e602"; }
+
+.di-right:before { content: "\e63f"; }

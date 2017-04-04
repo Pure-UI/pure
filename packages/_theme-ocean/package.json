@@ -1,13 +1,13 @@
 {
-  "name": "pure-theme-template",
+  "name": "pure-theme-ocean",
   "version": "0.1.0",
   "main": "lib/index.css",
   "scripts": {
-    "build-theme-source": "node scripts/default && node scripts/ocean"
+    "theme": "pure --name=pureTheme"
   },
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "kopy": "^5.0.5"
+    "pure-cli": "latest"
   }
 }

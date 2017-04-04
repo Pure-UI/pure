@@ -1,0 +1,20 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@tr-prefix-cls: ~"@{pure-prefix}-tr";
+@td-prefix-cls: ~"@{pure-prefix}-td";
+
+.@{tr-prefix-cls} {
+	&:nth-child(2n),
+	&:nth-child(2n) {
+		background-color: rgba(0,0,50,.02);
+	}
+
+	&:first-child .@{td-prefix-cls} {
+		border-top: none;
+	}
+
+	.@{td-prefix-cls}:first-child {
+		border-left: none;
+	}
+}

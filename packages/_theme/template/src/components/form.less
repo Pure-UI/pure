@@ -1,0 +1,37 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@form-prefix-cls: ~"@{pure-prefix}-form";
+@form-label-prefix-cls: ~"@{pure-prefix}-form-label";
+@form-control-prefix-cls: ~"@{pure-prefix}-form-control";
+@form-item-prefix-cls: ~"@{pure-prefix}-form-item";
+@input-prefix-cls: ~"@{pure-prefix}-input";
+
+.@{form-prefix-cls}--block {
+	.@{form-control-prefix-cls} {
+		flex: 1;
+
+		input,
+		textarea,
+		select {
+			flex: 1;
+		}
+
+		.@{input-prefix-cls}__wrapper {
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.@{form-prefix-cls}--stacked {
+	.@{form-label-prefix-cls} {
+		text-align: left !important;
+		margin-bottom: 10px;
+	}
+
+	.@{form-item-prefix-cls} {
+		display: block !important;
+	}
+}

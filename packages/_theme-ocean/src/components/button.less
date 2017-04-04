@@ -1,0 +1,106 @@
+@import './common/color.less';
+@import './common/var.less';
+
+@button-prefix-cls: ~"@{pure-prefix}-button";
+@button-color: @primary-color;
+
+.@{button-prefix-cls} {
+	box-sizing: border-box;
+	position: relative;
+	padding: .56em 1em;
+	font-size: 1rem;
+	vertical-align: middle;
+	border: solid 1px transparent;
+	border-radius: 3px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	font-family: inherit;
+	-webkit-appearance: none;
+
+	&:active {
+		box-shadow: inset 0 1px 5px rgba(0,0,0,.15);
+	}
+
+	&--sm {
+		padding: .45em .75em;
+	}
+
+	&--basic {
+		background-color: #fff;
+		border: solid 1px #ddd;
+		color: #333;
+
+		&:hover,
+		&:focus {
+			background-color: shade(#fff,3%);
+		}
+	}
+
+	&--primary {
+		background-color: @button-color;
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			background-color: shade(@button-color,5%);
+		}
+	}
+
+	&--disabled {
+		cursor: not-allowed;
+
+		&:active {
+			box-shadow: none;
+		}
+
+		&.@{button-prefix-cls}--basic {
+			background-color: #fff;
+			color: #999;
+		}
+
+		&.@{button-prefix-cls}--primary {
+			background-color: tint(@primary-color,45%);
+			color: #fff;
+		}
+	}
+
+	&--block {
+		display: block;
+		width: 100%;
+	}
+
+	&__text {
+		position: relative;
+		left: 50%;
+		transform: translate3d(-50%,0,0);
+	}
+
+	&__wave {
+		position: absolute;
+		background-color: rgba(0,0,0,.15);
+		border-radius: 50%;
+		transform: scale(0);
+		pointer-events: none;
+
+		&&--pressed {
+			animation: pureButtonRipple .6s linear forwards;
+		}
+
+		&&--hidden {
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes pureButtonRipple {
+	from {
+		opacity: 1;
+		transform: scale(0);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(2.5);
+	}
+}

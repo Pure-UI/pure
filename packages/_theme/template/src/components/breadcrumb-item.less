@@ -1,0 +1,29 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@breadcrumb-item-prefix-cls: ~"@{pure-prefix}-breadcrumb-item";
+
+.@{breadcrumb-item-prefix-cls} {
+	display: inline-block;
+	color: @breadcrumb-color;
+	vertical-align: middle;
+	font-size: 1rem;
+
+	&--link {
+		cursor: pointer;
+	}
+
+	&:last-child {
+		color: @breadcrumb-current-color;
+		font-weight: bold;
+
+		.@{breadcrumb-item-prefix-cls}__sep {
+			display: none;
+		}
+	}
+
+	&__sep {
+		margin: 0 4px;
+		color: #ddd;
+	}
+}

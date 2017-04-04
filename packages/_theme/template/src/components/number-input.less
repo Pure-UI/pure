@@ -1,0 +1,78 @@
+@import './common/color.less';
+@import './common/var.less';
+
+@number-input-prefix-cls: ~"@{pure-prefix}-number-input";
+
+.@{number-input-prefix-cls} {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+
+	&--disabled {
+		cursor: not-allowed;
+
+		.@{number-input-prefix-cls}__inner {
+			color: #999;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		background-color: #fff;
+		color: @form-color;
+		outline: none;
+		padding: .56em 10px;
+		font-size: 1rem;
+		display: inline-block;
+		vertical-align: middle;
+		box-sizing: border-box;
+		border: solid 1px #ddd;
+		cursor: inherit;
+		font-family: inherit;
+		-webkit-appearance: none;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&:focus {
+			border: solid 1px @primary-color;
+		}
+	}
+
+	&__buttons {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 21px;
+		height: 100%;
+		box-sizing: border-box;
+		user-select: none;
+		overflow: hidden;
+		border: solid 1px transparent;
+	}
+
+	&__button {
+		color: #666;
+		cursor: pointer;
+		height: 50%;
+		border-left: solid 1px #ddd;
+		text-align: center;
+		box-sizing: border-box;
+
+		&:first-child {
+			border-bottom: solid 1px #ddd;
+		}
+
+		&--disabled {
+			color: #ddd;
+			cursor: not-allowed;
+		}
+	}
+
+	&__button-inner--rotate {
+		transform: rotate(-180deg);
+	}
+}

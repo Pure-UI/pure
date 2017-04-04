@@ -1,0 +1,136 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@element-tree-node-prefix-cls: ~"@{pure-prefix}-element-tree-node";
+@hover-color: #f0f0f0;
+
+.@{element-tree-node-prefix-cls} {
+	cursor: default;
+
+	&--selected {
+		.@{element-tree-node-prefix-cls}__arrow {
+			color: #fff;
+		}
+
+		.@{element-tree-node-prefix-cls}__attr-key {
+			color: #bbb;
+		}
+
+		.@{element-tree-node-prefix-cls}__attr-plain {
+			color: #bbb;
+		}
+
+		.@{element-tree-node-prefix-cls}__attr-value {
+			color: #fff;
+		}
+	}
+
+	&__children {
+		padding-left: 30px;
+	}
+
+	&__tag {
+		position: relative;
+	}
+
+	&__arrow {
+		display: inline-block;
+		color: #666;
+		transform: rotate(-90deg);
+		user-select: none;
+
+		&&--open {
+			transform: rotate(0);
+		}
+
+		&&--invisible {
+			visibility: hidden;
+		}
+	}
+
+	&__open {
+		box-sizing: border-box;
+		display: block;
+		height: 2em;
+		line-height: 2em;
+		text-align: left;
+		color: #c71280;
+		background-color: transparent;
+		white-space: nowrap;
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background-color: #ddd;
+			height: 2em;
+		}
+
+		&.@{element-tree-node-prefix-cls}--hovered {
+			&::before {
+				left: 0;
+				right: 0;
+				background-color: @hover-color;
+			}
+		}
+
+		&.@{element-tree-node-prefix-cls}--selected {
+			color: #fff;
+
+			&::before {
+				left: 0;
+				right: 0;
+				background-color: #3879d9;
+			}
+		}
+	}
+
+	&__close {
+		box-sizing: border-box;
+		display: block;
+		height: 2em;
+		line-height: 2em;
+		text-align: left;
+		color: #c71280;
+		background-color: transparent;
+		text-indent: 1em;
+		white-space: nowrap;
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background-color: #ddd;
+			height: 2em;
+		}
+
+		&.@{element-tree-node-prefix-cls}--hovered::before {
+			left: 0;
+			right: 0;
+			background-color: @hover-color;
+		}
+
+		&.@{element-tree-node-prefix-cls}--selected {
+			background-color: #3879d9;
+			color: #fff;
+
+			&::before {
+				left: 0;
+				right: 0;
+				background-color: #3879d9;
+			}
+		}
+	}
+
+	&__attr-key {
+		color: #9a4500;
+	}
+
+	&__attr-plain {
+		color: #a894a6;
+	}
+
+	&__attr-value {
+		color: #1a1aa6;
+	}
+}

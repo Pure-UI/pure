@@ -1,0 +1,24 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@textarea-prefix-cls: ~"@{pure-prefix}-textarea";
+
+.@{textarea-prefix-cls} {
+	border: solid 1px #ddd;
+	padding: 10px;
+	color: @form-color;
+	font-size: 1rem;
+	font-family: inherit;
+	vertical-align: middle;
+	box-sizing: border-box;
+	outline: none;
+
+	&:focus {
+		border: solid 1px @primary-color;
+	}
+
+	&--block {
+		display: block;
+		width: 100%;
+	}
+}

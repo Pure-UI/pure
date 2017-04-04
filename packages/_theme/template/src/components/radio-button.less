@@ -1,0 +1,42 @@
+@import './common/var.less';
+@import './common/color.less';
+
+@radio-button-prefix-cls: ~"@{pure-prefix}-radio-button";
+
+@radio-button-border-radius: 4px;
+
+.@{radio-button-prefix-cls} {
+	display: block;
+	box-sizing: border-box;
+	padding: 0 10px;
+	height: 28px;
+	line-height: 26px;
+	border: solid 1px #d9d9d9;
+	cursor: pointer;
+	font-size: 1rem;
+	color: #666;
+	border-left: none;
+
+	&:first-child {
+		border-top-left-radius: @radio-button-border-radius;
+		border-bottom-left-radius: @radio-button-border-radius;
+		border-left: solid 1px #d9d9d9;
+	}
+
+	&:last-child {
+		border-top-right-radius: @radio-button-border-radius;
+		border-bottom-right-radius: @radio-button-border-radius;
+	}
+
+	&--checked {
+		background: #fff;
+		border-color: @primary-color;
+		color: @primary-color;
+		box-shadow: -1px 0 0 0 lighten(@primary-color,5%);
+
+		&:first-child {
+			border-color: @primary-color;
+			box-shadow: none;
+		}
+	}
+}
