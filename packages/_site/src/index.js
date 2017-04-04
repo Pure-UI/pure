@@ -5,7 +5,6 @@ import App from './components/app';
 import Regular from 'regularjs';
 import Pure from 'pure-ui';
 
-import 'pure-theme';
 import './site.css';
 import './highlight.css';
 

@@ -119,7 +119,7 @@
 </script>
 
 <style lang="less" scoped>
-	@import '../../../_theme/src/default/common/color.less';
+	@import '../../../_theme-default/src/common/color.less';
 
 	@hover-bgcolor: fade(tint(@primary-color,80%),14%);
 	@active-bgcolor: fade(tint(@primary-color,80%),30%);
