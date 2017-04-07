@@ -6,6 +6,6 @@
   "devDependencies": {
     "kopy": "^5.0.5",
     "pure-ui": "^0.3.0",
-    "pure-theme": "^0.1.0"
+    "@pure/theme": "^0.1.0"
   }
 }

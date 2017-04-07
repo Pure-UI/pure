@@ -40,8 +40,8 @@
 </template>
 
 <script>
-	import Icon from 'pure-icon';
-	import Button from 'pure-button';
+	import Icon from '@pure/icon';
+	import Button from '@pure/button';
 
 	export default {
 		components: {

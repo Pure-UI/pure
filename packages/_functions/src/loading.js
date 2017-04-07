@@ -1,5 +1,5 @@
-import install from 'pure-install';
-import Loading from 'pure-loading';
+import install from '@pure/install';
+import Loading from '@pure/loading';
 
 export default function ( Regular ) {
 	let $container;

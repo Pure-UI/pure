@@ -1,5 +1,5 @@
 {
-  "name": "pure-switch",
+  "name": "@pure/switch",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

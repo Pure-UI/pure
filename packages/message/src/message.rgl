@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import Icon from 'pure-icon';
+	import Icon from '@pure/icon';
 
 	export default {
 		components: {

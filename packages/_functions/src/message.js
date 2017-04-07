@@ -1,5 +1,5 @@
-import install from 'pure-install';
-import Message from 'pure-message';
+import install from '@pure/install';
+import Message from '@pure/message';
 
 export default function ( Regular ) {
 	const AnimMessage = Regular.extend( {

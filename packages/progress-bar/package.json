@@ -1,5 +1,5 @@
 {
-  "name": "pure-progress-bar",
+  "name": "@pure/progress-bar",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

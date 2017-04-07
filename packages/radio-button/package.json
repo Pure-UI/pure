@@ -1,5 +1,5 @@
 {
-  "name": "pure-radio-button",
+  "name": "@pure/radio-button",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

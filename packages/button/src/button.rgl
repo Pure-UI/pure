@@ -16,8 +16,8 @@
 </template>
 
 <script>
-	import Icon from 'pure-icon';
-	import nextTick from 'pure-helpers/nextTick';
+	import Icon from '@pure/icon';
+	import nextTick from '@pure/helpers/nextTick';
 
 	export default {
 		components: {

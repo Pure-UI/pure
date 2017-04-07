@@ -1,5 +1,5 @@
 {
-  "name": "pure-number-input",
+  "name": "@pure/number-input",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

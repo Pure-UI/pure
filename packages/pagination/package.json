@@ -1,5 +1,5 @@
 {
-  "name": "pure-pagination",
+  "name": "@pure/pagination",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "pure-button": "^0.1.0"
+    "@pure/button": "^0.1.0"
   },
   "devDependencies": {
     "pure-cli": "latest"

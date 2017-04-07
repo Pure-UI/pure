@@ -1,5 +1,5 @@
 {
-  "name": "pure-tab-pane",
+  "name": "@pure/tab-pane",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

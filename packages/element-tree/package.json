@@ -1,5 +1,5 @@
 {
-  "name": "pure-element-tree",
+  "name": "@pure/element-tree",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

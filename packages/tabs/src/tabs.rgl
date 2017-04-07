@@ -16,7 +16,7 @@
 </template>
 
 <script>
-	import nextTick from 'pure-helpers/nextTick';
+	import nextTick from '@pure/helpers/nextTick';
 
 	export default {
 		config() {

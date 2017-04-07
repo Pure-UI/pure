@@ -1,5 +1,5 @@
 {
-  "name": "pure-textarea",
+  "name": "@pure/textarea",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

@@ -1,5 +1,5 @@
 {
-  "name": "pure-breadcrumb",
+  "name": "@pure/breadcrumb",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

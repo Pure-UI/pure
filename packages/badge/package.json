@@ -1,5 +1,5 @@
 {
-  "name": "pure-badge",
+  "name": "@pure/badge",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

@@ -1,5 +1,5 @@
 {
-  "name": "pure-notification",
+  "name": "@pure/notification",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "pure-icon": "^0.1.0"
+    "@pure/icon": "^0.1.0"
   },
   "devDependencies": {
     "pure-cli": "latest"

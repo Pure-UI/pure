@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import Input from 'pure-input';
-	import Icon from 'pure-icon';
+	import Input from '@pure/input';
+	import Icon from '@pure/icon';
 
 	export default {
 		component: {

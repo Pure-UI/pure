@@ -1,5 +1,5 @@
 {
-  "name": "pure-tooltip",
+  "name": "@pure/tooltip",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

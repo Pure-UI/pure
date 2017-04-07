@@ -29,7 +29,7 @@
 </template>
 
 <script>
-	import Button from 'pure-button';
+	import Button from '@pure/button';
 
 	export default {
 		components: {

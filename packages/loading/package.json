@@ -1,5 +1,5 @@
 {
-  "name": "pure-loading",
+  "name": "@pure/loading",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {

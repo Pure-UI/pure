@@ -1,5 +1,5 @@
-import Notification from 'pure-notification';
-import install from 'pure-install';
+import Notification from '@pure/notification';
+import install from '@pure/install';
 
 export default function ( Regular ) {
 	const AnimNotification = Regular.extend( {

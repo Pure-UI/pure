@@ -1,5 +1,5 @@
 {
-  "name": "pure-input",
+  "name": "@pure/input",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {
