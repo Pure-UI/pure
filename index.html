@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Pure Docs</title>
-	<link href="dist/app-756ea9af.css" rel="stylesheet"></head>
-	<body>
-		<div id="app"></div>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-	<script type="text/javascript" src="dist/app-756ea9af.js"></script></body>
+<head>
+	<meta charset="utf-8">
+	<title>Pure Docs</title>
+<link href="dist/app-692fdeee.css" rel="stylesheet"></head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+		( function ( global ) {
+			var $link;
+			var ThemeSwitcher = {
+				root: function ( urlroot ) {
+					this.urlroot = urlroot;
+				},
+				use: function ( themeName ) {
+					if ( !$link ) {
+						$link = document.createElement( 'link' );
+						$link.rel = 'stylesheet';
+						document.head.appendChild( $link );
+					}
+
+					if ( themeName ) {
+						$link.href = this.urlroot + '/' + themeName + '/index.css';
+					}
+				},
+			};
+
+			ThemeSwitcher.root( '/theme' );
+			ThemeSwitcher.use( 'default' );
+
+			global.ThemeSwitcher = ThemeSwitcher;
+		} )( this );
+	</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script type="text/javascript" src="dist/app-692fdeee.js"></script></body>
 </html>
