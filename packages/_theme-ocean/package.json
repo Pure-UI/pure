@@ -1,5 +1,5 @@
 {
-  "name": "pure-theme-ocean",
+  "name": "@pure/theme-ocean",
   "version": "0.1.0",
   "main": "lib/index.css",
   "scripts": {

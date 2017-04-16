@@ -1,5 +1,5 @@
 {
-  "name": "pure-theme",
+  "name": "@pure/theme",
   "version": "0.1.0",
   "main": "lib/index.css",
   "scripts": {
