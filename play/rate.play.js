@@ -1,12 +1,10 @@
-import Rate from 'pure-rate';
+import Rate from '@pure/rate';
 
-play( Rate, module )
-	.name( 'Rate' )
-	.add( 'basic', {
-		template: `
+play( Rate, module ).name( 'Rate' ).add( 'basic', {
+	template: `
 			<Rate on-change="{ this.onChange($event) }"></Rate>
 		`,
-		onChange( v ) {
-			this.$log( v );
-		},
-	} );
+	onChange( v ) {
+		this.$log( v );
+	},
+} );

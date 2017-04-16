@@ -1,6 +1,6 @@
 import { merge } from 'regular-play';
 
-import 'pure-theme/src';
+import '@pure/theme/src';
 
 const load = requireContext => {
 	return requireContext.keys().map( requireContext );

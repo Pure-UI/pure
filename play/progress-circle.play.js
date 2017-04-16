@@ -1,5 +1,5 @@
-import ProgressCircle from 'pure-progress-circle';
-import NumberInput from 'pure-number-input';
+import ProgressCircle from '@pure/progress-circle';
+import NumberInput from '@pure/number-input';
 
 play( ProgressCircle, module )
 	.name( 'ProgressCircle' )
@@ -14,5 +14,5 @@ play( ProgressCircle, module )
 		`,
 		config() {
 			this.data.v = 10;
-		}
-	} )
+		},
+	} );

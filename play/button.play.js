@@ -1,20 +1,32 @@
-import Button from 'pure-button';
+import Button from '@pure/button';
 
 play( Button, module )
 	.name( 'Button' )
-	.add( 'basic', `
+	.add(
+		'basic',
+		`
 		<Button primary>Primary</Button>
 		<Button>Normal</Button>
-	` )
-	.add( 'size', `
+	`,
+	)
+	.add(
+		'size',
+		`
 		<Button primary sm>Primary</Button>
 		<Button sm>Normal</Button>
-	` )
-	.add( 'disabled', `
+	`,
+	)
+	.add(
+		'disabled',
+		`
 		<Button primary disabled>Normal</Button>
 		<Button disabled>Normal</Button>
-	` )
-	.add( 'loading', `
+	`,
+	)
+	.add(
+		'loading',
+		`
 		<Button primary loading>Normal</Button>
 		<Button loading>Normal</Button>
-	` )
+	`,
+	);
