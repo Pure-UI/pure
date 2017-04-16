@@ -1,7 +1,9 @@
 import Tag from '@pure/tag';
 
-play( Tag, module ).name( 'Tag' ).add( 'basic', {
-	template: `
+play( Tag, module )
+	.name( 'Tag' )
+	.add( 'basic', {
+		template: `
 			<Tag
 				on-click="{ this.onClick() }"
 				on-close="{ this.onClose($event) }"
@@ -16,13 +18,19 @@ play( Tag, module ).name( 'Tag' ).add( 'basic', {
 				checked
 			</Tag>
 		`,
-	onClose() {
-		this.$log( 'closed' );
-	},
-	onClick() {
-		this.$log( 'clicked' );
-	},
-	onCheck( status ) {
-		this.$log( 'check:' + status );
-	},
-} );
+		onClose() {
+			this.$log( 'closed' );
+		},
+		onClick() {
+			this.$log( 'clicked' );
+		},
+		onCheck( status ) {
+			this.$log( 'check:' + status );
+		},
+	} )
+	.add(
+		'color',
+		`
+			<Tag color="red">text</Tag>
+		`,
+	);

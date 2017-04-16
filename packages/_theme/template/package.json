@@ -1,5 +1,5 @@
 {
-  "name": "pure-theme<% if ( name ) {%>-<%= name %><% } %>",
+  "name": "@pure/theme<% if ( name ) {%>-<%= name %><% } %>",
   "version": "0.1.0",
   "main": "lib/index.css",
   "scripts": {
