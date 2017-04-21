@@ -3,6 +3,8 @@
 
 @tag-prefix-cls: ~"@{pure-prefix}-tag";
 
+@tag-success-color: green;
+
 .@{tag-prefix-cls} {
 	display: inline-block;
 	line-height: 20px;
@@ -21,13 +23,13 @@
 	&--checkable:hover {
 		position: relative;
 		top: -1px;
-		box-shadow: 0 1px 0px 1px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 1px 0 1px rgba(0,0,0,.05);
 	}
 
 	&--checkable&--checked:hover {
 		position: relative;
 		top: -1px;
-		box-shadow: 0 1px 0px 1px rgba(0, 0, 0, 0.16);
+		box-shadow: 0 1px 0 1px rgba(0,0,0,.16);
 	}
 
 	&--checked {

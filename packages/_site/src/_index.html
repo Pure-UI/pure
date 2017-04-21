@@ -3,35 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>Pure Docs</title>
+	<link rel="stylesheet" href="/theme/default/index.css">
 </head>
 <body>
 	<div id="app"></div>
-	<script type="text/javascript">
-		( function ( global ) {
-			var $link;
-			var ThemeSwitcher = {
-				root: function ( urlroot ) {
-					this.urlroot = urlroot;
-				},
-				use: function ( themeName ) {
-					if ( !$link ) {
-						$link = document.createElement( 'link' );
-						$link.rel = 'stylesheet';
-						document.head.appendChild( $link );
-					}
-
-					if ( themeName ) {
-						$link.href = this.urlroot + '/' + themeName + '/index.css';
-					}
-				},
-			};
-
-			ThemeSwitcher.root( '/theme' );
-			ThemeSwitcher.use( 'default' );
-
-			global.ThemeSwitcher = ThemeSwitcher;
-		} )( this );
-	</script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
 </body>
 </html>
