@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		{#else}
-			<Button primary sm on-click={this.upload()}>点击上传</Button>
+			<Button primary sm on-click={this.onUpload()}>点击上传</Button>
 		{/if}
 
 		{#if multiple}
