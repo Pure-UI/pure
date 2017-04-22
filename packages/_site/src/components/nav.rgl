@@ -74,6 +74,9 @@
 			<li>
 				<a class="{ active === 'Form' ? 'active' : '' }" href="#/Form">Form</a>
 			</li>
+			<li>
+				<a class="{ active === 'Upload' ? 'active' : '' }" href="#/Upload">Upload</a>
+			</li>
 			<!-- <li>
 				<a class="{ active === 'DatePicker' ? 'active' : '' }" href="#/DatePicker">DatePicker</a>
 			</li> -->

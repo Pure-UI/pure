@@ -1,0 +1,49 @@
+<template>
+	<ul ref=fileListBox class="pure-upload__list">
+	{#list fileList as item}
+		<li class="pure-upload__list-item">
+			<a class="pure-upload__list-item-name">
+				<Icon type="file"></Icon>
+				<span>{item.name}</span>
+			</a>
+			<label class="pure-upload__list-item-icon">
+				{#if item.status === 'success'}
+				<Icon type="success"></Icon>
+				{/if}
+				<span on-click={this.onDelete(item_index)}>
+					<Icon type="close"></Icon>
+				</span>
+			</label>
+		</li>
+	{/list}
+	{#list uploadList as item}
+		{#if item.name}
+		<li class="pure-upload__list-item">
+			<a class="pure-upload__list-item-name">
+				<Icon type="file"></Icon>
+				<span>{item.name || ''}</span>
+			</a>
+		</li>
+		<div class="pure-upload__list-item-progress">
+			<ProgressBar percentage="{item.complete||0}"></ProgressBar>
+		</div>
+		{/if}
+	{/list}
+	</ul>
+</template>
+
+<script>
+	import ProgressBar from '@pure/progress-bar';
+	import Icon from '@pure/icon';
+
+	export default {
+		components: {
+			ProgressBar,
+			Icon
+		},
+		onDelete( index ) {
+			this.data.fileList.splice( index, 1 );
+			this.$update();
+		},
+	};
+</script>

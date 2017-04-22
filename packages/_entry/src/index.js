@@ -40,6 +40,7 @@ import ProgressBar from '@pure/progress-bar';
 import ProgressCircle from '@pure/progress-circle';
 import Tag from '@pure/tag';
 import Loading from '@pure/loading';
+import Upload from '@pure/upload';
 
 // default theme
 import '@pure/theme';
@@ -86,7 +87,8 @@ export default function Pure( Component ) {
 	Component.use( install( 'ProgressCircle', ProgressCircle ) );
 	Component.use( install( 'Tag', Tag ) );
 	Component.use( install( 'Loading', Loading ) );
-};
+	Component.use( install( 'Upload', Upload ) );
+}
 
 Object.assign( Pure, {
 	install,
@@ -128,4 +130,5 @@ Object.assign( Pure, {
 	ProgressBar,
 	ProgressCircle,
 	Loading,
+	Upload,
 } );

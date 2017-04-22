@@ -56,6 +56,7 @@
     "@pure/progress-circle": "^0.1.0",
     "@pure/tag": "^0.1.0",
     "@pure/loading": "^0.1.0",
+    "@pure/upload": "^0.1.0",
     "pure-cli": "latest"
   }
 }

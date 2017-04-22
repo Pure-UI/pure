@@ -1,0 +1,166 @@
+<template>
+	<div class="pure-upload { drop ? 'pure-upload--drop' : '' }">
+		{#if type === 'drop'}
+			<div class="pure-upload__droparea { isDragOver ? 'pure-upload__droparea--hover' : '' }"
+				on-click={this.onUpload()}
+				on-dragenter={this.onDragEnter()}
+				on-dragleave={this.onDragLeave()}
+				on-drop={this.onDrop($event)}
+				on-dragover={this.onDragOver($event)}
+			>
+				<div class="pure-upload__icon"><Icon type="upload"></Icon></div>
+				<div class="pure-upload__text">
+					Drop files here, or <strong>Click me</strong>
+				</div>
+			</div>
+		{#else}
+			<Button primary sm on-click={this.upload()}>点击上传</Button>
+		{/if}
+
+		{#if multiple}
+			<input multiple ref=input type="file" class="pure-upload__input">
+		{#else}
+			<input ref=input type="file" class="pure-upload__input">
+		{/if}
+
+		<div class="pure-upload__tip">
+			{ tip }
+		</div>
+
+		{#if showFileList}
+			<FileList
+				fileList="{ fileList }"
+				uploadList="{ uploadList }"
+			></FileList>
+		{/if}
+	</div>
+</template>
+
+<script>
+	import Button from '@pure/button';
+	import Icon from '@pure/icon';
+	import Request from '@pure/helpers/request';
+	import FileList from './compontents/fileList';
+
+	export default {
+		components: {
+			Button,
+			Icon,
+			FileList
+		},
+		config() {
+			// [drag：默认false, multiple：默认false;若为拖拽只能为true, showFileList：默认true]
+			this.data.showFileList = typeof this.data.showFileList === 'undefined' ? true : this.data.showFileList;
+			this.data.fileList = this.data.fileList || [];
+			this.data.isDragOver = false;
+		},
+		onDragEnter() {
+			this.data.isDragOver = true;
+		},
+		onDragLeave() {
+			this.data.isDragOver = false;
+		},
+		onDrop( e ) {
+			var files = e.event.dataTransfer.files;
+			this.data.isDragOver = false;
+
+			if ( files.length !== 0 ) {
+				this.checkFiles( files );
+			}
+
+			e.event.preventDefault();
+		},
+		onDragOver( e ) {
+			e.event.dataTransfer.dragEffect = 'copy';
+			e.event.preventDefault();
+		},
+		onUpload() {
+			this.$refs.input.click();
+			if ( !this.isAlreadyBinding ) {
+				this.inputChange();
+			}
+		},
+		inputChange() {
+			var input = this.$refs.input;
+			var self = this;
+			this.isAlreadyBinding = true;
+			input.addEventListener( 'change', function () {
+				var files = this.files;
+				if ( files ) {
+					self.checkFiles( files );
+				}
+			} );
+		},
+		checkFiles( files ) {
+			this._initUploadList( files );
+
+			const self = this;
+			let i = 0;
+			const loopUpload = function () {
+				if ( files[ i ] ) {
+					var reader = new FileReader();
+					if ( !/image\/\w+/.test( files[ i ].type ) ) {
+						console.log( '请上传图片格式' );
+						return false;
+					}
+					reader.onload = function () {
+						var imgData = reader.result;
+						var opts = {
+							method: 'POST',
+							data: {
+								imgData: imgData,
+								index: i
+							},
+							progress: true,
+							success: function ( data ) {
+								console.log( data );
+							}
+						};
+
+						new Request().request( 'https://jsonplaceholder.typicode.com/posts/', opts );
+
+						opts.onProgress = function ( complete, index ) {
+							self._updateUploadFileList( complete, index );
+						};
+
+						opts.onProgressEnd = function ( index ) {
+							self._removeUploadFileListByIndex( index );
+						};
+
+						i++;
+
+						loopUpload();
+					};
+
+					reader.readAsDataURL( files[ i ] );
+				}
+			};
+
+			loopUpload();
+		},
+		_initUploadList( files ) {
+			this.data.uploadList = [];
+			for ( let i = 0, l = files.length; i < l; i++ ) {
+				const uploadListItem = {};
+				uploadListItem.name = files[ i ].name;
+				uploadListItem.complete = 0;
+				this.data.uploadList.push( uploadListItem );
+			}
+			this.$update();
+		},
+		_updateUploadFileList( complete, index ) {
+			this.data.uploadList[ index ].complete = complete;
+			this.$update();
+		},
+		_removeUploadFileListByIndex( index ) {
+			const newFileList = [];
+			newFileList.name = this.data.uploadList[ index ].name;
+			newFileList.url = '';
+			newFileList.status = 'success';
+
+			this.data.fileList.push( newFileList );
+			this.data.uploadList[ index ] = {};
+			this.$update();
+		}
+	};
+</script>
