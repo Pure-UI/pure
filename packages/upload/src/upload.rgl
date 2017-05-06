@@ -1,6 +1,6 @@
 <template>
 	<div class="pure-upload { drop ? 'pure-upload--drop' : '' }">
-		{#if type === 'drop'}
+		{#if drop}
 			<div class="pure-upload__droparea { isDragOver ? 'pure-upload__droparea--hover' : '' }"
 				on-click={this.onUpload()}
 				on-dragenter={this.onDragEnter()}
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		{#else}
-			<Button primary sm on-click={this.onUpload()}>点击上传</Button>
+			<Button primary sm on-click={this.onUpload()}>Upload</Button>
 		{/if}
 
 		{#if multiple}
@@ -49,7 +49,7 @@
 			FileList
 		},
 		config() {
-			// [drag：默认false, multiple：默认false;若为拖拽只能为true, showFileList：默认true]
+			// [drop：默认false, multiple：默认false;若为拖拽只能为true, showFileList：默认true]
 			this.data.showFileList = typeof this.data.showFileList === 'undefined' ? true : this.data.showFileList;
 			this.data.fileList = this.data.fileList || [];
 			this.data.isDragOver = false;
