@@ -1,0 +1,7 @@
+<template>
+	<div class="pure-text-spinner { type === 'dots' ? 'pure-text-spinner--dots' : '' }"></div>
+</template>
+
+<script>
+	export default {};
+</script>

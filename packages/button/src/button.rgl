@@ -8,7 +8,7 @@
 		<div ref="ripples"></div>
 		<div class="pure-button__text">
 			{#if loading}
-			<Icon opacity=".8" size="11px" spin>&#xe602;</Icon>
+			<TextSpinner type="dots"></TextSpinner>
 			{/if}
 			{#inc this.$body}
 		</div>
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-	import Icon from '@pure/icon';
+	import TextSpinner from '@pure/text-spinner';
 	import nextTick from '@pure/helpers/nextTick';
 
 	export default {
 		components: {
-			Icon,
+			TextSpinner,
 		},
 		config() {
 			this.data.ripple = this.data.ripple !== false;

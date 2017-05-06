@@ -1,17 +1,13 @@
 {
-  "name": "@pure/button",
+  "name": "@pure/text-spinner",
   "main": "lib/index.js",
   "play:main": "src/index.js",
   "scripts": {
-    "build": "pure --name=Button"
+    "build": "pure --name=TextSpinner"
   },
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
-  "peerDependencies": {
-    "@pure/text-spinner": "^0.1.0",
-    "@pure/helpers": "^0.1.0"
-  },
   "devDependencies": {
     "pure-cli": "latest"
   }
