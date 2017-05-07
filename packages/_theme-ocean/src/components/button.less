@@ -5,6 +5,7 @@
 @button-color: @primary-color;
 
 .@{button-prefix-cls} {
+	display: inline-block;
 	box-sizing: border-box;
 	position: relative;
 	padding: .56em 1em;
@@ -13,10 +14,7 @@
 	border: solid 1px transparent;
 	border-radius: 3px;
 	overflow: hidden;
-	outline: none;
 	cursor: pointer;
-	font-family: inherit;
-	-webkit-appearance: none;
 
 	&:active {
 		box-shadow: inset 0 1px 5px rgba(0,0,0,.15);
@@ -71,9 +69,18 @@
 	}
 
 	&__text {
+		display: inline-block;
 		position: relative;
 		left: 50%;
 		transform: translate3d(-50%,0,0);
+		-webkit-appearance: none;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		color: inherit;
+		outline: none;
+		font-family: inherit;
+		cursor: inherit;
 	}
 
 	&__wave {

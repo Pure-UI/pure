@@ -1,18 +1,18 @@
 <template>
-	<button
+	<div
 		ref="button"
 		class="pure-button { primary ? 'pure-button--primary' : 'pure-button--basic' } { sm ? 'pure-button--sm' : '' } { disabled ? 'pure-button--disabled' : '' } { block ? 'pure-button--block' : '' }"
 		on-mousedown="{ this.onRipple( $event ) }"
 		on-mouseup="{ this.onClick( $event ) }"
 	>
 		<div ref="ripples"></div>
-		<div class="pure-button__text">
+		<button class="pure-button__text">
 			{#if loading}
 			<TextSpinner type="dots"></TextSpinner>
 			{/if}
 			{#inc this.$body}
-		</div>
-	</button>
+		</button>
+	</div>
 </template>
 
 <script>
