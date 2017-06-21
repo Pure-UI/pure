@@ -89,6 +89,9 @@
 			<li>
 				<a class="{ active === 'Box' ? 'active' : '' }" href="#/Box">Box</a>
 			</li>
+			<li>
+				<a class="{ active === 'Card' ? 'active' : '' }" href="#/Card">Card</a>
+			</li>
 		</ul>
 		<div class="title">TREE</div>
 		<ul>

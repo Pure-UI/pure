@@ -1,0 +1,25 @@
+@import '../common/var.less';
+@import '../common/color.less';
+
+@card-prefix-cls: ~"@{pure-prefix}-card";
+
+.@{card-prefix-cls} {
+	border: solid 1px #f5f5f5;
+	border-radius: 4px;
+	padding: 15px;
+	transition: box-shadow .2s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+	}
+
+	&__title {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	&__content {
+		font-size: 14px;
+	}
+}

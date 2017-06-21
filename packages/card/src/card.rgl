@@ -1,0 +1,18 @@
+<template>
+	<div class="pure-card">
+		<div class="pure-card__title">
+			{ title }
+		</div>
+		<div class="pure-card__content">
+			{#inc this.$body}
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		config() {
+
+		},
+	};
+</script>
