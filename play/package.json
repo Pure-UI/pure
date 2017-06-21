@@ -49,6 +49,7 @@
     "@pure/tag": "^0.1.0",
     "@pure/loading": "^0.1.0",
     "@pure/upload": "^0.1.0",
-    "@pure/text-spinner": "^0.1.0"
+    "@pure/text-spinner": "^0.1.0",
+    "@pure/card": "^0.1.0"
   }
 }
