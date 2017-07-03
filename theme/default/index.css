@@ -1274,6 +1274,7 @@
   color: #333;
   cursor: pointer;
   transition: color .4s ease;
+  font-size: 14px;
 }
 .pure-tabs__title:hover {
   color: #4c5c77;
