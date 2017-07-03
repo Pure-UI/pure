@@ -8,18 +8,27 @@
 	border-radius: 4px;
 	padding: 15px;
 	transition: box-shadow .2s ease-in-out;
+	margin-bottom: 10px;
 
 	&:hover {
-		box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+		box-shadow: 0 1px 4px -1px rgba(0,0,0,0.1);
 	}
 
 	&__title {
 		font-size: 16px;
 		font-weight: bold;
 		margin-bottom: 10px;
+		color: #333;
+		line-height: 1;
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	&__content {
 		font-size: 14px;
+		color: #666;
 	}
 }

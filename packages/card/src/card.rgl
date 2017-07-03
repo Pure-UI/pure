@@ -1,8 +1,17 @@
 <template>
 	<div class="pure-card">
+		{#if title || icon}
 		<div class="pure-card__title">
-			{ title }
+			{#if icon}
+			<Icon type="{ icon }"></Icon>
+			{/if}
+
+			{#if title}
+			<span class="pure-card__text">{ title }</span>
+			{/if}
 		</div>
+		{/if}
+
 		<div class="pure-card__content">
 			{#inc this.$body}
 		</div>
@@ -10,9 +19,11 @@
 </template>
 
 <script>
-	export default {
-		config() {
+	import Icon from '@pure/icon';
 
+	export default {
+		components: {
+			Icon,
 		},
 	};
 </script>
