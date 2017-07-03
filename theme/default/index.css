@@ -227,17 +227,25 @@
   border-radius: 4px;
   padding: 15px;
   transition: box-shadow 0.2s ease-in-out;
+  margin-bottom: 10px;
 }
 .pure-card:hover {
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.1);
 }
 .pure-card__title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #333;
+  line-height: 1;
+}
+.pure-card__text {
+  display: inline-block;
+  vertical-align: middle;
 }
 .pure-card__content {
   font-size: 14px;
+  color: #666;
 }
 .pure-checkbox {
   display: inline-block;
@@ -1038,7 +1046,7 @@
   left: 0;
   width: 0;
   overflow: hidden;
-  color: #4c5c77;
+  color: #fdd83d;
 }
 .pure-rate__star-highlight--full {
   width: 100%;
