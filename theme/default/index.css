@@ -235,7 +235,7 @@
 .pure-card__title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #333;
   line-height: 1;
 }
@@ -942,7 +942,7 @@
   padding: 0 10px;
   height: 28px;
   line-height: 26px;
-  border: solid 1px #d9d9d9;
+  border: solid 1px #4c5c77;
   cursor: pointer;
   font-size: 1rem;
   color: #666;
@@ -951,20 +951,19 @@
 .pure-radio-button:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  border-left: solid 1px #d9d9d9;
+  border-left: solid 1px #4c5c77;
 }
 .pure-radio-button:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 .pure-radio-button--checked {
-  background: #fff;
+  background: #4c5c77;
   border-color: #4c5c77;
-  color: #4c5c77;
+  color: rgba(255, 255, 255, 0.96);
   box-shadow: -1px 0 0 0 #566887;
 }
 .pure-radio-button--checked:first-child {
-  border-color: #4c5c77;
   box-shadow: none;
 }
 .pure-radio-group {
