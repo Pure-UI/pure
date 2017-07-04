@@ -939,9 +939,7 @@
 .pure-radio-button {
   display: block;
   box-sizing: border-box;
-  padding: 0 10px;
-  height: 28px;
-  line-height: 26px;
+  padding: 5px 10px;
   border: solid 1px #3c7ce6;
   cursor: pointer;
   font-size: 1rem;
