@@ -17,6 +17,10 @@
 	user-select: none;
 
 	&--checked {
+		.@{checkbox-prefix-cls}__inner {
+			border: solid 1px @primary-color;
+		}
+
 		.@{checkbox-prefix-cls}__inner::after {
 			transform: scale(1) rotate(-45deg);
 		}
@@ -28,17 +32,19 @@
 		display: inline-block;
 		border: solid 1px @checkbox-border-color;
 		vertical-align: middle;
+		margin-right: 3px;
+		border-radius: 2px;
 
 		&::after {
 			content: '';
 			display: block;
 			position: absolute;
-			top: 6px;
-			left: 4px;
+			top: 5px;
+			left: 5px;
 			width: @checkbox-checkmark-width;
 			height: @checkbox-checkmark-height;
-			border-left: solid 2px @primary-color;
-			border-bottom: solid 2px @primary-color;
+			border-left: solid 1px @primary-color;
+			border-bottom: solid 1px @primary-color;
 			transform: scale(0) rotate(-45deg);
 			transition: all .1s cubic-bezier(.78,.14,.15,.86);
 		}
