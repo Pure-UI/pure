@@ -238,6 +238,7 @@
   margin-bottom: 15px;
   color: #333;
   line-height: 1;
+  cursor: default;
 }
 .pure-card__text {
   display: inline-block;
@@ -258,6 +259,9 @@
       -ms-user-select: none;
           user-select: none;
 }
+.pure-checkbox--checked .pure-checkbox__inner {
+  border: solid 1px #3c7ce6;
+}
 .pure-checkbox--checked .pure-checkbox__inner::after {
   -webkit-transform: scale(1) rotate(-45deg);
           transform: scale(1) rotate(-45deg);
@@ -268,17 +272,19 @@
   display: inline-block;
   border: solid 1px #ddd;
   vertical-align: middle;
+  margin-right: 3px;
+  border-radius: 2px;
 }
 .pure-checkbox__inner::after {
   content: '';
   display: block;
   position: absolute;
-  top: 6px;
-  left: 4px;
+  top: 5px;
+  left: 5px;
   width: 10px;
   height: 5px;
-  border-left: solid 2px #3c7ce6;
-  border-bottom: solid 2px #3c7ce6;
+  border-left: solid 1px #3c7ce6;
+  border-bottom: solid 1px #3c7ce6;
   -webkit-transform: scale(0) rotate(-45deg);
           transform: scale(0) rotate(-45deg);
   transition: all 0.1s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -945,6 +951,7 @@
   font-size: 1rem;
   color: #3c7ce6;
   border-left: none;
+  min-width: 40px;
 }
 .pure-radio-button:first-child {
   border-top-left-radius: 4px;
