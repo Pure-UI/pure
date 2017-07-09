@@ -16,10 +16,20 @@
 	user-select: none;
 	font-size: 1rem;
 
+	&:hover {
+		.@{radio-prefix-cls}__inner {
+			border: solid 1px @primary-color;
+		}
+	}
+
 	&--checked {
-		.@{radio-prefix-cls}__inner::after {
-			transform: scale(1);
-			opacity: 1;
+		.@{radio-prefix-cls}__inner {
+			border: solid 1px @primary-color;
+
+			&::after {
+				transform: scale(1);
+				opacity: 1;
+			}
 		}
 	}
 
