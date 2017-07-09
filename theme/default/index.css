@@ -989,6 +989,9 @@
           user-select: none;
   font-size: 1rem;
 }
+.pure-radio:hover .pure-radio__inner {
+  border: solid 1px #4c5c77;
+}
 .pure-radio--checked .pure-radio__inner {
   border: solid 1px #4c5c77;
 }
