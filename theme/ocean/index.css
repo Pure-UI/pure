@@ -150,6 +150,17 @@
 .pure-button--primary:focus {
   background-color: #3976db;
 }
+.pure-button--outline {
+  border: solid 1px #3c7ce6;
+  color: #3c7ce6;
+  background-color: #fff;
+}
+.pure-button--outline:hover {
+  background-color: rgba(60, 124, 230, 0.1);
+}
+.pure-button--outline:focus {
+  background-color: #fff;
+}
 .pure-button--disabled {
   cursor: not-allowed;
 }
