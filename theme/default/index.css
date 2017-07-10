@@ -175,6 +175,9 @@
   background-color: #9da5b4;
   color: #fff;
 }
+.pure-button--disabled.pure-button--outline {
+  border: solid 1px #ddd;
+}
 .pure-button--block {
   display: block;
   width: 100%;
