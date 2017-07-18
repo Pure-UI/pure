@@ -77,11 +77,12 @@
 				top: 0;
 				right: 0;
 				display: block;
-				padding: 2px 9px;
-				background-color: rgba(232, 239, 247, 0.3);
+				padding: 0 9px;
+				background-color: rgba(232, 239, 247, 0.64);
 				border-radius: 0 0 0 4px;
-				color: #b6c7e6;
+				color: #aeb3bd;
 				font-size: 11px;
+				font-weight: 200;
 				pointer-events: none;
 			}
 		}
@@ -113,6 +114,7 @@
 			word-break: break-all;
 			white-space: pre-wrap;
 			font-family: Lato, -apple-system, Segoe UI, Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+			font-weight: 300;
 		}
 	}
 

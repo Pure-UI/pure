@@ -90,6 +90,7 @@
 			text-decoration: none;
 			color: #333;
 			padding: 0 12px 0 5px;
+			font-weight: 300;
 		}
 	}
 

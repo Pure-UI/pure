@@ -156,6 +156,7 @@
 		color: #333;
 		text-decoration: none;
 		box-sizing: border-box;
+		font-weight: 300;
 
 		&:hover {
 			background-color: @hover-bgcolor;
@@ -166,7 +167,6 @@
 		color: @primary-color;
 		background-color: @active-bgcolor;
 		border-right: solid 1px @primary-color;
-		font-weight: 500;
 
 		&:hover {
 			background-color: @active-bgcolor;
