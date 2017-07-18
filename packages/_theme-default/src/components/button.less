@@ -45,6 +45,20 @@
 		}
 	}
 
+	&--outline {
+		border: solid 1px @button-color;
+		color: @button-color;
+		background-color: #fff;
+
+		&:hover {
+			background-color: fade(@button-color,10%);
+		}
+
+		&:focus {
+			background-color: #fff;
+		}
+	}
+
 	&--disabled {
 		cursor: not-allowed;
 
@@ -60,6 +74,10 @@
 		&.@{button-prefix-cls}--primary {
 			background-color: tint(@primary-color,45%);
 			color: #fff;
+		}
+
+		&.@{button-prefix-cls}--outline {
+			border: solid 1px #ddd;
 		}
 	}
 

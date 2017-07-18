@@ -1,7 +1,7 @@
 <template>
 	<div
 		ref="button"
-		class="pure-button { primary ? 'pure-button--primary' : 'pure-button--basic' } { sm ? 'pure-button--sm' : '' } { disabled ? 'pure-button--disabled' : '' } { block ? 'pure-button--block' : '' }"
+		class="pure-button { primary ? 'pure-button--primary' : 'pure-button--basic' } { outline ? 'pure-button--outline' : '' } { sm ? 'pure-button--sm' : '' } { disabled ? 'pure-button--disabled' : '' } { block ? 'pure-button--block' : '' }"
 		on-mousedown="{ this.onRipple( $event ) }"
 		on-mouseup="{ this.onClick( $event ) }"
 	>
