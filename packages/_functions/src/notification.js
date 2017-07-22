@@ -4,19 +4,17 @@ import install from '@pure/install';
 export default function ( Regular ) {
 	const AnimNotification = Regular.extend( {
 		template: `
-			{#if showNotification}
-				<div class="pure-notification--will-transition" r-animation="on: enter;wait: 10;class: pure-notification--in, 3;emit: in;" r-animation="on: c;class: pure-notification--out, 3;emit: remove;">
-					<Notification
-						type="{ type }"
-						title="{ title }"
-						description="{ description }"
-						closable="{ closable }"
-						icon="{ icon }"
-						iconColor="{ iconColor }"
-						on-close="{ this.onClose() }"
-					></Notification>
-				</div>
-			{/if}
+			<div class="pure-notification--will-transition" r-animation="on: enter;wait: 10;class: pure-notification--in, 3;emit: in;" r-animation="on: c;class: pure-notification--out, 3;emit: remove;">
+				<Notification
+					type="{ type }"
+					title="{ title }"
+					description="{ description }"
+					closable="{ closable }"
+					icon="{ icon }"
+					iconColor="{ iconColor }"
+					on-close="{ this.onClose() }"
+				></Notification>
+			</div>
 		`,
 		config() {
 			if ( typeof this.data.duration === 'undefined' ) {
@@ -32,13 +30,8 @@ export default function ( Regular ) {
 			} );
 
 			this.$on( 'remove', () => {
-				this.data.showNotification = false;
-				this.$update();
+				this.destroy();
 			} );
-		},
-		init() {
-			this.data.showNotification = true;
-			this.$update();
 		},
 		onClose() {
 			this.$emit( 'c' );

@@ -75,10 +75,12 @@
 		&--will-transition {
 			transition: transform .5s cubic-bezier(.79,.05,0,.96), opacity .5s ease;
 			transform: translate3d(100%,0,0);
+			opacity: 0;
 		}
 
 		&--in {
 			transform: translate3d(0,0,0);
+			opacity: 1;
 		}
 
 		&--out {
