@@ -691,15 +691,13 @@
   cursor: pointer;
   padding: 2px;
   line-height: 1;
-}
-.pure-modal__close:hover {
-  background-color: #f2f2f2;
-  border-radius: 3px;
+  font-size: 16px;
 }
 .pure-modal__head {
   text-align: center;
-  padding: 20px 0;
-  font-size: 19px;
+  padding: 15px 0;
+  font-size: 16px;
+  border-bottom: solid 1px #f1f1f1;
 }
 .pure-modal__body {
   padding: 20px 40px;
@@ -725,7 +723,7 @@
   padding: 14px 20px;
   text-align: right;
   background-color: rgba(241, 241, 241, 0.39);
-  border-top: solid 1px #f0f0f0;
+  border-top: solid 1px #f1f1f1;
 }
 .pure-notification {
   position: relative;
