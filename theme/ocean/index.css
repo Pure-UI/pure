@@ -1432,10 +1432,10 @@
 }
 .pure-tooltip {
   position: absolute;
-  background-color: rgba(60, 124, 230, 0.85);
+  background-color: rgba(0, 0, 0, 0.78);
   border-radius: 4px;
   color: #fff;
-  padding: 6px 10px;
+  padding: 4px 10px;
   font-size: 13px;
   pointer-events: none;
   opacity: 0;
@@ -1457,28 +1457,28 @@
 }
 .pure-tooltip--placement-top .pure-tooltip__arrow {
   border-width: 5px 5px 0;
-  border-top-color: rgba(60, 124, 230, 0.85);
+  border-top-color: rgba(0, 0, 0, 0.78);
   left: 50%;
   bottom: -5px;
   margin-left: -5px;
 }
 .pure-tooltip--placement-right .pure-tooltip__arrow {
   border-width: 5px 5px 5px 0;
-  border-right-color: rgba(60, 124, 230, 0.85);
+  border-right-color: rgba(0, 0, 0, 0.78);
   left: -5px;
   top: 50%;
   margin-top: -5px;
 }
 .pure-tooltip--placement-bottom .pure-tooltip__arrow {
   border-width: 0 5px 5px;
-  border-bottom-color: rgba(60, 124, 230, 0.85);
+  border-bottom-color: rgba(0, 0, 0, 0.78);
   top: -5px;
   left: 50%;
   margin-left: -5px;
 }
 .pure-tooltip--placement-left .pure-tooltip__arrow {
   border-width: 5px 0 5px 5px;
-  border-left-color: rgba(60, 124, 230, 0.85);
+  border-left-color: rgba(0, 0, 0, 0.78);
   right: -5px;
   top: 50%;
   margin-top: -5px;
