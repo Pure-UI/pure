@@ -8,6 +8,9 @@
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "@pure/icon": "^0.1.0"
+  },
   "devDependencies": {
     "pure-cli": "latest"
   }

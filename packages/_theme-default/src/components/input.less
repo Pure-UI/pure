@@ -61,8 +61,8 @@
 	}
 
 	&--disabled {
-		background-color: #eee;
-		border: solid 1px #ddd;
+		background-color: #f7f7f7;
+		border: solid 1px #eaeaea;
 		cursor: not-allowed;
 	}
 
@@ -79,11 +79,13 @@
 	&__error-message {
 		width: 100%;
 		color: #fd8282;
-		font-size: 11px;
-		background-color: #ffebeb;
-		border: solid 1px #ffebeb;
-		padding: 4px 10px;
+		font-size: 13px;
+		margin-top: 5px;
 		box-sizing: border-box;
 		word-break: break-all;
+
+		> .pure-icon {
+			margin-right: 5px;
+		}
 	}
 }

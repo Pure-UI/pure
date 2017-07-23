@@ -14,14 +14,19 @@
 		>
 		{#if error && errorMessage}
 		<div class="pure-input__error-message">
-			{ errorMessage }
+			<Icon type="error1"></Icon>{ errorMessage }
 		</div>
 		{/if}
 	</div>
 </template>
 
 <script>
+	import Icon from '@pure/icon';
+
 	export default {
+		components: {
+			Icon,
+		},
 		onChange() {
 			this.$emit( 'change', this.$refs.v.value );
 		},
