@@ -570,8 +570,8 @@
 .pure-input__error-message {
   width: 100%;
   color: #fd8282;
-  font-size: 11px;
-  padding: 4px 0;
+  font-size: 13px;
+  margin-top: 5px;
   box-sizing: border-box;
   word-break: break-all;
 }
