@@ -2,7 +2,10 @@
 @import '../common/color.less';
 
 @pagination-prefix-cls: ~"@{pure-prefix}-pagination";
+@button-prefix-cls: ~"@{pure-prefix}-button";
 
 .@{pagination-prefix-cls} {
-	margin: .4em 0;
+	> .@{button-prefix-cls}.@{button-prefix-cls}--sm {
+		padding: 0 10px;
+	}
 }
