@@ -908,9 +908,6 @@
 .pure-option--checked:hover {
   background-color: rgba(60, 124, 230, 0.1);
 }
-.pure-pagination {
-  margin: .4em 0;
-}
 .pure-pagination > .pure-button.pure-button--sm {
   padding: 0 10px;
 }
