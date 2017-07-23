@@ -571,9 +571,12 @@
   width: 100%;
   color: #fd8282;
   font-size: 11px;
-  padding: 4px 10px;
+  padding: 4px 0;
   box-sizing: border-box;
   word-break: break-all;
+}
+.pure-input__error-message > .pure-icon {
+  margin-right: 5px;
 }
 .pure-loading {
   position: relative;
