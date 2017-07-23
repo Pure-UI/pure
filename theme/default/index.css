@@ -123,10 +123,12 @@
 }
 .pure-button {
   display: inline-block;
+  height: 36px;
+  line-height: 36px;
   box-sizing: border-box;
   position: relative;
-  padding: .56em 1em;
-  font-size: 1rem;
+  padding: 0 17px;
+  font-size: 13px;
   vertical-align: middle;
   border: solid 1px transparent;
   border-radius: 4px;
@@ -140,7 +142,9 @@
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 .pure-button--sm {
-  padding: .45em .75em;
+  padding: 0 17px;
+  height: 32px;
+  line-height: 32px;
 }
 .pure-button--basic {
   background-color: #fff;
@@ -510,18 +514,19 @@
   }
 }
 .pure-input {
+  display: inline-block;
   width: 100%;
   background-color: #fff;
   color: #333;
   outline: none;
-  padding: .56em 10px;
-  font-size: 1rem;
-  display: inline-block;
+  padding: 0 10px;
+  font-size: 13px;
   vertical-align: middle;
   box-sizing: border-box;
   border: solid 1px #ddd;
   cursor: inherit;
   font-family: inherit;
+  height: 36px;
 }
 .pure-input:focus {
   border: solid 1px #4c5c77;
@@ -549,7 +554,7 @@
   border: solid 1px #4c5c77;
 }
 .pure-input--sm {
-  padding: .45em 10px;
+  height: 32px;
 }
 .pure-input--error {
   border: solid 1px #fd8282;
@@ -561,7 +566,7 @@
 }
 .pure-input__wrapper {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .pure-input__wrapper--block {
   display: block;
