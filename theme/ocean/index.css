@@ -723,7 +723,7 @@
 }
 .pure-modal__actions {
   padding: 14px 20px;
-  text-align: center;
+  text-align: right;
   background-color: rgba(241, 241, 241, 0.39);
   border-top: solid 1px #f0f0f0;
 }
