@@ -4,18 +4,19 @@
 @input-prefix-cls: ~"@{pure-prefix}-input";
 
 .@{input-prefix-cls} {
+	display: inline-block;
 	width: 100%;
 	background-color: #fff;
 	color: @form-color;
 	outline: none;
-	padding: .56em 10px;
-	font-size: 1rem;
-	display: inline-block;
+	padding: 0 10px;
+	font-size: 13px;
 	vertical-align: middle;
 	box-sizing: border-box;
 	border: solid 1px #ddd;
 	cursor: inherit;
 	font-family: inherit;
+	height: 36px;
 
 	&:focus {
 		border: solid 1px @primary-color;
@@ -53,7 +54,7 @@
 	}
 
 	&--sm {
-		padding: .45em 10px;
+		height: 32px;
 	}
 
 	&--error {
@@ -68,7 +69,7 @@
 
 	&__wrapper {
 		display: inline-block;
-		vertical-align: top;
+		vertical-align: middle;
 
 		&--block {
 			display: block;
