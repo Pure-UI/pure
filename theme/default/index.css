@@ -225,6 +225,16 @@
 .pure-button__wave.pure-button__wave--hidden {
   opacity: 0;
 }
+.pure-button__spinner {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: width 0.2s ease-in-out;
+}
+.pure-button__spinner.is-loading {
+  width: 10px;
+}
 @-webkit-keyframes pureButtonRipple {
   from {
     opacity: 1;
