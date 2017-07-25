@@ -124,6 +124,18 @@
 			opacity: 0;
 		}
 	}
+
+	&__spinner {
+		display: inline-block;
+		width: 0;
+		overflow: hidden;
+		vertical-align: middle;
+		transition: width .2s ease-in-out;
+
+		&.is-loading {
+			width: 10px;
+		}
+	}
 }
 
 @keyframes pureButtonRipple {

@@ -17,6 +17,7 @@
 	border-radius: 4px;
 	overflow: hidden;
 	cursor: pointer;
+	user-select: none;
 
 	+ .@{button-prefix-cls} {
 		margin-left: 5px;
@@ -122,6 +123,18 @@
 
 		&&--hidden {
 			opacity: 0;
+		}
+	}
+
+	&__spinner {
+		display: inline-block;
+		width: 0;
+		overflow: hidden;
+		vertical-align: middle;
+		transition: width .2s ease-in-out;
+
+		&.is-loading {
+			width: 10px;
 		}
 	}
 }
