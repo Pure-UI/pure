@@ -1,9 +1,10 @@
 <template>
 	<div class="pure-pagination">
 		<Button sm disabled="{ current === min }" on-click="{ this.onPrev() }">{ prevText || 'prev' }</Button>
+
 		{#if hasBeforeDot}
 			<Button sm ripple="{ false }" on-click="{ this.onClick(min) }">{ min }</Button>
-			<Button sm disabled>...</Button>
+			<div class="pure-pagination__dots">...</div>
 			<Button sm ripple="{ false }" on-click="{ this.onClick(current - 2) }">{ current - 2 }</Button>
 			<Button sm ripple="{ false }" on-click="{ this.onClick(current - 1) }">{ current - 1 }</Button>
 		{#else}
@@ -17,13 +18,14 @@
 		{#if hasAfterDot}
 			<Button sm ripple="{ false }" on-click="{ this.onClick(current + 1) }">{ current + 1 }</Button>
 			<Button sm ripple="{ false }" on-click="{ this.onClick(current + 2) }">{ current + 2 }</Button>
-			<Button sm disabled>...</Button>
+			<div class="pure-pagination__dots">...</div>
 			<Button sm ripple="{ false }" on-click="{ this.onClick(max) }">{ max }</Button>
 		{#else}
 			{#list current2max as item}
 				<Button sm ripple="{ false }" on-click="{ this.onClick(item) }">{ item }</Button>
 			{/list}
 		{/if}
+		
 		<Button sm disabled="{ current === max }" on-click="{ this.onNext() }">{ nextText || 'next' }</Button>
 	</div>
 </template>
