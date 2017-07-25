@@ -911,6 +911,11 @@
 .pure-pagination > .pure-button.pure-button--sm {
   padding: 0 10px;
 }
+.pure-pagination__dots {
+  display: inline-block;
+  margin: 0 10px;
+  color: #999;
+}
 .pure-progress-bar {
   display: inline-block;
   width: 100%;
