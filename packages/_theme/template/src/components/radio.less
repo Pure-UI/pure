@@ -4,7 +4,7 @@
 @radio-prefix-cls: ~"@{pure-prefix}-radio";
 
 @radio-size: 18px;
-@radio-dot-size: 8px;
+@radio-dot-size: 9px;
 
 .@{radio-prefix-cls} {
 	vertical-align: middle;
@@ -34,10 +34,11 @@
 		display: inline-block;
 		width: @radio-size;
 		height: @radio-size;
-		border-radius: @radio-size;
+		border-radius: 50%;
 		border: 1px solid #ddd;
 		background-color: #fff;
 		vertical-align: middle;
+		box-sizing: border-box;
 
 		&::after {
 			position: absolute;
