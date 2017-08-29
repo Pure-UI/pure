@@ -134,6 +134,10 @@
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .pure-button + .pure-button {
   margin-left: 5px;
@@ -208,6 +212,7 @@
   color: inherit;
   outline: none;
   font-family: inherit;
+  font-size: inherit;
   cursor: inherit;
 }
 .pure-button__wave {
@@ -1050,18 +1055,19 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  border-radius: 18px;
+  border-radius: 50%;
   border: 1px solid #ddd;
   background-color: #fff;
   vertical-align: middle;
+  box-sizing: border-box;
 }
 .pure-radio__inner::after {
   position: absolute;
-  width: 8px;
-  height: 8px;
-  left: 5px;
-  top: 5px;
-  border-radius: 8px;
+  width: 10px;
+  height: 10px;
+  left: 4px;
+  top: 4px;
+  border-radius: 10px;
   display: table;
   border-top: 0;
   border-left: 0;
