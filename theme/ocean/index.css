@@ -123,14 +123,10 @@
 }
 .pure-button {
   display: inline-block;
-  height: 36px;
-  line-height: 34px;
   box-sizing: border-box;
   position: relative;
-  padding: 0 22px;
   font-size: 13px;
   vertical-align: middle;
-  border: solid 1px transparent;
   border-radius: 3px;
   overflow: hidden;
   cursor: pointer;
@@ -138,64 +134,74 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  /* default size */
+  height: 32px;
+  line-height: 30px;
+  padding: 0 18px;
+  /* default theme */
+  background-color: #fff;
+  border: solid 1px #ddd;
+  color: #333;
+  /* Size */
 }
-.pure-button + .pure-button {
+.pure-button:hover,
+.pure-button:focus {
+  background-color: #f7f7f7;
+}
+.pure-button.is-primary {
+  background-color: #3c7ce6;
+  border: solid 1px #3c7ce6;
+  color: #fff;
+}
+.pure-button.is-primary:hover,
+.pure-button.is-primary:focus {
+  background-color: #3976db;
+}
+.pure-button.is-outline {
+  border: solid 1px #3c7ce6;
+  color: #3c7ce6;
+  background-color: #fff;
+}
+.pure-button.is-outline:hover {
+  background-color: rgba(60, 124, 230, 0.1);
+}
+.pure-button.is-outline:focus {
+  background-color: #fff;
+}
+ + .pure-button {
   margin-left: 5px;
 }
 .pure-button:active {
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.15);
 }
-.pure-button--sm {
-  padding: 0 17px;
-  height: 32px;
-  line-height: 30px;
+.pure-button.is-small {
+  height: 28px;
+  line-height: 26px;
+  padding: 0 14px;
+  font-size: 12px;
 }
-.pure-button--basic {
-  background-color: #fff;
-  border: solid 1px #ddd;
-  color: #333;
+.pure-button.is-large {
+  height: 36px;
+  line-height: 34px;
+  padding: 0 21px;
 }
-.pure-button--basic:hover,
-.pure-button--basic:focus {
-  background-color: #f7f7f7;
-}
-.pure-button--primary {
-  background-color: #3c7ce6;
-  color: #fff;
-}
-.pure-button--primary:hover,
-.pure-button--primary:focus {
-  background-color: #3976db;
-}
-.pure-button--outline {
-  border: solid 1px #3c7ce6;
-  color: #3c7ce6;
-  background-color: #fff;
-}
-.pure-button--outline:hover {
-  background-color: rgba(60, 124, 230, 0.1);
-}
-.pure-button--outline:focus {
-  background-color: #fff;
-}
-.pure-button--disabled {
+.pure-button.is-disabled {
   cursor: not-allowed;
-}
-.pure-button--disabled:active {
-  box-shadow: none;
-}
-.pure-button--disabled.pure-button--basic {
   background-color: #fff;
   color: #999;
 }
-.pure-button--disabled.pure-button--primary {
+.pure-button.is-disabled:active {
+  box-shadow: none;
+}
+.pure-button.is-disabled.is-primary {
+  border: solid 1px #ccc;
   background-color: #ccc;
   color: #fff;
 }
-.pure-button--disabled.pure-button--outline {
+.pure-button.is-disabled.is-outline {
   border: solid 1px #ddd;
 }
-.pure-button--block {
+.pure-button.is-block {
   display: block;
   width: 100%;
 }
@@ -223,11 +229,11 @@
           transform: scale(0);
   pointer-events: none;
 }
-.pure-button__wave.pure-button__wave--pressed {
+.pure-button__wave.is-pressed {
   -webkit-animation: pureButtonRipple .6s linear forwards;
           animation: pureButtonRipple .6s linear forwards;
 }
-.pure-button__wave.pure-button__wave--hidden {
+.pure-button__wave.is-hidden {
   opacity: 0;
 }
 .pure-button__spinner {
