@@ -29,7 +29,7 @@
 		position: fixed;
 		display: flex;
 		width: 100%;
-		background: #FFF;
+		background: rgba(255,255,255,.6);
 		border-bottom: solid 1px #DDD;
 		padding: 0 15%;
 		height: 60px;
