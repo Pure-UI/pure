@@ -5,7 +5,7 @@ order: 1
 Basic
 
 ```html
-<Button primary>Primary</Button>
-<Button outline>Outline</Button>
+<Button type="primary">Primary</Button>
+<Button type="outline">Outline</Button>
 <Button>Normal</Button>
 ```

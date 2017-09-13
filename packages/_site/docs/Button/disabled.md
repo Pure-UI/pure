@@ -5,7 +5,7 @@ order: 4
 Disabled
 
 ```html
-<Button primary disabled>Disabled</Button>
-<Button outline disabled>Disabled</Button>
-<Button disabled>Disabled</Button>
+<Button type="primary" disabled>Primary</Button>
+<Button type="outline" disabled>Outline</Button>
+<Button disabled>Normal</Button>
 ```

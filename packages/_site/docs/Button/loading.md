@@ -5,11 +5,11 @@ order: 2
 Loading
 
 ```html
-<Button primary loading="{ loading1 }" on-click="{ loading1 = !loading1 }">
+<Button type="primary" loading="{ loading1 }" on-click="{ loading1 = !loading1 }">
 	{ loading1 ? 'Loading...' : 'Start' }
 </Button>
 
-<Button outline loading="{ loading2 }" on-click="{ loading2 = !loading2 }">
+<Button type="outline" loading="{ loading2 }" on-click="{ loading2 = !loading2 }">
 	{ loading2 ? 'Loading...' : 'Start' }
 </Button>
 
