@@ -1,4 +1,5 @@
 import Button from '@pure/button';
+import '@pure/theme';
 
 play( Button, module )
 	.name( 'Button' )

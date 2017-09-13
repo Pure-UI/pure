@@ -12,6 +12,7 @@
     "@pure/button": "^0.1.0"
   },
   "devDependencies": {
+    "@pure/button": "^0.1.0",
     "pure-cli": "latest"
   }
 }

@@ -13,6 +13,8 @@
     "@pure/helpers": "^0.1.0"
   },
   "devDependencies": {
+    "@pure/icon": "^0.1.0",
+    "@pure/helpers": "^0.1.0",
     "pure-cli": "latest"
   }
 }

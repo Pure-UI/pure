@@ -8,12 +8,17 @@
   "version": "0.1.0",
   "author": "zjx1195688876 <15757116071@163.com>",
   "license": "MIT",
-  "devDependencies": {
-    "pure-cli": "latest"
-  },
   "peerDependencies": {
     "@pure/button": "^0.1.0",
     "@pure/progress-bar": "^0.1.0",
-    "@pure/icon": "^0.1.0"
+    "@pure/icon": "^0.1.0",
+    "@pure/helpers": "^0.1.0"
+  },
+  "devDependencies": {
+    "@pure/button": "^0.1.0",
+    "@pure/progress-bar": "^0.1.0",
+    "@pure/icon": "^0.1.0",
+    "@pure/helpers": "^0.1.0",
+    "pure-cli": "latest"
   }
 }

@@ -1,4 +1,4 @@
-import Upload from 'pure-upload';
+import Upload from '@pure/upload';
 
 play( Upload, module )
 	.name( 'Upload' )
