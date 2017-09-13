@@ -17,7 +17,7 @@ ProTip: Modal has no z-index by default
 	on-confirm="{ showModal = false }"
 >
 	<div class="modal-example-center">
-		<img src="http://i0.hdslb.com/group1/M00/B7/58/oYYBAFdLrESAWc1eAACDBgqOgmI788.gif">
+		<img src="https://i.loli.net/2017/09/13/59b8c6af9a0c1.gif">
 	</div>
 </Modal>
 {/if}
