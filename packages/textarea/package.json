@@ -8,8 +8,10 @@
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "autosize": "^3.0.20"
+  },
   "devDependencies": {
-    "autosize": "^3.0.20",
     "pure-cli": "latest"
   }
 }

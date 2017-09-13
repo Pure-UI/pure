@@ -8,13 +8,11 @@
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "@pure/icon": "^0.1.0",
     "@pure/input": "^0.1.0"
   },
   "devDependencies": {
-    "@pure/icon": "^0.1.0",
-    "@pure/input": "^0.1.0",
     "pure-cli": "latest"
   }
 }

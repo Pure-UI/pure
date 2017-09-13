@@ -8,8 +8,10 @@
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "dom-align": "^1.5.3"
+  },
   "devDependencies": {
-    "dom-align": "^1.5.3",
     "pure-cli": "latest"
   }
 }

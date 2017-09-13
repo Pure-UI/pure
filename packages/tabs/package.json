@@ -8,11 +8,10 @@
   "version": "0.1.0",
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "@pure/helpers": "^0.1.0"
   },
   "devDependencies": {
-    "@pure/helpers": "^0.1.0",
     "pure-cli": "latest"
   }
 }
