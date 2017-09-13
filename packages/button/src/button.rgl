@@ -1,9 +1,10 @@
 <template>
 	<div
-		ref="button"
-		class="pure-button { primary ? 'pure-button--primary' : 'pure-button--basic' } { outline ? 'pure-button--outline' : '' } { sm ? 'pure-button--sm' : '' } { disabled ? 'pure-button--disabled' : '' } { block ? 'pure-button--block' : '' }"
+		r-class={{ 'is-primary': type === 'primary', 'is-outline': type === 'outline', 'is-small': size === 'small', 'is-large': size === 'large', 'is-block': block, 'is-disabled': disabled }}
+		class="pure-button"
 		on-mousedown="{ this.onRipple( $event ) }"
 		on-mouseup="{ this.onClick( $event ) }"
+		ref="button"
 	>
 		<div ref="ripples"></div>
 		<button class="pure-button__text">
@@ -30,14 +31,10 @@
 			TextSpinner,
 		},
 		config() {
-			this.data.ripple = this.data.ripple !== false;
+			this.data.size = this.data.size || 'medium';
 		},
 		onRipple( e ) {
 			if ( this.data.disabled ) {
-				return;
-			}
-
-			if ( !this.data.ripple ) {
 				return;
 			}
 
@@ -61,7 +58,7 @@
 			} );
 
 			const $ripples = this.$refs.ripples;
-			$ripple.classList.add( 'pure-button__wave--hidden' );
+			$ripple.classList.add( 'is-hidden' );
 			$ripples.appendChild( $ripple );
 
 			$ripple.addEventListener( 'webkitAnimationEnd', handleAnimationEnd, false );
@@ -72,8 +69,8 @@
 			}
 
 			nextTick( () => {
-				$ripple.classList.remove( 'pure-button__wave--hidden' );
-				$ripple.classList.add( 'pure-button__wave--pressed' );
+				$ripple.classList.remove( 'is-hidden' );
+				$ripple.classList.add( 'is-pressed' );
 			} );
 		},
 		onClick() {
