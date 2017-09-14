@@ -321,7 +321,7 @@
   border: solid 1px #ddd;
   vertical-align: middle;
   margin-right: 3px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .pure-checkbox__inner::after {
   content: '';
