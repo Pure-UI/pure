@@ -1050,8 +1050,8 @@
   border: solid 1px #4c5c77;
 }
 .pure-radio--checked .pure-radio__inner::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
+          transform: translate3d(-50%, -50%, 0) scale(1);
   opacity: 1;
 }
 .pure-radio__inner {
@@ -1068,20 +1068,20 @@
   box-sizing: border-box;
 }
 .pure-radio__inner::after {
+  content: '';
+  display: block;
   position: absolute;
   width: 10px;
   height: 10px;
-  left: 4px;
-  top: 4px;
+  left: 50%;
+  top: 50%;
   border-radius: 10px;
-  display: table;
   border-top: 0;
   border-left: 0;
-  content: ' ';
   background-color: #4c5c77;
   opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: translate3d(-50%, -50%, 0) scale(0);
+          transform: translate3d(-50%, -50%, 0) scale(0);
   transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 .pure-radio__text {
