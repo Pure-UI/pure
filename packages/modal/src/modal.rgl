@@ -33,7 +33,7 @@
 			</div>
 			<div class="pure-modal__actions">
 				<Button on-click="{ this.onCancel() }">{ cancelText || 'Cancel' }</Button>
-				<Button primary on-click="{ this.onConfirm() }">{ confirmText || 'Confirm' }</Button>
+				<Button type="primary" on-click="{ this.onConfirm() }">{ confirmText || 'Confirm' }</Button>
 			</div>
 		</div>
 	</div>

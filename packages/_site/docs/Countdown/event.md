@@ -13,5 +13,5 @@ Event
 <br><br>
 isTimeEnd: { isTimeEnd ? 'true' : 'false' }
 <br><br>
-<Button sm primary on-click="{ v = Date.now() + 1000 * 5 && ( isTimeEnd = false ) }">Reset</Button>
+<Button size="small" type="primary" on-click="{ v = Date.now() + 1000 * 5 && ( isTimeEnd = false ) }">Reset</Button>
 ```

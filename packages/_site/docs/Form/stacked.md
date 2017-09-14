@@ -30,7 +30,7 @@ Stacked
 	<FormItem>
 		<FormLabel></FormLabel>
 		<FormControl>
-			<Button primary>Register</Button>
+			<Button type="primary">Register</Button>
 		</FormControl>
 	</FormItem>
 </Form>

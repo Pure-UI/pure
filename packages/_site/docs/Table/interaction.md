@@ -11,7 +11,7 @@ Wanna handle events in table? use raw TR and TD instead
 		<TD>{ ds.name }</TD>
 		<TD>{ ds.email }</TD>
 		<TD>
-			<Button sm on-click="{ this.onClick( ds ) }">Modify</Button>
+			<Button size="small" on-click="{ this.onClick( ds ) }">Modify</Button>
 		</TD>
 	</TR>
 	{/list}

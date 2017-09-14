@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		{#else}
-			<Button primary sm on-click={this.onUpload()}>Upload</Button>
+			<Button type="primary" on-click={this.onUpload()}>Upload</Button>
 		{/if}
 
 		{#if multiple}

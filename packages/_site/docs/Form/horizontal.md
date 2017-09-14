@@ -12,7 +12,7 @@ Horizontal
 			<Input placeholder="Your Nickname"></Input>
 		</FormControl>
 	</FormItem>
-	
+
 	<FormItem>
 		<FormLabel>Email</FormLabel>
 		<FormControl>
@@ -30,7 +30,7 @@ Horizontal
 	<FormItem>
 		<FormLabel></FormLabel>
 		<FormControl>
-			<Button primary>Register</Button>
+			<Button type="primary">Register</Button>
 		</FormControl>
 	</FormItem>
 </Form>
