@@ -149,21 +149,21 @@
   background-color: #f7f7f7;
 }
 .pure-button.is-primary {
-  background-color: #4c5c77;
-  border: solid 1px #4c5c77;
+  background-color: #567ef4;
+  border: solid 1px #567ef4;
   color: #fff;
 }
 .pure-button.is-primary:hover,
 .pure-button.is-primary:focus {
-  background-color: #485771;
+  background-color: #5278e8;
 }
 .pure-button.is-outline {
-  border: solid 1px #4c5c77;
-  color: #4c5c77;
+  border: solid 1px #567ef4;
+  color: #567ef4;
   background-color: #fff;
 }
 .pure-button.is-outline:hover {
-  background-color: rgba(76, 92, 119, 0.1);
+  background-color: rgba(86, 126, 244, 0.1);
 }
 .pure-button.is-outline:focus {
   background-color: #fff;
@@ -308,7 +308,7 @@
           user-select: none;
 }
 .pure-checkbox--checked .pure-checkbox__inner {
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
 }
 .pure-checkbox--checked .pure-checkbox__inner::after {
   -webkit-transform: scale(1) rotate(-45deg);
@@ -331,8 +331,8 @@
   left: 5px;
   width: 10px;
   height: 5px;
-  border-left: solid 1px #4c5c77;
-  border-bottom: solid 1px #4c5c77;
+  border-left: solid 1px #567ef4;
+  border-bottom: solid 1px #567ef4;
   -webkit-transform: scale(0) rotate(-45deg);
           transform: scale(0) rotate(-45deg);
   transition: all 0.1s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -550,7 +550,7 @@
   height: 36px;
 }
 .pure-input:focus {
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
 }
 .pure-input--block {
   display: block;
@@ -572,7 +572,7 @@
   border: solid 1px #bcbcbc;
 }
 .pure-input--transparent:not(.pure-input--readonly):focus {
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
 }
 .pure-input--sm {
   height: 32px;
@@ -609,7 +609,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background-color: #4c5c77;
+  background-color: #567ef4;
   opacity: 1;
 }
 .pure-loading__container {
@@ -749,7 +749,7 @@
   width: 6px;
   height: 6px;
   border-radius: 10px;
-  background-color: rgba(76, 92, 119, 0.15);
+  background-color: rgba(86, 126, 244, 0.15);
 }
 .pure-modal__actions {
   padding: 14px 20px;
@@ -864,7 +864,7 @@
   margin: 0;
 }
 .pure-number-input__inner:focus {
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
 }
 .pure-number-input__buttons {
   position: absolute;
@@ -904,12 +904,12 @@
   overflow: hidden;
 }
 .pure-option:hover {
-  background-color: rgba(76, 92, 119, 0.05);
+  background-color: rgba(86, 126, 244, 0.05);
 }
 .pure-option--checked {
   position: relative;
-  background-color: rgba(76, 92, 119, 0.05);
-  color: #4c5c77;
+  background-color: rgba(86, 126, 244, 0.05);
+  color: #567ef4;
 }
 .pure-option--checked::after {
   font-family: 'pureicon';
@@ -923,11 +923,11 @@
   top: 50%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
-  color: #4c5c77;
+  color: #567ef4;
   font-size: 13px;
 }
 .pure-option--checked:hover {
-  background-color: rgba(76, 92, 119, 0.1);
+  background-color: rgba(86, 126, 244, 0.1);
 }
 .pure-pagination > .pure-button.pure-button--sm {
   padding: 0 10px;
@@ -963,7 +963,7 @@
 }
 .pure-progress-bar__inner {
   position: absolute;
-  background-color: #4c5c77;
+  background-color: #567ef4;
   height: 100%;
   transition: width 0.3s ease-in-out;
   border-radius: 10px;
@@ -984,10 +984,10 @@
   position: relative;
 }
 .pure-progress-circle__track {
-  stroke: #edeff1;
+  stroke: #eef2fe;
 }
 .pure-progress-circle__stroker {
-  stroke: #4c5c77;
+  stroke: #567ef4;
 }
 .pure-progress-circle__text {
   position: absolute;
@@ -1003,27 +1003,27 @@
   display: block;
   box-sizing: border-box;
   padding: 8px 10px;
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
   cursor: pointer;
   font-size: 1rem;
-  color: #4c5c77;
+  color: #567ef4;
   border-left: none;
   min-width: 40px;
 }
 .pure-radio-button:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  border-left: solid 1px #4c5c77;
+  border-left: solid 1px #567ef4;
 }
 .pure-radio-button:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 .pure-radio-button--checked {
-  background: #4c5c77;
-  border-color: #4c5c77;
+  background: #567ef4;
+  border-color: #567ef4;
   color: rgba(255, 255, 255, 0.96);
-  box-shadow: -1px 0 0 0 #566887;
+  box-shadow: -1px 0 0 0 #6e90f6;
 }
 .pure-radio-button--checked:first-child {
   box-shadow: none;
@@ -1047,7 +1047,7 @@
   font-size: 1rem;
 }
 .pure-radio--checked .pure-radio__inner {
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
 }
 .pure-radio--checked .pure-radio__inner::after {
   -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
@@ -1078,7 +1078,7 @@
   border-radius: 10px;
   border-top: 0;
   border-left: 0;
-  background-color: #4c5c77;
+  background-color: #567ef4;
   opacity: 0;
   -webkit-transform: translate3d(-50%, -50%, 0) scale(0);
           transform: translate3d(-50%, -50%, 0) scale(0);
@@ -1176,17 +1176,17 @@
 .pure-spinner__dot-1 {
   -webkit-animation-delay: -1.5s;
           animation-delay: -1.5s;
-  background-color: #5e6c85;
+  background-color: #678bf5;
 }
 .pure-spinner__dot-2 {
   -webkit-animation-delay: -1.35s;
           animation-delay: -1.35s;
-  background-color: #5e6c85;
+  background-color: #678bf5;
 }
 .pure-spinner__dot-3 {
   -webkit-animation-delay: -1.2s;
           animation-delay: -1.2s;
-  background-color: #5e6c85;
+  background-color: #678bf5;
 }
 @-webkit-keyframes pureSpinnerDotPluse {
   0%,
@@ -1231,17 +1231,17 @@
   transition: all .3s ease;
 }
 .pure-switch--checked {
-  background-color: #a6aebb;
+  background-color: #abbffa;
 }
 .pure-switch--checked .pure-switch__circle-mask {
-  background-color: #4c5c77;
+  background-color: #567ef4;
   top: -23px;
   left: 0px;
 }
 .pure-switch--checked .pure-switch__block {
   -webkit-transform: translate3d(20px, 0, 0);
           transform: translate3d(20px, 0, 0);
-  background-color: #4c5c77;
+  background-color: #567ef4;
 }
 .pure-switch__circle-mask {
   display: block;
@@ -1342,10 +1342,10 @@
   font-size: 14px;
 }
 .pure-tabs__title:hover {
-  color: #4c5c77;
+  color: #567ef4;
 }
 .pure-tabs__title.pure-tabs__title--active {
-  color: #4c5c77;
+  color: #567ef4;
 }
 .pure-tabs__header {
   font-size: 1rem;
@@ -1358,7 +1358,7 @@
 .pure-tabs__indicator {
   position: absolute;
   bottom: 0;
-  border-bottom: solid 2px #4c5c77;
+  border-bottom: solid 2px #567ef4;
   transition: left .3s ease, width .3s ease;
 }
 .pure-tag {
@@ -1394,8 +1394,8 @@
 }
 .pure-tag--checked {
   color: #fff;
-  background-color: #4c5c77;
-  border: solid 1px #4c5c77;
+  background-color: #567ef4;
+  border: solid 1px #567ef4;
 }
 .pure-tag__close {
   font-size: 11px;
@@ -1456,7 +1456,7 @@
   min-height: 70px;
 }
 .pure-textarea:focus {
-  border: solid 1px #4c5c77;
+  border: solid 1px #567ef4;
 }
 .pure-textarea--block {
   display: block;
