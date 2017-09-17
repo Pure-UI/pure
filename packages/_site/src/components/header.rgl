@@ -42,10 +42,13 @@
 	.logo {
 		display: block;
 		color: @primary-color;
-		font-size: 24px;
+		font-size: 27px;
 		text-decoration: none;
 		font-family: Pacifico,cursive;
 		margin-left: 18px;
+		background: -webkit-linear-gradient(left,#4d8cff, #ae87ff, #8c8eff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	.links,
