@@ -137,7 +137,7 @@
   /* default size */
   height: 32px;
   line-height: 30px;
-  padding: 0 18px;
+  padding: 0 16px;
   /* default theme */
   background-color: #fff;
   border: solid 1px #ddd;
@@ -177,13 +177,11 @@
 .pure-button.is-small {
   height: 28px;
   line-height: 26px;
-  padding: 0 14px;
   font-size: 12px;
 }
 .pure-button.is-large {
   height: 36px;
   line-height: 34px;
-  padding: 0 21px;
 }
 .pure-button.is-disabled {
   cursor: not-allowed;
@@ -200,6 +198,9 @@
 }
 .pure-button.is-disabled.is-outline {
   border: solid 1px #ddd;
+}
+.pure-button.is-disabled.is-outline:hover {
+  background-color: #fff;
 }
 .pure-button.is-block {
   display: block;
