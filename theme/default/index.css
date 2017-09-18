@@ -985,7 +985,7 @@
   position: relative;
 }
 .pure-progress-circle__track {
-  stroke: #eef2fe;
+  stroke: #f2f2f2;
 }
 .pure-progress-circle__stroker {
   stroke: #567ef4;
