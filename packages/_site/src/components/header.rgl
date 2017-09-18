@@ -41,7 +41,6 @@
 
 	.logo {
 		display: block;
-		color: @primary-color;
 		font-size: 27px;
 		text-decoration: none;
 		font-family: Pacifico,cursive;
@@ -70,6 +69,7 @@
 		position: relative;
 		display: flex;
 		align-items: stretch;
+		transition: transform .3s ease;
 
 		&::after {
 			content: '';
@@ -82,6 +82,10 @@
 			transform: translate3d(0,2px,0);
 			transition: transform .3s ease;
 			background-color: @primary-color;
+		}
+
+		&:hover {
+			color: @primary-color;
 		}
 
 		&:hover::after {
@@ -97,7 +101,11 @@
 		}
 	}
 
-	.link--active::after {
-		transform: translate3d(0,0,0);
+	.link--active {
+		color: @primary-color;
+
+		&::after {
+			transform: translate3d(0,0,0);
+		}
 	}
 </style>
