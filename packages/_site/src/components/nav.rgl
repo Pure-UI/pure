@@ -166,7 +166,7 @@
 	.active {
 		color: @primary-color;
 		background-color: @active-bgcolor;
-		border-right: solid 1px @primary-color;
+		border-right: solid 2px @primary-color;
 
 		&:hover {
 			background-color: @active-bgcolor;
