@@ -23,7 +23,7 @@
 </script>
 
 <style lang="less" scoped>
-	@import '../../../_theme/src/common/color.less';
+	@import '~@pure/theme/src/common/color.less';
 
 	.header {
 		position: fixed;
