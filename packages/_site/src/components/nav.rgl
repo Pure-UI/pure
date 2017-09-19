@@ -3,118 +3,214 @@
 		<div class="title">BASIC</div>
 		<ul>
 			<li>
-				<a class="{ active === 'Button' ? 'active' : '' }" href="#/Button">Button</a>
+				<a class="{ active === 'Button' ? 'active' : '' }" href="#/Button">
+					Button
+					<span class="sub">按钮</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Tag' ? 'active' : '' }" href="#/Tag">Tag</a>
+				<a class="{ active === 'Tag' ? 'active' : '' }" href="#/Tag">
+					Tag
+					<span class="sub">标签</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">Icon</a>
+				<a class="{ active === 'Icon' ? 'active' : '' }" href="#/Icon">
+					Icon
+					<span class="sub">图标</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Badge' ? 'active' : '' }" href="#/Badge">Badge</a>
+				<a class="{ active === 'Badge' ? 'active' : '' }" href="#/Badge">
+					Badge
+					<span class="sub">徽标</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Spinner' ? 'active' : '' }" href="#/Spinner">Spinner</a>
+				<a class="{ active === 'Spinner' ? 'active' : '' }" href="#/Spinner">
+					Spinner
+					<span class="sub">加载</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Loading' ? 'active' : '' }" href="#/Loading">Loading</a>
+				<a class="{ active === 'Loading' ? 'active' : '' }" href="#/Loading">
+					Loading
+					<span class="sub">加载进度</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Rate' ? 'active' : '' }" href="#/Rate">Rate</a>
+				<a class="{ active === 'Rate' ? 'active' : '' }" href="#/Rate">
+					Rate
+					<span class="sub">评分</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'ProgressBar' ? 'active' : '' }" href="#/ProgressBar">ProgressBar</a>
+				<a class="{ active === 'ProgressBar' ? 'active' : '' }" href="#/ProgressBar">
+					ProgressBar
+					<span class="sub">进度条</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'ProgressCircle' ? 'active' : '' }" href="#/ProgressCircle">ProgressCircle</a>
+				<a class="{ active === 'ProgressCircle' ? 'active' : '' }" href="#/ProgressCircle">
+					ProgressCircle
+					<span class="sub">进度环</span>
+				</a>
 			</li>
 			<!-- <li>
-				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">Link</a>
+				<a class="{ active === 'Link' ? 'active' : '' }" href="#/Link">
+					Link
+					<span class="sub">链接</span>
+				</a>
 			</li> -->
 		</ul>
 		<div class="title">NAVIGATION</div>
 		<ul>
 			<li>
-				<a class="{ active === 'Pagination' ? 'active' : '' }" href="#/Pagination">Pagination</a>
+				<a class="{ active === 'Pagination' ? 'active' : '' }" href="#/Pagination">
+					Pagination
+					<span class="sub">分页</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Breadcrumb' ? 'active' : '' }" href="#/Breadcrumb">Breadcrumb</a>
+				<a class="{ active === 'Breadcrumb' ? 'active' : '' }" href="#/Breadcrumb">
+					Breadcrumb
+					<span class="sub">面包屑</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Tabs' ? 'active' : '' }" href="#/Tabs">Tabs</a>
+				<a class="{ active === 'Tabs' ? 'active' : '' }" href="#/Tabs">
+					Tabs
+					<span class="sub">标签页</span>
+				</a>
 			</li>
 		</ul>
 		<div class="title">FORM</div>
 		<ul>
 			<li>
-				<a class="{ active === 'Input' ? 'active' : '' }" href="#/Input">Input</a>
+				<a class="{ active === 'Input' ? 'active' : '' }" href="#/Input">
+					Input
+					<span class="sub">文本输入</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'NumberInput' ? 'active' : '' }" href="#/NumberInput">NumberInput</a>
+				<a class="{ active === 'NumberInput' ? 'active' : '' }" href="#/NumberInput">
+					NumberInput
+					<span class="sub">数字输入</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Textarea' ? 'active' : '' }" href="#/Textarea">Textarea</a>
+				<a class="{ active === 'Textarea' ? 'active' : '' }" href="#/Textarea">
+					Textarea
+					<span class="sub">文本域</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Select' ? 'active' : '' }" href="#/Select">Select</a>
+				<a class="{ active === 'Select' ? 'active' : '' }" href="#/Select">
+					Select
+					<span class="sub">下拉选择</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Radio' ? 'active' : '' }" href="#/Radio">Radio</a>
+				<a class="{ active === 'Radio' ? 'active' : '' }" href="#/Radio">
+					Radio
+					<span class="sub">单选</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Checkbox' ? 'active' : '' }" href="#/Checkbox">Checkbox</a>
+				<a class="{ active === 'Checkbox' ? 'active' : '' }" href="#/Checkbox">
+					Checkbox
+					<span class="sub">复选</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Switch' ? 'active' : '' }" href="#/Switch">Switch</a>
+				<a class="{ active === 'Switch' ? 'active' : '' }" href="#/Switch">
+					Switch
+					<span class="sub">开关</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Table' ? 'active' : '' }" href="#/Table">Table</a>
+				<a class="{ active === 'Table' ? 'active' : '' }" href="#/Table">
+					Table
+					<span class="sub">表格</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Form' ? 'active' : '' }" href="#/Form">Form</a>
+				<a class="{ active === 'Form' ? 'active' : '' }" href="#/Form">
+					Form
+					<span class="sub">表单</span>
+				</a>
 			</li>
 			<!-- <li>
-				<a class="{ active === 'Upload' ? 'active' : '' }" href="#/Upload">Upload</a>
+				<a class="{ active === 'Upload' ? 'active' : '' }" href="#/Upload">
+					Upload
+					<span class="sub">上传</span>
+				</a>
 			</li> -->
 			<!-- <li>
-				<a class="{ active === 'DatePicker' ? 'active' : '' }" href="#/DatePicker">DatePicker</a>
+				<a class="{ active === 'DatePicker' ? 'active' : '' }" href="#/DatePicker">
+					DatePicker
+					<span class="sub">日期选择</span>
+				</a>
 			</li> -->
 		</ul>
 		<div class="title">CONTAINER</div>
 		<ul>
 			<li>
-				<a class="{ active === 'Modal' ? 'active' : '' }" href="#/Modal">Modal</a>
+				<a class="{ active === 'Modal' ? 'active' : '' }" href="#/Modal">
+					Modal
+					<span class="sub">模态框</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Box' ? 'active' : '' }" href="#/Box">Box</a>
+				<a class="{ active === 'Box' ? 'active' : '' }" href="#/Box">
+					Box
+					<span class="sub">容器</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Card' ? 'active' : '' }" href="#/Card">Card</a>
+				<a class="{ active === 'Card' ? 'active' : '' }" href="#/Card">
+					Card
+					<span class="sub">卡片</span>
+				</a>
 			</li>
 		</ul>
 		<div class="title">TREE</div>
 		<ul>
 			<li>
-				<a class="{ active === 'ElementTree' ? 'active' : '' }" href="#/ElementTree">ElementTree</a>
+				<a class="{ active === 'ElementTree' ? 'active' : '' }" href="#/ElementTree">
+					ElementTree
+					<span class="sub">元素树</span>
+				</a>
 			</li>
 		</ul>
 		<div class="title">MESSAGE</div>
 		<ul>
 			<li>
-				<a class="{ active === 'Tooltip' ? 'active' : '' }" href="#/Tooltip">Tooltip</a>
+				<a class="{ active === 'Tooltip' ? 'active' : '' }" href="#/Tooltip">
+					Tooltip
+					<span class="sub">文字提示</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Message' ? 'active' : '' }" href="#/Message">Message</a>
+				<a class="{ active === 'Message' ? 'active' : '' }" href="#/Message">
+					Message
+					<span class="sub">消息</span>
+				</a>
 			</li>
 			<li>
-				<a class="{ active === 'Notification' ? 'active' : '' }" href="#/Notification">Notification</a>
+				<a class="{ active === 'Notification' ? 'active' : '' }" href="#/Notification">
+					Notification
+					<span class="sub">通知</span>
+				</a>
 			</li>
 		</ul>
 		<div class="title">TIME</div>
 		<ul>
 			<li>
-				<a class="{ active === 'Countdown' ? 'active' : '' }" href="#/Countdown">Countdown</a>
+				<a class="{ active === 'Countdown' ? 'active' : '' }" href="#/Countdown">
+					Countdown
+					<span class="sub">倒计时</span>
+				</a>
 			</li>
 		</ul>
 	</nav>
@@ -131,7 +227,7 @@
 	@active-bgcolor: fade(tint(@primary-color,80%),30%);
 
 	.nav {
-		width: 170px;
+		width: 200px;
 		color: #333;
 		border-right: solid 1px #f2f2f2;
 	}
@@ -163,6 +259,12 @@
 		}
 	}
 
+	.sub {
+		font-size: 13px;
+		margin-left: 5px;
+		color: #999;
+	}
+
 	.active {
 		color: @primary-color;
 		background-color: @active-bgcolor;
@@ -170,6 +272,10 @@
 
 		&:hover {
 			background-color: @active-bgcolor;
+		}
+
+		.sub {
+			color: @primary-color;
 		}
 	}
 </style>
