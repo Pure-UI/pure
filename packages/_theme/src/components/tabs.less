@@ -34,6 +34,10 @@
 		&&--active {
 			color: @primary-color;
 		}
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
 	}
 
 	&__header {
@@ -49,7 +53,7 @@
 	&__indicator {
 		position: absolute;
 		bottom: 0;
-		border-bottom: solid 2px @primary-color;
+		border-bottom: solid 3px @primary-color;
 		transition: left .3s ease, width .3s ease;
 	}
 }
