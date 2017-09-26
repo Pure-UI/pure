@@ -1,5 +1,5 @@
 <template>
-	<span class="pure-breadcrumb-item { href ? 'pure-breadcrumb-item--link' : '' }" on-click="{ this.onClick( href ) }">
+	<span class="pure-breadcrumb-item { href ? 'is-link' : '' }" on-click="{ this.onClick( href ) }">
 		{#inc this.$body }
 		<span class="pure-breadcrumb-item__sep">/</span>
 	</span>

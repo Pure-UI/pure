@@ -1,5 +1,5 @@
 <template>
-	<span class="pure-checkbox { checked ? 'pure-checkbox--checked' : '' }" on-click="{ this.onClick() }">
+	<span class="pure-checkbox { checked ? 'is-checked' : '' }" on-click="{ this.onClick() }">
 		<span class="pure-checkbox__inner"></span>
 		<span class="pure-checkbox__text">{#inc this.$body}</span>
 	</span>

@@ -3,7 +3,7 @@
 		{#inc this.$body}
 
 		{#if show !== false}
-		<div class="pure-badge { ( !count || dot ) ? 'pure-badge--dot' : '' }">{ count ? ( ( count <= max ) ? count : ( max + '+' ) ) : '' }</div>
+		<div class="pure-badge { ( !count || dot ) ? 'is-dot' : '' }">{ count ? ( ( count <= max ) ? count : ( max + '+' ) ) : '' }</div>
 		{/if}
 	</div>
 </template>
