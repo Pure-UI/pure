@@ -8,15 +8,13 @@
 	>
 		<div ref="ripples"></div>
 		<button class="pure-button__text">
-			{#if loading}
-				<div
-					class="pure-button__spinner"
-					r-animation="when: loading;class: is-loading,3;"
-					r-animation="when: !loading;class: is-loading,4;"
-				>
-					<TextSpinner type="dots"></TextSpinner>
-				</div>
-			{/if}
+			<div
+				class="pure-button__spinner { loading ? 'is-loading' : '' }"
+				r-animation="when: loading;class: is-loading,3;"
+				r-animation="when: !loading;class: is-loading,4;"
+			>
+				<TextSpinner type="dots"></TextSpinner>
+			</div>
 			{#inc this.$body}
 		</button>
 	</div>

@@ -27,8 +27,12 @@ play( Button, module )
 	)
 	.add(
 		'loading',
-		`
-		<Button type="primary" loading>Normal</Button>
-		<Button loading>Normal</Button>
-	`,
+		{
+			template: `
+				<Button loading="{ loading }" on-click="{ loading = !loading }">Normal</Button>
+			`,
+			config() {
+				this.data.loading = true
+			}
+		},
 	);
