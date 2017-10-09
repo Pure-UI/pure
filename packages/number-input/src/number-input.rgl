@@ -1,35 +1,30 @@
 <template>
 	<div
-		class="pure-number-input { block ? 'pure-number-input--block' : '' } { disabled ? 'pure-number-input--disabled' : '' }"
-		style="{ size ? 'width: ' + size + 'px' : '' }"
+		class="pure-number-input { block ? 'is-block' : '' } { class }"
 	>
+		<div
+			class="pure-number-input__action is-increase { disabled || isSubtractDisabled ? 'is-disabled' : '' }"
+			on-click="{ this.onSubtract() }"
+		>-</div>
+
 		<input
 			ref="input"
-			class="pure-number-input__inner"
+			class="pure-number-input__input { disabled ? 'is-disabled' : '' }"
 			value="{ @(value) }"
 			type="number"
 			disabled="{ disabled }"
 			on-input="{ this.onInput() }"
 		>
 
-		<div class="pure-number-input__buttons">
-			<div class="pure-number-input__button { disabled || isAddDisabled ? 'pure-number-input__button--disabled' : '' }" on-click="{ this.onAdd() }">
-				<div class="pure-number-input__button-inner--rotate"><Icon type="down2"></Icon></div>
-			</div>
-			<div class="pure-number-input__button { disabled || isSubtractDisabled ? 'pure-number-input__button--disabled' : '' }" on-click="{ this.onSubtract() }">
-				<Icon type="down2"></Icon>
-			</div>
-		</div>
+		<div
+			class="pure-number-input__action is-decrease { disabled || isAddDisabled ? 'is-disabled' : '' }"
+			on-click="{ this.onAdd() }"
+		>+</div>
 	</div>
 </template>
 
 <script>
-	import Icon from '@pure/icon';
-
 	export default {
-		components: {
-			Icon
-		},
 		computed: {
 			isAddDisabled() {
 				const max = this.data.max;
@@ -57,12 +52,8 @@
 		config() {
 			this.data.value = Number( this.data.value ) || 0;
 			this.data.step = Number( this.data.step ) || 1;
-			this.data.min = this.data.min ? Number( this.data.min ) : -Infinity;
-			this.data.max = this.data.max ? Number( this.data.max ) : Infinity;
-			this.data.size = this.data.size ? parseFloat( this.data.size ) : '';
-		},
-		isValid( v ) {
-			return v >= this.data.min && v <= this.data.max;
+			this.data.min = typeof this.data.min === 'undefined' ? -Infinity : Number( this.data.min );
+			this.data.max = typeof this.data.max === 'undefined' ? Infinity : Number( this.data.max );
 		},
 		onSubtract() {
 			if ( this.data.disabled ) {
@@ -71,10 +62,12 @@
 
 			const value = this.data.value;
 			const step = this.data.step;
+			const min = this.data.min;
+			const max = this.data.max;
 
 			const newValue = value - step;
 
-			if ( !this.isValid( newValue ) ) {
+			if ( !isValid( newValue, min, max ) ) {
 				return;
 			}
 
@@ -89,10 +82,12 @@
 
 			const value = this.data.value;
 			const step = this.data.step;
+			const min = this.data.min;
+			const max = this.data.max;
 
 			const newValue = value + step;
 
-			if ( !this.isValid( newValue ) ) {
+			if ( !isValid( newValue, min, max ) ) {
 				return;
 			}
 
@@ -107,4 +102,8 @@
 			this.$emit( 'change', newValue );
 		},
 	};
+
+	function isValid( value, min, max ) {
+		return value >= min && value <= max;
+	}
 </script>

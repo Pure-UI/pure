@@ -1,35 +1,31 @@
 @import '../common/color.less';
 @import '../common/var.less';
+@import '../common/mixin.less';
 
 @number-input-prefix-cls: ~"@{pure-prefix}-number-input";
+@number-input-action-size: 36px;
 
 .@{number-input-prefix-cls} {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
+	background-color: #fff;
+	color: @form-color;
+	width: 140px;
 
-	&--disabled {
-		cursor: not-allowed;
-
-		.@{number-input-prefix-cls}__inner {
-			color: #999;
-		}
-	}
-
-	&__inner {
+	&__input {
+		box-sizing: border-box;
 		width: 100%;
-		background-color: #fff;
-		color: @form-color;
 		outline: none;
-		padding: .56em 10px;
+		padding: 0 @number-input-action-size;
+		height: @number-input-action-size;
 		font-size: 1rem;
 		display: inline-block;
 		vertical-align: middle;
-		box-sizing: border-box;
 		border: solid 1px #ddd;
-		cursor: inherit;
 		font-family: inherit;
 		-webkit-appearance: none;
+		text-align: center;
 
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button {
@@ -40,39 +36,36 @@
 		&:focus {
 			border: solid 1px @primary-color;
 		}
-	}
 
-	&__buttons {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 21px;
-		height: 100%;
-		box-sizing: border-box;
-		user-select: none;
-		overflow: hidden;
-		border: solid 1px transparent;
-	}
-
-	&__button {
-		color: #666;
-		cursor: pointer;
-		height: 50%;
-		border-left: solid 1px #ddd;
-		text-align: center;
-		box-sizing: border-box;
-
-		&:first-child {
-			border-bottom: solid 1px #ddd;
-		}
-
-		&--disabled {
-			color: #ddd;
+		&.is-disabled {
+			color: #999;
 			cursor: not-allowed;
 		}
 	}
 
-	&__button-inner--rotate {
-		transform: rotate(-180deg);
+	&__action {
+		box-sizing: border-box;
+		position: absolute;
+		top: 0;
+		width: @number-input-action-size;
+		height: @number-input-action-size;
+		line-height: @number-input-action-size - 2;
+		text-align: center;
+		color: #666;
+		cursor: pointer;
+		user-select: none;
+
+		&.is-increase {
+			left: 0;
+		}
+
+		&.is-decrease {
+			right: 0;
+		}
+
+		&.is-disabled {
+			color: #ddd;
+			cursor: not-allowed;
+		}
 	}
 }

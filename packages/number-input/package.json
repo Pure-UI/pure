@@ -9,7 +9,6 @@
   "author": "fengzilong <fengzilong1992@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@pure/icon": "^0.1.0"
   },
   "devDependencies": {
     "pure-cli": "latest"
