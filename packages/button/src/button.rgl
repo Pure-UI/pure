@@ -30,6 +30,14 @@
 		},
 		config() {
 			this.data.size = this.data.size || 'medium';
+
+			this.$watch( 'loading', ( newLoading, oldLoading ) => {
+				if ( newLoading ) {
+					this.data.disabled = true;
+				} else if ( oldLoading && !newLoading ) {
+					this.data.disabled = false;
+				}
+			} );
 		},
 		onRipple( e ) {
 			if ( this.data.disabled ) {

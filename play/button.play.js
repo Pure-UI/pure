@@ -29,10 +29,18 @@ play( Button, module )
 		'loading',
 		{
 			template: `
-				<Button loading="{ loading }" on-click="{ loading = !loading }">Normal</Button>
+				<Button loading="{ loading }" on-click="{ this.onClick() }">Normal</Button>
 			`,
 			config() {
+				this.data.loading = false
+			},
+			onClick() {
 				this.data.loading = true
-			}
+
+				setTimeout( () => {
+					this.data.loading = false
+					this.$update()
+				}, 1000 )
+			},
 		},
 	);
