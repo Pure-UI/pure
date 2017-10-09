@@ -882,6 +882,9 @@
       -ms-user-select: none;
           user-select: none;
 }
+.pure-number-input__action:hover {
+  color: #567ef4;
+}
 .pure-number-input__action.is-increase {
   left: 0;
 }
