@@ -882,7 +882,7 @@
       -ms-user-select: none;
           user-select: none;
 }
-.pure-number-input__action:hover {
+.pure-number-input__action:not(.is-disabled):hover {
   color: #567ef4;
 }
 .pure-number-input__action.is-increase {
