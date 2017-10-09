@@ -837,68 +837,60 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-}
-.pure-number-input--disabled {
-  cursor: not-allowed;
-}
-.pure-number-input--disabled .pure-number-input__inner {
-  color: #999;
-}
-.pure-number-input__inner {
-  width: 100%;
   background-color: #fff;
   color: #333;
+  width: 140px;
+}
+.pure-number-input__input {
+  box-sizing: border-box;
+  width: 100%;
   outline: none;
-  padding: .56em 10px;
+  padding: 0 36px;
+  height: 36px;
   font-size: 1rem;
   display: inline-block;
   vertical-align: middle;
-  box-sizing: border-box;
   border: solid 1px #ddd;
-  cursor: inherit;
   font-family: inherit;
   -webkit-appearance: none;
+  text-align: center;
 }
-.pure-number-input__inner::-webkit-outer-spin-button,
-.pure-number-input__inner::-webkit-inner-spin-button {
+.pure-number-input__input::-webkit-outer-spin-button,
+.pure-number-input__input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.pure-number-input__inner:focus {
+.pure-number-input__input:focus {
   border: solid 1px #567ef4;
 }
-.pure-number-input__buttons {
+.pure-number-input__input.is-disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+.pure-number-input__action {
+  box-sizing: border-box;
   position: absolute;
   top: 0;
-  right: 0;
-  width: 21px;
-  height: 100%;
-  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  overflow: hidden;
-  border: solid 1px transparent;
 }
-.pure-number-input__button {
-  color: #666;
-  cursor: pointer;
-  height: 50%;
-  border-left: solid 1px #ddd;
-  text-align: center;
-  box-sizing: border-box;
+.pure-number-input__action.is-increase {
+  left: 0;
 }
-.pure-number-input__button:first-child {
-  border-bottom: solid 1px #ddd;
+.pure-number-input__action.is-decrease {
+  right: 0;
 }
-.pure-number-input__button--disabled {
+.pure-number-input__action.is-disabled {
   color: #ddd;
   cursor: not-allowed;
-}
-.pure-number-input__button-inner--rotate {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
 }
 .pure-option {
   padding: 6px 10px;
