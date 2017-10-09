@@ -8,8 +8,24 @@ Loading
 <Button
 	type="primary"
 	loading="{ loading }"
-	on-click="{ loading = !loading }"
+	on-click="{ this.onLoading() }"
 >
 	{ loading ? 'Loading...' : 'Start' }
 </Button>
+```
+
+
+```js
+{
+	config() {
+		this.data.loading = false
+	},
+	onLoading() {
+		this.data.loading = true
+		setTimeout( () => {
+			this.data.loading = false
+			this.$update()
+		}, 5000 )
+	}
+}
 ```
