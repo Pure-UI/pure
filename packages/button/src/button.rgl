@@ -9,6 +9,7 @@
 		<div ref="ripples"></div>
 		<button class="pure-button__text">
 			<div
+				r-hide="{ !loading }"
 				class="pure-button__spinner { loading ? 'is-loading' : '' }"
 				r-animation="when: loading;class: is-loading,3;"
 				r-animation="when: !loading;class: is-loading,4;"
