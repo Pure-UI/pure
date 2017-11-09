@@ -168,7 +168,7 @@
 .pure-button.is-outline:focus {
   background-color: #fff;
 }
- + .pure-button {
+.pure-button + .pure-button {
   margin-left: 5px;
 }
 .pure-button:active {
@@ -176,6 +176,7 @@
 }
 .pure-button.is-small {
   height: 28px;
+  padding: 0 10px;
   line-height: 26px;
   font-size: 12px;
 }
