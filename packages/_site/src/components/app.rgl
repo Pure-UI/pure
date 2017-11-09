@@ -9,7 +9,6 @@
 			{/list}
 
 			<!-- TODO: api table -->
-			<!-- <APITable></APITable> -->
 		</div>
 	</div>
 </template>
@@ -64,12 +63,20 @@
 	.wrapper {
 		display: flex;
 		width: 70%;
-		margin: 0 auto;
-		padding: 90px 0;
+		height: -webkit-calc( ~"100vh - 90px" );
+		padding-top: 30px;
+		margin: 60px auto 0;
+		box-sizing: border-box;
 	}
 
 	.docs {
 		flex: 1;
 		margin-left: 20px;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
 	}
 </style>
