@@ -37,6 +37,9 @@
 				window.scrollTo( 0, 0 );
 			} );
 		},
+		init() {
+			
+		}
 	};
 </script>
 
@@ -63,7 +66,7 @@
 	.wrapper {
 		display: flex;
 		width: 70%;
-		height: -webkit-calc( ~"100vh - 90px" );
+		height: -webkit-calc( ~"100vh - 60px" );
 		padding-top: 30px;
 		margin: 60px auto 0;
 		box-sizing: border-box;

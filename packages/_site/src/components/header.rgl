@@ -1,26 +1,50 @@
 <template>
 	<header class="header">
 		<a class="logo" href="#/">Pure</a>
-		<ul class="links">
-			<li class="link link--active">
-				<a href="#/">
-					<Icon size="20px">&#xe66e;</Icon>
-					Components
-				</a>
-			</li>
-			<li class="link">
-				<a href="https://github.com/fengzilong/pure" target="_blank">
-					<Icon size="20px">&#xe69f;</Icon>
-					GitHub
-				</a>
-			</li>
-		</ul>
+		<div class="links-wrap">
+			<div class="search-wrap">
+				<input id="search" class="search-input" value="" placeholder="Search" />
+			</div>
+			<div>
+				<ul class="links">
+					<li class="link link--active">
+						<a href="#/">
+							<Icon size="20px">&#xe66e;</Icon>
+							Components
+						</a>
+					</li>
+					<li class="link">
+						<a href="https://github.com/fengzilong/pure" target="_blank">
+							<Icon size="20px">&#xe69f;</Icon>
+							GitHub
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</header>
 </template>
 
 <script>
-	export default {};
+	export default {
+		init() {
+			setTimeout( () => {
+				docsearch({
+					apiKey: '6d6625f99224b19c34947209c094184c',
+					indexName: 'pure_js',
+					inputSelector: '#search',
+					debug: false // Set debug to true if you want to inspect the dropdown
+				});
+			}, 50 )
+		}
+	};
 </script>
+
+<style lang="less">
+	.algolia-autocomplete {
+		height: 36px;
+	}
+</style>
 
 <style lang="less" scoped>
 	@import '~@pure/theme/src/common/color.less';
@@ -49,6 +73,36 @@
 		background: -webkit-linear-gradient(left,#4d8cff, #ae87ff, #8c8eff);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+
+	.links-wrap {
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+	}
+
+	.search-wrap {
+		display: flex;
+		align-items: center;
+	}
+
+	.search-input {
+		border-radius: 2px;
+		border: solid 1px #ededed;
+		height: 36px;
+		padding: 10px 15px;
+		box-sizing: border-box;
+		font-size: 13px;
+		outline: none;
+		margin-right: 20px;
+
+		&::placeholder {
+			color: #bbb;
+		}
+
+		&:focus {
+			border: solid 1px #4d8cff;
+		}
 	}
 
 	.links,
