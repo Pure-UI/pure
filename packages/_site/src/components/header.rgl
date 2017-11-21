@@ -26,16 +26,18 @@
 </template>
 
 <script>
+	/* global docsearch */
+
 	export default {
 		init() {
 			setTimeout( () => {
-				docsearch({
+				docsearch( {
 					apiKey: '6d6625f99224b19c34947209c094184c',
 					indexName: 'pure_js',
 					inputSelector: '#search',
 					debug: false // Set debug to true if you want to inspect the dropdown
-				});
-			}, 50 )
+				} );
+			}, 50 );
 		}
 	};
 </script>
@@ -110,6 +112,7 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		height: 100%;
 	}
 
 	.links {

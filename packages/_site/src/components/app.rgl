@@ -36,9 +36,6 @@
 				this.$update();
 				window.scrollTo( 0, 0 );
 			} );
-		},
-		init() {
-			
 		}
 	};
 </script>
