@@ -64,15 +64,16 @@
 		display: flex;
 		width: 70%;
 		height: -webkit-calc( ~"100vh - 60px" );
-		padding-top: 30px;
 		margin: 60px auto 0;
 		box-sizing: border-box;
+		overflow: hidden;
 	}
 
 	.docs {
 		flex: 1;
-		margin-left: 20px;
+		padding-left: 30px;
 		overflow-y: auto;
+		padding-top: 20px;
 
 		&::-webkit-scrollbar {
 			width: 0;

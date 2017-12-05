@@ -231,6 +231,9 @@
 		color: #333;
 		border-right: solid 1px #f2f2f2;
 		overflow-y: auto;
+		padding-top: 10px;
+		padding-bottom: 30px;
+		box-shadow: 0px 0 6px rgba(0,0,0,.1);
 	}
 
 	.title {
