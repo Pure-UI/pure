@@ -97,7 +97,18 @@
 		},
 		onInput() {
 			const $input = this.$refs.input;
-			const newValue = Number( $input.value ) || this.data.value;
+
+			if ( $input.value === '' ) {
+				return;
+			}
+
+			const newValue = Number( $input.value );
+
+			// invalid input
+			if ( isNaN( newValue ) ) {
+				return;
+			}
+
 			this.data.value = newValue;
 			this.$emit( 'change', newValue );
 		},
