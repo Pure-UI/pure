@@ -10,5 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "pure-cli": "latest"
+  },
+  "dependencies": {
+    "@pure/icon": "^0.1.0"
   }
 }

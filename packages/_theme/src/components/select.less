@@ -42,9 +42,17 @@
 		margin-top: 5px;
 		padding: 5px 0;
 		background-color: #fff;
-		border: solid 1px #ddd;
-		box-shadow: 1px 1px 6px 1px rgba(0,0,0,.1);
+		border: solid 1px #f2f2f2;
+		box-shadow: 1px 1px 6px 1px rgba(0,0,0,.03);
 		z-index: 1;
+		opacity: 0;
+		transform: translate3d(0,-20px,0) scale(.9);
+		transition: all .16s ease;
+
+		&.is-transition-fadeup {
+			opacity: 1;
+			transform: translate3d(0,0,0) scale(1);
+		}
 	}
 
 	.@{input-prefix-cls}__wrapper {

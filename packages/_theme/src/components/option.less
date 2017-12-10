@@ -4,35 +4,40 @@
 @option-prefix-cls: ~"@{pure-prefix}-option";
 
 .@{option-prefix-cls} {
-	padding: 6px 10px;
+	display: flex;
 	overflow: hidden;
 
-	&:hover {
-		background-color: fade(@primary-color,5%);
+	&:not(:first-child) {
+		.@{option-prefix-cls}__content {
+			border-top: solid 1px #f2f2f2;
+		}
 	}
 
-	&--checked {
-		position: relative;
-		background-color: fade(@primary-color,5%);
-		color: @primary-color;
+	&:hover {
+		background-color: #f9f9f9;
+	}
 
-		&::after {
-			font-family: 'pureicon';
-			font-style: normal;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			display: block;
-			content: '\e63f';
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			transform: translate3d(0,-50%,0);
-			color: @primary-color;
-			font-size: 13px;
-		}
+	&.is-checked {
+		position: relative;
+		background-color: fade(@primary-color,6%);
+		color: @primary-color;
 
 		&:hover {
 			background-color: fade(@primary-color,10%);
 		}
+	}
+
+	&__icon {
+		padding: 8px 4px;
+		font-size: 13px;
+		color: @primary-color;
+		width: 20px;
+		text-align: center;
+	}
+
+	&__content {
+		flex: 1;
+		padding: 8px 10px 8px 0;
+		font-size: 13px;
 	}
 }

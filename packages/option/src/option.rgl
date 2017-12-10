@@ -1,11 +1,27 @@
 <template>
-	<div class="pure-option { checked ? 'pure-option--checked' : '' }" ref="option" on-click="{ this.onClick() }">
-		{#inc this.$body}
+	<div
+		class="pure-option { checked ? 'is-checked' : '' }"
+		ref="option"
+		on-click="{ this.onCheck() }"
+	>
+		<div class="pure-option__icon">
+			{#if checked}
+			<Icon type="right"></Icon>
+			{/if}
+		</div>
+		<div class="pure-option__content">
+			{#inc this.$body}
+		</div>
 	</div>
 </template>
 
 <script>
+	import Icon from '@pure/icon';
+
 	export default {
+		components: {
+			Icon,
+		},
 		config() {
 			this.data.checked = false;
 
@@ -13,7 +29,7 @@
 				this.$outer.optionPing( this );
 			}
 		},
-		onClick() {
+		onCheck() {
 			if ( this.$outer && this.$outer.onOptionChange ) {
 				this.$outer.onOptionChange( this );
 			}
