@@ -83,6 +83,7 @@
   font-size: 11px;
   color: #fff;
   overflow: hidden;
+  border: solid 3px #fff;
 }
 .pure-badge.is-dot {
   border-radius: 50%;
